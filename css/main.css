@@ -54,11 +54,19 @@ ul.posts li {
 }
 
 .fa {
+/* square
     padding: 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
+     */
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
 
 /* Add a hover effect if you want */
