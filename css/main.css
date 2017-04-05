@@ -1,17 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
 body {
     margin: 60px auto;
     width: 70%;
+    font-family: 'Lato', sans-serif;
+    /* color: #FFF;
+    background: #322f30; */
+    -webkit-font-smoothing: antialiased;
 }
+
 nav ul, footer ul {
     /*font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 /*a {
     text-decoration: none;
     color: #999;
@@ -28,28 +38,19 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
-}
-
-
-@import url(http://fonts.googleapis.com/css?family=Lato);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-body {
-    font-family: 'Lato', sans-serif;
-    /* color: #FFF;
-    background: #322f30; */
-    -webkit-font-smoothing: antialiased;
 }
 
 .fa {
