@@ -68,27 +68,25 @@ ul.posts li {
     text-decoration: none;
     border-radius: 50%;
 }
-
 /* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
 }
-
-/* Set a specific color for each brand */
-
 /* Facebook */
 .fa-facebook {
-    background: #3B5998;
+    /*background: #3B5998;*/
     color: white;
 }
-
 /* Twitter */
 .fa-twitter {
-    background: #55ACEE;
+    /*background: #55ACEE;*/
     color: white;
 }
-
 .fa-google-plus {
-    background: #dd4b39;
+    /*background: #dd4b39;*/
+    color: white;
+}
+.fa-linkedin {
+    /*background: #dd4b39;*/
     color: white;
 }
