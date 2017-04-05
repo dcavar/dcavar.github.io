@@ -1,7 +1,7 @@
-/*body {
+body {
     margin: 60px auto;
     width: 70%;
-}*/
+}
 nav ul, footer ul {
     /*font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     padding: 0px;
@@ -22,7 +22,7 @@ a:hover {
 /*h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
+}*/
 p {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -40,7 +40,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
-}*/
+}
 
 
 @import url(http://fonts.googleapis.com/css?family=Lato);
@@ -52,96 +52,34 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
-.footer-social-icons {
-    width: 350px;
-    display:block;
-    margin: 0 auto;
-}
-.social-icon {
-    color: #fff;
-}
-ul.social-icons {
-    margin-top: 10px;
-}
-.social-icons li {
-    vertical-align: top;
-    display: inline;
-    height: 100px;
-}
-.social-icons a {
-    color: #fff;
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
     text-decoration: none;
 }
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
 .fa-facebook {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    /*background-color: #322f30;*/
+    background: #3B5998;
+    color: white;
 }
-.fa-facebook:hover {
-    background-color: #3d5b99;
-}
+
+/* Twitter */
 .fa-twitter {
-    padding:10px 12px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    /*background-color: #322f30;*/
+    background: #55ACEE;
+    color: white;
 }
-.fa-twitter:hover {
-    background-color: #00aced;
-}
-.fa-rss {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-   /* background-color: #322f30;*/
-}
-.fa-rss:hover {
-    background-color: #eb8231;
-}
-.fa-youtube {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-   /* background-color: #322f30;*/
-}
-.fa-youtube:hover {
-    background-color: #e64a41;
-}
-.fa-linkedin {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    /*background-color: #322f30;*/
-}
-.fa-linkedin:hover {
-    background-color: #0073a4;
-}
+
 .fa-google-plus {
-    padding:10px 9px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    /*background-color: #322f30;*/
-}
-.fa-google-plus:hover {
-    background-color: #e25714;
+    background: #dd4b39;
+    color: white;
 }
