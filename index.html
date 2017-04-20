@@ -1,23 +1,153 @@
----
-layout: default
----
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Damir Cavar's personal homepage">
+    <meta name="author" content="Damir Cavar">
+    <title>Damir Cavar's Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!--div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-colla
+pse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Start Bootstrap</a>
+        </div-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/">home</a></li>
+                <li><a href="/cv/index.html">cv</a></li>
+                <li><a href="/code/index.html">code</a></li>
+                <li><a href="/blog/_site/index.html">blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Damir Cavar</h2>
+            <p>Associate Professor of Computational Linguistics<br/>
+                <a href="https://www.indiana.edu/~lingdept/">Department of Linguistics</a>, <a
+                        href="https://www.indiana.edu/">Indiana University</a> (IU)<br/>
+                Co-Director, Moderator of <a href="https://linguistlist.org/">The LINGUIST List</a></p>
+            <p><b>phone:</b> via Skype or Google Hangouts<br/>
+                <b>email:</b> dcavar at the domain where we all are, here at IU (iu.edu), or my first name and
+                @linguistlist.org for <a href="https://linguistlist.org/">LINGUIST List</a> business.
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <p><img style="width:40%; max-width:90%; height:40%;" src="dc_pic2.jpg"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <p><b>departmental address:</b></p>
+            <p><a href="https://www.indiana.edu/~lingdept/">Department of Linguistics</a><br/>
+                <a href="https://www.indiana.edu/">Indiana University</a><br/>
+                Ballantine Hall, Room 850<br/>
+                1020 E. Kirkwood Ave.<br/>
+                <a href="https://en.wikipedia.org/wiki/Bloomington,_Indiana">Bloomington</a>, IN 47405<br/>
+                USA</p>
+        </div>
+        <div class="col-sm-4">
+            <p><b>other address:</b></p>
+            <p><a href="https://linguistlist.org/">The LINGUIST List</a><br/>
+                <a href="https://www.indiana.edu/">Indiana University</a><br/>
+                111 N Bryan Ave<br/>
+                <a href="https://en.wikipedia.org/wiki/Bloomington,_Indiana">Bloomington</a>, IN 47408<br/>
+                USA</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <p><strong>Courses in Spring 2017:</strong></p>
+            <ul>
+                <li>LING 665 and CSCI-B 659: Applying Machine Learning Techniques in Computational Linguistics</li>
+                <li>LING 614 Alternative Syntactic Theories (that is mainly Lexical-functional Grammar (LFG), Theory,
+                    Parsing, Corpora, etc.)
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <p><strong>Courses in Fall 2017:</strong></p>
+            <ul>
+                <li>LING-L 645 Advanced Natural Language Processing<br/>
+                    CSCI-B 659 Topics in Artificial Intelligence
+                </li>
+                <li>LING-L 715 Seminar in Computational Linguistics<br/>
+                    CSCI-B 659 Topics: Adv Natural Language Processing: "Semantic Natural Language Processing, NoAI, and
+                    Big Knowledge"
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p><strong>Adjunct/Member:</strong></p>
+    </div>
+    <div class="row">
+        <ul>
+            <li><a href="https://www.soic.indiana.edu/graduate/degrees/data-science/index.html">Data Science</a> Faculty
+                in the <a href="http://www.soic.indiana.edu/">School of Informatics and Computation</a></li>
+            <li><a href="http://www.iub.edu/~reeiweb/" target="_blank">Russian and East-European Institute</a> (<a
+                    href="http://www.iub.edu/~reeiweb/" target="_blank">REEI</a>), <a href="http://sgis.indiana.edu/"
+                                                                                      target="_blank">School of Global
+                &amp; International Studies</a>, <a href="https://www.indiana.edu/" target="_blank">Indiana
+                University</a></li>
+            <li>Member of the <a href="http://www.cogs.indiana.edu">Cognitive Science Program at Indiana University</a>
+            </li>
+            <li>Adjunct in the <a href="http://www.indiana.edu/~lingdept/">Department of Slavic and East European
+                Languages and Cultures</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <p><strong>Code and Projects:</strong></p>
+    </div>
+    <div class="row">
+        <p><a href="https://github.com/dcavar"><i class="fa fa-github"></i> GitHub</a> and <a
+                href="https://bitbucket.org/dcavar/"><i class="fa fa-bitbucket"></i> Bitbucket</a></p>
+    </div>
+    <div class="row">
+        <p><strong><a href="http://www.cavar.me/damir_old/blog/">Old blog and pages</a></strong></p>
+    </div>
 </div>
+<footer>
+    <table style="width: 70%;" border="0">
+        <tbody>
+        <tr>
+            <td>(C) 2017 by Damir Cavar (<a href="DamirCavar.asc"><i class="fa fa-key"></i> GPG-key</a>)</td>
+            <td style="text-align: right;">
+                <ul class="social-icons">
+                    <li><a href="http://www.facebook.com/dcavar22" class="fa fa-facebook"></a></li>
+                    <li><a href="https://twitter.com/dacavar" class="fa fa-twitter"></a></li>
+                    <!--li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li-->
+                    <!--li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li-->
+                    <li><a href="https://www.linkedin.com/in/damircavar/" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://plus.google.com/+DamirCavarHome/" class="fa fa-google-plus"></a></li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!--div id="back-top">
+        <a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
+    </div-->
+</footer>
+</body>
+</html>
