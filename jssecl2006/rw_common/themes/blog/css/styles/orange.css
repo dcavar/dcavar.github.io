@@ -1,0 +1,164 @@
+body {
+	background: #3e3e3e;
+}
+
+a:link, a:visited {
+	color: #ff9510;
+}
+
+#top_grad {
+	display: none;
+}
+
+#container { 
+	border-right: 1px solid #88683c;
+	border-bottom: 1px solid #88683c;
+	border-left: 1px solid #88683c;
+}
+
+#pageHeader {
+	background: url(../../images/orange/header_bg.png) repeat-x;
+}
+
+#pageHeader h1 {
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #b8540e;
+}
+
+#pageHeader h2 {
+	color: #f2c459;
+	text-shadow: 2px 2px 2px #b8540e;
+}
+
+#sidebarContainer #sidebar {
+	color: #4c4c4c;
+}
+
+#sidebarContainer .sideHeader {
+	background: url(../../images/orange/side_head_bg.png) repeat-x left top;
+}
+
+#footer a:link, #footer a:visited {
+	color: #dccaaf;
+	text-decoration: none;
+}
+
+#footer a:hover, #footer a:active {
+	color: #f2dfc1;
+}
+
+#navcontainer {
+	border-top-color: #ffffff;
+}
+
+#navcontainer #current {
+	background: #e76c0c;
+}
+
+#navcontainer #current:hover {
+	background: #ff9510;
+	color: #ffffff;
+}
+
+#navcontainer .currentAncestor {
+	background: #e76c0c;
+}
+
+#navcontainer a{
+	background: #ff8000;
+	border-bottom-color: #ffffff;
+}
+
+#navcontainer a:hover {
+	background: #ff9610;
+}
+
+#navcontainer ul ul a {
+	background: #ffdda1;
+}
+
+#navcontainer ul ul #current{
+	background: #ff9510;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #ff9510;
+}
+
+#navcontainer ul ul ul #current{
+	background: #ffdda1;
+	color: #ff9410;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin: 0 0 3px;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin: 0 0 3px;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0 0 3px;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0 0 3px;
+}.blog-archive-month {
+	text-shadow: 2px 2px 2px #b8540e;
+}
+
+.blog-entry-title a {
+	color: #e76d0d;
+}
+
+.blog-entry-date {
+	color: #999999;
+
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #e86a12;
+}
+
+.album-title {
+	color: #e76d0d;
+}
+
+.photo-navigation {
+	background: repeat-x url(../../images/orange/header_bg.png);
+}
+
+.photo-links {
+	background: #ffffff;
+
+}
+
+.photo-title {
+	text-shadow: 2px 2px 2px #b8540e;
+}
+
+.photo-caption {
+	color: #f2c459;
+	text-shadow: 2px 2px 2px #b8540e;
+}
+
+.exif-data {
+	color: #fff;
+}
+
+.movie-page-title {
+	color: #e76d0d;
+}
+
+.movie-background {
+	background: #3e3e3e none;
+}
+
+.movie-title {
+	text-shadow: 2px 2px 2px #333333;
+}

@@ -1,0 +1,169 @@
+body {
+	background: repeat url(../../images/tech/body_bg.png);
+}
+
+a:link, a:visited {
+	color: #0080ff;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+}
+
+#top_grad {
+	background: repeat-x url(../../images/tech/body_top_grad.png);
+	height: 250px;
+}
+
+#container { 
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-left: 1px solid #404040;
+}
+
+#pageHeader {
+	background: url(../../images/tech/header_bg.png) repeat-x;
+}
+
+#pageHeader h1 {
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #333333;
+}
+
+#pageHeader h2 {
+	color: #ababab;
+	text-shadow: 2px 2px 2px #333333;
+}
+
+#sidebarContainer #sidebar {
+	color: #666666;
+}
+
+#sidebarContainer #sidebar a:link, #sidebarContainer #sidebar a:visited {
+	color: #1e1f1a;
+}
+
+#sidebarContainer .sideHeader {
+	background: url(../../images/tech/side_head_bg.png) repeat-x left top;
+}
+
+#footer { 
+	color: #dbdbdb;
+}
+
+#footer a:link, #footer a:visited {
+	color: #dbdbdb;
+}
+
+#footer a:hover, #footer a:active {
+	color: #f0f0f0;
+	background: transparent;
+}
+
+#breadcrumbcontainer {
+	color: #cccccc;
+}
+
+#navcontainer {
+	border-top-color: #fcfcfc;
+}
+
+#navcontainer #current {
+	background: #0080ff;
+	color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+
+#navcontainer #current:hover {
+	background: #0080ff;
+}
+
+#navcontainer .currentAncestor {
+	background: #0080ff;
+	color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+
+#navcontainer a{
+	color: #ffffff;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #ffffff;
+	background: #b3b3b3;
+}
+
+#navcontainer a:hover {
+	background: #0080ff;
+	color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+
+#navcontainer ul ul a {
+	background: #cccccc;
+}
+
+#navcontainer ul ul #current{
+	background: #66ccff;
+	color: #ffffff;
+}
+
+#navcontainer ul ul #current:hover {
+	color: #ffffff;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #66ccff;
+	color: #ffffff;
+}
+
+#navcontainer ul ul ul #current{
+	background: #cccccc;
+	color: #808080;
+}
+.blog-archive-month {
+	text-shadow: 2px 2px 2px #333333;
+}
+
+.blog-entry-title a {
+	color: #0080ff;
+}
+
+.blog-entry-date {
+	color: #999999;
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #007efd;
+}
+
+.album-title {
+	color: #0080ff;
+}
+
+.photo-navigation {
+	background: repeat-x url(../../images/tech/header_bg.png);
+}
+
+.photo-title {
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #333333;
+}
+
+.photo-caption {
+	color: #ababab;
+	text-shadow: 2px 2px 2px #333333;
+}
+
+.exif-data {
+	color: #fff;
+}
+
+.movie-page-title {
+	color: #0080ff;
+}
+.movie-background {
+	background: repeat url(../../images/tech/body_bg.png);
+}
+
+.movie-title {
+	text-shadow: 2px 2px 2px #333333;
+}

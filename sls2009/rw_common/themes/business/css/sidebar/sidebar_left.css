@@ -1,0 +1,15 @@
+#sidebarContainer {
+	float: left;
+}
+
+#container {
+	background: url(../../images/sidebar_left.png) repeat-y left #f7f6f7;
+}
+#contentContainer {
+	margin-left: 190px;
+	margin-right: 0px;
+}
+
+#footer p {
+	padding-left: 230px;
+}

@@ -1,0 +1,14 @@
+/* hide the sidebar by setting it's display to none. */
+#sidebarContainer {
+	display: none;
+}
+
+/* change the content containers margin to 0px so that it flows full width */
+
+#contentContainer {
+	margin: 0px;
+}
+
+#container {
+	background: #ffffff;
+}

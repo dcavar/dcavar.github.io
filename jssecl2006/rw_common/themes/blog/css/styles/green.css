@@ -1,0 +1,158 @@
+body {
+	background: repeat url(../../images/body_bg.png);
+}
+
+a:link, a:visited {
+	color: #4e6311;
+}
+
+#top_grad {
+	background: repeat-x url(../../images/body_top_grad.png);
+}
+
+#container { 
+	border-right: 1px solid #88683c;
+	border-bottom: 1px solid #88683c;
+	border-left: 1px solid #88683c;
+}
+
+#pageHeader {
+	background: url(../../images/green/header_bg.jpg) repeat-x;
+}
+
+#pageHeader h1 {
+	text-shadow: 2px 2px 2px #4e6311;
+}
+
+#pageHeader h2 {
+	color: #c9f54f;
+	text-shadow: 2px 2px 2px #4e6311;
+}
+
+#sidebarContainer #sidebar {
+	color: #77924a;
+}
+
+#sidebarContainer .sideHeader {
+	background: url(../../images/green/side_head_bg.png) repeat-x left top;
+}
+
+#footer a:link, #footer a:visited {
+	color: #dccaaf;
+}
+
+#footer a:hover, #footer a:active {
+	color: #f2dfc1;
+}
+
+#navcontainer {
+	border-top-color: #bbdf70;
+}
+
+#navcontainer #current {
+	background: #657f27;
+}
+
+#navcontainer #current:hover {
+	background: #4e6311;
+	color: #ffffff;
+}
+
+#navcontainer .currentAncestor {
+	background: #657f27;
+}
+
+#navcontainer a{
+	background: #7d992f;
+	border-bottom-color: #bcdd6e;
+}
+
+#navcontainer a:hover {
+	background: #4e6311;
+}
+
+#navcontainer ul ul a {
+	background: #a7c660;
+}
+
+#navcontainer ul ul #current{
+	background: #7c982e;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #7c982e;
+}
+
+#navcontainer ul ul ul #current{
+	background: #a6c660;
+	color: #7b972d;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin: 0 0 3px;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin: 0 0 3px;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0 0 3px;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0 0 3px;
+}.blog-archive-month {
+	text-shadow: 2px 2px 2px #4e6311;
+}
+
+.blog-entry-title a {
+	color: #7c982e;
+}
+
+.blog-entry-date {
+	color: #999999;
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #7b995c;
+}
+
+
+.album-title {
+	color: #4e6311;
+}
+
+.photo-background {
+}
+
+.photo-navigation {
+	background: url(../../images/green/header_bg.jpg) repeat-x;
+}
+
+.photo-title {
+	text-shadow: 2px 2px 2px #4e6311;
+}
+
+.photo-caption {
+	color: #c8f753;
+	text-shadow: 2px 2px 2px #4e6311;
+}
+
+
+.movie-page-title {
+	color: #4e6311;
+}
+
+.movie-background {
+	background: repeat url(../../images/body_bg.png);
+}
+
+.movie-title {
+	text-shadow: 2px 2px 2px #4e6311;
+}
+

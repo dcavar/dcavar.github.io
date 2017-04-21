@@ -1,0 +1,78 @@
+a:link, a:visited {
+	color: #950101;
+}
+
+a:hover, a:active {
+	color: #000000;
+}
+
+#pageHeader {
+	background: url(../../images/red/header_bg.png) repeat;
+}
+
+#sidebarContainer .sideHeader {
+	color: #960004;
+}
+
+#navcontainer #current {
+	background: #950101;
+}
+
+#navcontainer #current:hover {
+	background: #950101;
+	color: #ffffff;
+}
+
+#navcontainer .currentAncestor {
+	background: #950101;
+}
+
+#navcontainer a {
+	color: #950101;
+}
+
+#navcontainer a:hover {
+	background: #950101;
+}
+
+#navcontainer ul ul #current{
+	background: #d3bab6;
+	color: #950004;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #d3bab6;
+}
+
+#navcontainer ul ul #current{
+	background: #f7f5f6;
+	color: #cccccc;
+}
+
+.blog-entry-title {
+	color: #950101;
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #950101;
+}
+
+.album-title {
+	color: #950101;
+}
+
+.thumbnail-caption {
+	color: #950101;
+}
+
+.photo-navigation {
+	background: url(../../images/red/header_bg.png);
+}
+
+.movie-page-title {
+	color: #950101;
+}
+
+.movie-title {
+	color: #950101;
+}

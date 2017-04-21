@@ -1,0 +1,15 @@
+#pageHeader {
+	text-align: right;
+}
+
+#pageHeader h1 {
+	padding-right: 15px;
+}
+
+#pageHeader h2 {
+	padding-right: 15px;
+}
+
+#pageHeader img {
+	left: 10px;
+}
