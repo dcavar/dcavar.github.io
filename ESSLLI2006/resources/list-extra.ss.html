@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>list-extra.ss.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Filename: list-extra.ss</i></font><br>
+<font color="#0000ed"><i>;;; Author:&nbsp;&nbsp; Damir Cavar &lt;dcavar@me.com&gt;</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; This code is published under the restrictive GPL!</i></font><br>
+<font color="#0000ed"><i>;;; Please find the text of the GPL here:</i></font><br>
+<font color="#0000ed"><i>;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; It is free for use, change, etc. as long as the copyright</i></font><br>
+<font color="#0000ed"><i>;;; note above is included in any modified version of the code.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Functions:</i></font><br>
+<font color="#0000ed"><i>;;; sublist (list from-integer to-integer)</i></font><br>
+<font color="#0000ed"><i>;;; Returns a sublist from a list, including the from index,</i></font><br>
+<font color="#0000ed"><i>;;; excluding the to index.</i></font><br>
+<font color="#0000ed"><i>;;; This function is safe for the indices being out of range.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Usage:</i></font><br>
+<font color="#0000ed"><i>;;; (load &quot;list-extra.ss&quot;)</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;sublist<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>mlist&nbsp;from&nbsp;to<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>res&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">'()]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>counter&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>and</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;=</font>&nbsp;from&nbsp;counter<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;counter&nbsp;to<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;res<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;res&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">append</font>&nbsp;res&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;x<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;res&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;x<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;counter&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;counter&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mlist<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res<font color="#8a2ae2">)))</font><br>
+<br>
+</font>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>

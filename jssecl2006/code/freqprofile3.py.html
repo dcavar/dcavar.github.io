@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>~/Documents/Teaching/2006/JSSECL-2006/Code/freqprofile3.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">(C) 2006 by Damir Cavar</font>
+
+<font color="#f20884">This code is published under the GNU Public License 2.</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+<font color="#a020f0">import</font> sys
+<font color="#a020f0">from</font> operator <font color="#a020f0">import</font> itemgetter
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">filterText</font>(text):
+   <font color="#804040"><b>return</b></font> text
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">prettyPrint</font>(items, count, relativize=False):
+   <font color="#804040"><b>if</b></font> relativize:
+      count = float(count)
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> items:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">%s</font><font color="#6a5acd">\t</font><font color="#f20884">%s</font><span style="background-color: #ffffff">&quot;</span> % ( i[0], i[1]/count )
+   <font color="#804040"><b>else</b></font>:
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> items:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">%s</font><font color="#6a5acd">\t</font><font color="#f20884">%s</font><span style="background-color: #ffffff">&quot;</span> % i
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">sortByValue</font>(dict, decreasing=True):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Return an item list of key-value pairs from a dictionary sorted by value.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   items = dict.items()
+   items.sort(key = itemgetter(1), reverse=decreasing)
+   <font color="#804040"><b>return</b></font> items
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">countTokens</font>(words, count, filename):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Create a token list and count tokens.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   wordlist = open(filename).read().lower().split()
+
+   <font color="#0000d4"># keep track of total number of tokens</font>
+   count += len(wordlist)
+
+   <font color="#0000d4"># creating token frequencies</font>
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> wordlist:
+      words[i] = words.get(i, 0) + 1
+
+   <font color="#804040"><b>return</b></font> count, words
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   words = {}
+   count = 0
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> sys.argv[1:]:
+      count, words = countTokens(words, count, i)
+   prettyPrint(sortByValue(words), count)
+
+
+</pre>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

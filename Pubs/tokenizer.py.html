@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>tokenizer.py.html</title>
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Type { color: #008b00; font-weight: bold; }
+.Constant { color: #ff8c00; }
+.Identifier { color: #458b74; }
+.Statement { color: #b03060; font-weight: bold; }
+.Special { color: #8a2be2; }
+.PreProc { color: #1874cd; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">#!/usr/bin/env python3</span>
+<span class="Comment"># -*- coding: utf-8 -*-</span>
+
+
+<span class="String">&quot;&quot;&quot;</span>
+<span class="String">tokenizer.py</span>
+<span class="String">(C) 2010-2012 by Damir Cavar &lt;dcavar@me.com&gt;</span>
+
+<span class="String">Simple tokenization algorithm. Feel free to expand and extend it.</span>
+<span class="String">Returns a list of tokens from some raw text file.</span>
+<span class="String">&quot;&quot;&quot;</span>
+
+
+<span class="PreProc">import</span> sys, os, os.path, glob, codecs
+
+<span class="Comment"># Fix output for Windows and Komodo Edit</span>
+sys.stdout = codecs.getwriter(<span class="String">'utf-8'</span>)(sys.stdout.detach())
+
+
+delimiterSet = <span class="String">&quot;;.,!?</span><span class="Special">\&quot;</span><span class="String">()':[]</span><span class="Special">\n</span><span class="String">/+-—=≤≥{}&gt;&lt;*’”“|&quot;</span>
+digits = <span class="String">&quot;0123456789&quot;</span>
+chars = <span class="String">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
+chars = <span class="String">&quot;&quot;</span>.join( (chars, chars.upper()) )
+spaces = <span class="String">&quot; </span><span class="Special">\t\n</span><span class="String">&quot;</span>
+numberdelimiters = <span class="String">&quot;,.&quot;</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>(fname):
+   <span class="Statement">global</span> delimiterSet
+
+   <span class="Statement">if</span> <span class="Statement">not</span> os.path.isfile(fname):
+      <span class="Identifier">print</span>(<span class="String">&quot;Error: Not a file&quot;</span>, fname, <span class="String">&quot;</span><span class="Special">\n</span><span class="String">&quot;</span>)
+      usage()
+      <span class="Statement">return</span>
+
+   <span class="Statement">try</span>:
+      inStream = <span class="Identifier">open</span>(fname, mode=<span class="String">&quot;r&quot;</span>, encoding=<span class="String">&quot;utf-8&quot;</span>)
+      token = <span class="String">&quot;&quot;</span>
+      ch = inStream.read(<span class="Constant">1</span>)
+      lookahead = inStream.read(<span class="Constant">1</span>)
+      <span class="Statement">while</span> <span class="Identifier">True</span>:
+         <span class="Statement">if</span> <span class="Statement">not</span> ch:
+            <span class="Statement">if</span> token:
+               <span class="Identifier">print</span>(token, <span class="Identifier">file</span>=sys.stdout)
+            <span class="Statement">break</span>
+         <span class="Statement">if</span> ch <span class="Statement">in</span> delimiterSet:
+            <span class="Statement">if</span> token:
+               <span class="Statement">if</span> token[-<span class="Constant">1</span>] <span class="Statement">in</span> digits <span class="Statement">and</span> lookahead <span class="Statement">in</span> digits <span class="Statement">and</span> ch <span class="Statement">in</span> numberdelimiters:
+                  token = <span class="String">&quot;&quot;</span>.join( (token, ch) )
+               <span class="Statement">elif</span> token[-<span class="Constant">1</span>] <span class="Statement">in</span> chars <span class="Statement">and</span> lookahead <span class="Statement">in</span> chars <span class="Statement">and</span> ch <span class="Statement">in</span> numberdelimiters:
+                  token = <span class="String">&quot;&quot;</span>.join( (token, ch) )
+               <span class="Statement">else</span>:
+                  <span class="Identifier">print</span>(token, <span class="Identifier">file</span>=sys.stdout)
+                  token = <span class="String">&quot;&quot;</span>
+                  <span class="Statement">if</span> ch <span class="Statement">not</span> <span class="Statement">in</span> spaces:
+                     <span class="Identifier">print</span>(ch, <span class="Identifier">file</span>=sys.stdout)
+         <span class="Statement">elif</span> ch <span class="Statement">in</span> spaces:
+            <span class="Statement">if</span> token:
+               <span class="Identifier">print</span>(token, <span class="Identifier">file</span>=sys.stdout)
+               token = <span class="String">&quot;&quot;</span>
+         <span class="Statement">else</span>:
+            token = <span class="String">&quot;&quot;</span>.join( (token, ch) )
+         ch = lookahead
+         lookahead = inStream.read(<span class="Constant">1</span>)
+      inStream.close()
+   <span class="Statement">except</span> <span class="Type">IOError</span>:
+      <span class="Identifier">print</span>(<span class="String">&quot;Cannot read from file:&quot;</span>, fname, <span class="Identifier">file</span>=sys.stdout)
+
+
+<span class="Statement">def</span> <span class="Identifier">usage</span>():
+   <span class="Identifier">print</span>(<span class="String">&quot;&quot;&quot;</span>
+<span class="String">tokenizer.py</span>
+
+<span class="String">Usage:</span>
+<span class="String">python3 tokenizer.py mytext.txt myothertext.txt ...</span>
+<span class="String">&quot;&quot;&quot;</span>)
+
+
+<span class="Statement">if</span> __name__ == <span class="String">'__main__'</span>:
+   <span class="Statement">if</span> <span class="Identifier">len</span>(sys.argv) &gt; <span class="Constant">1</span>:
+      <span class="Statement">for</span> i <span class="Statement">in</span> sys.argv[<span class="Constant">1</span>:]:
+         <span class="Statement">for</span> j <span class="Statement">in</span> glob.glob(i):
+            main(os.path.expanduser(os.path.expandvars(j)))
+   <span class="Statement">else</span>:
+      usage()
+</pre>
+<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-21704386-2']);
+		   _gaq.push(['_trackPageview']);
+
+			  (function() {
+			      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+							    })();
+
+							 </script>
+
+</body>
+</html>

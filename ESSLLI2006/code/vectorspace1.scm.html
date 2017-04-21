@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Documents/Teaching/2006/ESSLLI/ESSLLI2006/code/vectorspace1.scm.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#4a6f8b">&quot;:&quot;</font><font color="#0000ed"><i>; exec mzscheme -r $0 &quot;$@&quot;</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Filename: vectorspace1.ss</i></font><br>
+<font color="#0000ed"><i>;;; Author:&nbsp;&nbsp; Damir Cavar &lt;dcavar@unizd.hr&gt;</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; This code is published under the restrictive GPL!</i></font><br>
+<font color="#0000ed"><i>;;; Please find the text of the GPL here:</i></font><br>
+<font color="#0000ed"><i>;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; It is free for use, change, etc. as long as the copyright</i></font><br>
+<font color="#0000ed"><i>;;; note above is included in any modified version of the code.</i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; This script assumes that the text is raw and encoded in UTF8.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; If the command line parameters contain more than one text file,</i></font><br>
+<font color="#0000ed"><i>;;; the above results are accumulated over all the input text files.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Usage:</i></font><br>
+<font color="#0000ed"><i>;;; mzscheme -r vectorspace1.ss test1.txt test2.txt ...</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;list.ss&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;list.ss&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;1&quot;</font>&nbsp;<font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;string.ss&quot;</font><font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; for string-uppercase!</i></font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;string.ss&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp; <font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;13&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;vector-lib.ss&quot;</font>&nbsp;<font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;43&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;pregexp.ss&quot;</font><font color="#8a2ae2">))</font>&nbsp;&nbsp;<font color="#0000ed"><i>; for Perl compatible regular expressions</i></font><br>
+<font color="#8a2ae2">(</font><font color="#458b73">load</font>&nbsp;<font color="#4a6f8b">&quot;english.ss&quot;</font><font color="#8a2ae2">)</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; global counters</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;tokencount&nbsp;&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)</font>&nbsp;<font color="#0000ed"><i>; total number of words</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;bigramcount&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)</font>&nbsp;<font color="#0000ed"><i>; total number of bigrams</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; hash-table containers</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;types&nbsp;&nbsp; <font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; words and their counts</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;bigrams&nbsp;<font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; bigrams and their counts</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; extra hash-tables</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;lefttoken&nbsp;&nbsp;<font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; key = left token in bigram, value = list of bigrams with key left</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;righttoken&nbsp;<font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; key = right token in bigram, value = list of bigrams with key right</i></font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; sort hash table with by value</i></font><br>
+<font color="#0000ed"><i>;;; assuming values = reals/ints</i></font><br>
+<font color="#0000ed"><i>;;; returning a sorted list of key-value tuples (lists)</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;sort-by-value<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>table<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>keyval&nbsp;<font color="#8a2ae2">(</font>hash-table-map&nbsp;table&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>key&nbsp;val<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;key&nbsp;val<font color="#8a2ae2">)))])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>sort&nbsp;keyval&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>a&nbsp;b<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;b<font color="#8a2ae2">)))))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;add-data<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>tokenlist<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>count&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;tokenlist<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; remember the total counts of tokens and bigrams</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;tokencount&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;tokencount&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;tokenlist<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;bigramcount&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;bigramcount&nbsp;count<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; count the first token in the list</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>value&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;types&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;tokenlist<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;types&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;tokenlist<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;value&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; loop over the rest of the tokens</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">([</font>i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>token&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list-ref</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tokenlist&nbsp;i<font color="#8a2ae2">)]</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; token = second element of bigram </i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>bigram&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list-ref</font>&nbsp;tokenlist&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font>&nbsp;token<font color="#8a2ae2">)]</font>&nbsp;<font color="#0000ed"><i>; bigram = previous and current token as list</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>wvalue&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;types&nbsp;&nbsp; token&nbsp;&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)]</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; get value for token</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>bvalue&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;bigrams&nbsp;bigram&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)]</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; get value for bigram</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>leftval&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;lefttoken&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">'())]</font>&nbsp;&nbsp;<font color="#0000ed"><i>; list of bigrams where token is left</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>rightval&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;righttoken&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">'())])</font>&nbsp;<font color="#0000ed"><i>; list of bigrams where token is right</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; store the bigram in the value for left and right</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;leftval&nbsp;bigram<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;leftval&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cons</font>&nbsp;bigram&nbsp;leftval<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;lefttoken&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;leftval<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;rightval&nbsp;bigram<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;rightval&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cons</font>&nbsp;bigram&nbsp;rightval<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;righttoken&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;rightval<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; store tokens and bigrams in their hash-tables</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;types&nbsp;&nbsp; token&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;wvalue&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; increment counter for token</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;bigrams&nbsp;bigram&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;bvalue&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)))</font>&nbsp;&nbsp; <font color="#0000ed"><i>; increment counter for bigram</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; go back to loop, if more tokens left</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;i&nbsp;count<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)))))))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; load-file (filename)</i></font><br>
+<font color="#0000ed"><i>;;; load text from file into a string variable and return it</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;load-file<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>name<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">call-with-input-file</font>&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>p<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>read-string&nbsp;<font color="#8a2ae2">(</font>file-size&nbsp;name<font color="#8a2ae2">)</font>&nbsp;p<font color="#8a2ae2">)))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;list-position<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>o&nbsp;l<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">((</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font>l&nbsp;l<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">null?</font>&nbsp;l<font color="#8a2ae2">)</font>&nbsp;<font color="#cc0000">#f</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">equal?</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;l<font color="#8a2ae2">)</font>&nbsp;o<font color="#8a2ae2">)</font>&nbsp;i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cdr</font>&nbsp;l<font color="#8a2ae2">)))))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;gen-distributional-vs<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>columntokens<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>wordpositions&nbsp;<font color="#8a2ae2">(</font>hash-table-copy&nbsp;types<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>columncount&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;columntokens<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>vs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; initialize vectors</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">([</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;vs&nbsp;<font color="#8a2ae2">(</font>vector-append&nbsp;vs&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">*</font>&nbsp;columncount&nbsp;<font color="#ff8b00">2</font><font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;i&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;tokencount&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>counter&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-for-each&nbsp;wordpositions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>key&nbsp;value<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; remember localy the total freq of the token</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>tokenfreq&nbsp;value<font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; store position for token in hash-table instead of freq.</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-put!&nbsp;wordpositions&nbsp;key&nbsp;counter<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; set the freq of each cooccurence in the vector</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>bigram<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; set the cell of left and right token to rel. freq.</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;columntokens<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vs&nbsp;counter<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>list-position&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;columntokens<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;bigrams&nbsp;bigram&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;types&nbsp;key&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;lefttoken&nbsp;key&nbsp;<font color="#8a2ae2">'()))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>bigram<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; set the cell of left and right token to rel. freq.</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;columntokens<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vs&nbsp;counter<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;<font color="#8a2ae2">(</font>list-position&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;bigram<font color="#8a2ae2">)</font>&nbsp;columntokens<font color="#8a2ae2">)</font>&nbsp;columncount<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;bigrams&nbsp;bigram&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;types&nbsp;key&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;righttoken&nbsp;key&nbsp;<font color="#8a2ae2">'())))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; and increment the counter</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;counter&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;counter&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cons</font>&nbsp;wordpositions&nbsp;vs<font color="#8a2ae2">))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;fname<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>text&nbsp;<font color="#8a2ae2">(</font>load-file&nbsp;fname<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>string-lowercase!&nbsp;text<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; (add-data (string-tokenize text))</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>add-data&nbsp;<font color="#8a2ae2">(</font>string-tokenize&nbsp;<font color="#8a2ae2">(</font>pregexp-replace*&nbsp;<font color="#4a6f8b">&quot;[`'-.,!?;:&lt;&gt;()|\&quot;\\]\\[$%/]+&quot;</font>&nbsp;text&nbsp;<font color="#4a6f8b">&quot; &quot;</font><font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; argv<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;&nbsp;&nbsp;(let ([text (load-file &quot;en-ex1.txt&quot;)])</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(string-lowercase! text)</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(add-data (string-tokenize (pregexp-replace* &quot;[`'-.,!?;:&lt;&gt;()|\&quot;\\]\\[$%/]+&quot; text &quot; &quot;))))</i></font><br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>freqprof&nbsp;<font color="#8a2ae2">(</font>sort-by-value&nbsp;types<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; generate 100 most frequent words list</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;freqprof&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">map</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;x<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">reverse</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">list-tail</font>&nbsp;freqprof<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;freqprof<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">50</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">abs</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;<font color="#ff8b00">50</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;freqprof<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;freqprof<font color="#8a2ae2">))))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;key\t&quot;</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; print the top 100 words from the decreasing frequency profile</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;~a\t&quot;</font>&nbsp;x<font color="#8a2ae2">))</font>&nbsp;freqprof<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">newline</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; generate the vector space</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>vs&nbsp;<font color="#8a2ae2">(</font>gen-distributional-vs&nbsp;freqprof<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-for-each&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;vs<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>key&nbsp;val<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;~a\t&quot;</font>&nbsp;key<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;~a\t&quot;</font>&nbsp;x<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cdr</font>&nbsp;vs<font color="#8a2ae2">)</font>&nbsp;val<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">newline</font><font color="#8a2ae2">)))))</font><br>
+<br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;---------------------------------------------------------\n&quot;)</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Number of tokens: ~a\n&quot;&nbsp;&nbsp;tokencount)</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Number of types: ~a\n&quot;&nbsp;&nbsp; (hash-table-count types))</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Type/Token ratio: ~a\n&quot;&nbsp;&nbsp;(/ (hash-table-count types) tokencount))</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Number of bigrams: ~a\n&quot; bigramcount)</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Number of bigram types: ~a\n&quot; (hash-table-count bigrams))</i></font><br>
+&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;(printf &quot;Bigram type/token ratio: ~a\n&quot;&nbsp;&nbsp;(/ (hash-table-count bigrams) bigramcount))</i></font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">)</font><br>
+</font>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

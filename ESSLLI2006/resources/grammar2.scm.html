@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>grammar2.scm.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v10">
+<meta name="syntax" content="scheme">
+<meta name="settings" content="use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Constant { color: #ff8c00; }
+.Identifier { color: #458b74; }
+.Statement { color: #b03060; font-weight: bold; }
+.Special { color: #8a2be2; }
+.Comment { color: #0000ee; font-style: italic; }
+.String { color: #4a708b; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="String">&quot;:&quot;</span><span class="Comment">; exec mzscheme -r $0 &quot;$@&quot;</span>
+
+<span class="Comment">;;; ----------------------------------------------------</span>
+<span class="Comment">;;; Filename: grammar.ss</span>
+<span class="Comment">;;; Author:   Damir Cavar &lt;dcavar@me.com&gt;</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; (C) 2006 by Damir Cavar</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; This code is published under the restrictive GPL!</span>
+<span class="Comment">;;; Please find the text of the GPL here:</span>
+<span class="Comment">;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></span>
+<span class="Comment">;;; </span>
+<span class="Comment">;;; It is free for use, change, etc. as long as the copyright</span>
+<span class="Comment">;;; note above is included in any modified version of the code.</span>
+<span class="Comment">;;; </span>
+<span class="Comment">;;; This script assumes that the text is raw and encoded in UTF8.</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; Functions:</span>
+<span class="Comment">;;; 1. Reads a grammar file from files.</span>
+<span class="Comment">;;; 2. Tokenizes each line and reads in left- and right-hand-side</span>
+<span class="Comment">;;;    into hash-tables.</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; If the command line parameters contain more than one text/grammar file,</span>
+<span class="Comment">;;; the above results are accumulated over all the input files into one hash-table.</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; The grammar files have one CFG-rule per line:</span>
+<span class="Comment">;;; S -&gt; NP VP</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; Comment lines start with a hash-mark #.</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; Empty lines are allowed.</span>
+<span class="Comment">;;;</span>
+<span class="Comment">;;; Usage:</span>
+<span class="Comment">;;; mzscheme -r grammar.ss grammar1.txt grammar2.txt ...</span>
+<span class="Comment">;;; ----------------------------------------------------</span>
+
+<span class="Special">(</span>require <span class="Special">(</span>lib <span class="String">&quot;list.ss&quot;</span>   <span class="String">&quot;srfi&quot;</span> <span class="String">&quot;1&quot;</span><span class="Special">))</span>
+<span class="Special">(</span>require <span class="Special">(</span>lib <span class="String">&quot;string.ss&quot;</span> <span class="String">&quot;srfi&quot;</span> <span class="String">&quot;13&quot;</span><span class="Special">))</span>
+
+
+<span class="Special">(</span><span class="Statement">define</span> lhs  <span class="Special">(</span>make-hash-table <span class="Special">'</span>equal<span class="Special">))</span>
+<span class="Special">(</span><span class="Statement">define</span> rhs  <span class="Special">(</span>make-hash-table <span class="Special">'</span>equal<span class="Special">))</span>
+<span class="Special">(</span><span class="Statement">define</span> rhsl <span class="Special">(</span>make-hash-table <span class="Special">'</span>equal<span class="Special">))</span>
+
+
+<span class="Comment">;;; reading from file line by line</span>
+<span class="Special">(</span><span class="Statement">define</span> fold-lines-in-file
+  <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>filename proc init <span class="Special">.</span> mode<span class="Special">)</span>
+    <span class="Special">(</span><span class="Identifier">with-input-from-file</span> filename
+      <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">()</span>
+        <span class="Special">(</span><span class="Identifier">apply</span> fold-lines proc init <span class="Special">(</span><span class="Identifier">current-input-port</span><span class="Special">)</span> mode<span class="Special">)))))</span>
+
+<span class="Special">(</span><span class="Statement">define</span> fold-lines
+  <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>proc init <span class="Special">.</span> port+mode<span class="Special">)</span>
+    <span class="Special">(</span><span class="Statement">let</span> while <span class="Special">((</span>accum init<span class="Special">))</span>
+      <span class="Special">(</span><span class="Statement">let</span> <span class="Special">([</span>line <span class="Special">(</span><span class="Identifier">apply</span> read-line port+mode<span class="Special">)])</span>
+        <span class="Special">(</span><span class="Statement">if</span> <span class="Special">(</span><span class="Identifier">eof-object?</span> line<span class="Special">)</span> accum
+          <span class="Special">(</span>while <span class="Special">(</span>proc line<span class="Special">)))))))</span>
+
+
+<span class="Comment">;;; parsing the grammar string</span>
+<span class="Special">(</span><span class="Statement">define</span> parse-rule!
+  <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>line<span class="Special">)</span>
+    <span class="Special">(</span><span class="Statement">if</span> <span class="Special">(</span><span class="Identifier">&lt;</span> <span class="Constant">0</span> <span class="Special">(</span><span class="Identifier">string-length</span> line<span class="Special">))</span>
+        <span class="Special">(</span>unless <span class="Special">(</span><span class="Identifier">eq?</span> <span class="Special">(</span><span class="Identifier">string-ref</span> line <span class="Constant">0</span><span class="Special">)</span> <span class="Constant">#\#</span><span class="Special">)</span>
+          <span class="Special">(</span><span class="Statement">let</span> <span class="Special">([</span>tokens <span class="Special">(</span>string-tokenize line<span class="Special">)])</span>
+            <span class="Special">(</span><span class="Statement">if</span> <span class="Special">(</span>string= <span class="Special">(</span><span class="Identifier">cadr</span> tokens<span class="Special">)</span> <span class="String">&quot;-&gt;&quot;</span><span class="Special">)</span>
+                <span class="Special">(</span><span class="Statement">let*</span> <span class="Special">([</span>lhst <span class="Special">(</span><span class="Identifier">string-&gt;symbol</span> <span class="Special">(</span><span class="Identifier">car</span> tokens<span class="Special">))]</span>
+                       <span class="Special">[</span>rhst <span class="Special">(</span>map-in-order <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>x<span class="Special">)</span>
+                                    <span class="Special">(</span><span class="Identifier">string-&gt;symbol</span> x<span class="Special">))</span> <span class="Special">(</span><span class="Identifier">cddr</span> tokens<span class="Special">))]</span>
+                       <span class="Special">[</span>rhsinit <span class="Special">(</span><span class="Identifier">car</span> rhst<span class="Special">)]</span>
+                       <span class="Special">[</span>rhslval <span class="Special">(</span>hash-table-get rhsl rhsinit <span class="Special">'())]</span>
+                       <span class="Special">[</span>lhsval <span class="Special">(</span>hash-table-get lhs lhst <span class="Special">'())]</span>
+                       <span class="Special">[</span>rhsval <span class="Special">(</span>hash-table-get rhs rhst <span class="Special">'())])</span>
+                  <span class="Comment">; keep for key = RHS all LHSs</span>
+                  <span class="Special">(</span>unless <span class="Special">(</span><span class="Identifier">member</span> rhst lhsval<span class="Special">)</span>
+                    <span class="Special">(</span>hash-table-put! lhs lhst <span class="Special">(</span><span class="Identifier">cons</span> rhst lhsval<span class="Special">)))</span>
+                  <span class="Comment">; keep for key = lhs symbol all RHSs</span>
+                  <span class="Special">(</span>unless <span class="Special">(</span><span class="Identifier">member</span> lhst rhsval<span class="Special">)</span>
+                    <span class="Special">(</span>hash-table-put! rhs rhst <span class="Special">(</span><span class="Identifier">cons</span> lhst rhsval<span class="Special">)))</span>
+                  <span class="Comment">; keep for key = leftmost symbol in RHS all RHSs</span>
+                  <span class="Special">(</span>unless <span class="Special">(</span><span class="Identifier">member</span> rhst rhslval<span class="Special">)</span>
+                    <span class="Special">(</span>hash-table-put! rhsl rhsinit <span class="Special">(</span><span class="Identifier">cons</span> rhst rhslval<span class="Special">))))))))))</span>
+
+
+<span class="Comment">;;; loading rules from a grammar file</span>
+<span class="Special">(</span><span class="Statement">define</span> load-grammar
+  <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>filename<span class="Special">)</span>
+    <span class="Special">(</span>fold-lines-in-file filename
+                        <span class="Special">(</span><span class="Statement">lambda</span> <span class="Special">(</span>line<span class="Special">)</span>
+                          <span class="Special">(</span>parse-rule! <span class="Special">(</span>string-trim-both line<span class="Special">)))</span>
+                        <span class="Constant">1</span><span class="Special">)))</span>
+
+</pre>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>countwords3.scm.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#4a6f8b">&quot;:&quot;</font><font color="#0000ed"><i>; exec mzscheme -r $0 &quot;$@&quot;</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Filename: countwords3.ss</i></font><br>
+<font color="#0000ed"><i>;;; Author:&nbsp;&nbsp; Damir Cavar &lt;dcavar@unizd.hr&gt;</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; This code is published under the restrictive GPL!</i></font><br>
+<font color="#0000ed"><i>;;; Please find the text of the GPL here:</i></font><br>
+<font color="#0000ed"><i>;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; It is free for use, change, etc. as long as the copyright</i></font><br>
+<font color="#0000ed"><i>;;; note above is included in any modified version of the code.</i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; This script assumes that the text is raw and encoded in UTF8.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Functions:</i></font><br>
+<font color="#0000ed"><i>;;; 1. The text file is loaded into memory.</i></font><br>
+<font color="#0000ed"><i>;;; 2. All orthographic symbols listed in a Perl compatible regular</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;expression below are removed from the text.</i></font><br>
+<font color="#0000ed"><i>;;; 3. The text is converted into lower-case.</i></font><br>
+<font color="#0000ed"><i>;;; 4. The text is tokenized, i.e. converted into a list of tokens.</i></font><br>
+<font color="#0000ed"><i>;;; 5. The tokens are placed into a hash-table as keys, the value</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;is the absolute frequency (i.e. count) of each token in the</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;text.</i></font><br>
+<font color="#0000ed"><i>;;; 6. The hash-table is converted into a list of key-value tuples.</i></font><br>
+<font color="#0000ed"><i>;;; 7. The key-values are sorted by value, and a list of tokens</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;and their frequency is printed out, as well as a reversed</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;frequency list.</i></font><br>
+<font color="#0000ed"><i>;;; 8. A list of tokens and their relative frequency is printed out,</i></font><br>
+<font color="#0000ed"><i>;;;&nbsp;&nbsp;&nbsp;&nbsp;where stopwords are ignored.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; If the command line parameters contain more than one text file,</i></font><br>
+<font color="#0000ed"><i>;;; the above results are accumulated over all the input text files.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Usage:</i></font><br>
+<font color="#0000ed"><i>;;; mzscheme -r countwords3.ss test1.txt test2.txt ...</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; all necessary libraries and functions</i></font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;list.ss&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;string.ss&quot;</font><font color="#8a2ae2">))</font>&nbsp;&nbsp; <font color="#0000ed"><i>; for string-uppercase!</i></font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;string.ss&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp; <font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;13&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;vector-lib.ss&quot;</font>&nbsp;<font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;43&quot;</font><font color="#8a2ae2">))</font>&nbsp;&nbsp;<font color="#0000ed"><i>; for vector-for-each</i></font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;pregexp.ss&quot;</font><font color="#8a2ae2">))</font>&nbsp;&nbsp;<font color="#0000ed"><i>; for Perl compatible regular expressions</i></font><br>
+<font color="#8a2ae2">(</font><font color="#458b73">load</font>&nbsp;<font color="#4a6f8b">&quot;english.ss&quot;</font><font color="#8a2ae2">)</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; Global variables</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;count-words&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; counter of total number tokens</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;word-hash&nbsp;&nbsp; <font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">))</font>&nbsp;<font color="#0000ed"><i>; hash-table for tokens and counts</i></font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; print-wordlist</i></font><br>
+<font color="#0000ed"><i>;;; &lt;- hash-table of key-value pairs</i></font><br>
+<font color="#0000ed"><i>;;; side effect: print out of tab-delimited key-value pairs per line</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Pretty print wordlist as tab-delimited key-value lines.</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;print-wordlist!<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>table<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-for-each&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>key&nbsp;value<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;~a\t~a\n&quot;</font>&nbsp;key&nbsp;value<font color="#8a2ae2">)))))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; sort-by-value</i></font><br>
+<font color="#0000ed"><i>;;; &lt;- hash-table</i></font><br>
+<font color="#0000ed"><i>;;; -&gt; list of key-value tuples (lists)</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Sort a hash-table of key-value pairs by value, by converting it</i></font><br>
+<font color="#0000ed"><i>;;; into a list of key-value tuples and sorting on the value.</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;sort-by-value<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>table<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">((</font>keyval&nbsp;<font color="#8a2ae2">(</font>hash-table-map&nbsp;table&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>key&nbsp;val<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;key&nbsp;val<font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>sort&nbsp;keyval&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>a&nbsp;b<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;b<font color="#8a2ae2">)))))))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; add-words</i></font><br>
+<font color="#0000ed"><i>;;; &lt;- list of strings, i.e. token list</i></font><br>
+<font color="#0000ed"><i>;;; &lt;- hash-table</i></font><br>
+<font color="#0000ed"><i>;;; !-&gt; updated hash-table word-hash</i></font><br>
+<font color="#0000ed"><i>;;; !-&gt; updated count-words counter</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Add words/tokens from an ordered list of tokens to the hash-table</i></font><br>
+<font color="#0000ed"><i>;;; container and keep track of their count.</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;add-words<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>words<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;count-words&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;count-words&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">length</font>&nbsp;words<font color="#8a2ae2">)))</font>&nbsp;&nbsp;<font color="#0000ed"><i>; increment the total number of words</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>token<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>value&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;word-hash&nbsp;token&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;word-hash&nbsp;token&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;value&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;words<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; load-file</i></font><br>
+<font color="#0000ed"><i>;;; &lt;- string filename</i></font><br>
+<font color="#0000ed"><i>;;; -&gt; string file content</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Load text from file into a string variable and return it.</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;load-file<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>name<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">call-with-input-file</font>&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>p<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>read-string&nbsp;<font color="#8a2ae2">(</font>file-size&nbsp;name<font color="#8a2ae2">)</font>&nbsp;p<font color="#8a2ae2">)))))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; main steps</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font>&nbsp;<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;fname<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;Loading file: ~a\n&quot;</font>&nbsp;fname<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>text&nbsp;<font color="#8a2ae2">(</font>load-file&nbsp;fname<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>string-lowercase!&nbsp;text<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>add-words&nbsp;<font color="#8a2ae2">(</font>string-tokenize&nbsp;<font color="#8a2ae2">(</font>pregexp-replace*&nbsp;<font color="#4a6f8b">&quot;[`'-.,!?;:&lt;&gt;()\&quot;\\]\\[$%/]+&quot;</font>&nbsp;text&nbsp;<font color="#4a6f8b">&quot; &quot;</font><font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; argv<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;Number of tokens: ~a\n&quot;</font>&nbsp;count-words<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;Number of types: ~a\n&quot;</font>&nbsp;<font color="#8a2ae2">(</font>hash-table-count&nbsp;word-hash<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;Type/Token ratio: ~a\n&quot;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;<font color="#8a2ae2">(</font>hash-table-count&nbsp;word-hash<font color="#8a2ae2">)</font>&nbsp;count-words<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">((</font>result&nbsp;<font color="#8a2ae2">(</font>sort-by-value&nbsp;word-hash<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;---------------------------------------------------------\n&quot;</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;Sorted decreasing with relative frequency:\n&quot;</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;token\tabsolute frequency\trelative frequency\n&quot;</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>a<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;stopwords<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;<font color="#4a6f8b">&quot;~a\t~a\t~a\n&quot;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cadr</font>&nbsp;a<font color="#8a2ae2">)</font>&nbsp;count-words<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">reverse</font>&nbsp;result<font color="#8a2ae2">))))</font><br>
+</font>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>

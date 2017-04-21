@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/Web/DC/ChartyPy/ChartyPy.py.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Type { color: #008b00; font-weight: bold; }
+.Special { color: #8a2be2; }
+.Constant { color: #ff8c00; }
+.Statement { color: #b03060; font-weight: bold; }
+.Identifier { color: #458b74; }
+.PreProc { color: #1874cd; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">#!/usr/bin/env python</span>
+<span class="Comment"># -*- coding: UTF-8 -*-</span>
+
+
+<span class="String">&quot;&quot;&quot;</span>
+<span class="String">ChartyPy.py</span>
+
+<span class="String">This is a small incremental bottom-up chart parser for context free grammars.</span>
+
+<span class="String">(C) 2005-2011 by Damir Cavar &lt;damir@cavar.me&gt;</span>
+
+<span class="String">This code is written and distributed under the</span>
+<span class="String">Lesser GNU General Public License version 3 or newer.</span>
+
+<span class="String">See <a href="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</a> for details</span>
+<span class="String">on the license or the the file lgpl-3.0.txt that should always be</span>
+<span class="String">distributed with this code.</span>
+
+
+<span class="String">Used data structures:</span>
+
+<span class="String">chart:</span>
+<span class="String">   list of edges</span>
+
+<span class="String">edge:</span>
+<span class="String">   list of integers and symbols</span>
+<span class="String">   [start, end, dotindex, LHS, RHS]</span>
+<span class="String">   start:    integer, start of the edge</span>
+<span class="String">   end:      integer, end of the edge</span>
+<span class="String">   dotindex: integer, position of the dot in the RHS</span>
+<span class="String">   LHS:      string, left-hand side symbol</span>
+<span class="String">   RHS:      list of strings, symbols in right-hand side</span>
+
+
+<span class="String">Properties:</span>
+<span class="String">Incremental (left-to-right) bottom-up chart parser.</span>
+<span class="String">Select only potentially appropriate rules from grammar</span>
+<span class="String">   - length of RHS is less or equal to remaining words/symbols</span>
+
+
+<span class="String">Processing steps:</span>
+<span class="String">   Word by word:</span>
+<span class="String">      Initialise chart with word (add edge for word)</span>
+<span class="String">      Do until no further improvement:</span>
+<span class="String">         Add new rules from grammar that consume inactive edges</span>
+<span class="String">         Apply the fundamental rule to induce new edges</span>
+
+
+<span class="String">Calling via command line:</span>
+<span class="String">If ChartyPy.py is made executable, one can call it:</span>
+
+<span class="String">./ChartyPy.py -g PSG1.txt -i &quot;John loves Mary&quot;</span>
+
+<span class="String">or start Python with the script otherwise:</span>
+
+<span class="String">python ChartyPy.py -g PSG1.txt -i &quot;John loves Mary&quot;</span>
+
+<span class="String">Start the script with as:</span>
+
+<span class="String">python ChartyPy.py -h</span>
+
+<span class="String">for instructions about the parameters.</span>
+
+
+<span class="String">This code can be opimized. However, its main purpose is to help students understand a simple algorithm for chart parsing. If there are any bugs, please let me know:</span>
+
+<span class="String">Damir Cavar &lt;damir@cavar.me&gt;</span>
+<span class="String">&quot;&quot;&quot;</span>
+
+__author__  = <span class="String">&quot;Damir Cavar &lt;damir@cavar.me&gt;&quot;</span>
+__date__    = <span class="String">&quot;$May 29, 2005 10:36:30 AM$&quot;</span>
+__version__ = <span class="String">&quot;0.5&quot;</span>
+
+
+<span class="PreProc">import</span> sys, PSGParse
+<span class="PreProc">import</span> argparse
+
+DEBUG = <span class="Identifier">False</span>       <span class="Comment"># set this to 0 if you do not want tracking</span>
+QTREE = <span class="Identifier">False</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">isActive</span>(edge):
+   <span class="String">&quot;&quot;&quot;Return 1 if edge is active, else return 0.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> edge[<span class="Constant">2</span>] &lt; <span class="Identifier">len</span>(edge[<span class="Constant">4</span>]): <span class="Statement">return</span> <span class="Identifier">True</span>
+   <span class="Statement">return</span> <span class="Identifier">False</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">isInactive</span>(edge):
+   <span class="String">&quot;&quot;&quot;Return True if edge is active, else returns False.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> edge[<span class="Constant">2</span>] &gt;= <span class="Identifier">len</span>(edge[<span class="Constant">4</span>]): <span class="Statement">return</span> <span class="Identifier">True</span>
+   <span class="Statement">return</span> <span class="Identifier">False</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">match</span>(aedge, iedge):
+   <span class="String">&quot;&quot;&quot;Returns True if the active edge and the inactive edge match,</span>
+<span class="String">      otherwise False.</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   <span class="Statement">if</span> aedge[<span class="Constant">1</span>] == iedge[<span class="Constant">0</span>]:
+      <span class="Statement">if</span> aedge[<span class="Constant">4</span>][aedge[<span class="Constant">2</span>]] == iedge[<span class="Constant">3</span>]: <span class="Statement">return</span> <span class="Identifier">True</span>
+   <span class="Statement">return</span> <span class="Identifier">False</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">getParse</span>(inputlength, chart, grammar):
+   <span class="String">&quot;&quot;&quot;Returns a list of all parses in bracketing notation.&quot;&quot;&quot;</span>
+   parses = []
+   <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(chart)):
+      <span class="Statement">if</span> <span class="Statement">not</span> isActive(chart[i]):
+         <span class="Statement">if</span> chart[i][<span class="Constant">0</span>] == <span class="Constant">0</span> <span class="Statement">and</span> chart[i][<span class="Constant">1</span>] == inputlength: <span class="Comment"># got spanning edge</span>
+            parses.append(struct2Str(i, chart, grammar))
+   <span class="Statement">return</span> parses
+
+
+<span class="Statement">def</span> <span class="Identifier">getQtreeParse</span>(inputlength, chart, grammar):
+   <span class="String">&quot;&quot;&quot;Returns a list of all parses in bracketing notation.&quot;&quot;&quot;</span>
+   parses = []
+   <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(chart)):
+      <span class="Statement">if</span> <span class="Statement">not</span> isActive(chart[i]):
+         <span class="Statement">if</span> chart[i][<span class="Constant">0</span>] == <span class="Constant">0</span> <span class="Statement">and</span> chart[i][<span class="Constant">1</span>] == inputlength: <span class="Comment"># got spanning edge</span>
+            parses.append(<span class="String">&quot; &quot;</span>.join((<span class="String">&quot;\Tree&quot;</span>, struct2QtreeStr(i, chart, grammar))))
+   <span class="Statement">return</span> parses
+
+
+<span class="Statement">def</span> <span class="Identifier">struct2Str</span>(edge, chart, grammar):
+   <span class="String">&quot;&quot;&quot;Returns a string representation of the parse with</span>
+<span class="String">      labled brackets.</span>
+
+<span class="String">      Parameters:</span>
+<span class="String">      edges - the lsit of edges that make a parse</span>
+<span class="String">      chart - the current chart (list of edges)</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   tmpstr = <span class="String">&quot;&quot;</span>
+   edgenums = chart[edge][<span class="Constant">5</span>]
+   tmpstr = <span class="String">&quot;&quot;</span>.join((tmpstr, <span class="String">&quot;[&quot;</span>, grammar.id2s(chart[edge][<span class="Constant">3</span>])))
+   <span class="Statement">for</span> x <span class="Statement">in</span> chart[edge][<span class="Constant">4</span>]:
+      <span class="Statement">if</span> grammar.isTerminal(x):
+         tmpstr = <span class="String">&quot; &quot;</span>.join( (tmpstr, grammar.id2s(x)) )
+      <span class="Statement">else</span>:
+         tmpstr = <span class="String">&quot; &quot;</span>.join( (tmpstr, struct2Str(edgenums[<span class="Constant">0</span>], chart, grammar)) )
+         edgenums = edgenums[<span class="Constant">1</span>:]
+   tmpstr = <span class="String">&quot;&quot;</span>.join( (tmpstr, <span class="String">&quot; ]&quot;</span>) )
+   <span class="Statement">return</span> tmpstr
+
+
+<span class="Statement">def</span> <span class="Identifier">struct2QtreeStr</span>(edge, chart, grammar):
+   <span class="String">&quot;&quot;&quot;Returns a string representation of the parse with</span>
+<span class="String">      labled brackets.</span>
+
+<span class="String">      Parameters:</span>
+<span class="String">      edges - the lsit of edges that make a parse</span>
+<span class="String">      chart - the current chart (list of edges)</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   tmpstr = <span class="String">&quot;&quot;</span>
+   edgenums = chart[edge][<span class="Constant">5</span>]
+   tmpstr = <span class="String">&quot;&quot;</span>.join((tmpstr, <span class="String">&quot;[.&quot;</span>, grammar.id2s(chart[edge][<span class="Constant">3</span>])))
+   <span class="Statement">for</span> x <span class="Statement">in</span> chart[edge][<span class="Constant">4</span>]:
+      <span class="Statement">if</span> grammar.isTerminal(x):
+         tmpstr = <span class="String">&quot; &quot;</span>.join( (tmpstr, grammar.id2s(x)) )
+      <span class="Statement">else</span>:
+         tmpstr = <span class="String">&quot; &quot;</span>.join( (tmpstr, struct2QtreeStr(edgenums[<span class="Constant">0</span>], chart, grammar)) )
+         edgenums = edgenums[<span class="Constant">1</span>:]
+   tmpstr = <span class="String">&quot;&quot;</span>.join( (tmpstr, <span class="String">&quot; ]&quot;</span>) )
+   <span class="Statement">return</span> tmpstr
+
+
+<span class="Statement">def</span> <span class="Identifier">edgeStr</span>(edge, grammar):
+   <span class="String">&quot;&quot;&quot; &quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">str</span>( (edge[<span class="Constant">0</span>], edge[<span class="Constant">1</span>], edge[<span class="Constant">2</span>],
+           grammar.id2s(edge[<span class="Constant">3</span>]),
+           grammar.idl2s(edge[<span class="Constant">4</span>]),
+           edge[<span class="Constant">5</span>]) )
+
+
+<span class="Statement">def</span> <span class="Identifier">ruleInvocation</span>(lststart, chart, inputlength, grammar):
+   <span class="String">&quot;&quot;&quot;Add all the rules of the grammar to the chart that</span>
+<span class="String">      are relavant:</span>
+<span class="String">      Find the rule with the LHS of edge as the leftmost RHS</span>
+<span class="String">      symbol and maximally the remaining length of the input.</span>
+
+<span class="String">      Parameters:</span>
+<span class="String">      lststart - start position at edge in chart</span>
+<span class="String">      chart - the current chart</span>
+<span class="String">      inputlength - the length of the input sentence</span>
+<span class="String">      grammar - the grammar object raturned by PSGParse</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   change = <span class="Identifier">False</span>
+   <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(lststart, <span class="Identifier">len</span>(chart)):
+      <span class="Statement">if</span> chart[i][<span class="Constant">2</span>] &gt;= <span class="Identifier">len</span>(chart[i][<span class="Constant">4</span>]): <span class="Comment"># only inactive edge</span>
+         (start, end, index, lhs, rhs, consumed) = chart[i]
+         <span class="Statement">for</span> k <span class="Statement">in</span> grammar.rhshash.get(lhs, ()):
+            <span class="Statement">if</span> <span class="Identifier">len</span>(k[<span class="Constant">1</span>]) &gt; inputlength - start:
+               <span class="Statement">continue</span>
+            newedge = ( start, end, <span class="Constant">1</span>, k[<span class="Constant">0</span>], k[<span class="Constant">1</span>], (i,) )
+            <span class="Statement">if</span> newedge <span class="Statement">in</span> chart:
+               <span class="Statement">continue</span>
+            chart.append(newedge)
+            change = <span class="Identifier">True</span>
+            <span class="Statement">if</span> DEBUG:
+               <span class="Identifier">print</span> <span class="String">&quot;RI Adding edge:&quot;</span>, edgeStr(newedge, grammar)
+   <span class="Statement">return</span> change
+
+
+<span class="Statement">def</span> <span class="Identifier">fundamentalRule</span>(chart, grammar):
+   <span class="String">&quot;&quot;&quot;The fundamental rule of chart parsing generates new edges by</span>
+<span class="String">      combining fitting active and inactive edges.</span>
+
+<span class="String">      Parameters:</span>
+<span class="String">      chart - the current chart</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   change = <span class="Identifier">False</span>
+   <span class="Statement">for</span> aedge <span class="Statement">in</span> chart:
+      <span class="Statement">if</span> isActive(aedge):
+         <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(chart)):
+            <span class="Statement">if</span> isInactive(chart[k]):
+               <span class="Statement">if</span> match(aedge, chart[k]):
+                  newedge = (aedge[<span class="Constant">0</span>], chart[k][<span class="Constant">1</span>], aedge[<span class="Constant">2</span>] + <span class="Constant">1</span>,
+                             aedge[<span class="Constant">3</span>], aedge[<span class="Constant">4</span>], <span class="Identifier">tuple</span>(<span class="Identifier">list</span>(aedge[<span class="Constant">5</span>]) + [ k ]))
+                  <span class="Statement">if</span> newedge <span class="Statement">not</span> <span class="Statement">in</span> chart:
+                     chart.append(newedge)
+                     change = <span class="Identifier">True</span>
+                     <span class="Statement">if</span> DEBUG:
+                        <span class="Identifier">print</span> <span class="String">&quot;FR Adding edge:&quot;</span>, edgeStr(newedge, grammar)
+   <span class="Statement">return</span> change
+
+
+<span class="Statement">def</span> <span class="Identifier">parse</span>(inp, grammar):
+   <span class="String">&quot;&quot;&quot;Parse a list of tokens.</span>
+
+<span class="String">      Arguments:</span>
+<span class="String">      inp = a list of tokens</span>
+<span class="String">      grammar = an object returned by PSGParse</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   chart = []
+   inputlength = <span class="Identifier">len</span>(inp)
+
+   chartpos = <span class="Constant">0</span>  <span class="Comment"># remember start-position in chart</span>
+   <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(inputlength):
+      <span class="Comment"># initialize with input token</span>
+      rules = grammar.rhshash.get(grammar.symb2id[inp[i]], ( (<span class="String">&quot;&quot;</span>, ()) ) )
+      <span class="Statement">for</span> rule <span class="Statement">in</span> rules:
+         <span class="Statement">if</span> rule[<span class="Constant">0</span>]:
+            chart.append( ( i, i + <span class="Constant">1</span>, <span class="Constant">1</span>, rule[<span class="Constant">0</span>], rule[<span class="Constant">1</span>], () ) )
+      <span class="Statement">if</span> DEBUG:
+         <span class="Identifier">print</span> <span class="String">&quot;Adding edge:&quot;</span>, edgeStr(chart[<span class="Identifier">len</span>(chart) - <span class="Constant">1</span>], grammar)
+      change = <span class="Constant">1</span>
+      <span class="Statement">while</span> change:
+         change = <span class="Constant">0</span>
+         chartlen = <span class="Identifier">len</span>(chart)
+         <span class="Statement">if</span> ruleInvocation(chartpos, chart, inputlength, grammar):
+            change = <span class="Constant">1</span>
+         chartpos = chartlen  <span class="Comment"># set pointer to new edge in chart</span>
+         <span class="Statement">if</span> fundamentalRule(chart, grammar):
+            change = <span class="Constant">1</span>
+   <span class="Statement">if</span> DEBUG:
+      <span class="Identifier">print</span> <span class="String">&quot;Chart:&quot;</span>
+      <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(chart)):
+         <span class="Statement">if</span> isActive(chart[i]):
+            <span class="Identifier">print</span> i, <span class="String">&quot;Active:&quot;</span>,
+         <span class="Statement">else</span>:
+            <span class="Identifier">print</span> i, <span class="String">&quot;Inactive:&quot;</span>,
+         <span class="Identifier">print</span> edgeStr(chart[i], grammar)
+   <span class="Statement">if</span> QTREE:
+      <span class="Statement">return</span> getQtreeParse(inputlength, chart, grammar)
+   <span class="Statement">return</span> getParse(inputlength, chart, grammar)
+
+
+<span class="Statement">def</span> <span class="Identifier">printParses</span>(parses):
+   <span class="String">&quot;&quot;&quot;Prints the parse as brackated string to the screen.&quot;&quot;&quot;</span>
+   numparses = <span class="Identifier">len</span>(parses)
+   counter = <span class="Constant">0</span>
+   <span class="Statement">for</span> i <span class="Statement">in</span> parses:
+      counter += <span class="Constant">1</span>
+      <span class="Identifier">print</span> <span class="String">&quot;Parse:&quot;</span>, counter, <span class="String">&quot;of&quot;</span>, numparses
+      <span class="Identifier">print</span> i
+
+
+<span class="Statement">if</span> __name__ == <span class="String">&quot;__main__&quot;</span>:
+   usage = <span class="String">&quot;usage: %(prog)s [options]&quot;</span>
+   parser = argparse.ArgumentParser(prog=<span class="String">&quot;ChartyPy&quot;</span>, usage=usage,
+            version=<span class="String">&quot;ChartyPy &quot;</span>+__version__,
+            description=<span class="String">'A chart parser, based on the Earley algorithm.'</span>,
+            epilog=<span class="String">&quot;(C) 2005-2011 by Damir Cavar &lt;damir@cavar.me&gt;&quot;</span>)
+   parser.add_argument(<span class="String">&quot;-g&quot;</span>, <span class="String">&quot;--grammar&quot;</span>, dest=<span class="String">&quot;grammar&quot;</span>, required=<span class="Identifier">True</span>,
+            <span class="Identifier">help</span>=<span class="String">&quot;name of the file with the context-free grammar&quot;</span>)
+   parser.add_argument(<span class="String">&quot;-i&quot;</span>, <span class="String">&quot;--input&quot;</span>, dest=<span class="String">&quot;sentence&quot;</span>, required=<span class="Identifier">True</span>,
+            <span class="Identifier">help</span>=<span class="String">&quot;input sentence, e.g. </span><span class="Special">\&quot;</span><span class="String">John kissed Mary</span><span class="Special">\&quot;</span><span class="String">&quot;</span>)
+   parser.add_argument(<span class="String">&quot;-l&quot;</span>, <span class="String">&quot;--latex&quot;</span>, dest=<span class="String">&quot;latex&quot;</span>, action=<span class="String">&quot;store_true&quot;</span>,
+            required=<span class="Identifier">False</span>,
+            <span class="Identifier">help</span>=<span class="String">&quot;output of parse structure in LaTeX notation for qtree.sty&quot;</span>)
+   parser.add_argument(<span class="String">&quot;-q&quot;</span>, <span class="String">&quot;--quiet&quot;</span>,
+            action=<span class="String">&quot;store_false&quot;</span>, dest=<span class="String">&quot;DEBUG&quot;</span>, default=<span class="Identifier">True</span>,
+            <span class="Identifier">help</span>=<span class="String">&quot;don't print the chart content  [default True]&quot;</span>)
+   args = parser.parse_args()
+   <span class="Statement">if</span> args:
+      DEBUG = args.DEBUG
+      QTREE = args.latex
+      <span class="Statement">try</span>:
+         mygrammar = PSGParse.PSG(args.grammar) <span class="Comment"># initialization of the grammar</span>
+      <span class="Statement">except</span> <span class="Type">IOError</span>:
+         <span class="Identifier">print</span> <span class="String">&quot;Cannot load grammar:&quot;</span>, args.grammar
+      <span class="Statement">else</span>:
+         printParses(parse(args.sentence.split(), mygrammar))
+
+</pre>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

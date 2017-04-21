@@ -1,0 +1,4 @@
+X -> a Y
+Y -> b
+Y -> b Z
+Z -> a Y

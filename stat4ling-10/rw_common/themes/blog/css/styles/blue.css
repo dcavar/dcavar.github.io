@@ -1,0 +1,134 @@
+body {
+	background: repeat url(../../images/body_bg.png);
+}
+
+a:link, a:visited {
+	color: #1870da;
+}
+
+#top_grad {
+	background: repeat-x url(../../images/body_top_grad.png);
+}
+
+#container { 
+	border-right: 1px solid #88683c;
+	border-bottom: 1px solid #88683c;
+	border-left: 1px solid #88683c;
+}
+
+#pageHeader {
+	background: url(../../images/header_bg.png) repeat-x;
+}
+
+#pageHeader h1 {
+	text-shadow: 2px 2px 2px #07326d;
+}
+
+#pageHeader h2 {
+	color: #c7e5fa;
+	text-shadow: 2px 2px 2px #07326d;
+}
+
+#sidebarContainer #sidebar {
+	color: #0a559c;
+}
+
+#sidebarContainer .sideHeader {
+	background: url(../../images/side_head_bg.png) repeat-x left top;
+}
+
+#footer a:link, #footer a:visited {
+	color: #dccaaf;
+}
+
+#footer a:hover, #footer a:active {
+	color: #f2dfc1;
+}
+
+#navcontainer {
+	border-top-color: #a3caf3;
+}
+
+#navcontainer #current {
+	background: #205cb5;
+}
+
+#navcontainer #current:hover {
+	background: #0a559d;
+	color: #ffffff;
+}
+
+#navcontainer .currentAncestor {
+	background: #205cb5;
+}
+
+#navcontainer a{
+	background: #1d88e2;
+	border-bottom-color: #a4cbf4;
+}
+
+#navcontainer a:hover {
+	background: #0a559d;
+}
+
+#navcontainer ul ul a {
+	background: #71b4ef;
+}
+
+#navcontainer ul ul #current{
+	background: #51a0ef;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #51a0ef;
+}
+
+#navcontainer ul ul ul #current{
+	background: #70b3ef;
+	color: #0a559d;
+}
+
+.blog-archive-month {
+	text-shadow: 2px 2px 2px #07326d;
+}
+
+.blog-entry-title a {
+	color: #1870da;
+}
+
+.blog-entry-date {
+	color: #999999;
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #156ed8;
+}
+
+.album-title {
+	color: #1870da;
+}
+
+.photo-navigation {
+	background: url(../../images/header_bg.png) repeat-x;
+}
+
+.photo-title {
+	text-shadow: 2px 2px 2px #07326d;
+}
+
+.photo-caption {
+	color: #c7e5fa;
+	text-shadow: 2px 2px 2px #07326d;
+}
+
+.movie-page-title {
+	color: #1870da;
+}
+
+.movie-background {
+	background: repeat url(../../images/body_bg.png);
+}
+
+.movie-title {
+	text-shadow: 2px 2px 2px #07326d;
+}

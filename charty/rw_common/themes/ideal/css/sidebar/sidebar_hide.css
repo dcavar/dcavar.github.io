@@ -1,0 +1,11 @@
+#container {
+	background: #f7f6f7;
+}
+
+#sidebarContainer {
+	display: none;
+}
+
+#contentContainer {
+	margin: 0;
+}

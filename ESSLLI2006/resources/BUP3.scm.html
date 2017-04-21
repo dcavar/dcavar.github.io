@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>BUP3.scm</title>
+<style type="text/css"><!--
+.syntax0 {
+color: #000000;
+}
+.syntax1 {
+color: #cc0000;
+}
+.syntax2 {
+color: #ff8400;
+}
+.syntax3 {
+color: #6600cc;
+}
+.syntax4 {
+color: #cc6600;
+}
+.syntax5 {
+color: #ff0000;
+}
+.syntax6 {
+color: #9966ff;
+}
+.syntax7 {
+background: #ffffcc;
+color: #ff0066;
+}
+.syntax8 {
+color: #006699;
+font-weight: bold;
+}
+.syntax9 {
+color: #009966;
+font-weight: bold;
+}
+.syntax10 {
+color: #0099ff;
+font-weight: bold;
+}
+.syntax11 {
+color: #66ccff;
+font-weight: bold;
+}
+.syntax12 {
+color: #02b902;
+}
+.syntax13 {
+color: #ff00cc;
+}
+.syntax14 {
+color: #cc00cc;
+}
+.syntax15 {
+color: #9900cc;
+}
+.syntax16 {
+color: #6600cc;
+}
+.syntax17 {
+color: #0000ff;
+}
+.syntax18 {
+color: #000000;
+font-weight: bold;
+}
+.gutter {
+background: #dbdbdb;
+color: #000000;
+}
+.gutterH {
+background: #dbdbdb;
+color: #990066;
+}
+--></style>
+</head>
+<body bgcolor="#ffffff">
+<pre><span class="syntax0"><span class="gutter">   1:</span><span class="syntax13">&quot;</span><span class="syntax13">:</span><span class="syntax13">&quot;</span><span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">exec</span><span class="syntax1"> </span><span class="syntax1">mzscheme</span><span class="syntax1"> </span><span class="syntax1">-r</span><span class="syntax1"> </span><span class="syntax1">$0</span><span class="syntax1"> </span><span class="syntax1">&quot;$@&quot;</span>
+<span class="gutter">   2:</span>
+<span class="gutter">   3:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">----------------------------------------------------</span>
+<span class="gutter">   4:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">Filename:</span><span class="syntax1"> </span><span class="syntax1">BUP3.scm</span>
+<span class="gutterH">   5:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">Author:</span><span class="syntax1"> </span><span class="syntax1"> </span><span class="syntax1"> </span><span class="syntax1">Damir</span><span class="syntax1"> </span><span class="syntax1">Cavar</span><span class="syntax1"> </span><span class="syntax1">&lt;dcavar@me.com&gt;</span>
+<span class="gutter">   6:</span><span class="syntax1">;</span><span class="syntax1">;;</span>
+<span class="gutter">   7:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">(C)</span><span class="syntax1"> </span><span class="syntax1">2006</span><span class="syntax1"> </span><span class="syntax1">by</span><span class="syntax1"> </span><span class="syntax1">Damir</span><span class="syntax1"> </span><span class="syntax1">Cavar</span>
+<span class="gutter">   8:</span><span class="syntax1">;</span><span class="syntax1">;;</span>
+<span class="gutter">   9:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">This</span><span class="syntax1"> </span><span class="syntax1">code</span><span class="syntax1"> </span><span class="syntax1">is</span><span class="syntax1"> </span><span class="syntax1">published</span><span class="syntax1"> </span><span class="syntax1">under</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">restrictive</span><span class="syntax1"> </span><span class="syntax1">GPL!</span>
+<span class="gutterH">  10:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">Please</span><span class="syntax1"> </span><span class="syntax1">find</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">text</span><span class="syntax1"> </span><span class="syntax1">of</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">GPL</span><span class="syntax1"> </span><span class="syntax1">here:</span>
+<span class="gutter">  11:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">http://www.gnu.org/licenses/gpl.txt</span>
+<span class="gutter">  12:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span>
+<span class="gutter">  13:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">It</span><span class="syntax1"> </span><span class="syntax1">is</span><span class="syntax1"> </span><span class="syntax1">free</span><span class="syntax1"> </span><span class="syntax1">for</span><span class="syntax1"> </span><span class="syntax1">use,</span><span class="syntax1"> </span><span class="syntax1">change,</span><span class="syntax1"> </span><span class="syntax1">etc.</span><span class="syntax1"> </span><span class="syntax1">as</span><span class="syntax1"> </span><span class="syntax1">long</span><span class="syntax1"> </span><span class="syntax1">as</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">copyright</span>
+<span class="gutter">  14:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">note</span><span class="syntax1"> </span><span class="syntax1">above</span><span class="syntax1"> </span><span class="syntax1">is</span><span class="syntax1"> </span><span class="syntax1">included</span><span class="syntax1"> </span><span class="syntax1">in</span><span class="syntax1"> </span><span class="syntax1">any</span><span class="syntax1"> </span><span class="syntax1">modified</span><span class="syntax1"> </span><span class="syntax1">version</span><span class="syntax1"> </span><span class="syntax1">of</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">code.</span>
+<span class="gutterH">  15:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span>
+<span class="gutter">  16:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">This</span><span class="syntax1"> </span><span class="syntax1">script</span><span class="syntax1"> </span><span class="syntax1">assumes</span><span class="syntax1"> </span><span class="syntax1">that</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">text</span><span class="syntax1"> </span><span class="syntax1">is</span><span class="syntax1"> </span><span class="syntax1">raw</span><span class="syntax1"> </span><span class="syntax1">and</span><span class="syntax1"> </span><span class="syntax1">encoded</span><span class="syntax1"> </span><span class="syntax1">in</span><span class="syntax1"> </span><span class="syntax1">UTF8.</span>
+<span class="gutter">  17:</span><span class="syntax1">;</span><span class="syntax1">;;</span>
+<span class="gutter">  18:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">Functions:</span>
+<span class="gutter">  19:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">1.</span><span class="syntax1"> </span><span class="syntax1">Reads</span><span class="syntax1"> </span><span class="syntax1">in</span><span class="syntax1"> </span><span class="syntax1">a</span><span class="syntax1"> </span><span class="syntax1">grammar</span><span class="syntax1"> </span><span class="syntax1">from</span><span class="syntax1"> </span><span class="syntax1">files</span><span class="syntax1"> </span><span class="syntax1">named</span><span class="syntax1"> </span><span class="syntax1">grammar*.txt.</span>
+<span class="gutterH">  20:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">2.</span><span class="syntax1"> </span><span class="syntax1">Parses</span><span class="syntax1"> </span><span class="syntax1">the</span><span class="syntax1"> </span><span class="syntax1">words</span><span class="syntax1"> </span><span class="syntax1">given</span><span class="syntax1"> </span><span class="syntax1">as</span><span class="syntax1"> </span><span class="syntax1">command</span><span class="syntax1"> </span><span class="syntax1">line</span><span class="syntax1"> </span><span class="syntax1">arguments.</span>
+<span class="gutter">  21:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">3.</span><span class="syntax1"> </span><span class="syntax1">Returns</span><span class="syntax1"> </span><span class="syntax1">true</span><span class="syntax1"> </span><span class="syntax1">or</span><span class="syntax1"> </span><span class="syntax1">false</span><span class="syntax1"> </span><span class="syntax1">(parsed</span><span class="syntax1"> </span><span class="syntax1">or</span><span class="syntax1"> </span><span class="syntax1">not</span><span class="syntax1"> </span><span class="syntax1">parsed).</span>
+<span class="gutter">  22:</span><span class="syntax1">;</span><span class="syntax1">;;</span>
+<span class="gutter">  23:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">Usage:</span>
+<span class="gutter">  24:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">mzscheme</span><span class="syntax1"> </span><span class="syntax1">-r</span><span class="syntax1"> </span><span class="syntax1">BUP3.scm</span><span class="syntax1"> </span><span class="syntax1">John</span><span class="syntax1"> </span><span class="syntax1">kissed</span><span class="syntax1"> </span><span class="syntax1">Mary</span>
+<span class="gutterH">  25:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">----------------------------------------------------</span>
+<span class="gutter">  26:</span>
+<span class="gutter">  27:</span>(require (lib <span class="syntax13">&quot;</span><span class="syntax13">list.ss</span><span class="syntax13">&quot;</span>))
+<span class="gutter">  28:</span>(require (lib <span class="syntax13">&quot;</span><span class="syntax13">list.ss</span><span class="syntax13">&quot;</span>   <span class="syntax13">&quot;</span><span class="syntax13">srfi</span><span class="syntax13">&quot;</span> <span class="syntax13">&quot;</span><span class="syntax13">1</span><span class="syntax13">&quot;</span> ))
+<span class="gutter">  29:</span>(require (lib <span class="syntax13">&quot;</span><span class="syntax13">string.ss</span><span class="syntax13">&quot;</span> <span class="syntax13">&quot;</span><span class="syntax13">srfi</span><span class="syntax13">&quot;</span> <span class="syntax13">&quot;</span><span class="syntax13">13</span><span class="syntax13">&quot;</span>))
+<span class="gutterH">  30:</span>(require (lib <span class="syntax13">&quot;</span><span class="syntax13">hash.ss</span><span class="syntax13">&quot;</span>   <span class="syntax13">&quot;</span><span class="syntax13">srfi</span><span class="syntax13">&quot;</span> <span class="syntax13">&quot;</span><span class="syntax13">69</span><span class="syntax13">&quot;</span>))
+<span class="gutter">  31:</span>(<span class="syntax9">load</span> <span class="syntax13">&quot;</span><span class="syntax13">list-extra.ss</span><span class="syntax13">&quot;</span>)
+<span class="gutter">  32:</span>(<span class="syntax9">load</span> <span class="syntax13">&quot;</span><span class="syntax13">grammar.scm</span><span class="syntax13">&quot;</span>)
+<span class="gutter">  33:</span>
+<span class="gutter">  34:</span>
+<span class="gutterH">  35:</span>
+<span class="gutter">  36:</span>(<span class="syntax8">define</span> buparse
+<span class="gutter">  37:</span>  (<span class="syntax8">lambda</span> (tokens goal agenda)
+<span class="gutter">  38:</span>    (printf <span class="syntax13">&quot;</span><span class="syntax13">Looking</span><span class="syntax13"> </span><span class="syntax13">at:</span><span class="syntax13"> </span><span class="syntax13">~a\n</span><span class="syntax13">&quot;</span> tokens)
+<span class="gutter">  39:</span>    (<span class="syntax8">let</span> window ([w (<span class="syntax9">length</span> tokens)])
+<span class="gutterH">  40:</span>      (<span class="syntax8">let</span> loop ([i <span class="syntax5">0</span>])
+<span class="gutter">  41:</span>        (<span class="syntax8">let</span> ([x (sublist tokens i (+ i w))])
+<span class="gutter">  42:</span>          (<span class="syntax8">let</span> ([vals  (hash-table-get rhs x '())]
+<span class="gutter">  43:</span>                [parse '()])
+<span class="gutter">  44:</span>            (<span class="syntax9">for-each</span> (<span class="syntax8">lambda</span> (y)
+<span class="gutterH">  45:</span>                        (<span class="syntax8">set!</span> parse (concatenate (<span class="syntax9">list</span> (take tokens i)
+<span class="gutter">  46:</span>                                                       (<span class="syntax9">list</span> y)
+<span class="gutter">  47:</span>                                                       (take-right tokens (- (<span class="syntax9">length</span> tokens) (+ i w))))))
+<span class="gutter">  48:</span>                        (unless (<span class="syntax9">member</span> parse agenda)
+<span class="gutter">  49:</span>                          <span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">prepend</span><span class="syntax1"> </span><span class="syntax1">to</span><span class="syntax1"> </span><span class="syntax1">agenda</span>
+<span class="gutterH">  50:</span>                          (<span class="syntax8">set!</span> agenda (<span class="syntax9">append</span> (<span class="syntax9">list</span> parse) agenda))))
+<span class="gutter">  51:</span>                      vals)))
+<span class="gutter">  52:</span>        (unless (&gt;= (+ i w) (<span class="syntax9">length</span> tokens))
+<span class="gutter">  53:</span>          (loop (+ i <span class="syntax5">1</span>))))
+<span class="gutter">  54:</span>      (unless (&lt;= w <span class="syntax5">1</span>)
+<span class="gutterH">  55:</span>        (window (- w <span class="syntax5">1</span>))))
+<span class="gutter">  56:</span>    
+<span class="gutter">  57:</span>    (<span class="syntax8">if</span> (<span class="syntax9">member</span> goal agenda)
+<span class="gutter">  58:</span>        <span class="syntax14">#t</span> <span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">if</span><span class="syntax1"> </span><span class="syntax1">goal</span><span class="syntax1"> </span><span class="syntax1">in</span><span class="syntax1"> </span><span class="syntax1">agenda,</span><span class="syntax1"> </span><span class="syntax1">success</span>
+<span class="gutter">  59:</span>        (<span class="syntax8">if</span> (&gt; (<span class="syntax9">length</span> agenda) <span class="syntax5">0</span>) <span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">else</span>
+<span class="gutterH">  60:</span>            (buparse (<span class="syntax9">car</span> agenda) goal (<span class="syntax9">cdr</span> agenda)) <span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">if</span><span class="syntax1"> </span><span class="syntax1">some</span><span class="syntax1"> </span><span class="syntax1">path</span><span class="syntax1"> </span><span class="syntax1">on</span><span class="syntax1"> </span><span class="syntax1">agenda</span>
+<span class="gutter">  61:</span>            <span class="syntax14">#f</span>)))) <span class="syntax1">;</span><span class="syntax1"> </span><span class="syntax1">else</span><span class="syntax1"> </span><span class="syntax1">fail</span>
+<span class="gutter">  62:</span>
+<span class="gutter">  63:</span>
+<span class="gutter">  64:</span>
+<span class="gutterH">  65:</span><span class="syntax1">;</span><span class="syntax1">;;</span><span class="syntax1"> </span><span class="syntax1">-----------------------------</span>
+<span class="gutter">  66:</span>(load-grammar <span class="syntax13">&quot;</span><span class="syntax13">grammar.txt</span><span class="syntax13">&quot;</span>)
+<span class="gutter">  67:</span>(<span class="syntax8">if</span> (&lt; <span class="syntax5">0</span> (<span class="syntax9">vector-length</span> argv))
+<span class="gutter">  68:</span>    (<span class="syntax8">if</span> (buparse (map-in-order (<span class="syntax8">lambda</span> (x)
+<span class="gutter">  69:</span>                                 (<span class="syntax9">string-&gt;symbol</span> x))
+<span class="gutterH">  70:</span>                               (<span class="syntax9">vector-&gt;list</span> argv))
+<span class="gutter">  71:</span>                 (<span class="syntax9">list</span> <span class="syntax13">'</span><span class="syntax13">S</span>)
+<span class="gutter">  72:</span>                 '())
+<span class="gutter">  73:</span>        (printf <span class="syntax13">&quot;</span><span class="syntax13">Success!\n</span><span class="syntax13">&quot;</span>)
+<span class="gutter">  74:</span>        (printf <span class="syntax13">&quot;</span><span class="syntax13">Fail!\n</span><span class="syntax13">&quot;</span>)))
+<span class="gutterH">  75:</span>
+<span class="gutter">  76:</span>
+<span class="gutter">  77:</span>
+</span></pre>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>
+

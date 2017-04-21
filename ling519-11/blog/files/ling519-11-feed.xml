@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+	<channel>
+<title>LING 519 RSS Feed</title><link>http://cavar.me/damir/ling519-11/index.html</link><description>Technologies for Language Documentation</description><dc:language>en</dc:language><dc:creator>Damir Cavar</dc:creator><dc:rights>Copyright 2011/2012 by Damir Cavar</dc:rights><dc:date>2011-11-30T12:13:59-05:00</dc:date><admin:generatorAgent rdf:resource="http://www.realmacsoftware.com/" />
+<sy:updatePeriod>hourly</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+<lastBuildDate>Thu, 15 Mar 2012 21:47:03 -0400</lastBuildDate><item><title>Scheme Programming on the 31st of Nov. 2011 in the Cooper building</title><dc:creator>Damir Cavar</dc:creator><category>Announcement</category><dc:date>2011-11-30T12:13:59-05:00</dc:date><link>http://cavar.me/damir/ling519-11/blog/files/db0fa6661e1b582ebebce8ca966ae77e-2.html#unique-entry-id-2</link><guid isPermaLink="true">http://cavar.me/damir/ling519-11/blog/files/db0fa6661e1b582ebebce8ca966ae77e-2.html#unique-entry-id-2</guid><content:encoded><![CDATA[Whoever is interested, we meet for Scheme Programming for Linguists (a free club-type of meeting, no official course, no obligation, no formal credits) in the Cooper building at 3 PM.  If you are interested in learning something about Programming in Scheme and Racket, doing language processing and linguistic tools in it, join us. See the <a href="http://www.cavar.me/damir/blog/files/f787f8289df6280b5b937c3cab86b80c-18.php" rel="external">announcement here</a>&hellip;<br /><br /><br /><center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+]]></content:encoded></item><item><title>Session on the 30th of Nov. 2011</title><dc:creator>Damir Cavar</dc:creator><category>Announcement</category><dc:date>2011-11-30T12:12:52-05:00</dc:date><link>http://cavar.me/damir/ling519-11/blog/files/73e7bc61fd9f9c0a5292bbb8851f1ffc-1.html#unique-entry-id-1</link><guid isPermaLink="true">http://cavar.me/damir/ling519-11/blog/files/73e7bc61fd9f9c0a5292bbb8851f1ffc-1.html#unique-entry-id-1</guid><content:encoded><![CDATA[Please bring your laptops to the session on the 30th of Nov., and make sure you have Komodo Edit on it, and the Python 3.x environment.<br /><br /><br /><center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center><br />]]></content:encoded></item><item><title>Welcome to LING 519 Technologies for Language Documentation</title><dc:creator>Damir Cavar</dc:creator><category>Announcement</category><dc:date>2011-08-31T14:30:26-04:00</dc:date><link>http://cavar.me/damir/ling519-11/blog/files/d9c0337ad5e142336352a7c9327b96d8-0.html#unique-entry-id-0</link><guid isPermaLink="true">http://cavar.me/damir/ling519-11/blog/files/d9c0337ad5e142336352a7c9327b96d8-0.html#unique-entry-id-0</guid><content:encoded><![CDATA[Welcome to LING 519!<br /><br /><br /><center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center><br />]]></content:encoded></item></channel>
+</rss>

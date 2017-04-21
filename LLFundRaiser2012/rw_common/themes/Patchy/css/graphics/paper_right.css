@@ -1,0 +1,19 @@
+#backPageSide {
+	width: 49px;
+	height: 402px;
+	background: url(../../images/backPageSide.gif) no-repeat;
+	display: block;
+	position: absolute;
+	margin-left: 873px;
+	margin-top: 60px;
+}
+
+html>body #backPageSide {
+	width: 49px;
+	height: 402px;
+	background: url(../../images/backPageSide.png) no-repeat;
+	display: block;
+	position: absolute;
+	margin-left: 873px;
+	margin-top: 60px;
+}

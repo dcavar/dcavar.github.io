@@ -1,0 +1,15 @@
+#backPageBottom {
+	width: 596px;
+	height: 94px;
+	background: url(../../images/backPageBottom.gif) no-repeat;
+	margin-left: 240px;
+	display: block;
+}
+
+html>body #backPageBottom {
+	width: 596px;
+	height: 94px;
+	background: url(../../images/backPageBottom.png) no-repeat;
+	margin-left: 240px;
+	display: block;
+}

@@ -1,0 +1,232 @@
+body {
+	background: repeat url(../../images/bluegrass/body_bg.png);
+}
+
+a:link, a:visited {
+	color: #2d73b7;
+}
+
+#top_grad {
+	background: repeat-x url(../../images/bluegrass/body_top_grad.png);
+	height: 337px;
+}
+
+#container { 
+	border-right: 1px solid #23272d;
+	border-bottom: 1px solid #23272d;
+	border-left: 1px solid #23272d;
+}
+
+#pageHeader {
+	background: url(../../images/bluegrass/header_bg.png) repeat-x;
+}
+
+#pageHeader h1 {
+	text-shadow: 2px 2px 2px #082142;
+}
+
+#pageHeader h2 {
+	color: #eaf3f8;
+	text-shadow: 2px 2px 2px #082142;
+}
+
+#sidebarContainer #sidebar {
+	color: #1e537e;
+}
+
+#sidebarContainer .sideHeader {
+	background: url(../../images/bluegrass/side_head_bg.png) repeat-x left top;
+}
+
+#footer { 
+	color: #9baabb;
+}
+
+#footer a:link, #footer a:visited {
+	color: #9baabb;
+}
+
+#footer a:hover, #footer a:active {
+	color: #9baabb;
+}
+
+#breadcrumbcontainer {
+	color: #c6c6c6;
+}
+
+#navcontainer {
+	border-top-color: #b3b3b3;
+}
+
+#navcontainer #current {
+	color: #ffffff;
+	background: #1b426a;
+}
+
+#navcontainer #current:hover {
+	background: #215080;
+	color: #ffffff;
+}
+
+#navcontainer .currentAncestor {
+	color: #ffffff;
+	background: #1b426a;
+}
+
+/* Parent - Level 0 */
+
+#navcontainer ul
+{
+	list-style: none;
+}
+
+#navcontainer li {
+}
+
+#navcontainer a{
+	display: block;
+	background: #ffffff;
+	color: #1a4169;
+	text-decoration: none;
+	border-bottom: 1px solid #ececec;
+}
+
+#navcontainer a:hover {
+	background: #245b92;
+	color: #ffffff;
+}
+
+#navcontainer ul ul a {
+	background: #fafafa;
+}
+
+#navcontainer ul ul #current{
+	background: #3c90ca;
+}
+
+#navcontainer ul ul .currentAncestor {
+	background: #3c90ca;
+}
+
+#navcontainer ul ul ul #current{
+	background: #fafafa;
+	color: #3c90ca;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin: 0 0 3px;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin: 0 0 3px;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0 0 3px;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0 0 3px;
+}
+
+.blog-archive-month {
+	text-shadow: 2px 2px 2px #082142;
+}
+
+.blog-entry-title a {
+	color: #345483;
+}
+
+.blog-entry-date {
+	color: #999999;
+}
+
+.blog-entry-category, .blog-entry-permalink {
+	color: #304f7b;
+}
+
+.filesharing-description {
+	margin-bottom: 10px;
+}
+
+.filesharing-item {
+	border: 1px solid #e6e6e6;
+	padding: 1px;
+	margin-bottom: 10px;
+}
+
+.filesharing-item-title a:link {
+	padding: 3px;
+	margin-bottom: 5px;
+	border-bottom-style: none;
+}
+
+.filesharing-item-description {
+	font-size: 0.9em;
+	padding-left: 3px;
+	color: #808080;
+}
+
+.album-title {
+	color: #2d73b7;
+}
+
+.photo-navigation {
+	background: url(../../images/bluegrass/header_bg.png) repeat-x;
+}
+
+.photo-title {
+	text-shadow: 2px 2px 2px #082142;
+}
+
+.photo-caption {
+	color: #eaf3f8;
+	text-shadow: 2px 2px 2px #082142;
+}
+
+.exif-data {
+	color: #fff;
+}
+
+.movie-page-title {
+	color: #2d73b7;
+	font-size: 1.8em;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+.movie-page-description {
+	margin-bottom: 10px;
+}
+
+.movie-thumbnail-frame {
+	border: 1px solid #e6e6e6;
+	padding: 1px;
+	width: 132px;
+	float: left;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.movie-thumbnail-frame:hover {
+	border: 1px solid #808080;
+}
+
+
+.movie-thumbnail-caption {
+	font-size: 0.9em;
+	color: #808080;
+
+}
+
+.movie-background {
+	background: repeat url(../../images/bluegrass/body_bg.png);
+}
+
+.movie-title {
+	text-shadow: 2px 2px 2px #07326d;
+}

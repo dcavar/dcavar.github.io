@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>TextStat1.py.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Statement { color: #b03060; font-weight: bold; }
+.Constant { color: #ff8c00; }
+.Identifier { color: #458b74; }
+.PreProc { color: #1874cd; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">#!/usr/bin/env python3.2</span>
+<span class="Comment"># -*- coding: UTF-8 -*-</span>
+<span class="Comment"># encoding: utf-8</span>
+
+
+<span class="String">&quot;&quot;&quot;</span>
+<span class="String">TextStat.py</span>
+<span class="String">(C) 2009-2011 by Damir Cavar &lt;<a href="http://www.cavar.me/damir/">http://www.cavar.me/damir/</a>&gt;</span>
+
+<span class="String">TextStat.py is a module that provides various statistical functions for text</span>
+<span class="String">analysis and processing, N-gram model generation, vector space model generation</span>
+<span class="String">and processing, and so on.</span>
+
+<span class="String">It is based on Python 3.x.</span>
+
+
+<span class="String">License</span>
+
+<span class="String">This file is part of the TextStat.py Python 3.x module.</span>
+
+<span class="String">    TextStat.py is free software: you can redistribute it and/or modify</span>
+<span class="String">    it under the terms of the GNU Lesser General Public License as published by</span>
+<span class="String">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="String">    (at your option) any later version.</span>
+
+<span class="String">    textstat is distributed in the hope that it will be useful,</span>
+<span class="String">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="String">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="String">    GNU Lesser General Public License for more details.</span>
+
+<span class="String">    You should have received a copy of the GNU Lesser General Public License</span>
+<span class="String">    along with TextStat.py.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</span>
+
+<span class="String">&quot;&quot;&quot;</span>
+
+__author__ =  <span class="String">'Damir Cavar &lt;damir@cavar.me&gt;'</span>
+__version__=  <span class="String">'1.0'</span>
+
+
+<span class="PreProc">import</span> sys, codecs
+<span class="PreProc">from</span> collections <span class="PreProc">import</span> Counter
+<span class="PreProc">from</span> math <span class="PreProc">import</span> log, sqrt
+<span class="PreProc">from</span> operator <span class="PreProc">import</span> itemgetter, mul
+<span class="PreProc">from</span> functools <span class="PreProc">import</span> <span class="Identifier">reduce</span>
+
+
+<span class="Comment"># make stdout take UTF-8</span>
+sys.stdout = codecs.getwriter(<span class="String">&quot;utf-8&quot;</span>)(sys.stdout.detach())
+
+
+df1chi2sigscore = <span class="Constant">7.879</span>
+<span class="String">&quot;&quot;&quot;df1chi2sigscore = 7.879 is the Significance score for the Chi2-test for a degree of freedom of 1.&quot;&quot;&quot;</span>
+
+CI2EXPECTATIONCOUNTOFF = <span class="Constant">0.000000001</span>
+NAIVEBAYESIANCOUNTOFF = <span class="Constant">0.000000001</span>
+RECOUNTOFF = <span class="Constant">0.000001</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">freqProfile</span>(tokenlist, model=<span class="Identifier">None</span>):
+   <span class="String">&quot;&quot;&quot;Generates a frequency profile from a token list.</span>
+<span class="String">      </span>
+<span class="String">      Parameter:</span>
+<span class="String">      </span>
+<span class="String">      tokenlist: an iterable sequence of tokens.</span>
+<span class="String">      </span>
+<span class="String">      Optional parameter:</span>
+<span class="String">      </span>
+<span class="String">      model: a dictionary data structure, i.e. a frequency profile</span>
+<span class="String">      default = None</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   <span class="Statement">if</span> model:
+      <span class="Statement">return</span> mergeFreqProfiles(model, <span class="Identifier">dict</span>(Counter(tokenlist)))
+   <span class="Statement">else</span>:
+      <span class="Statement">return</span> <span class="Identifier">dict</span>(Counter(tokenlist))
+
+
+<span class="Statement">def</span> <span class="Identifier">textKWIC</span>(text, token, contextchars=<span class="Constant">15</span>, wordboundary=<span class="Identifier">True</span>):
+   <span class="String">&quot;&quot;&quot;Returns a list of left and right context tuples for token.</span>
+<span class="String">      The context is default of length 15,</span>
+<span class="String">      the context obeys word boundaries in the default.</span>
+<span class="String">      !!! TODO !!!</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   pos = text.find(token)
+   res = []
+   <span class="Statement">while</span> pos &gt; -<span class="Constant">1</span>:
+      left = text[<span class="Identifier">max</span>(<span class="Constant">0</span>,pos-contextchars):pos].strip()
+      right = text[pos+<span class="Identifier">len</span>(token):<span class="Identifier">max</span>(contextchars,<span class="Identifier">len</span>(text)+pos+<span class="Identifier">len</span>(token))].strip()
+      res.append( (left, right) )
+      <span class="Statement">if</span> pos + <span class="Constant">1</span> &lt; <span class="Identifier">len</span>(text) + <span class="Identifier">len</span>(token):
+         pos = text.find(token, pos + <span class="Constant">1</span>)
+      <span class="Statement">else</span>:
+         <span class="Statement">break</span>
+   <span class="Statement">return</span> <span class="Identifier">tuple</span>(res)
+
+
+<span class="Statement">def</span> <span class="Identifier">mergeFreqProfiles</span>(freqp1, freqp2):
+   <span class="String">&quot;&quot;&quot;Returns a frequency profile from two merged frequency profiles.</span>
+<span class="String">      The two frequency profiles must be dictionary types.</span>
+<span class="String">      </span>
+<span class="String">      Parameters:</span>
+<span class="String">      </span>
+<span class="String">      freqp1: dictionary, i.e. frequency profile</span>
+<span class="String">      </span>
+<span class="String">      freqp2: dictionary, i.e. frequency profile</span>
+<span class="String">      </span>
+<span class="String">      This function only works with absolute frequency profiles.</span>
+<span class="String">      &quot;&quot;&quot;</span>
+
+   <span class="Statement">return</span> <span class="Identifier">dict</span>(((i, freqp1.get(i, <span class="Constant">0</span>) + freqp2.get(i, <span class="Constant">0</span>)) <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">set</span>.union(<span class="Identifier">set</span>(freqp1), <span class="Identifier">set</span>(freqp2))))
+
+
+<span class="Statement">def</span> <span class="Identifier">relFreqProfile</span>(freqprof):
+   <span class="String">&quot;&quot;&quot;Generates a relative frequency profile from an absolute frequency</span>
+<span class="String">      profile.&quot;&quot;&quot;</span>
+   tokenCount = <span class="Identifier">sum</span>(freqprof.values())
+   <span class="Statement">if</span> tokenCount &gt; <span class="Constant">0</span>:
+      <span class="Statement">return</span> <span class="Identifier">dict</span>(((i[<span class="Constant">0</span>], i[<span class="Constant">1</span>]/tokenCount) <span class="Statement">for</span> i <span class="Statement">in</span> freqprof.items()))
+
+
+<span class="Statement">def</span> <span class="Identifier">filterTokens</span>(model, tokenset):
+   <span class="String">&quot;&quot;&quot;Eliminates tokens from tokenset from a model.&quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">dict</span>((i <span class="Statement">for</span> i <span class="Statement">in</span> model.items() <span class="Statement">if</span> i[<span class="Constant">0</span>] <span class="Statement">not</span> <span class="Statement">in</span> tokenset))
+
+
+<span class="Statement">def</span> <span class="Identifier">vectorFromModel</span>(model, vectormodel):
+   <span class="String">&quot;&quot;&quot;Returns a vector from a model (e.g. frequency profile),</span>
+<span class="String">      matching the token to position table in vectormodel.&quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">tuple</span>(<span class="Identifier">list</span>((model.get(i, <span class="Constant">0</span>) <span class="Statement">for</span> i <span class="Statement">in</span> vectormodel)))
+
+
+<span class="Statement">def</span> <span class="Identifier">positionVectorFromModel</span>(model):
+   <span class="String">&quot;&quot;&quot;Returns a vector with all tokens in model, used to match a token with</span>
+<span class="String">      a position in a vector.&quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">tuple</span>(model.items())
+
+
+<span class="Statement">def</span> <span class="Identifier">ngramList</span>(tokenlist, n):
+   <span class="String">&quot;&quot;&quot;Returns a N-gram list from a tokenlist.</span>
+<span class="String">      The returned list is just a list of N-grams, not a frequency profile.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(tokenlist) &gt;= n:
+      <span class="Statement">return</span> <span class="Identifier">tuple</span>((<span class="Identifier">tuple</span>(tokenlist[i:i+n]) <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(tokenlist) - (n - <span class="Constant">1</span>))))
+   <span class="Statement">return</span> ()
+
+
+<span class="Statement">def</span> <span class="Identifier">relativeEntropyScore</span>(model1, model2):
+   <span class="String">&quot;&quot;&quot;Returns the relative entropy score for two distributions.</span>
+<span class="String">      The lower the RE-score, the better!&quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">sum</span>((model1[i] * log(model1[i]/model2.get(i, RECOUNTOFF), <span class="Constant">2</span>) <span class="Statement">for</span> i <span class="Statement">in</span> model1))
+
+
+<span class="Statement">def</span> <span class="Identifier">dotProduct</span>(vector1, vector2):
+   <span class="String">&quot;&quot;&quot;Returns the dot product of two vectors.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(vector1) == <span class="Identifier">len</span>(vector2):
+      <span class="Statement">return</span> <span class="Identifier">sum</span>((vector1[i] * vector2[i] <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(vector1))))
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">cosineSimilarity</span>(vector1, vector2):
+   <span class="String">&quot;&quot;&quot;Returns the cosine similarity of two vectors.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(vector1) == <span class="Identifier">len</span>(vector2):
+      magnitude = sqrt(<span class="Identifier">sum</span>((i**<span class="Constant">2</span> <span class="Statement">for</span> i <span class="Statement">in</span> vector1))) * sqrt(<span class="Identifier">sum</span>((i**<span class="Constant">2</span> <span class="Statement">for</span> i <span class="Statement">in</span> vector2)))
+      <span class="Statement">if</span> magnitude &gt; <span class="Constant">0</span>:
+         <span class="Statement">return</span> dotProduct(vector1, vector2) / magnitude
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">euclideanDistance</span>(vector1, vector2):
+   <span class="String">&quot;&quot;&quot;Returns the Euclidean distance of two vectors.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(vector1) == <span class="Identifier">len</span>(vector2):
+      <span class="Statement">return</span> sqrt(<span class="Identifier">sum</span>((vector1[i] - vector2[i])**<span class="Constant">2</span> <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(vector1))))
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">termInDocsProfile</span>(docsprofiles):
+   <span class="String">&quot;&quot;&quot;Returns a profile with terms and number of documents in which the term</span>
+<span class="String">      occurs as a key value pair in a dicitionary data structure.</span>
+<span class="String">      </span>
+<span class="String">      Parameter:</span>
+<span class="String">      </span>
+<span class="String">      docsprofiles: list with</span>
+<span class="String">      a. frequency profiles for documents (dictionary data structure), or</span>
+<span class="String">      b. lists or tuples with document tokens</span>
+<span class="String">      c. set of document tokens</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   mycount = Counter()
+   <span class="Statement">for</span> doc <span class="Statement">in</span> docsprofiles:
+      <span class="Statement">if</span> <span class="Identifier">type</span>(doc) == <span class="Identifier">type</span>(<span class="Identifier">dict</span>):
+         mycount.update(doc.items())
+      <span class="Statement">elif</span> <span class="Identifier">type</span>(doc) == <span class="Identifier">type</span>([]) <span class="Statement">or</span> <span class="Identifier">type</span>(doc) == <span class="Identifier">type</span>(<span class="Identifier">tuple</span>()):
+         mycount.update(<span class="Identifier">set</span>(doc))
+      <span class="Statement">elif</span> <span class="Identifier">type</span>(doc) == <span class="Identifier">type</span>(<span class="Identifier">set</span>()):
+         mycount.update(doc)
+      <span class="Statement">else</span>:
+         <span class="Statement">return</span> <span class="Identifier">None</span>
+   <span class="Statement">return</span> <span class="Identifier">dict</span>(mycount)
+
+
+<span class="Statement">def</span> <span class="Identifier">tfidfProfile</span>(docfprof, numdocs, termsindocprofile):
+   <span class="String">&quot;&quot;&quot;Returns a document profile after applying tf-idf reranking to it.</span>
+<span class="String">   </span>
+<span class="String">   Parameters:</span>
+<span class="String">   </span>
+<span class="String">   docfprof: document frequency profile with absolute frequencies</span>
+<span class="String">   </span>
+<span class="String">   termsindocprofile: a dictionary data structure with term and count of</span>
+<span class="String">   documents it occurs in pairs.</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   total = <span class="Identifier">sum</span>(docfprof.values())
+   <span class="Statement">if</span> total &gt; <span class="Constant">0</span>:
+      <span class="Statement">return</span> <span class="Identifier">dict</span>((<span class="Identifier">tuple</span>(i, tfidfScore(docfprof[i]/total, numdocs, termsindocprofile[i])) <span class="Statement">for</span> i <span class="Statement">in</span> docfprof))
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">tfidfScore</span>(tf, numdocs, numtermincorp):
+   <span class="String">&quot;&quot;&quot;Returns the tf-idf-score for a term.</span>
+<span class="String">      </span>
+<span class="String">      Parameters:</span>
+<span class="String">      </span>
+<span class="String">      tf: text frequency of the term, i.e. the relative frequency of a term in</span>
+<span class="String">      a document, or number of times a term occurs in a document divided by</span>
+<span class="String">      the number of terms in the document.</span>
+<span class="String">      </span>
+<span class="String">      numdoc: the total number of documents in the corpus, i.e. number of</span>
+<span class="String">      documents in all classes.</span>
+<span class="String">      </span>
+<span class="String">      numtermincorp: number of documents in the corpus in which the term</span>
+<span class="String">      occurs.</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   <span class="Statement">return</span> tf * log(numdocs / (<span class="Constant">1</span> + numtermincorp))
+
+
+<span class="Statement">def</span> <span class="Identifier">naiveBayesianScore</span>(model, tokenlist, pdoc):
+   <span class="String">&quot;&quot;&quot;Returns the Naive Bayesian score given a model and a tokenlist.</span>
+<span class="String">      The score is the sum of logs of the document probability and</span>
+<span class="String">      the individual token probabilities in the tokenlist, taken from model.</span>
+<span class="String">      </span>
+<span class="String">      Parameters:</span>
+
+<span class="String">      model: dictionary with token - relative frequency pairs</span>
+
+<span class="String">      tokenlist: iterable list or tuple of tokens</span>
+
+<span class="String">      pdoc: float with the probability to get a document of the class that</span>
+<span class="String">            corresponds to the model (this is the number of documents used to</span>
+<span class="String">            generate the model for the class, divided by the number of all</span>
+<span class="String">            documents.</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   <span class="Statement">return</span> log(pdoc) + <span class="Identifier">sum</span>((log(model.get(i, NAIVEBAYESIANCOUNTOFF)) <span class="Statement">for</span> i <span class="Statement">in</span> tokenlist))
+
+
+<span class="Statement">def</span> <span class="Identifier">chi2Score</span>(observation, expectation):
+   <span class="String">&quot;&quot;&quot;Returns the Chi2-score for an observation and expectation value list.&quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(observation) == <span class="Identifier">len</span>(expectation):
+      <span class="Statement">return</span> <span class="Identifier">sum</span>((observation[i] - <span class="Identifier">max</span>(expectation[i], CI2EXPECTATIONCOUNTOFF))**<span class="Constant">2</span> / <span class="Identifier">max</span>(expectation[i], CI2EXPECTATIONCOUNTOFF) <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(observation)))
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">highestNTermsChi2</span>(docfprof, corpfprof, n=<span class="Constant">10</span>):
+   <span class="String">&quot;&quot;&quot;Returns a list of the first n tokens with the highest Chi2 score.</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   doctotal  = <span class="Identifier">sum</span>(docfprof.values())
+   corptotal = <span class="Identifier">sum</span>(corpfprof.values())
+   res = [ (j[<span class="Constant">0</span>], chi2Score(j[<span class="Constant">1</span>:],expectationFromObservationDF1(j[<span class="Constant">1</span>:]))) <span class="Statement">for</span> j <span class="Statement">in</span> ((i, docfprof.get(i, <span class="Constant">0</span>), corpfprof.get(i, <span class="Constant">0</span>) - docfprof.get(i, <span class="Constant">0</span>), doctotal - docfprof.get(i, <span class="Constant">0</span>), corptotal - (corpfprof.get(i, <span class="Constant">0</span>) - docfprof.get(i, <span class="Constant">0</span>))) <span class="Statement">for</span> i <span class="Statement">in</span> docfprof) ]
+   res.sort(key=itemgetter(<span class="Constant">1</span>), reverse=<span class="Identifier">True</span>)
+   <span class="Statement">return</span> (i[<span class="Constant">0</span>] <span class="Statement">for</span> i <span class="Statement">in</span> res[:n])
+
+
+<span class="Statement">def</span> <span class="Identifier">significantTermsChi2</span>(docfprof, corpfprof):
+   <span class="String">&quot;&quot;&quot;Returns a list of significant terms from a document, given the documents</span>
+<span class="String">      frequency profile and the corpus frequency profile.</span>
+<span class="String">      </span>
+<span class="String">      The significance test is based on Chi2.</span>
+<span class="String">      </span>
+<span class="String">      Parameters:</span>
+<span class="String">      </span>
+<span class="String">      docfprof: absolute frequency profile for one document.</span>
+<span class="String">      </span>
+<span class="String">      corpfprof: absolute freqeuncy profile for the complete corpus.</span>
+<span class="String">      </span>
+<span class="String">      It is presupposed that all terms in docfprof are also in corpfprof,</span>
+<span class="String">      although, this function is robust wrt. this assumption.</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   doctotal  = <span class="Identifier">sum</span>(docfprof.values())
+   corptotal = <span class="Identifier">sum</span>(corpfprof.values())
+   <span class="Statement">return</span> (k[<span class="Constant">0</span>] <span class="Statement">for</span> k <span class="Statement">in</span> ((j[<span class="Constant">0</span>], chi2Score(j[<span class="Constant">1</span>:],expectationFromObservationDF1(j[<span class="Constant">1</span>:]))) <span class="Statement">for</span> j <span class="Statement">in</span> ((i, docfprof.get(i, <span class="Constant">0</span>), corpfprof.get(i, <span class="Constant">0</span>) - docfprof.get(i, <span class="Constant">0</span>), doctotal - docfprof.get(i, <span class="Constant">0</span>), corptotal - (corpfprof.get(i, <span class="Constant">0</span>) - docfprof.get(i, <span class="Constant">0</span>))) <span class="Statement">for</span> i <span class="Statement">in</span> docfprof)) <span class="Statement">if</span> k[<span class="Constant">1</span>] &gt;= df1chi2sigscore)
+
+
+<span class="Statement">def</span> <span class="Identifier">chi2Significant</span>(<span class="Identifier">tuple</span>, unigrams, bigrams):
+   <span class="String">&quot;&quot;&quot;Returns true, if token1 and token2 are significantly coocurring,</span>
+<span class="String">      false otherwise. The used test is the Chi2-test.</span>
+<span class="String">      </span>
+<span class="String">      Parameters:</span>
+<span class="String">      </span>
+<span class="String">      tuple: tuple of tokens</span>
+
+<span class="String">      unigrams: unigrams dictionary data structure</span>
+
+<span class="String">      bigrams: bigrams dictionary data structure</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   yes_yes = bigrams.get(<span class="Identifier">tuple</span>, <span class="Constant">0</span>)
+   yes_not = unigrams.get(<span class="Identifier">tuple</span>[<span class="Constant">0</span>], <span class="Constant">0</span>) - yes_yes
+   not_yes = unigrams.get(<span class="Identifier">tuple</span>[<span class="Constant">1</span>], <span class="Constant">0</span>) - bigrams.get(<span class="Identifier">tuple</span>, <span class="Constant">0</span>)
+   not_not = <span class="Identifier">sum</span>(bigrams.values()) - <span class="Constant">1</span> - yes_not - not_yes + yes_yes
+   chi2score = chi2Score((yes_yes, yes_not, not_yes, not_not),
+      expectationFromObservationDF1((yes_yes, yes_not, not_yes, not_not)))
+   <span class="Statement">if</span> chi2score <span class="Statement">and</span> chi2score &gt; df1chi2sigscore:
+      <span class="Statement">return</span> <span class="Identifier">True</span>
+   <span class="Statement">return</span> <span class="Identifier">False</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">expectationFromObservationDF1</span>(observation):
+   <span class="String">&quot;&quot;&quot;Returns the expectation values for observation values, assuming a table</span>
+<span class="String">      of two columns and two rows represented in a value list observations.</span>
+<span class="String">      That is, the first two values are assumed to be row 1, the second two</span>
+<span class="String">      values are assumed to be row 2.</span>
+<span class="String">      </span>
+<span class="String">      A table like:</span>
+<span class="String">       -----------------------------------</span>
+<span class="String">      |           | class     | not class |</span>
+<span class="String">      |-----------------------------------|</span>
+<span class="String">      | token     | 34        | 4567      |</span>
+<span class="String">      | not token | 16356     | 34985737  |</span>
+<span class="String">       -----------------------------------</span>
+
+<span class="String">      is mapped on a list like this, i.e. observations is</span>
+<span class="String">      ( 34, 4567, 16356, 34985737 )</span>
+<span class="String">      </span>
+<span class="String">      the returned corresponding expected values would be:</span>
+<span class="String">      (2.15417057091995, 4598.84582942908, 16387.84582942908, 34985705.15417057)</span>
+<span class="String">      &quot;&quot;&quot;</span>
+   <span class="Statement">if</span> <span class="Identifier">len</span>(observation) == <span class="Constant">4</span>:
+      rowtotal1 = <span class="Identifier">sum</span>(observation[:<span class="Constant">2</span>])
+      rowtotal2 = <span class="Identifier">sum</span>(observation[<span class="Constant">2</span>:])
+      columntotal1 = <span class="Identifier">sum</span>(observation[::<span class="Constant">2</span>])
+      columntotal2 = <span class="Identifier">sum</span>(observation[<span class="Constant">1</span>::<span class="Constant">2</span>])
+      total = <span class="Identifier">sum</span>(observation)
+      <span class="Statement">return</span> ( (rowtotal1 * columntotal1) / total,
+               (rowtotal1 * columntotal2) / total,
+               (rowtotal2 * columntotal1) / total,
+               (rowtotal2 * columntotal2) / total )
+   <span class="Statement">return</span> <span class="Identifier">None</span>
+
+
+
+<span class="Statement">def</span> <span class="Identifier">pointwiseMI</span>(ngram, ngrammodel, unigrammodel):
+   <span class="String">&quot;&quot;&quot;Return the Mutual Information score for an N-gram based on the N-gram</span>
+<span class="String">      frquency profile and the individual frequencies.</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   <span class="Statement">return</span> ngrammodel.get(ngram, <span class="Constant">0.000000001</span>) * log(ngrammodel.get(ngram, <span class="Constant">0.000000001</span>) / <span class="Identifier">reduce</span>(mul, (unigrammodel.get(i, <span class="Constant">0.000000001</span>) <span class="Statement">for</span> i <span class="Statement">in</span> ngram )), <span class="Constant">2</span>)
+
+
+<span class="Statement">def</span> <span class="Identifier">MI</span>(ngrammodel, unigrammodel):
+   <span class="String">&quot;&quot;&quot;Returns the sum of the Mutual Information score over the ngrams.</span>
+<span class="String">   &quot;&quot;&quot;</span>
+   <span class="Statement">return</span> <span class="Identifier">sum</span>([ pointwiseMI(ngram, ngrammodel, unigrammodel) <span class="Statement">for</span> ngram <span class="Statement">in</span> ngrammodel ])
+
+
+</pre>
+
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

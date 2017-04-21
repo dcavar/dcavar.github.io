@@ -1,0 +1,35 @@
+#tapeBottomLeft {
+	width: 118px;
+	height: 128px;
+	background: url(../../images/tapeBottomLeft.gif) no-repeat;
+	position: absolute;
+	margin-left: -50px;
+	margin-top: -12px;
+}
+
+html>body #tapeBottomLeft {
+	width: 118px;
+	height: 128px;
+	background: url(../../images/tapeBottomLeft.png) no-repeat;
+	position: absolute;
+	margin-left: -50px;
+	margin-top: -12px;
+}
+
+#tapeBottomRight {
+	width: 76px;
+	height: 80px;
+	background: url(../../images/tapeBottomRight.gif) no-repeat;
+	position: absolute;
+	margin-left: 770px;
+	margin-top: 36px;
+}
+
+html>body #tapeBottomRight {
+	width: 76px;
+	height: 80px;
+	background: url(../../images/tapeBottomRight.png) no-repeat;
+	position: absolute;
+	margin-left: 770px;
+	margin-top: 36px;
+}

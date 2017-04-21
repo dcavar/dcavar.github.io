@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Documents/Teaching/2006/ESSLLI/ESSLLI2006/code/vector-extra.ss.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Filename: vector-extras.ss</i></font><br>
+<font color="#0000ed"><i>;;; Author:&nbsp;&nbsp; Damir Cavar &lt;dcavar@unizd.hr&gt;</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; This code is published under the restrictive GPL!</i></font><br>
+<font color="#0000ed"><i>;;; Please find the text of the GPL here:</i></font><br>
+<font color="#0000ed"><i>;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; It is free for use, change, etc. as long as the copyright</i></font><br>
+<font color="#0000ed"><i>;;; note above is included in any modified version of the code.</i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; These functions offer vector manipulation and vector</i></font><br>
+<font color="#0000ed"><i>;;; distance calculations.</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; WARNING:</i></font><br>
+<font color="#0000ed"><i>;;; This is an ALPHA HACK!</i></font><br>
+<font color="#0000ed"><i>;;; Please report any problems with the code!</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Usage:</i></font><br>
+<font color="#0000ed"><i>;;; (load &quot;vector-extras.ss&quot;)</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;list.ss&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;1&quot;</font>&nbsp;<font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;vector-lib.ss&quot;</font>&nbsp;<font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;43&quot;</font><font color="#8a2ae2">))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; get-centroid (v1 v2)</i></font><br>
+<font color="#0000ed"><i>; returns the centroid between two vectors</i></font><br>
+<font color="#0000ed"><i>; assuming the vectors are of the same size</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;get-centroid<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>v1&nbsp;v2<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-map&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v1&nbsp;i<font color="#8a2ae2">)</font>&nbsp;x<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">2</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v2<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; vector-min (vec)</i></font><br>
+<font color="#0000ed"><i>; returns the index position of the smallest number in the vector</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;vector-min<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>smallest&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vec&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;a<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;a&nbsp;smallest<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;smallest&nbsp;a<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; vector-max (vec)</i></font><br>
+<font color="#0000ed"><i>; returns the index position of the highest number in the vector</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;vector-max<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>pos&nbsp;&nbsp;&nbsp;&nbsp; <font color="#ff8b00">-1</font><font color="#8a2ae2">]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>highest&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vec&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;a<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;a&nbsp;highest<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;highest&nbsp;a<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos<font color="#8a2ae2">)))</font><br>
+<br>
+<font color="#0000ed"><i>; vector-remove (vec elem)</i></font><br>
+<font color="#0000ed"><i>; return the vector without element</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;vector-remove<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vec&nbsp;elem<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>tvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;e<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">=</font>&nbsp;e&nbsp;elem<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;tvec&nbsp;<font color="#8a2ae2">(</font>vector-append&nbsp;tvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector</font>&nbsp;e<font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tvec<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; list-remove (list elem)</i></font><br>
+<font color="#0000ed"><i>; return the vector without element</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;list-remove<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vec&nbsp;elem<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>tvec&nbsp;<font color="#8a2ae2">'()])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>e<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">=</font>&nbsp;e&nbsp;elem<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;tvec&nbsp;<font color="#8a2ae2">(</font>concatenate&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;tvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;e<font color="#8a2ae2">))))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tvec<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; vector-sum (vec)</i></font><br>
+<font color="#0000ed"><i>; return the sum over all elements in a vector</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;vector-sum<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>res&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;e<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;res&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;res&nbsp;e<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res<font color="#8a2ae2">)))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; euclidean-distance (v1 v2)</i></font><br>
+<font color="#0000ed"><i>; returns the Euclidean distance between two vectors</i></font><br>
+<font color="#0000ed"><i>; assuming the vectors are of equal length</i></font><br>
+<font color="#0000ed"><i>; sqrt \sum_{i = 0}^{n} \left( p_i - q_i \right)^2</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;euclidean-distance<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>v1&nbsp;v2<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>vectorlength&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;v1<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>distance&nbsp;&nbsp;&nbsp;&nbsp; <font color="#ff8b00">0.0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; vectors are not of equal length!</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; we could append 0 for the missing dimensions</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>;(if (&lt;&gt; vectorlength (vector-length v1))</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>;&nbsp;&nbsp;&nbsp;&nbsp;#f)</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">((</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;=</font>&nbsp;i&nbsp;vectorlength<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;distance&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">expt</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v1&nbsp;i<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v2&nbsp;i<font color="#8a2ae2">))</font>&nbsp;<font color="#ff8b00">2</font><font color="#8a2ae2">)</font>&nbsp;distance<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">sqrt</font>&nbsp;distance<font color="#8a2ae2">))))</font><br>
+<br>
+<br>
+<font color="#0000ed"><i>; sum of scalar product divided by the multiplications of the square of dot products</i></font><br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;cosine-similarity<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>v1&nbsp;v2<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">((</font>spv1&nbsp;<font color="#8a2ae2">(</font>scalar-product&nbsp;v1<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>spv2&nbsp;<font color="#8a2ae2">(</font>scalar-product&nbsp;v2<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>sp&nbsp;&nbsp; <font color="#ff8b00">0.0</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vlen&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;v1<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">((</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;=</font>&nbsp;i&nbsp;vlen<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;sp&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;sp&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">*</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v1&nbsp;i<font color="#8a2ae2">)</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v2&nbsp;i<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">/</font>&nbsp;sp&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">*</font>&nbsp;spv1&nbsp;spv2<font color="#8a2ae2">)))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;scalar-product<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>v<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">((</font>vlen&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;v<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>scalar&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">((</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;=</font>&nbsp;i&nbsp;vlen<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;scalar&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;scalar&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">expt</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;v&nbsp;i<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">2</font><font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">sqrt</font>&nbsp;scalar<font color="#8a2ae2">))))</font><br>
+</font>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

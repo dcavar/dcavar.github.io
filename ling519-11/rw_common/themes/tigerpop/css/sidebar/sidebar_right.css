@@ -1,0 +1,23 @@
+#sidebarContainer {
+	float: right;
+}
+
+#container {
+	background: repeat-y url(../../images/sidebar_right_bg.png) right #ffffff;
+}
+#contentContainer {
+	margin-right: 200px;
+	margin-left: 0px;
+}
+
+/* All browsers will use this code, it will make the pop out menus work */
+#navcontainer ul ul {
+	position: absolute;
+	top: -1px;
+	left: -202px;
+	display: none;
+}
+
+#navcontainer ul ul a {
+	text-align: right;
+}

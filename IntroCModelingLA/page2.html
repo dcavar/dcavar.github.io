@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />		<meta name="generator" content="RapidWeaver" />		<meta name="description" content="Tutorial Machine Learning and Language Acquisition, " />		<link href="styles.css" type="text/css" rel="stylesheet" />		<script language="JavaScript" src="javascript.js"></script>		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>		<title>Tutorial Machine Learning and Language Acquisition : Code</title>	</head>	<body background="" bgcolor="ffffff">		<table width="100%" border="0" cellspacing="0" cellpadding="0">			<tr>				<td colspan="2" background="images/toolbar_bg_top.png">					<div align="right">						<table border="0" cellspacing="0" cellpadding="0">							<tr height="43">								<td height="43" background="images/toolbar_bg_black.png"><img src="images/toolbar_cap.png" alt="" width="64" height="43" border="0"></td>								<td height="43" width="454" background="images/toolbar_bg_black.png"><a href="index.html"><img src="images/button0.png" ALT="Button 0" Name ="b0" border="0" OnMouseOver="bOver('b0');" OnMouseOut="bOut('b0');"></a><a href="page1.html"><img src="images/button1.png" ALT="Button 1" Name ="b1" border="0" OnMouseOver="bOver('b1');" OnMouseOut="bOut('b1');"></a><a href="page2.html"><img src="images/button2.png" ALT="Button 2" Name ="b2" border="0" OnMouseOver="bOver('b2');" OnMouseOut="bOut('b2');"></a></td>							</tr>						</table>					</div>				</td>			</tr>			<tr>				<td colspan="2" background="images/toolbar_bg_bottom.png"><img src="images/toolbar_bg_bottom.png" alt="" width="10" height="20" border="0"></td>			</tr>		</table>		<div align="center">			<br>				<br>				<br>						<table width="64" border="0" cellspacing="0" cellpadding="1" bgcolor="#5a5a5a">				<tr>					<td>						<table width="580" border="0" cellspacing="0" cellpadding="5">							<tr height="37">								<td width="569" height="37" background="images/content_top.png"><span class="TitleStyle">Tutorial Machine Learning and Language Acquisition</span></td>							</tr>							<tr>								<td bgcolor="white" width="569"><div id="content"><div><style type="text/css">.contentstyle1 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle1">General Comment</b></span><style type="text/css">.contentstyle2 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle2"><br />
+</span><span class="contentstyle2"><br />
+</span><style type="text/css">.contentstyle3 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle3">All code examples are programmed in Python 2.3 (and should be compatible with newer versions of Python). Your Mac OSX should have a version of Python installed. If not, there is a developer CD that contains it. Linux machines usually all have some version of Python as part of the system. If you do not have Python on your machine, mainly, if you are a Windows user, follow the following instructions on how to obtain a version for your system:<br />
+<br />
+<A HREF="http://www.activestate.com/">Windows specific</A><br />
+<A HREF="http://www.python.org/">Python for everybody else</A><br />
+<br />
+</span><span class="contentstyle3"><br />
+</span><style type="text/css">.contentstyle4 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle4">Code Examples</b></span><style type="text/css">.contentstyle5 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle5"><br />
+<br />
+In general, all code examples are published under the GNU Public License, even if not explicitly mentioned in the code itself.<br />
+<br />
+Use the examples via command line:<br />
+<br />
+python example.py [textfile]</span><span class="contentstyle5"><br />
+<br />
+</span><style type="text/css">.contentstyle6 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle6">You will need: <A HREF="Code/stattools.py">General code fragments</A> used by some of the scripts, copy it to wherever you copy the other files!<br />
+</span><span class="contentstyle6"><br />
+<br />
+<br />
+<br />
+</span><style type="text/css">.contentstyle7 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle7">N-gram Extraction</b></span><style type="text/css">.contentstyle8 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle8"><br />
+<br />
+<A HREF="Code/frequency.py">Frequency profile of uni-grams 1</A><br />
+<A HREF="Code/frequency2.py">Frequency profile of uni-grams 2</A><br />
+<A HREF="Code/frequencyNFW.py">Frequency profile of uni-grams without function words for English</A><br />
+<A HREF="Code/bigramchar.py">Bi-grams of characters</A><br />
+<A HREF="Code/ngrams.py">N-grams (you specify the N)</A><br />
+<A HREF="Code/ngram.py">Another N-grams tool (you specify the N)</A><br />
+<A HREF="Code/ngramchar.py">Another N-grams tool for characters (you specify the N)</A><br />
+<A HREF="Code/unigramchar.py">Uni-grams of characters</A><br />
+<br />
+<br />
+</span><style type="text/css">.contentstyle9 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle9">Mutual Information and Relative Entropy</b></span><style type="text/css">.contentstyle10 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle10"><br />
+<br />
+<A HREF="Code/MI.py">Mutual Information of bi-grams</A><br />
+<A HREF="Code/MIRE.py">Mutual Information and Relative Entropy</A><br />
+<A HREF="Code/PtwMI.py">Average Left and Right Point-wise Mutual Information for tokens (words)</A><br />
+<A HREF="Code/PtwMIBToTy.py">Average Left and Right Point-wise Mutual Information for tokens and types</A> using the Brown corpus (or any other with slash "dog/N" tag annotation)<br />
+<A HREF="Code/PtwMIBToTy2.py">Average Left and Right Point-wise Mutual Information for tokens and types 2</A> using the Brown corpus (or any other with slash "dog/N" tag annotation)<br />
+<A HREF="Code/PtwMIBTyTy.py">Average Left and Right Point-wise Mutual Information for type information only</A> using the Brown corpus (or any other with slash "dog/N" tag annotation)<br />
+<A HREF="Code/REBToTo.py">Relative Entropy over tokens</A><br />
+<A HREF="Code/REBToTy.py">Relative Entropy over token and type pairs</A><br />
+<br />
+<br />
+</span><style type="text/css">.contentstyle11 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle11">Language Identification</b></span><style type="text/css">.contentstyle12 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle12"><br />
+<br />
+</span></div><div align=""><style type="text/css">.contentstyle13 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle13">More information and the code with some language models can be found at:<br />
+<br />
+<A HREF="http://jones.ling.indiana.edu/damir/lid/">LID: language identification over 3-grams</A><br />
+<br />
+<br />
+</span><style type="text/css">.contentstyle14 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle14">Clustering Algorithms</b></span><style type="text/css">.contentstyle15 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle15"><br />
+<br />
+<A HREF="Code/KMeans/kMeansClustering.zip">K-means example</A> by <A HREF="http://jay.askren.net/">Jay Askren</A> (Indiana University)<br />
+<A HREF="Code/KMeans/index.html">Documentation</A><br />
+<br />
+<br />
+</span><style type="text/css">.contentstyle16 { font-size: 12px; font-family: Helvetica-Bold } </style><b><span class="contentstyle16">MI- and RE-based Parsing</b></span><style type="text/css">.contentstyle17 { font-size: 12px; font-family: Helvetica } </style><span class="contentstyle17"><br />
+<br />
+This code requires you to use some additional files and the Brown corpus for example (or any other corpus where the tokens are slash-annotated (e.g. dog/N)). The choice of tags should be consistent over the corpus, it is irrelevant otherwise.<br />
+<br />
+<A HREF="Code/MIParser.py">MI-RE Parser</A><br />
+<br />
+<br />
+</span></div></div></td>							</tr>						</table>					</td>				</tr>			</table>			<div align="center">				<br>				<span class="footer">&copy; 2004 Damir &#262;avar <a href="mailto:dcavar@indiana.edu">Contact</a> </span></div>		</div>		<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-21704386-2']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script>	</body></html>
