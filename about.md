@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About
+layout: base
+title: About Damir Cavar's Blog
 permalink: /about/
 ---
 
