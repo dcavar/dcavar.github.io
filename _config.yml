@@ -24,7 +24,7 @@ github_username:  dcavar
 
 # Build settings
 markdown: kramdown
-theme: minimal
+theme: minima
 gems:
   - jekyll-feed
 exclude:
