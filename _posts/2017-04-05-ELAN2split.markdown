@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "ELAN2split"
+author: Damir Cavar
 date:   2016-09-15 06:52:13 -0400
 permalink: ELAN2split
 categories: software
