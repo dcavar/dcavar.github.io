@@ -17,7 +17,7 @@ title: Damir Cavar's Homepage
 email: damir@cavar.me
 description: > # this means to ignore newlines until "baseurl:"
   This is Damir Cavar's private homepage.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://damir.cavar.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: DaCavar
 github_username:  dcavar
