@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>k-means.scm.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<font color="#0000ed"><i>;;; Filename: k-means.ss</i></font><br>
+<font color="#0000ed"><i>;;; Author:&nbsp;&nbsp; Damir Cavar &lt;dcavar@me.com&gt;</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; This code is published under the restrictive GPL!</i></font><br>
+<font color="#0000ed"><i>;;; Please find the text of the GPL here:</i></font><br>
+<font color="#0000ed"><i>;;; <a href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; It is free for use, change, etc. as long as the copyright</i></font><br>
+<font color="#0000ed"><i>;;; note above is included in any modified version of the code.</i></font><br>
+<font color="#0000ed"><i>;;; </i></font><br>
+<font color="#0000ed"><i>;;; WARNING:</i></font><br>
+<font color="#0000ed"><i>;;; This is an ALPHA HACK!</i></font><br>
+<font color="#0000ed"><i>;;; Please report any problems with the code!</i></font><br>
+<font color="#0000ed"><i>;;;</i></font><br>
+<font color="#0000ed"><i>;;; Usage:</i></font><br>
+<font color="#0000ed"><i>;;; (load &quot;k-means.ss&quot;)</i></font><br>
+<font color="#0000ed"><i>;;; ----------------------------------------------------</i></font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;list.ss&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font>require&nbsp;<font color="#8a2ae2">(</font>lib&nbsp;<font color="#4a6f8b">&quot;vector-lib.ss&quot;</font>&nbsp;<font color="#4a6f8b">&quot;srfi&quot;</font>&nbsp;<font color="#4a6f8b">&quot;43&quot;</font><font color="#8a2ae2">))</font><br>
+<font color="#8a2ae2">(</font><font color="#458b73">load</font>&nbsp;<font color="#4a6f8b">&quot;vector-extra.ss&quot;</font><font color="#8a2ae2">)</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;soft-k-means<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>vectorspace&nbsp;k<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; initialize by setting k to most distant or random</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>centroids&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;k<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>centroidhash&nbsp;<font color="#8a2ae2">(</font>make-hash-table&nbsp;<font color="#8a2ae2">'</font>equal<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;k<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>countvec&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;vectorspace<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>assign&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">make-vector</font>&nbsp;countvec&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>change&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#cc0000">#t</font><font color="#8a2ae2">]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>priorerror&nbsp;&nbsp; <font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; initialize the centroids</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>;(printf &quot;Assigned:\n~a\n&quot; assign)</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>initialize!&nbsp;centroids&nbsp;centroidhash&nbsp;k&nbsp;error&nbsp;assign&nbsp;countvec&nbsp;vectorspace<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>;(printf &quot;Assigned:\n~a\n&quot; assign)</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;priorerror&nbsp;<font color="#8a2ae2">(</font>vector-sum&nbsp;error<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; assign vectors, recalculate centroid, recalculate error for centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;optimize&nbsp;<font color="#8a2ae2">()</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>currentstate&nbsp;<font color="#8a2ae2">(</font>vector-copy&nbsp;assign<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;change&nbsp;<font color="#cc0000">#f</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; loop over assign: check whether still the same</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;aloop&nbsp;<font color="#8a2ae2">([</font>n&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>curvec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;n<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>assigned&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;assign&nbsp;n<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>distance&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;curvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;assigned<font color="#8a2ae2">))]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>tmpdistance&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>from&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned<font color="#8a2ae2">]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;vloop&nbsp;<font color="#8a2ae2">([</font>p&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; get the distance for the centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;tmpdistance&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;curvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;p<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; if smaller</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;tmpdistance&nbsp;distance<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; remember the new distance</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;distance&nbsp;tmpdistance<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; remember the assignment</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;assign&nbsp;n&nbsp;p<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;to&nbsp;p<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;p&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;k&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vloop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;p&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;to&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>assigned&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;assign&nbsp;n<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">[</font>centvec&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;assigned<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; recalculate the centroid to which vec was assigned</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;centroids&nbsp;assigned&nbsp;<font color="#8a2ae2">(</font>get-centroid&nbsp;centvec&nbsp;curvec<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; keep track of which vector is in this centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>val&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">'())])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;n&nbsp;val<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">(</font>concatenate&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;val&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;n<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; recalculate the error</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>er&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;centvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;x<font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">'()))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;error&nbsp;assigned&nbsp;er<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; recalculate the centroid where it was</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>val&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;centroidhash&nbsp;from&nbsp;<font color="#8a2ae2">'())]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>er&nbsp;&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>hash-table-put!&nbsp;centroidhash&nbsp;from&nbsp;<font color="#8a2ae2">(</font>list-remove&nbsp;val&nbsp;n<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; take initial vec from list and make it the centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;centroids&nbsp;from&nbsp;<font color="#8a2ae2">(</font>vector-copy&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">car</font>&nbsp;val<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; recalc centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;centroids&nbsp;from&nbsp;<font color="#8a2ae2">(</font>get-centroid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;from<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">cdr</font>&nbsp;val<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font>euclidean-distance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;from<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;x<font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;error&nbsp;from&nbsp;er<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;n&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;assign<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>aloop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;n&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; if error did not improve, set change to #f</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>errorsum&nbsp;<font color="#8a2ae2">(</font>vector-sum&nbsp;error<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;errorsum&nbsp;priorerror<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;priorerror&nbsp;errorsum<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;change&nbsp;<font color="#cc0000">#t</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;change&nbsp;<font color="#cc0000">#f</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;assign&nbsp;currentstate<font color="#8a2ae2">)))))</font>&nbsp;<font color="#0000ed"><i>; restore the prior state and return</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;change<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>optimize<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assign<font color="#8a2ae2">))))</font><br>
+<br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;initialize!<br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>centroids&nbsp;centroidhash&nbsp;k&nbsp;error&nbsp;assign&nbsp;countvec&nbsp;vectorspace<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;vec<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>num&nbsp;<font color="#8a2ae2">(</font>random&nbsp;countvec<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; repeat until a vector is found that does not belong to a cluster</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;assign&nbsp;num<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;randloop&nbsp;<font color="#8a2ae2">()</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;num&nbsp;<font color="#8a2ae2">(</font>random&nbsp;countvec<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;</font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;assign&nbsp;num<font color="#8a2ae2">)</font>&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>randloop<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; set the assignment of the vector</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;assign&nbsp;num&nbsp;i<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; copy the vector into the centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;centroids&nbsp;i&nbsp;<font color="#8a2ae2">(</font>vector-copy&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;num<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; remember which vector for this centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-put!&nbsp;centroidhash&nbsp;i&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;num<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp; centroids<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ed"><i>; assign other vectors</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>vector-for-each<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>i&nbsp;a<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">=</font>&nbsp;a&nbsp;<font color="#ff8b00">-1</font><font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; for each centroid, check which one is closest</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>curvec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;i<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>distance&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;curvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">))]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>tmpdistance&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;assign&nbsp;i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">)</font>&nbsp;<font color="#0000ed"><i>; set the vector assignment for 0</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;vloop&nbsp;<font color="#8a2ae2">([</font>p&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; get the distance for the centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;tmpdistance&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;curvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;p<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; if smaller</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;tmpdistance&nbsp;distance<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>begin</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; remember the new distance</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;distance&nbsp;tmpdistance<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; remember the assignment</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;assign&nbsp;i&nbsp;p<font color="#8a2ae2">)))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>if</b></font>&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&lt;</font>&nbsp;p&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">-</font>&nbsp;k&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>vloop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;p&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let*</b></font>&nbsp;<font color="#8a2ae2">([</font>assigned&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;assign&nbsp;i<font color="#8a2ae2">)]</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">[</font>centvec&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;centroids&nbsp;assigned<font color="#8a2ae2">)])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; recalculate the centroid to which vec was assigned</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;centroids&nbsp;assigned&nbsp;<font color="#8a2ae2">(</font>get-centroid&nbsp;centvec&nbsp;curvec<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; keep track of which vector is in this centroid</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>val&nbsp;<font color="#8a2ae2">(</font>hash-table-get&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">'())])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">member</font>&nbsp;i&nbsp;val<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-put!&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">(</font>concatenate&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;val&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">list</font>&nbsp;i<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ed"><i>; recalculate the error</i></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">([</font>er&nbsp;<font color="#ff8b00">0.0</font><font color="#8a2ae2">])</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">for-each</font>&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>x<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#b02f60"><b>set!</b></font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;er&nbsp;<font color="#8a2ae2">(</font>euclidean-distance&nbsp;centvec&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;vectorspace&nbsp;x<font color="#8a2ae2">)))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font>hash-table-get&nbsp;centroidhash&nbsp;assigned&nbsp;<font color="#8a2ae2">'()))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#8a2ae2">(</font><font color="#458b73">vector-set!</font>&nbsp;error&nbsp;assigned&nbsp;er<font color="#8a2ae2">))))))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp; assign<font color="#8a2ae2">)))</font><br>
+</font>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>

@@ -1,0 +1,12 @@
+#sidebarContainer {
+	float: right;
+	position: relative;
+	right: 50px;
+}
+
+#content {
+	float: left;
+	margin-left: 50px;
+	margin-right: 0;
+	width: 463px;
+}

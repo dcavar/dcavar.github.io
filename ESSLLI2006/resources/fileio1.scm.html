@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/Documents/Teaching/2006/ESSLLI/ESSLLI2006/code/fileio1.scm.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#4a6f8b">&quot;:&quot;</font><font color="#0000ed"><i>; exec mzscheme -r $0 &quot;$@&quot;</i></font><br>
+<br>
+<font color="#0000ed"><i>;;; fileio1.ss</i></font><br>
+<font color="#0000ed"><i>;;; (C) 2006 by Damir Cavar</i></font><br>
+<font color="#0000ed"><i>;;; Read filenames from command line arguments</i></font><br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>define</b></font>&nbsp;<font color="#8a2ae2">(</font>read-all&nbsp;path<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">call-with-input-file</font>&nbsp;path<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>lambda</b></font>&nbsp;<font color="#8a2ae2">(</font>p<font color="#8a2ae2">)</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>read-string&nbsp;<font color="#8a2ae2">(</font>file-size&nbsp;path<font color="#8a2ae2">)</font>&nbsp;p<font color="#8a2ae2">))))</font><br>
+<br>
+<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;loop&nbsp;<font color="#8a2ae2">((</font>i&nbsp;<font color="#ff8b00">0</font><font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;<font color="#8a2ae2">(</font>unless&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">&gt;=</font>&nbsp;i&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-length</font>&nbsp;argv<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font><font color="#b02f60"><b>let</b></font>&nbsp;<font color="#8a2ae2">((</font>text&nbsp;<font color="#8a2ae2">(</font>read-all&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">vector-ref</font>&nbsp;argv&nbsp;i<font color="#8a2ae2">))))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>printf&nbsp;text<font color="#8a2ae2">))</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8a2ae2">(</font>loop&nbsp;<font color="#8a2ae2">(</font><font color="#458b73">+</font>&nbsp;i&nbsp;<font color="#ff8b00">1</font><font color="#8a2ae2">))))</font><br>
+</font>
+
+<br/>
+<br/>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></body>
+</html>

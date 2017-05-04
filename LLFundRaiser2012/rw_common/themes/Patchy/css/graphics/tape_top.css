@@ -1,0 +1,17 @@
+#tapeTop {
+	width: 118px;
+	height: 128px;
+	background: url(../../images/tapeTop.gif) no-repeat;
+	position: absolute;
+	margin-left: 801px;
+	margin-top: -87px;
+}
+
+html>body #tapeTop {
+	width: 118px;
+	height: 128px;
+	background: url(../../images/tapeTop.png) no-repeat;
+	position: absolute;
+	margin-left: 801px;
+	margin-top: -87px;
+}

@@ -1,0 +1,8 @@
+#sidebarContainer {
+	display: none;
+}
+
+#content {
+	margin-left: 50px;
+	margin-right: 60px;
+}

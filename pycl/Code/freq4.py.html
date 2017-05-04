@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/freq4.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#! /usr/bin/env python</font>
+<font color="#0000d4"># -*- coding: utf8 -*-</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">freq4.py</font>
+<font color="#f20884">(C) 2005 by Damir Cavar &lt;dcavar@indiana.edu&gt;</font>
+<font color="#f20884">GNU General Public License</font>
+
+<font color="#f20884">Functionality: Counting words</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+<font color="#a020f0">import</font> sys, os.path, glob, string, codecs
+<font color="#a020f0">from</font> operator <font color="#a020f0">import</font> itemgetter
+
+<font color="#804040"><b>def</b></font> <font color="#008080">countWords</font>(words, filename):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Counts words in file and returns dictionary.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   count = words.get(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">__count__</font><span style="background-color: #ffffff">&quot;</span>, 0)
+   <font color="#804040"><b>try</b></font>:
+      file = codecs.open(filename, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">r</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">utf8</font><span style="background-color: #ffffff">&quot;</span>)
+      tokens = [ string.strip(string.lower(i)) <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> file.read().split() ]
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> tokens:
+         words[i] = words.get(i, 0) + 1
+         count += 1
+      file.close()
+   <font color="#804040"><b>except</b></font> IOError:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Cannot read from file:</font><span style="background-color: #ffffff">&quot;</span>, filename
+   words[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">__count__</font><span style="background-color: #ffffff">&quot;</span>] = count
+   <font color="#804040"><b>return</b></font> words
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   words = {}
+   <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> sys.argv[1:]:
+      <font color="#804040"><b>for</b></font> y <font color="#804040"><b>in</b></font> glob.glob(os.path.normcase(x)):
+         words = countWords(words, y)
+
+   <font color="#0000d4"># Items sorted by value</font>
+   <font color="#0000d4">#    The keyword argument `key` allows easy selection of sorting criteria</font>
+   wordsort = sorted(words.items(), key=itemgetter(1), reverse=True)
+
+   <font color="#0000d4"># In-place sort still works, and also has the same new features as sorted</font>
+   <font color="#0000d4">#wordsort = words.items()</font>
+   <font color="#0000d4">#wordsort.sort(key=itemgetter(1), reverse=True)</font>
+
+   <font color="#804040"><b>try</b></font>:
+      file = codecs.open(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">log.txt</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">w</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">utf8</font><span style="background-color: #ffffff">&quot;</span>)
+      file.write(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">word</font><font color="#6a5acd">\t</font><font color="#f20884">frequency</font><font color="#6a5acd">\n</font><span style="background-color: #ffffff">&quot;</span>)
+      count = words.get(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">__count__</font><span style="background-color: #ffffff">&quot;</span>, 1)
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> wordsort:
+         <font color="#804040"><b>if</b></font> x[0] != <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__count__</font><span style="background-color: #ffffff">&quot;</span>:
+            file.write(x[0] + <span style="background-color: #ffffff">&quot;</span><font color="#6a5acd">\t</font><span style="background-color: #ffffff">&quot;</span> + str(float(x[1])/float(count)) + <span style="background-color: #ffffff">&quot;</span><font color="#6a5acd">\n</font><span style="background-color: #ffffff">&quot;</span>)
+      file.close()
+   <font color="#804040"><b>except</b></font> IOError:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Output error.</font><span style="background-color: #ffffff">&quot;</span>
+</pre>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

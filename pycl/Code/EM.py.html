@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/EM.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#! /usr/bin/env python</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">EM2.py</font>
+<font color="#f20884">(C) 2005 by Damir Cavar</font>
+<font color="#f20884">GNU General Public License</font>
+
+<font color="#f20884">Expectation Maximization clustering</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+<font color="#a020f0">import</font> math, operator
+
+income = {}
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Josh</font><span style="background-color: #ffffff">&quot;</span>] = 1550.0
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Tossi</font><span style="background-color: #ffffff">&quot;</span>] = 1460.0
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Amber</font><span style="background-color: #ffffff">&quot;</span>] = 1278.0
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Debbie</font><span style="background-color: #ffffff">&quot;</span>] = 3400.0
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Paul</font><span style="background-color: #ffffff">&quot;</span>] = 5430.0
+income[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">Giancarlo</font><span style="background-color: #ffffff">&quot;</span>] = 5540.0
+
+group = {}
+probability = {}
+
+
+<font color="#0000d4"># Gaussians: mean, deviation</font>
+Gaussians = [(1200.0, 200.0), (5000.0, 300.0)]
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">GaussianPDF</font>(value, G):
+   <font color="#804040"><b>return</b></font> (1/float(math.sqrt(2 * math.pi * G[1]))) * math.e**(-1 * (value - G[0])**2 / (2 * G[1]**2))
+   <font color="#0000d4"># operator.div(1.0, val)</font>
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">expectation</font>():
+   <font color="#804040"><b>global</b></font> group, probability, Gaussians
+   <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> income.keys():
+      p_g1 = GaussianPDF(income[x], Gaussians[0])
+      p_g2 = GaussianPDF(income[x], Gaussians[1])
+      <font color="#804040"><b>print</b></font> x,
+      <font color="#804040"><b>if</b></font> p_g1 &gt; p_g2:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">G1</font><span style="background-color: #ffffff">&quot;</span>, p_g1
+         group[x] = 0
+         probability[x] = p_g1
+      <font color="#804040"><b>else</b></font>:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">G2</font><span style="background-color: #ffffff">&quot;</span>, p_g2
+         group[x] = 1
+         probability[x] = p_g2
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">maximization</font>():
+   <font color="#804040"><b>global</b></font> group, Gaussians, probability
+   <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> range(len(Gaussians)):
+      probs = 0.0
+      posprobs = 0.0
+      deviations = 0.0
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> group.keys():
+         <font color="#804040"><b>if</b></font> group[i] == x:
+            probs += probability[i]
+            posprobs += (probability[i] * income[i])
+      mean = math.floor(posprobs/probs)
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> group.keys():
+         <font color="#804040"><b>if</b></font> group[i] == x:
+            deviations += probability[i] * (mean - income[i])**2
+      deviations = math.floor(math.sqrt(deviations / probs))
+      Gaussians[x] = (mean, deviations)
+
+<font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Data:</font><span style="background-color: #ffffff">&quot;</span>
+<font color="#804040"><b>print</b></font> income
+
+<font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Initialization:</font><span style="background-color: #ffffff">&quot;</span>
+<font color="#804040"><b>print</b></font> Gaussians
+
+<font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> range(5):
+   expectation()
+   maximization()
+   <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Iteration:</font><span style="background-color: #ffffff">&quot;</span>, x
+   <font color="#804040"><b>print</b></font> Gaussians
+   <font color="#804040"><b>print</b></font> probability, <span style="background-color: #ffffff">&quot;</span><font color="#6a5acd">\n</font><span style="background-color: #ffffff">&quot;</span>
+</pre>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

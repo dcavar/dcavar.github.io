@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Dropbox/Web/DC/FSAPy/Wlist2RE.py.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Folded { color: #00008b; background-color: #e6e6e6; }
+.Identifier { color: #458b74; }
+.Statement { color: #b03060; font-weight: bold; }
+.PreProc { color: #1874cd; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">#!/usr/bin/env python</span>
+<span class="Comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="String">&quot;&quot;&quot;</span>
+<span class="String">Wlist2RE.py</span>
+<span class="String">(C) 2007-2011 by Damir Cavar &lt;dcavar@me.com&gt;</span>
+
+<span class="String">This code is published under the GNU General Public Licence Version 3:</span>
+<span class="String"><a href="http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html</a></span>
+<span class="String">Make sure you understand the license terms before doing anything with</span>
+<span class="String">this code.</span>
+
+<span class="String">The code generates an FSA from a list of words and generate a DOT file</span>
+<span class="String">(for visualization in for example Graphviz).</span>
+
+<span class="String">The file FSA.py is required. Make sure it is in the path or next to</span>
+<span class="String">Wlist2RE.py.</span>
+
+<span class="String">Run with Python, having a list of words in a text-file &quot;wordlist.txt&quot;:</span>
+
+<span class="String">python Wlist2RE.py wordlist.txt</span>
+
+<span class="String">The output will be written in the file out.dot. This file can be opened in</span>
+<span class="String">Graphviz for visualization.</span>
+
+<span class="String">or make Wlist2RE.py executable.</span>
+
+<span class="String">The word list is assumed to be encoded in UTF-8. This can be changed in the</span>
+<span class="String">code below.</span>
+
+<span class="String">Links:</span>
+
+<span class="String">For the DOT language:</span>
+<span class="String"><a href="http://www.graphviz.org/doc/info/lang.html">http://www.graphviz.org/doc/info/lang.html</a></span>
+
+<span class="String">For Graphviz:</span>
+<span class="String"><a href="http://www.graphviz.org/">http://www.graphviz.org/</a></span>
+
+<span class="String">&quot;&quot;&quot;</span>
+
+
+__author__    = <span class="String">&quot;Damir Cavar &lt;dcavar@me.hr&gt;&quot;</span>
+__credits__ = <span class="String">&quot;&quot;</span>
+__version__   = <span class="String">&quot;$Revision: 1.0 $&quot;</span>
+__date__      = <span class="String">&quot;$Date: 2008/01/13 13:20:01 $&quot;</span>
+__copyright__ = <span class="String">&quot;Copyright (c) 2007-2011 Damir Ćavar&quot;</span>
+__license__   = <span class="String">&quot;GPLv3&quot;</span>
+
+
+<span class="PreProc">import</span> sys, re, codecs
+<span class="PreProc">from</span> FSA <span class="PreProc">import</span> FSA
+
+finals = <span class="String">u&quot;#__0__FS&quot;</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">makeFSA</span>(wlist):
+<span class="Folded">+--136 lines: &quot;&quot;&quot;Returns a non-deterministic minimal automaton incrementally generated from a word list.&quot;&quot;&quot;</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">makeDOT</span>(myFSA):
+<span class="Folded">+-- 10 lines: &quot;&quot;&quot;Return DOT representation for graphviz.&quot;&quot;&quot;-----------------------------------------</span>
+
+
+
+<span class="Statement">def</span> <span class="Identifier">makePrefixList</span>(wlist):
+    <span class="Comment"># print wlist</span>
+<span class="Folded">+-- 15 lines: prefdict = {}-------------------------------------------------------------------------</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">loadWlist</span>(fname):
+<span class="Folded">+-- 14 lines: &quot;&quot;&quot;Return a list of words from a text file (in UTF-8 encoding).-----------------------</span>
+
+
+<span class="Statement">if</span> __name__ == <span class="String">&quot;__main__&quot;</span>:
+<span class="Folded">+--  7 lines: for i in sys.argv[1:]:----------------------------------------------------------------</span>
+        <span class="Comment"># test some word in the FSA (accepting)</span>
+        <span class="Comment"># print myFSA.accept(&quot;pospavaju&quot;)</span>
+</pre>
+</body>
+</html>

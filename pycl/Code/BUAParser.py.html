@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/BUAParser.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#!/usr/bin/env python</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">BUAParser.py</font>
+<font color="#f20884">(C) 2005 by Damir Cavar</font>
+
+<font color="#f20884">   This code is free; you can redistribute it and/or modify</font>
+<font color="#f20884">   it under the terms of the GNU General Public License as published by</font>
+<font color="#f20884">   the Free Software Foundation; either version 2 of the License, or</font>
+<font color="#f20884">   (at your option) any later version.</font>
+
+<font color="#f20884">This is an implementation of a simple agenda-based buttom-up parser with</font>
+<font color="#f20884">backtracking.</font>
+
+<font color="#f20884">You can change the behavior of the parser by setting the value in the code</font>
+<font color="#f20884">line:</font>
+
+<font color="#f20884">strategy = FIFO</font>
+
+<font color="#f20884">to the LIFO or FIFO. This simulates breadth first or depth first, respectively.</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+<font color="#a020f0">import</font> sys, grammar
+
+LIFO = -1
+FIFO = 0
+strategy = LIFO
+
+<font color="#804040"><b>def</b></font> <font color="#008080">parse</font>(input, grammar, rootsymbol):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Simple non-recursive bottom up parser.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   agenda = []
+   <font color="#804040"><b>while</b></font> True:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Input: %s</font><span style="background-color: #ffffff">&quot;</span> % (input,)
+      <font color="#804040"><b>if</b></font> input == rootsymbol:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Success!</font><span style="background-color: #ffffff">&quot;</span>
+         <font color="#804040"><b>break</b></font>
+      <font color="#804040"><b>else</b></font>:
+         <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(1, len(input) + 1):     <font color="#0000d4"># window</font>
+            <font color="#804040"><b>for</b></font> j <font color="#804040"><b>in</b></font> range(len(input) - i + 1): <font color="#0000d4"># movement</font>
+               <font color="#804040"><b>for</b></font> lhs <font color="#804040"><b>in</b></font> grammar.RHS.get(tuple(input[j:i + j]), []):
+                  newhyp = input[:j] + [lhs] + input[i + j:]
+                  <font color="#804040"><b>if</b></font> newhyp <font color="#804040"><b>not</b></font> <font color="#804040"><b>in</b></font> agenda:
+                     agenda.append(newhyp)
+         <font color="#804040"><b>if</b></font> len(agenda) &gt; 0:
+            input = agenda.pop(strategy)
+            <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Backing up to: </font><span style="background-color: #ffffff">&quot;</span>, input
+         <font color="#804040"><b>else</b></font>:
+            <font color="#804040"><b>if</b></font> input == rootsymbol:
+               <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Success!</font><span style="background-color: #ffffff">&quot;</span>
+            <font color="#804040"><b>else</b></font>:
+               <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Failure! No more backtracking!</font><span style="background-color: #ffffff">&quot;</span>
+            <font color="#804040"><b>break</b></font>
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   <font color="#804040"><b>if</b></font> len(sys.argv[1:]) &gt; 0:
+      parse(sys.argv[1:], grammar.PSG(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">PSG1.txt</font><span style="background-color: #ffffff">&quot;</span>), [<span style="background-color: #ffffff">'</span><font color="#f20884">S</font><span style="background-color: #ffffff">'</span>])
+   <font color="#804040"><b>else</b></font>:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Example parse:</font><span style="background-color: #ffffff">&quot;</span>
+      input=[<span style="background-color: #ffffff">&quot;</span><font color="#f20884">the</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">cat</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">chases</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">a</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">mouse</font><span style="background-color: #ffffff">&quot;</span>]
+      parse(input, grammar.PSG(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">PSG1.txt</font><span style="background-color: #ffffff">&quot;</span>), [<span style="background-color: #ffffff">'</span><font color="#f20884">S</font><span style="background-color: #ffffff">'</span>])
+</pre>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

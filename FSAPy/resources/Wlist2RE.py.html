@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>FSAPy Wlist2RE.py.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Type { color: #008b00; font-weight: bold; }
+.Special { color: #8a2be2; }
+.Constant { color: #ff8c00; }
+.Identifier { color: #458b74; }
+.Statement { color: #b03060; font-weight: bold; }
+.PreProc { color: #1874cd; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">#!/usr/bin/env python</span>
+<span class="Comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="String">&quot;&quot;&quot;</span>
+<span class="String">Wlist2RE.py</span>
+<span class="String">(C) 2007-2011 by Damir Cavar &lt;dcavar@me.com&gt;</span>
+
+<span class="String">This code is published under the Lesser GNU General Public Licence Version 3:</span>
+<span class="String"><a href="http://www.gnu.org/licenses/lgpl-3.0.html">http://www.gnu.org/licenses/lgpl-3.0.html</a></span>
+<span class="String">Make sure you understand the license terms before doing anything with</span>
+<span class="String">this code.</span>
+
+<span class="String">The code generates an FSA from a list of words and generate a DOT file</span>
+<span class="String">(for visualization in for example Graphviz).</span>
+
+<span class="String">The file FSA.py is required. Make sure it is in the path or next to</span>
+<span class="String">Wlist2RE.py.</span>
+
+<span class="String">Run with Python, having a list of words in a text-file &quot;wordlist.txt&quot;:</span>
+
+<span class="String">python Wlist2RE.py wordlist.txt</span>
+
+<span class="String">The output will be written in the file out.dot. This file can be opened in</span>
+<span class="String">Graphviz for visualization.</span>
+
+<span class="String">or make Wlist2RE.py executable.</span>
+
+<span class="String">The word list is assumed to be encoded in UTF-8. This can be changed in the</span>
+<span class="String">code below.</span>
+
+<span class="String">Links:</span>
+
+<span class="String">For the DOT language:</span>
+<span class="String"><a href="http://www.graphviz.org/doc/info/lang.html">http://www.graphviz.org/doc/info/lang.html</a></span>
+
+<span class="String">For Graphviz:</span>
+<span class="String"><a href="http://www.graphviz.org/">http://www.graphviz.org/</a></span>
+
+<span class="String">&quot;&quot;&quot;</span>
+
+
+__author__    = <span class="String">&quot;Damir Cavar &lt;dcavar@me.com&gt;&quot;</span>
+__credits__ = <span class="String">&quot;&quot;</span>
+__version__   = <span class="String">&quot;$Revision: 1.0 $&quot;</span>
+__date__      = <span class="String">&quot;$Date: 2008/01/13 13:20:01 $&quot;</span>
+__copyright__ = <span class="String">&quot;Copyright (c) 2007-2011 Damir Cavar&quot;</span>
+__license__   = <span class="String">&quot;LGPLv3&quot;</span>
+
+
+<span class="PreProc">import</span> sys, re, codecs
+<span class="PreProc">from</span> FSA <span class="PreProc">import</span> FSA
+
+finals = <span class="String">u&quot;#__0__FS&quot;</span>
+
+
+<span class="Statement">def</span> <span class="Identifier">makeFSA</span>(wlist):
+    <span class="String">&quot;&quot;&quot;Returns a non-deterministic minimal automaton incrementally generated from a word list.&quot;&quot;&quot;</span>
+
+    <span class="Comment"># store all the states and as value tuples of production and goal state</span>
+    <span class="Comment"># key: state</span>
+    <span class="Comment"># value: [ (to-state, emission-symbol), ... ]</span>
+    states = { <span class="Constant">0</span>:<span class="Identifier">None</span>, <span class="Constant">1</span>:[] }
+
+    countstates = <span class="Constant">1</span> <span class="Comment"># this number is the currently highest numbered state</span>
+    finalstates = [ <span class="Constant">0</span> ] <span class="Comment"># list of final states</span>
+
+    <span class="Comment"># INIT: store all words as starting from startstate</span>
+    <span class="Comment"># suffixes is used as helping data structure to eliminate duplicates</span>
+    suffixes = {}
+    <span class="Statement">for</span> i <span class="Statement">in</span> wlist:
+        suffixes[i] = <span class="Constant">1</span>
+    <span class="Comment"># tuple list: state, [suffix1, suffix2, ... ], history=(state1, state2, ...)</span>
+    agenda = [ (<span class="Constant">1</span>, suffixes.keys(), <span class="Identifier">tuple</span>() ) ]
+    suffixes = {} <span class="Comment"># empty suffixes!</span>
+    statesuffixes = {} <span class="Comment"># store all suffixes for a state</span>
+
+    <span class="Statement">while</span> <span class="Identifier">True</span>:
+        <span class="Statement">if</span> <span class="Identifier">len</span>(agenda) == <span class="Constant">0</span>:
+            <span class="Statement">break</span>
+        currentstate, suffixlist, history = agenda.pop()
+        <span class="Comment"># get suffixes, if exist:</span>
+        tmpval = statesuffixes.get(currentstate, [])
+        tmpval = tmpval + suffixlist
+        tmpval.sort()
+        statesuffixes[currentstate] = tmpval
+
+        prefList = makePrefixList(suffixlist)
+        <span class="Statement">for</span> x <span class="Statement">in</span> prefList.keys():
+            val = prefList[x]
+            <span class="Statement">if</span> finals <span class="Statement">in</span> val <span class="Statement">and</span> <span class="Identifier">len</span>(val) == <span class="Constant">1</span>:
+                    <span class="Comment"># link this to final state</span>
+                    transitions = states.get(currentstate, [])
+                    <span class="Statement">if</span> (x, <span class="Constant">0</span>) <span class="Statement">not</span> <span class="Statement">in</span> transitions:
+                        transitions.append( (x, <span class="Constant">0</span>) )
+                        states[currentstate] = transitions
+                    <span class="Comment"># generate suffix and store in suffix list</span>
+                    tmpsuf = x
+                    sto = currentstate
+                    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(history) - <span class="Constant">1</span>, -<span class="Constant">1</span>, -<span class="Constant">1</span>):
+                        <span class="Statement">if</span> history[i] <span class="Statement">in</span> finalstates:
+                            <span class="Comment"># only if the current state is not a final one too</span>
+                            <span class="Statement">break</span>
+                        outgoing = states[history[i]]
+                        <span class="Statement">if</span> <span class="Identifier">len</span>(outgoing) &gt; <span class="Constant">1</span>:
+                            <span class="Statement">break</span>
+                        <span class="Statement">for</span> n <span class="Statement">in</span> outgoing:
+                            <span class="Statement">if</span> n[<span class="Constant">1</span>] == sto:
+                                tmpsuf = n[<span class="Constant">0</span>] + tmpsuf
+                        sto = history[i]
+                    tmp = suffixes.get(tmpsuf, -<span class="Constant">1</span>)
+                    <span class="Statement">if</span> tmp == -<span class="Constant">1</span>:
+                        suffixes[tmpsuf] = sto
+                    <span class="Statement">continue</span>
+
+            <span class="Comment"># if there is one suffix and it is in suffixes</span>
+            <span class="Comment"># link it to the state this suffix starts from</span>
+            <span class="Statement">if</span> <span class="Identifier">len</span>(val) == <span class="Constant">1</span> <span class="Statement">and</span> suffixes.has_key(val[<span class="Constant">0</span>]):
+                transition = (x, suffixes[val[<span class="Constant">0</span>]])
+                transitions = states.get(currentstate, [])
+                <span class="Statement">if</span> transition <span class="Statement">not</span> <span class="Statement">in</span> transitions:
+                    transitions.append(transition)
+                    states[currentstate] = transitions
+            <span class="Statement">else</span>:
+                <span class="Comment"># make new transition</span>
+                countstates += <span class="Constant">1</span>
+                transition = (x, countstates)
+                transitions = states.get(currentstate, [])
+                <span class="Statement">if</span> transition <span class="Statement">not</span> <span class="Statement">in</span> transitions:
+                    transitions.append(transition)
+                    states[currentstate] = transitions
+                <span class="Statement">if</span> finals <span class="Statement">in</span> val:
+                    <span class="Statement">if</span> countstates <span class="Statement">not</span> <span class="Statement">in</span> finalstates:
+                        finalstates.append(countstates)
+                    val.remove(finals)
+                agenda.append( (countstates, val, <span class="Identifier">tuple</span>(<span class="Identifier">list</span>(history) + [ currentstate ])) )
+
+    <span class="Comment"># check for equal subpaths in the end</span>
+    merged = {}
+    <span class="Statement">for</span> key <span class="Statement">in</span> statesuffixes.keys():
+        val = <span class="Identifier">tuple</span>(statesuffixes[key])
+        <span class="Statement">del</span> statesuffixes[key]
+        <span class="Comment"># hash table with transition and target state as key</span>
+        <span class="Comment"># and starting state as value</span>
+        <span class="Comment"># the target state converted to final vs. non-final</span>
+        <span class="Statement">if</span> statesuffixes.has_key(val):
+            <span class="Comment"># merge the states</span>
+            merged[key] = statesuffixes[val]
+        <span class="Statement">else</span>:
+            statesuffixes[ <span class="Identifier">max</span>( (key, val) ) ] = <span class="Identifier">min</span>( (key, val) )
+    statesuffixes = <span class="Identifier">None</span>
+
+    <span class="Comment"># change the states that need to be merged</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> states.keys():
+        newval = []
+        oldval = states[i]
+        <span class="Statement">if</span> oldval == <span class="Identifier">None</span>:
+            <span class="Statement">continue</span>
+        <span class="Statement">for</span> j <span class="Statement">in</span> oldval:
+            <span class="Statement">if</span> merged.has_key(j[<span class="Constant">1</span>]):
+                newval.append( (j[<span class="Constant">0</span>], merged[ j[<span class="Constant">1</span>] ]) )
+            <span class="Statement">else</span>:
+                newval.append( (j[<span class="Constant">0</span>], j[<span class="Constant">1</span>]) )
+        states[i] = newval
+
+    myFSA = FSA() <span class="Comment"># new FSA</span>
+
+    <span class="Comment"># eliminate unnecessary states by traversing</span>
+    agenda = []
+    <span class="Statement">for</span> i <span class="Statement">in</span> states[<span class="Constant">1</span>]:
+        agenda.append( i )
+        myFSA.add(<span class="Constant">1</span>, i[<span class="Constant">0</span>], i[<span class="Constant">1</span>], <span class="Identifier">None</span>, <span class="Identifier">None</span>)
+
+    <span class="Statement">while</span> <span class="Identifier">True</span>:
+        <span class="Statement">if</span> <span class="Statement">not</span> agenda:
+            <span class="Statement">break</span>
+        inp, state = agenda.pop()
+        val = states[state]
+        <span class="Statement">if</span> val:
+            <span class="Statement">for</span> i <span class="Statement">in</span> val:
+                agenda.append( i )
+                myFSA.add(state, i[<span class="Constant">0</span>], i[<span class="Constant">1</span>], <span class="Identifier">None</span>, <span class="Identifier">None</span>)
+    <span class="Comment"># erase unnecessary data</span>
+    states = <span class="Identifier">None</span>
+
+    existingstates = myFSA.getStates()
+    <span class="Statement">for</span> i <span class="Statement">in</span> finalstates:
+        <span class="Statement">if</span> i <span class="Statement">in</span> existingstates:
+            myFSA.setFinal(i)
+    myFSA.setFinal(<span class="Constant">0</span>)
+    myFSA.setStart(<span class="Constant">1</span>)
+
+    <span class="Statement">return</span> myFSA
+
+
+<span class="Statement">def</span> <span class="Identifier">makeDOT</span>(myFSA):
+    <span class="String">&quot;&quot;&quot;Return DOT representation for graphviz.&quot;&quot;&quot;</span>
+
+    <span class="Identifier">buffer</span> = <span class="String">&quot;digraph fsa {</span><span class="Special">\n</span><span class="String">rankdir=LR;</span><span class="Special">\n</span><span class="String">node [shape=doublecircle];</span><span class="Special">\n</span><span class="String">&quot;</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> myFSA.getFinalStates():
+        <span class="Identifier">buffer</span> = <span class="String">u&quot; &quot;</span>.join((<span class="Identifier">buffer</span>, <span class="Identifier">str</span>(i)))
+    <span class="Identifier">buffer</span> += <span class="String">u&quot;;</span><span class="Special">\n</span><span class="String">node [shape = circle];</span><span class="Special">\n</span><span class="String">&quot;</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> myFSA.states.keys():
+        val = myFSA.states[i]
+        <span class="Identifier">buffer</span> = <span class="String">u&quot; &quot;</span>.join( (<span class="Identifier">buffer</span>, <span class="Identifier">str</span>(i[<span class="Constant">0</span>]), <span class="String">u&quot;-&gt;&quot;</span>, <span class="Identifier">str</span>(val[<span class="Constant">0</span>]), <span class="String">u&quot;[ label=</span><span class="Special">\&quot;</span><span class="String">&quot;</span>, i[<span class="Constant">1</span>], <span class="String">u&quot;</span><span class="Special">\&quot;</span><span class="String"> ];</span><span class="Special">\n</span><span class="String">&quot;</span>) )
+    <span class="Statement">return</span> <span class="String">&quot;&quot;</span>.join((<span class="Identifier">buffer</span>, <span class="String">&quot;</span><span class="Special">\n</span><span class="String">}&quot;</span>))
+
+
+
+<span class="Statement">def</span> <span class="Identifier">makePrefixList</span>(wlist):
+    <span class="Comment"># print wlist</span>
+    prefdict = {}
+    <span class="Statement">for</span> i <span class="Statement">in</span> wlist:
+        <span class="Statement">if</span> <span class="Statement">not</span> i:
+            <span class="Statement">continue</span>
+        value = prefdict.get(i[<span class="Constant">0</span>], [])
+        <span class="Statement">if</span> <span class="Identifier">len</span>(i) == <span class="Constant">1</span>:
+            rest = finals
+        <span class="Statement">else</span>:
+            rest = i[<span class="Constant">1</span>:]
+        <span class="Statement">if</span> rest <span class="Statement">in</span> value:
+            <span class="Statement">continue</span>
+        value.append(rest)
+        value.sort()
+        prefdict[i[<span class="Constant">0</span>]] = value
+    <span class="Statement">return</span> prefdict
+
+
+<span class="Statement">def</span> <span class="Identifier">loadWlist</span>(fname):
+    <span class="String">&quot;&quot;&quot;Return a list of words from a text file (in UTF-8 encoding).</span>
+<span class="String">       The word list is genereted by whitespace tokenization, i.e.</span>
+<span class="String">        it could be a floating text, a list of words line by line,</span>
+<span class="String">        word by word, etc. Duplicate words are removed.&quot;&quot;&quot;</span>
+    <span class="Statement">try</span>:
+        fp = codecs.<span class="Identifier">open</span>(fname, <span class="String">&quot;r&quot;</span>, <span class="String">&quot;utf-8&quot;</span>)
+        tmp = fp.read()
+        fp.close()
+        words = tmp.split()
+    <span class="Statement">except</span> <span class="Type">ValueError</span>:
+        fp.close()
+    words = <span class="Identifier">list</span>(<span class="Identifier">set</span>(words))
+    words.sort()
+    <span class="Statement">return</span> <span class="Identifier">tuple</span>(words)
+
+
+<span class="Statement">if</span> __name__ == <span class="String">&quot;__main__&quot;</span>:
+    <span class="Statement">for</span> i <span class="Statement">in</span> sys.argv[<span class="Constant">1</span>:]:
+        myFSA = makeFSA(loadWlist(i))
+        myFSA.setAcceptingEmission(<span class="String">&quot;verb&quot;</span>)
+        ret = makeDOT(myFSA)
+        fp = codecs.<span class="Identifier">open</span>(<span class="String">&quot;out.dot&quot;</span>, <span class="String">&quot;w&quot;</span>, <span class="String">&quot;utf-8&quot;</span>)
+        fp.write(ret)
+        fp.close()
+        <span class="Comment"># test some word in the FSA (accepting)</span>
+        <span class="Comment"># print myFSA.accept(&quot;pospavaju&quot;)</span>
+</pre>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8896209246743797";
+/* HomePage-DC-small */
+google_ad_slot = "9466016636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

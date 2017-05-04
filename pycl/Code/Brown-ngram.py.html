@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/Brown-ngram.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#!/usr/bin/env python</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">Brown-ngram.py</font>
+<font color="#f20884">(C) 2005 by Damir Cavar</font>
+
+<font color="#f20884">This code is free; you can redistribute it and/or modify</font>
+<font color="#f20884">it under the terms of the GNU General Public License as published by</font>
+<font color="#f20884">the Free Software Foundation; either version 2 of the License, or</font>
+<font color="#f20884">(at your option) any later version.</font>
+
+<font color="#f20884">This is an implementation of a simple ngram generator for the Brown corpus format.</font>
+
+<font color="#f20884">Each token is structured as follows:</font>
+<font color="#f20884">word + &quot;/&quot; + part of speech</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+
+<font color="#a020f0">import</font> sys, glob, os.path, string
+<font color="#a020f0">from</font> ngram <font color="#a020f0">import</font> Ngrams
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">makeNgrams</font>(ngrams, filename):
+   <font color="#804040"><b>try</b></font>:
+      file = open(filename)
+      tokens = file.read().split()
+      file.close()
+   <font color="#804040"><b>except</b></font> IOError:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Cannot read from file</font><span style="background-color: #ffffff">&quot;</span>, filename
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> tokens:
+      i = i.split(<span style="background-color: #ffffff">&quot;</span><font color="#f20884">/</font><span style="background-color: #ffffff">&quot;</span>)
+      <font color="#804040"><b>if</b></font> i[0][0] <font color="#804040"><b>not</b></font> <font color="#804040"><b>in</b></font> string.punctuation:
+         i[0] = i[0].lower()
+         ngrams.addNgram( tuple(i) )
+   <font color="#804040"><b>return</b></font> ngrams
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   myNgrams = Ngrams(2)
+   <font color="#804040"><b>if</b></font> len(sys.argv) &gt; 1:
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> sys.argv[1:]:
+         <font color="#804040"><b>for</b></font> y <font color="#804040"><b>in</b></font> glob.glob(os.path.normcase(x)):
+            <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Loading file:</font><span style="background-color: #ffffff">&quot;</span>, y
+            myNgrams = makeNgrams(myNgrams, y)
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> myNgrams.frequencyProfile(False):
+         <font color="#804040"><b>print</b></font> x
+   <font color="#804040"><b>else</b></font>:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Usage:</font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">python Brown-ngram.py filename[s]</font><span style="background-color: #ffffff">&quot;</span>
+</pre>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21704386-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
