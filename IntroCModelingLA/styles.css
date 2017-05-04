@@ -1,58 +1,0 @@
-body {
-	background : #e2e2e2;	font-family: Lucida Grande, Arial, Helvetica, sans serif; 
-	font-size: 12px;
-	color: #000000;
-	margin: 0px;
-}
-
-P {
-	font-family: Lucida Grande, Arial, Helvetica, sans serif; 
-	font-size: 12px;
-	color: #000000;
-}
-
-B {
-	font-weight: Bold;
-	font-size:12px; 
-	color: #000000;
-	}
-
-.content {
-}
-
-#content img{
-	position: relative;
-	margin: 10px;
-	float: right;
-}
-
-.header{
-}
-
-#header img{
-	position: relative;
-	margin: 5px;
-	float: left;
-	display: inline;
-}
-
-.TitleStyle  {
-	color: #ffffff;
-	text-indent: 0px;
-	position: relative;
-	vertical-align: middle;
-	font: bold 14px Lucida Grande, Arial, Helvetica, sans serif;
-	padding-bottom: 10px;
-}
-
-.footer {  font-size: 12px; color: #666666; font-family: Lucida Grande, Arial, Helvetica, sans serif;
-	text-align: center;
-}/* Link Styles */a:link {	color: #333333;	text-decoration: underline;
-	font: bold 12px "Lucida Grande", "Arial", "Helvetica" ,"Swiss" ,"SunSans-Regular";
-}a:visited {	color: #333333;	text-decoration: underline;
-	font: bold 12px "Lucida Grande", "Arial", "Helvetica" ,"Swiss" ,"SunSans-Regular";
-}a:hover {	color: #333333;	text-decoration: none;
-	font: bold 12px "Lucida Grande", "Arial", "Helvetica" ,"Swiss" ,"SunSans-Regular";
-}a:active {	color: #333333;	text-decoration: none;
-	font: bold 12px "Lucida Grande", "Arial", "Helvetica" ,"Swiss" ,"SunSans-Regular";
-}
