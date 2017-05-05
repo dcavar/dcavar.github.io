@@ -37,6 +37,17 @@ p {
     font-size: 1em;
     line-height: 1.4em;
     color: #333;
+    margin: 0.1em;
+    padding: 0.5em;
+}
+
+li {
+    margin: 0em;
+    padding: 0.5em;
+}
+
+.post-link {
+    font-size: 20px;
 }
 
 footer {
