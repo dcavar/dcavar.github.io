@@ -11,9 +11,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']" href="/">home</a></li>
-                <li class="dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a [routerLink]="['/cv']" class="dropdown-toggle" data-toggle="dropdown" href="#">cv
+                <li><a href="/">home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">cv
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/cv/">cv</a></li>
@@ -23,10 +23,10 @@
                         <li><a href="/cv/teaching.html">teaching</a></li>
                     </ul>
                 </li>
-                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/code']" href="/code/">code</a></li>
+                <li><a href="/code/">code</a></li>
             </ul>
-            <ul [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav navbar-nav navbar-right">
-                <li><a [routerLink]="['/blog']" href="/blog">blog</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/blog">blog</a></li>
             </ul>
         </div>
     </div>
