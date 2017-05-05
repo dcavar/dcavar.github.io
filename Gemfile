@@ -29,3 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # generate sitemap
 gem 'jekyll-sitemap'
 
+# SEO Tag
+gem 'jekyll-seo-tag'
