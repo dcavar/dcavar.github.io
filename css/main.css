@@ -104,13 +104,29 @@ ul.posts li {
     color: #fff;
 }
 .nav.navbar-nav a:hover {
-    color: grey;
+    color: #ffffff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    /*background-color: #3344ff;*/
+    color:#ffffff;
 }
 .dropdown-menu>li>a, .dropdown-menu {
     background-color: #3b95ff;
     color:#ffffff;
 }
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+}
 
+.navbar-default .navbar-text {
+    color: #FFF;
+}
+.navbar-gallery .dropdown-menu > li > a {
+    color: #ffffff;
+}
+.navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+}
 nav ul, footer ul {
     /*font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     padding: 0px;
@@ -148,7 +164,7 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
-    background-color: silver; /*Change rollover cell color here*/
+    background-color: #ffffff; /*Change rollover cell color here*/
 }
 
 
