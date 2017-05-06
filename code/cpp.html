@@ -15,30 +15,36 @@ link: cpp
 
 <ul>
     <li><a href="http://gorilla.linguistlist.org/software/#ELAN2split" target="_blank">ELAN2split</a>
-        (splitting ELAN annotation files into time-sequences as annotated in a
-        specific tier). This tool generates a corpus of file-pairs, i.e.
+        (splitting <a href="https://tla.mpi.nl/tools/tla-tools/elan/">ELAN</a> annotation files into time-sequences as
+        annotated in a specific tier). This tool generates a corpus of file-pairs, i.e.
         audio-file chunks from a time-aligned speech corpus with the
-        corresponding transcription to be used by HTK-based speech
-        tools&nbsp;for the generation of Forced Aligners or training of other
-        types of speech recognizer models. The C++11 code is available
-        at&nbsp;the <a href="https://bitbucket.org/dcavar/elan2split" target="_blank">Bitbucket&nbsp;Git Repo</a>.
+        corresponding transcription to be used by the <a href="http://htk.eng.cam.ac.uk/">Hidden Markov Model
+            Toolkit</a> (<a href="http://htk.eng.cam.ac.uk/">HTK</a>) based speech
+        tools for the generation of Forced Aligners or training of other
+        types of speech recognizer models. The <a href="https://en.wikipedia.org/wiki/C%2B%2B11">C++11</a> code is
+        available
+        at the <a href="https://bitbucket.org/dcavar/elan2split" target="_blank">Bitbucket Git Repo</a>.
     </li>
     <li><a href="https://bitbucket.org/dcavar/treebankparsersa">TreeBankParserSA</a>
-        is a tool written in C++11 to extract Context-free Grammar rules from
+        is a tool written in <a href="https://en.wikipedia.org/wiki/C%2B%2B11">C++11</a> to extract Context-free Grammar
+        rules from
         treebanks in the Penn-Treebank format. It can generate Probabilistic
         Context-free Grammar (PCFG) formats for the <a href="http://gorilla.linguistlist.org/fle/">Free Linguistic
             Environment</a> (<a href="http://gorilla.linguistlist.org/fle/">FLE</a>)
         with absolute counts and relative frequencies. The frequencies can
         refer to the left-hand-side symbol or the particular extracted rule. One
         output format will be also compact using Finite State representations
-        or the <a href="http://gorilla.linguistlist.org/fle/">FLE</a>-based Weighted Finite State Transducer (WFST)
+        or the <a href="http://gorilla.linguistlist.org/fle/">FLE</a>-based <a
+                href="https://en.wikipedia.org/wiki/Finite-state_transducer#Weighted_automata">Weighted Finite State
+            Transducer</a> (<a href="https://en.wikipedia.org/wiki/Finite-state_transducer#Weighted_automata">WFST</a>)
         representation.
     </li>
     <li><a href="http://gorilla.linguistlist.org/fle/" target="_blank">Free Linguistic Environment</a> (<a
             href="http://gorilla.linguistlist.org/fle/" target="_blank">FLE</a>), a parser environment implemented in
-        C++11/C++14, mainly focusing on compatibility with <a href="http://www2.parc.com/isl/groups/nltt/xle/"
-                                                              target="_blank">XLE</a> and <a
-                href="http://www.fsmbook.com/" target="_blank">XFST</a> for parsing based on the&nbsp;LFG-formalism
+        <a href="https://en.wikipedia.org/wiki/C%2B%2B11">C++11</a>/<a href="https://en.wikipedia.org/wiki/C%2B%2B14">C++14</a>,
+        mainly focusing on compatibility with <a href="http://www2.parc.com/isl/groups/nltt/xle/"
+                                                 target="_blank">XLE</a> and <a
+                href="http://www.fsmbook.com/" target="_blank">XFST</a> for parsing based on the LFG-formalism
         (using the existing <a href="http://www.fsmbook.com/" target="_blank">XFST</a> morphologies and <a
                 href="http://www2.parc.com/isl/groups/nltt/xle/" target="_blank">XLE</a>
         grammars). It also can parse with CFGs, PCFGs, etc. The implementation
@@ -50,7 +56,7 @@ link: cpp
                 href="http://www.openfst.org/" target="_blank">OpenFST</a>. I run a <a
                 href="http://listserv.linguistlist.org/mailman/listinfo/lfgparser" target="_blank">list for the
             development group</a>, a <a href="https://bitbucket.org/linguistlist/lfgparser/" target="_blank">closed
-            Bitbucket Git-repo</a>&nbsp;(by invitation) and <a href="https://bitbucket.org/dcavar/fle" target="_blank">a
+            Bitbucket Git-repo</a> (by invitation) and <a href="https://bitbucket.org/dcavar/fle" target="_blank">a
             free and open repo</a> with the finally released code.
     </li>
 </ul>
