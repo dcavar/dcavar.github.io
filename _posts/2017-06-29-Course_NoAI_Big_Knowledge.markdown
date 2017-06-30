@@ -18,6 +18,8 @@ VT: SEMANTICS AND DISCOURSE
 - Above class requires permission of instructor
 - Above class meets with LING-L 715 
 
+(Note: *This is not CSCI-B 659/LING-L 645 Topics in Artificial Intelligence/Advanced NLP!*)
+
 
 **Topic: Semantic Natural Language Processing, NoAI, and Big Knowledge**
 
