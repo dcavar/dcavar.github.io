@@ -5,7 +5,7 @@ author: Damir Cavar
 date:   2017-08-12 08:21:00 -0400
 permalink: System_76_with_Fedora
 categories: System 76, Lemur, laptop, Fedora, KDE, Linux
-tags: "System 76 Lemur", "Fedora 26", KDE
+tags: "System 76 Lemur" "Fedora 26" "KDE"
 ---
 # System 76 Lemur with Fedora 26 KDE Spin
 
