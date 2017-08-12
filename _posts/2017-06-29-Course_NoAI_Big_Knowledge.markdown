@@ -1,6 +1,6 @@
 ---
+title:  CSCI-B 659 and LING-715 Semantic Natural Language Processing, NoAI, and Big Knowledge
 layout: post
-title:  "CSCI-B 659 and LING-715 Semantic Natural Language Processing, NoAI, and Big Knowledge"
 author: Damir Cavar
 date:   2017-06-29 20:14:10 -0400
 permalink: Semantic_NLP_NoAI_Big_Knowledge

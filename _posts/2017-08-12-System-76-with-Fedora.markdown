@@ -1,6 +1,6 @@
 ---
+title:  System 76 Lemur with Fedora 26 KDE Spin
 layout: post
-title:  "System 76 Lemur with Fedora 26 KDE Spin"
 author: Damir Cavar
 date:   2017-08-12 08:21:00 -0400
 permalink: System_76_with_Fedora
