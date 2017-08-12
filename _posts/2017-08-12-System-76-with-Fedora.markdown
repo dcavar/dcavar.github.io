@@ -7,6 +7,8 @@ permalink: System_76_with_Fedora
 categories: System 76, Lemur, laptop, Fedora, KDE, Linux
 tags: "System 76 Lemur", "Fedora 26", KDE
 ---
+# System 76 Lemur with Fedora 26 KDE Spin
+
 I installed successfully [Fedora 26 KDE Spin with Plasma Desktop](https://spins.fedoraproject.org/kde/) on my [System 76 Lemur](https://system76.com/laptops/lemur). The default Ubuntu had issues with many things, most annoying were issues with the wireless driver.
 
 As for the procedure:
