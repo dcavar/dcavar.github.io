@@ -7,6 +7,8 @@ permalink: Semantic_NLP_NoAI_Big_Knowledge
 categories: software, course, AI, spoken language interface, knowledge graph
 tags: Graph-DB Alexa "Google Assistant" OWL NLP LFG "Dependency Parser" "Lexical-functional Grammar" textmining "deep parsing" "knowledge graphs"
 ---
+# CSCI B-659 and LING L-715 Semantic Natural Language Processing, NoAI, and Big Knowledge
+
 This fall I am teaching the course:
 
 CSCI-B 659 TOPICS ARTIFICIAL INTELLIGENCE (and LING-L 715 SEMINAR IN COMPUTATIONAL LING) (3 CR)
