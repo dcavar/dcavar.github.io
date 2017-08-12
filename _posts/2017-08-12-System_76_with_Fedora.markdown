@@ -12,11 +12,11 @@ I installed successfully [Fedora 26 KDE Spin with Plasma Desktop](https://spins.
 
 As for the procedure:
 
-- Backup your System 76 data and other details (e.g. installed packages, */usr/local*, */opt*, some settings from */etc*).
+- Backup your [System 76](https://system76.com/) data and other details (e.g. installed packages, */usr/local*, */opt*, some settings from */etc*).
 - Download Fedora, in my case the [Fedora 26 KDE Plasma Desktop](https://spins.fedoraproject.org/kde/download/index.html).
 - Create a bootable USB Flash drive using [Etcher](https://etcher.io/).
 - Plug it into the USB port.
-- Boot the System 76 holding down F7 to get into the boot menu.
+- Boot the [System 76](https://system76.com/) holding down F7 to get into the boot menu.
 - Select the USB drive with Fedora.
 - Follow the installation instructions.
 - Update the system after successful installation (using *dnf update* in the terminal as sudo) and set up some essential software.
