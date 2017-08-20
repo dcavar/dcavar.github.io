@@ -48,7 +48,7 @@ Students from Data Science, Computer Science, Engineering, will gain experience 
 
 Cognitive Science students will gain experience with modeling of concept nets and knowledge representations, real applications with NLP, machine learning, and AI algorithms.
 
-The course will group students into projects with priorities on modeling linguistic processing and analysis, knowledge representations and graph-based technologies, spoken language interfaces using common SDKs and APIs from Amazon and Google, etc., depending on the the students core skills and main interests.
+The course will group students into projects with priorities on modeling linguistic processing and analysis, knowledge representations and graph-based technologies, spoken language interfaces using common SDKs and APIs from Amazon and Google, etc., depending on the students core skills and main interests.
 
 
 The content of the course can have these special foci, among others:
