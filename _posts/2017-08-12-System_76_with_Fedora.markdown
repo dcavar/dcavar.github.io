@@ -36,6 +36,13 @@ Interesting questions:
 - Does my [Overleaf](https://www.overleaf.com/), [Office365](https://www.office.com/), [iCloud](https://www.icloud.com/), [Dropbox](https://www.dropbox.com/install-linux), [Netflix](https://www.netflix.com/), ... work?
 
 
+### Activate KDE Connect on Fedora and Android
+
+If you want to activate [KDE Connect](https://community.kde.org/KDEConnect) on [Fedora](https://getfedora.org/), you need to open [Firewall Configuration](https://fedoraproject.org/wiki/Firewalld?rd=FirewallD). Change to **Configuration: Permanent**. Select your default configuration, e.g. **public** and in Services activate *kde-connect*. In the *Options* menu activate *Reload Firewalld*. On your Android device install [KDE Connect](https://community.kde.org/KDEConnect) and refresh, pair and connect to your [Fedora](https://getfedora.org/) system.
+
+
+
+
 ## Summary
 
 If I encounter issues with something, I will report here.
