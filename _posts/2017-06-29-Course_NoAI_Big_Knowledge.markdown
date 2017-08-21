@@ -42,7 +42,7 @@ This is a theoretical and also very practical seminar that includes:
 - using [Graph Databases](https://en.wikipedia.org/wiki/Graph_database) for knowledge representations (e.g. [Neo4J](https://neo4j.com/), [Apache Jena](https://jena.apache.org/), [Stardog](http://www.stardog.com/)), using [SPARQL](https://en.wikipedia.org/wiki/SPARQL), Reasoning engines (e.g. [Fact++](http://owl.man.ac.uk/factplusplus/), [Pellet](https://github.com/stardog-union/pellet)), [OWL2](https://en.wikipedia.org/wiki/Web_Ontology_Language), semantic constraints over [OWL2](https://en.wikipedia.org/wiki/Web_Ontology_Language)
 - using the [Amazon Alexa SDK](https://developer.amazon.com/alexa-skills-kit) and [Lambda Functions](https://aws.amazon.com/lambda/) for the development of spoken language interfaces to query knowledge representations
 - various machine learning technologies, neural networks, graph and network analysis technologies that are related to NLP and knowledge representations/processing
-- all based on truly open source code and tools from our side (with the exception of Amazon's or Google's SDKs)
+- all based on truly open source code and tools from our side (with the exception of [Amazon's Alexa]((https://developer.amazon.com/alexa-skills-kit)) or [Google's Assistant SDKs](https://developers.google.com/assistant/sdk/))
 
 Students from Linguistics and language studies will gain experience with the newest technologies that are underlying applications like Amazon Alexa, Google Assistant, IBM Watson, etc. They will have the opportunity to model linguistic knowledge (lexical, syntactic, semantic, pragmatic) and apply it in high-level technological environments.
 
