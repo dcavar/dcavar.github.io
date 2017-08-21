@@ -36,11 +36,11 @@ Our goal is to set up a fully functional system by end of the semester.
 
 This is a theoretical and also very practical seminar that includes:
 
-- setting up a test server on the Amazon AWS (EC2) cloud (and/or Microsoft Azure) using Linux as an operating system
+- setting up a test server on the [Amazon AWS](https://aws.amazon.com/) (EC2) cloud (and/or [Microsoft Azure](https://azure.microsoft.com/)) using Linux as an operating system
 - using common (and lesser common) NLP technologies and pipelines for text processing, parsing, semantic analysis
-- modeling grammars (using deep linguistic models, e.g. Probabilistic Lexical-functional Grammar, Construction Grammar), linguistic processing of morphologies (using Finite State Transducer and various probabilistic models), multi-word expressions, concept typing, etc.
-- using Graph Databases for knowledge representations (e.g. Neo4J, Apache Jena, Stardog), using SPARQL, Reasoning engines (e.g. Fact++, Pellet), OWL2, semantic constraints over OWL2
-- using the Amazon Alexa SDK and Lambda Functions for the development of spoken language interfaces to query knowledge representations
+- modeling grammars (using deep linguistic models, e.g. Probabilistic Lexical-functional Grammar, [Construction Grammar](https://www.fcg-net.org/)), linguistic processing of morphologies (using Finite State Transducer and various probabilistic models), multi-word expressions, concept typing, etc.
+- using [Graph Databases](https://en.wikipedia.org/wiki/Graph_database) for knowledge representations (e.g. [Neo4J](https://neo4j.com/), [Apache Jena](https://jena.apache.org/), [Stardog](http://www.stardog.com/)), using [SPARQL](https://en.wikipedia.org/wiki/SPARQL), Reasoning engines (e.g. [Fact++](http://owl.man.ac.uk/factplusplus/), [Pellet](https://github.com/stardog-union/pellet)), [OWL2](https://en.wikipedia.org/wiki/Web_Ontology_Language), semantic constraints over [OWL2](https://en.wikipedia.org/wiki/Web_Ontology_Language)
+- using the [Amazon Alexa SDK](https://developer.amazon.com/alexa-skills-kit) and [Lambda Functions](https://aws.amazon.com/lambda/) for the development of spoken language interfaces to query knowledge representations
 - various machine learning technologies, neural networks, graph and network analysis technologies that are related to NLP and knowledge representations/processing
 - all based on truly open source code and tools from our side (with the exception of Amazon's or Google's SDKs)
 
@@ -64,4 +64,10 @@ The content of the course can have these special foci, among others:
 - Using various neural network strategies we can approach modeling of dialog memory, co-reference analysis, or simple processing of different discourse functions.
 - Using temporal logic we can process time references and deduce the event time of assertions.
 - Using dialog memory and pragmatic components and modeling technologies we can manage not only co-reference and anaphoric relations, but also complex conversation flow and conversational goals.
+
+
+### Resources
+
+For more details consult the [Fall 2017 course website](http://damir.cavar.me/l715/).
+
 
