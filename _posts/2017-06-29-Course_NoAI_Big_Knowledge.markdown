@@ -60,7 +60,7 @@ The content of the course can have these special foci, among others:
 - Using deep parsing (beyond shallow Dependency Parsing or simple Constituent Structure) of unstructured text to extract semantically relevant concepts and content and map the parsed concepts and relations on networks and graph-based knowledge representations.
 - We can discuss the issues with current shallow parsing and NLP methods and how we can generate representations that are closer to a semantic representation (including scope, functional relations, concept classification), that can be mapped onto a Description Logic, potentially a Linear Logic or Glue Semantics.
 - Using knowledge representations (graphs and networks) we can apply techniques for validation and verification of content (using Description Logic and general network analysis strategies). This would be related to Fake News or Deception detection in textual content sources.
-- Using spoken language query processing (via Alexa or Google Assistant) we can generate spoken language responses using a query to SPARQL to template language generation mapping.
+- Using spoken language query processing (via Alexa or Google Assistant) we can generate spoken language responses using a query to [SPARQL](https://en.wikipedia.org/wiki/SPARQL) to template language generation mapping.
 - Using various neural network strategies we can approach modeling of dialog memory, co-reference analysis, or simple processing of different discourse functions.
 - Using temporal logic we can process time references and deduce the event time of assertions.
 - Using dialog memory and pragmatic components and modeling technologies we can manage not only co-reference and anaphoric relations, but also complex conversation flow and conversational goals.
