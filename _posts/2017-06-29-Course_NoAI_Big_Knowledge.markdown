@@ -22,22 +22,24 @@ VT: SEMANTICS AND DISCOURSE
 (Note: *This is not CSCI-B 659/LING-L 645 Topics in Artificial Intelligence/Advanced NLP!*)
 
 
-**Topic: Semantic Natural Language Processing, NoAI, and Big Knowledge**
+## Topic: Semantic Natural Language Processing, NoAI, and Big Knowledge
 
 The goal of this seminar is to understand theoretical and practical aspects of:
 
-- systems (similar to some version of IBM Watson) that read unstructured text and map content on knowledge representations using networks or graph-based models,
-- developing a natural language frontend (what is now referred to as AI by Amazon or Google) using Alexa and/or Google Assistant to query with spoken language the knowledge representation or have a longer conversation about some concrete topic.
+- systems (similar to some version of IBM Watson) that read unstructured text and map content on knowledge representations using ontologies, networks, and Graph-databases,
+- developing a natural language frontend (what is now referred to as AI by Amazon or Google) using the Alexa SDK and/or Google Assistant to query with spoken language the knowledge representation or have a longer conversation about some concrete topic.
 
-Our goal is to set up a fully functional system that can be demoed.
+Our goal is to set up a fully functional system by end of the semester.
 
+
+### Issues
 
 This is a theoretical and also very practical seminar that includes:
 
-- setting up a test server on the Amazon EC2 cloud (and/or Microsoft Azure) using Linux as an OS
-- using common (and lesser common) NLP technologies for text processing, parsing, semantic analysis
+- setting up a test server on the Amazon AWS (EC2) cloud (and/or Microsoft Azure) using Linux as an operating system
+- using common (and lesser common) NLP technologies and pipelines for text processing, parsing, semantic analysis
 - modeling grammars (using deep linguistic models, e.g. Probabilistic Lexical-functional Grammar, Construction Grammar), linguistic processing of morphologies (using Finite State Transducer and various probabilistic models), multi-word expressions, concept typing, etc.
-- using Graph Databases for knowledge representations (e.g. Neo4J, Apache Jena, Stardog), using SPARQL, Reasoning engines, OWL2, semantic constraints over OWL2
+- using Graph Databases for knowledge representations (e.g. Neo4J, Apache Jena, Stardog), using SPARQL, Reasoning engines (e.g. Fact++, Pellet), OWL2, semantic constraints over OWL2
 - using the Amazon Alexa SDK and Lambda Functions for the development of spoken language interfaces to query knowledge representations
 - various machine learning technologies, neural networks, graph and network analysis technologies that are related to NLP and knowledge representations/processing
 - all based on truly open source code and tools from our side (with the exception of Amazon's or Google's SDKs)
@@ -51,6 +53,8 @@ Cognitive Science students will gain experience with modeling of concept nets an
 The course will group students into projects with priorities on modeling linguistic processing and analysis, knowledge representations and graph-based technologies, spoken language interfaces using common SDKs and APIs from Amazon and Google, etc., depending on the students core skills and main interests.
 
 
+### Research Questions
+
 The content of the course can have these special foci, among others:
 
 - Using deep parsing (beyond shallow Dependency Parsing or simple Constituent Structure) of unstructured text to extract semantically relevant concepts and content and map the parsed concepts and relations on networks and graph-based knowledge representations.
@@ -60,6 +64,4 @@ The content of the course can have these special foci, among others:
 - Using various neural network strategies we can approach modeling of dialog memory, co-reference analysis, or simple processing of different discourse functions.
 - Using temporal logic we can process time references and deduce the event time of assertions.
 - Using dialog memory and pragmatic components and modeling technologies we can manage not only co-reference and anaphoric relations, but also complex conversation flow and conversational goals.
-
-Please let me know, if you have questions about the course, or if you are interested in participating.
 
