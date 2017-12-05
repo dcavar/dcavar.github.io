@@ -3,7 +3,7 @@ layout: post
 title:  "Communication with Amazon Alexa via HTTPS using Go"
 author: Damir Cavar
 date:   2017-12-05 23:35:00 -0400
-permalink: communicating-with-amazon-alexa-via-https-using-go
+permalink: communicating_with_amazon_alexa_via_https_using_go
 categories: code
 tags: "Amazon Alexa" Go Golang HTTPS "Custom Skill" JSON XML-RPC
 ---
