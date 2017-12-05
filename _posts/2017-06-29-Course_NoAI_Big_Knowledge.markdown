@@ -31,6 +31,11 @@ The goal of this seminar is to understand theoretical and practical aspects of:
 
 Our goal is to set up a fully functional system by end of the semester.
 
+We did that on two AWS instances. More information about that can be found here:
+
+[http://linguistic.technology/](http://linguistic.technology/)
+
+
 
 ### Issues
 
