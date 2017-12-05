@@ -1,6 +1,6 @@
 ---
+title:  Communication with Amazon Alexa via HTTPS using Go
 layout: post
-title:  "Communication with Amazon Alexa via HTTPS using Go"
 author: Damir Cavar
 date:   2017-12-05 23:35:00 -0400
 permalink: communicating_with_amazon_alexa_via_https_using_go
@@ -20,7 +20,3 @@ This is using HTTPS to communicate with the Amazon server, XML-RPC (over HTTP) t
 Have fun!
 
 DC
-
-
-
-
