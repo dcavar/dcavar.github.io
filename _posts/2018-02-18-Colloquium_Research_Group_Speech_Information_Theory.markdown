@@ -34,7 +34,7 @@ If you are interested to work with us on these problems, let us know and join us
 
 The group is managed by:
 
-- Dr. Malgosia Cavar
+- [Dr. Malgosia Cavar](http://malgosia.cavar.me/)
 - Dr. Damir Cavar
 
 We have some undergraduate students interested in this project, as well as students from Damir's L665 class.
