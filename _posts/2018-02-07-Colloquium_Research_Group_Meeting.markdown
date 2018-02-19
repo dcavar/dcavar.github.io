@@ -5,7 +5,7 @@ author: Damir Cavar
 date:   2018-02-07 10:05:00 -0400
 permalink: colloquium_research_group_meeting_deep_linguistics_deep_learning
 categories: Research
-tags: LFG HPSG Probabilistic Unification Deep Learning GPU HPC C++ Go
+tags: LFG HPSG Probabilistic Unification Deep-Learning GPU HPC C++ Go
 ---
 ## Colloquium and Research Group Meeting working on Deep Linguistics and Deep Learning
 
