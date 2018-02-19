@@ -39,4 +39,7 @@ The group is managed by:
 
 We have some undergraduate students interested in this project, as well as students from Damir's L665 class.
 
+For more information consult the [Wiki-page on GitHub](https://github.com/dcavar/speechsignal/wiki), as well as a [code repository](https://github.com/dcavar/speechsignal).
+
+
 
