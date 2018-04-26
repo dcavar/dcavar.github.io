@@ -172,3 +172,7 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: white; /*Change active text color here*/
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

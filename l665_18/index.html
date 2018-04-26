@@ -1,0 +1,428 @@
+---
+layout: base
+title: "Topics in Artificial Intelligence / Applying Machine Learning Techniques in Computational Linguistics - Neural Networks, Deep Learning for CL/NLP , Spring 2018, Damir Cavar"
+author: "Damir Cavar"
+desc: "This is Damir Cavar's L665 Deep Learning and NLP taught in Spring 2018."
+keywords: "Damir Cavar, Computational Linguistics, Natural Language Processing, Deep Learning"
+link: l665_18
+---
+<div class="row">
+    <div class="col-sm-12">
+        <h2>CSCI-B 659 Topics in Artificial Intelligence</h2>
+        <h3>LING-L 665 Applying Machine Learning Techniques in Computational Linguistics - Neural Networks, Deep
+            Learning for CL/NLP</h3>
+
+        <p>See for full syllabus the <a
+                href="https://docs.google.com/document/d/19i9XQ0ir3v3_xRxaI5AuTMDwq9VbLVQNvQHm5ZulRwQ/edit?usp=sharing">online
+            document</a>.
+
+        <hr/>
+
+        <h3 id="content">Content</h3>
+
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#projects">Projects and Reports</a></li>
+        </ul>
+
+        <hr/>
+
+        <h3 id="introduction">Introduction</h3>
+
+        <p>This is a graduate course that focuses on the introducing of machine learning techniques that are used in
+            Computational Linguistics.</p>
+
+        <p>Machine learning problems in CL are rather non-typical for machine learning because natural language includes
+            a significant level of exceptions. The course will provide an overview of the most important machine
+            learning algorithms, but it will mostly focus on how to apply machine learning to CL problems such as
+            co-reference resolution, morphological analysis, parsing, and word sense disambiguation. In addition to the
+            numerous underlying tasks in ML for CL (and NLP) applications, we will discuss deep learning approaches. We
+            will work with neural network models applied to traditional CL and NLP problems.</p>
+
+        <p>Among others, we will cover word vector representations, window-based neural networks, recurrent neural
+            networks, long-short-term-memory models, recursive neural networks, convolutional neural networks, etc.</p>
+
+        <p>The course is a series of lectures and hands-on programming exercises.</p>
+
+        <p>The course is using material provided by:</p>
+
+        <ul>
+            <li>Stanford University: <a href="http://web.stanford.edu/class/cs224n/">CS224n: Natural Language Processing
+                with Deep
+                Learning</a>
+            </li>
+            <li>The <a href="http://www.deeplearningbook.org/">Deep Learning</a> textbook (MIT Press) by Ian Goodfellow,
+                Yoshua Bengio and Aaron Courville
+            </li>
+            <li>Dan Jurafsky and James H. Martin. <a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language
+                Processing</a> (3rd ed. draft)
+            </li>
+            <li>University of Oxford: <a href="https://www.cs.ox.ac.uk/teaching/courses/2016-2017/dl/">Deep Learning for
+                Natural Language Processing: 2016-2017</a> by Phil Blunsom
+            </li>
+        </ul>
+
+        <p>These courses are accompanied by videos, slides, research papers, links to supplemental material and
+            tutorials, and other very valuable information. Please use these resources during our course.</p>
+
+
+        <h3>Prerequisites and Requirements</h3>
+
+        <p>I expect that you are able or acquire the skills to code examples in <a href="https://docs.python.org/3/">Python</a>
+            or Go. If you have no programming experience, follow the different links here and on the mentioned course
+            sites and learn <a href="https://docs.python.org/3/">Python</a> and
+            Numpy.</p>
+
+
+        <h4>Recommended</h4>
+
+        <ul>
+            <li>Learn <a href="https://docs.python.org/3/">Python</a> or [Go]; if you have never programmed before,
+                learn <a href="https://docs.python.org/3/">Python</a> first; I recommend using <a
+                        href="https://docs.python.org/3/">Python</a> 3.x or the most recent distribution of [Go].
+            </li>
+            <li>Install and learn about <a href="https://www.tensorflow.org/">TensorFlow</a>, <a
+                    href="https://www.tensorflow.org/tutorials/word2vec">Word2vec</a>.
+            </li>
+            <li>Refresh your knowledge of Calculus and Linear Algebra.</li>
+            <li>Update your knowledge of Probability Theory.</li>
+            <li>Refresh your knowledge of common Machine Learning approaches.</li>
+            <li>Familiarize yourself with common Linguistic concepts and theories, in particular lexical properties,
+                syntax, semantics, speech; for basic introductions consult Jurafsky and Martin (2017, draft, 3rd ed.) or
+                Bender (2013).
+            </li>
+        </ul>
+
+        <p>Work through all the relevant Jupyter notebooks at: <a
+                href="https://github.com/dcavar/python-tutorial-for-ipython">Python tutorials for NLP, ML, AI</a></p>
+
+        <ul>
+            <li>
+                <a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Linear%20Algebra.ipynb">Linear
+                    Algebra</a></li>
+            <li>
+                <a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Linear%20Algebra%20-%20Eigenvalues%20and%20Eigenvectors.ipynb">Linear
+                    Algebra: Eigenvalues and Eigenvectors</a></li>
+            <li>
+                <a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Perceptron%20Learning%20in%20Python.ipynb">Perceptron
+                    Learning in Python</a></li>
+            <li><a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Word2Vec.ipynb">Word2Vec</a>
+            </li>
+            <li>
+                <a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Backpropagation.ipynb">Backpropagation</a>
+            </li>
+            <li>
+                <a href="https://github.com/dcavar/python-tutorial-for-ipython/blob/master/notebooks/Neural%20Network%20Example%20with%20Keras.ipynb">Neural
+                    Network Example with Keras</a></li>
+            <li>...</li>
+        </ul>
+
+
+        <h3>Literature</h3>
+
+        <p>I do not require any textbook, I recommend the following:</p>
+
+        <ul>
+            <li>Dan Jurafsky and James H. Martin. Speech and Language Processing (3rd ed. draft) (<a
+                    href="https://web.stanford.edu/~jurafsky/slp3/">available online</a>)
+            </li>
+            <li>Yoav Goldberg. A Primer on Neural Network Models for Natural Language Processing. (<a
+                    href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">download paper</a>)
+            </li>
+            <li>Ian Goodfellow, Yoshua Bengio, and Aaron Courville. Deep Learning. MIT Press. (<a
+                    href="http://www.deeplearningbook.org/">read online</a>), <a
+                    href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/">book</a>
+            </li>
+        </ul>
+
+        <p>If you are new to natural language, computational linguistics, NLP, take a look at this book:</p>
+
+        <ul>
+            <li>Bender, Emily M. (2013) Linguistic Fundamentals for Natural Language Processing: 100 Essentials from
+                Morphology and Syntax. Synthesis Lectures on Human Language Technologies #20. Morgan &amp; Claypool
+                Publishers.
+            </li>
+        </ul>
+
+        <p>We will read the following papers:</p>
+
+        <ul>
+            <li>...</li>
+        </ul>
+
+        <p>Recommended tutorials:</p>
+
+        <ul>
+            <li><a href="https://docs.python.org/3/tutorial/">Python 3.x tutorial</a></li>
+            <li><a href="http://cs231n.github.io/python-numpy-tutorial/">Numpy for Python</a></li>
+            <li><a href="http://cs229.stanford.edu/section/cs229-linalg.pdf">Linear Algebra</a></li>
+            <li><a href="https://www.tensorflow.org/tutorials/word2vec">Word2vec tutorial</a></li>
+            <li><a href="https://www.tensorflow.org/tutorials/">TensorFlow tutorial</a></li>
+            <li><a href="http://www.nltk.org/">NLTK</a></li>
+            <li><a href="https://spacy.io/usage/">spaCy Usage</a></li>
+            <li><a href="https://tour.golang.org/welcome/1">Go: A Tour of Go</a>, if you want to learn a more serious
+                programming language
+            </li>
+        </ul>
+        <hr/>
+
+        <hr/>
+
+        <p style="alignment: right"><a href="#content">back to Content</a></p>
+
+        <h2 id="schedule">Schedule</h2>
+
+        <table style="alignment: center ;width:70%">
+            <tr>
+                <td><b>Jan. 09</b></td>
+                <td><i>Introduction</i>, <i>Syllabus and Schedule</i></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 11</b></td>
+                <td><i>Introduction to NLP and CL</i></td>
+                <td>Read: Bender 2013 for Linguistics; Manning &amp; Schuetze: Ch. 1</td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 16</b></td>
+                <td><i>Probability Review</i></td>
+                <td>
+                    Maleki &amp; Do: Review of Probability Theory<br/>
+                    Manning &amp; Schuetze: Ch. 2<br/>
+                    Goodfellow et al.: Ch. 3
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 18</b></td>
+                <td><i>Linear Algebra Review</i></td>
+                <td>Kolter (and Do) Linear Algebra Review and References<br/>
+                    Goodfellow et al.: Ch. 2
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 23</b></td>
+                <td><i>Optimization</i>; <i>Python, NLTK, WordNet, spaCy</i><br/>
+                    <i>Convex Optimization Review</i><br/>
+                    <i>More Optimization (SGD) Review</i>
+                </td>
+                <td>Jurafsky &amp; Martin: Ch. 17<br/>
+                    Bird et al (2009)<br/>
+                    Pilgrim (2009)
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 25</b></td>
+                <td><i>Vectors and Word2vec</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 15 &amp; 16<br/>
+                    <i>Word2Vec Tutorial</i> - <i>The Skip-Gram Model</i><br/>
+                    <i>Distributed Representations of Words and Phrases and their Compositionality</i><br/>
+                    <i>Efficient Estimation of Word Representations in Vector Space</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Jan. 30</b></td>
+                <td><i>Numpy and Word2vec applied</i></td>
+                <td><i>Online tutorial</i><br/>
+                    Lit., see previous session
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 1</b></td>
+                <td><i>Word Window Classification and Neural Networks</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 8</td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 6</b></td>
+                <td><i>Word Window Classification and Neural Networks</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 8</td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 8</b></td>
+                <td><i>Advanced Word Vector Models</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 16</td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 13</b></td>
+                <td><i>Advanced Word Vector Models</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 16</td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 15</b></td>
+                <td><i>Neural Networks, Single Layer Networks</i></td>
+                <td>Jurafsky &amp; Martin: Ch. 8<br/>
+                    Goodfellow et al.: Ch. 6
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 20</b></td>
+                <td><i>Backpropagation</i></td>
+                <td><i>UFLDL tutorial</i><br/>
+                    <i>Learning Representations by Backpropogating Errors</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 22</b></td>
+                <td><i>Backpropagation, NNs, QA, Semantics</i></td>
+                <td><i>Natural Language Processing (almost) from Scratch</i><br/>
+                    <i>A Neural Network for Factoid Question Answering over Paragraphs</i><br/>
+                    <i>Grounded Compositional Semantics for Finding and Describing Images with Sentences</i><br/>
+                    <i>Deep Visual-Semantic Alignments for Generating Image Descriptions</i><br/>
+                    <i>Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Feb. 27</b></td>
+                <td><i>Gradients, Overfitting, Activation Function</i></td>
+                <td><i>Practical recommendations for gradient-based training of deep architectures</i><br/>
+                    <i>UFLDL page on gradient checking</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 1</b></td>
+                <td><i>Tensorflow</i></td>
+                <td><i>TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems</i><br/>
+                    <i>Tensorflow tutorials</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 6</b></td>
+                <td><i>Tensorflow</i></td>
+                <td>Lit., see above</td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 8</b></td>
+                <td><i>Recurrent Neural Networks and Language Models</i></td>
+                <td><i>Recurrent neural network based language model</i><br/>
+                    <i>Extensions of recurrent neural network language model</i><br/>
+                    <i>Opinion Mining with Deep Recurrent Neural Networks</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 20</b></td>
+                <td><i>Gated Feedback Recurrent NNs, Long Short-Term Memory for Machine Translation</i></td>
+                <td><i>Long Short-Term Memory</i><br/>
+                    <i>Gated Feedback Recurrent Neural Networks</i><br/>
+                    <i>Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 22</b></td>
+                <td><i>Gated Feedback Recurrent NNs, Long Short-Term Memory for Machine Translation</i></td>
+                <td>Lit., see above</td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 27</b></td>
+                <td><i>Recursive Neural Networks, Parsing</i></td>
+                <td>Goodfellow et al.: Ch. 10<br/>
+                    <i>Parsing with Compositional Vector Grammars</i><br/>
+                    <i>Subgradient Methods for Structured Prediction</i><br/>
+                    <i>Parsing Natural Scenes and Natural Language with Recursive Neural Networks</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Mar. 29</b></td>
+                <td><i>Recursive Neural Networks, Sentiment Analysis</i></td>
+                <td><i>Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank</i><br/>
+                    <i>Dynamic Pooling and Unfolding Recursive Autoencoders for Paraphrase Detection</i><br/>
+                    <i>Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 3</b></td>
+                <td><i>Convolutional Neural Networks, Sentence Classification</i></td>
+                <td>Goodfellow et al.: Ch. 9<br/>
+                    Arxiv paper
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 5</b></td>
+                <td><i>General topics: ML, Speech Recognition</i></td>
+                <td>Oxford DL Course: Speech Recognition chapter<br/>
+                    <i>Deep Neural Networks for Acoustic Modeling in Speech Recognition</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 10</b></td>
+                <td><i>General topics: Dynamic Memory Networks</i></td>
+                <td><i>Ask me anthing: Dynamic Memory Networks for NLP</i></td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 12</b></td>
+                <td><i>Discussion and Practical Experiments</i></td>
+                <td>TBA</td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 17</b></td>
+                <td><i>Issues with Deep Learning and NLP</i></td>
+                <td>Marcus 2017</td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 19</b></td>
+                <td><i>Issues with Deep Learning and NLP</i></td>
+                <td>Marcus 2018</td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 24</b></td>
+                <td><i>Project presentations</i></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><b>Apr. 26</b></td>
+                <td><i>Project presentations</i></td>
+                <td></td>
+            </tr>
+
+        </table>
+
+        <hr/>
+
+        <p style="alignment: right"><a href="#content">back to Content</a></p>
+
+        <h2 id="projects">Projects and Reports</h2>
+
+        <table style="alignment: center; width: 70%">
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Resources</th>
+            </tr>
+            <tr>
+                <td>Gleb Alexeev</td>
+                <td>Recursive Deep Models for Semantic Compositionality over a Sentiment Treebank</td>
+                <td><a href="Gleb_Alexeev_Presentation.pdf">Slides</a> (<a
+                        href="Gleb_Alexeev_Presentation.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td>Carlos Sathler</td>
+                <td>Neural Nets in NLP Competitions: Two Recent Examples from Kaggle</td>
+                <td><a href="Carlos_Sathler_Presentation.pdf">Slides</a> (<a
+                        href="Carlos_Sathler_Presentation.pdf">pdf</a>)<br/>
+                    <a href="https://youtu.be/nV0uabSVrWs">YouTube video/presentation</a></td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>

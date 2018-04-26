@@ -124,3 +124,8 @@ ul.social-icons {
 .fa-google-plus:hover {
     background-color: #e25714;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
