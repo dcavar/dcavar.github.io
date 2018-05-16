@@ -5,7 +5,7 @@ author: Damir Cavar
 date:   2018-05-14 23:17:00 -0400
 permalink: colloquium_research_group_meeting_quantum_algorithms_4_nlp
 categories: Research
-tags: Deep-Learning GPU HPC Speech Prosody Information-Theory Quantum-Computing Quantum-Algorithm Natural-Language-Processing
+tags: Deep-Learning Quantum-Machine-Learning GPU HPC Speech Prosody Information-Theory Quantum-Computing Quantum-Algorithm Natural-Language-Processing
 ---
 ## Colloquium, Research, and Reading Group Meetings during summer 2018
 
@@ -31,7 +31,9 @@ The two projects meet independently, they can and should be related.
 
 ## Reading Group on Quantum Algorithms via Linear Algebra for Computational Linguistics and Natural Language Processing
 
-In addition there is a reading group that meets also independently. The focus is on Linear Algebra, Deep Learning, and Quantum Algorithms using Linear Algebra. The textbooks that we will use are:
+In addition there is a reading group that meets also independently. The focus is on Linear Algebra, Deep Learning, and Quantum Algorithms using Linear Algebra, with the main goal to study and understand Quantum Machine Learning for Natural Language Processing (NLP). We will also look at the programming languages or environments for Quantum Computing, listed below.
+
+The textbooks that we will use are:
 
 - [Quantum Algorithms via Linear Algebra](https://mitpress.mit.edu/books/quantum-algorithms-linear-algebra) by Richard J. Lipton and Kenneth W. Regan, MIT Press.
 - [Deep Learning](https://mitpress.mit.edu/books/deep-learning) by Ian Goodfellow, Yoshua Bengio, Aaron Courville, MIT Press.
