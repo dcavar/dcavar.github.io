@@ -2,7 +2,7 @@
 title:  Java JNI to C++ Wrapper for Foma for Natural Language Processing and Morphological Analysis
 layout: post
 author: Damir Cavar
-date:   2018-07-03 09:17:00 -0400
+date:   2018-08-03 09:17:00 -0400
 permalink: 2018-08-03-Java_JNI_CPP_Foma_Wrapper_4_NLP_Morphology
 categories: Research
 tags: Java JNI C++ Machine-Learning Finite-State-Transducer Morphology Foma XFST Lexc Natural-Language-Processing
