@@ -31,3 +31,7 @@ gem 'jekyll-sitemap'
 
 # SEO Tag
 gem 'jekyll-seo-tag'
+
+# for Alembic theme
+gem "jekyll-remote-theme"
+
