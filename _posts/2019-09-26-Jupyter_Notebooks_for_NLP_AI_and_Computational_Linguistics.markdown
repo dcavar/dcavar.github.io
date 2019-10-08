@@ -30,4 +30,5 @@ The following HTML-converted notebooks are available:
 - [Python: Text Similarities](pynotebooks/Python_Text_Similarities.html)
 - [Python: Tokens and N-grams](pynotebooks/Python_Tokens_and_N_grams.html)
 - [Python: Tutorial HMM](pynotebooks/Python_Tutorial_HMM)
+- [Python: Tutorial on PoS Tagging](pynotebooks/Python_Tutorial_PoS_Tagging.html)
 

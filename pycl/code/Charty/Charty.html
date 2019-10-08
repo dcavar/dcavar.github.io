@@ -1,0 +1,121 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Charty</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Charty</strong></big></big> (version 0.2)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/dcavar/Documents/Teaching/DGfS Herbstschule 2005/Code/Charty/Charty.py">/Users/dcavar/Documents/Teaching/DGfS Herbstschule 2005/Code/Charty/Charty.py</a></font></td></tr></table>
+    <p><tt>Charty.py<br>
+This&nbsp;is&nbsp;a&nbsp;small&nbsp;incremental&nbsp;bottom-up&nbsp;chart&nbsp;parser&nbsp;for&nbsp;context&nbsp;free&nbsp;grammars.<br>
+&nbsp;<br>
+(C)&nbsp;2005&nbsp;by&nbsp;Damir&nbsp;Cavar<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;is&nbsp;written&nbsp;and&nbsp;distributed&nbsp;under&nbsp;the<br>
+GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;which&nbsp;means&nbsp;that&nbsp;its<br>
+source&nbsp;code&nbsp;is&nbsp;freely-distributed&nbsp;and&nbsp;available<br>
+to&nbsp;the&nbsp;general&nbsp;public.<br>
+&nbsp;<br>
+See&nbsp;<a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>&nbsp;for&nbsp;details<br>
+on&nbsp;the&nbsp;license&nbsp;or&nbsp;the&nbsp;the&nbsp;file&nbsp;gpl.txt&nbsp;that&nbsp;should&nbsp;always&nbsp;be<br>
+distributed&nbsp;with&nbsp;this&nbsp;code.<br>
+&nbsp;<br>
+&nbsp;<br>
+Used&nbsp;data&nbsp;structures:<br>
+&nbsp;<br>
+chart:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;edges<br>
+&nbsp;<br>
+&nbsp;<br>
+edge:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;integers&nbsp;and&nbsp;symbols<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[start,&nbsp;end,&nbsp;dotindex,&nbsp;LHS,&nbsp;RHS]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start:&nbsp;&nbsp;&nbsp;&nbsp;integer,&nbsp;start&nbsp;of&nbsp;the&nbsp;edge<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integer,&nbsp;end&nbsp;of&nbsp;the&nbsp;edge<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dotindex:&nbsp;integer,&nbsp;position&nbsp;of&nbsp;the&nbsp;dot&nbsp;in&nbsp;the&nbsp;RHS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LHS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string,&nbsp;left-hand&nbsp;side&nbsp;symbol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RHS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;strings,&nbsp;symbols&nbsp;in&nbsp;right-hand&nbsp;side<br>
+&nbsp;<br>
+&nbsp;<br>
+Properties:<br>
+Incremental&nbsp;(left-to-right)&nbsp;bottom-up&nbsp;chart&nbsp;parser.<br>
+Select&nbsp;only&nbsp;potentially&nbsp;appropriate&nbsp;rules&nbsp;from&nbsp;grammar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;length&nbsp;of&nbsp;RHS&nbsp;is&nbsp;less&nbsp;or&nbsp;equal&nbsp;to&nbsp;remaining&nbsp;words/symbols<br>
+&nbsp;<br>
+&nbsp;<br>
+Processing&nbsp;steps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Word&nbsp;by&nbsp;word:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialise&nbsp;chart&nbsp;with&nbsp;word&nbsp;(add&nbsp;edge&nbsp;for&nbsp;word)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do&nbsp;until&nbsp;no&nbsp;further&nbsp;improvement:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;new&nbsp;rules&nbsp;from&nbsp;grammar&nbsp;that&nbsp;consume&nbsp;inactive&nbsp;edges<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apply&nbsp;the&nbsp;fundamental&nbsp;rule&nbsp;to&nbsp;induce&nbsp;new&nbsp;edges<br>
+&nbsp;<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;can&nbsp;be&nbsp;opimized.&nbsp;However,&nbsp;its&nbsp;main&nbsp;purpose&nbsp;is&nbsp;to&nbsp;help<br>
+students&nbsp;understand&nbsp;how&nbsp;simple&nbsp;chart&nbsp;parsing&nbsp;works.&nbsp;If&nbsp;there&nbsp;are&nbsp;any&nbsp;bugs,<br>
+please&nbsp;let&nbsp;me&nbsp;know:&nbsp;Damir&nbsp;Cavar&nbsp;&lt;dcavar@indiana.edu&gt;</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PSGPars.html">PSGPars</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-fundamentalRule"><strong>fundamentalRule</strong></a>()</dt><dd><tt>The&nbsp;fundamental&nbsp;rule&nbsp;of&nbsp;chart&nbsp;parsing&nbsp;generates&nbsp;new&nbsp;edges&nbsp;by<br>
+combining&nbsp;fitting&nbsp;active&nbsp;and&nbsp;inactive&nbsp;edges.</tt></dd></dl>
+ <dl><dt><a name="-getParse"><strong>getParse</strong></a>(inputlength, chart)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;parses&nbsp;in&nbsp;bracketing&nbsp;notation.</tt></dd></dl>
+ <dl><dt><a name="-isActive"><strong>isActive</strong></a>(edge)</dt><dd><tt>Return&nbsp;1&nbsp;if&nbsp;edge&nbsp;is&nbsp;active,&nbsp;else&nbsp;return&nbsp;0.</tt></dd></dl>
+ <dl><dt><a name="-isInactive"><strong>isInactive</strong></a>(edge)</dt><dd><tt>Return&nbsp;1&nbsp;if&nbsp;edge&nbsp;is&nbsp;active,&nbsp;else&nbsp;return&nbsp;0.</tt></dd></dl>
+ <dl><dt><a name="-match"><strong>match</strong></a>(aedge, iedge)</dt><dd><tt>Returns&nbsp;1&nbsp;if&nbsp;the&nbsp;active&nbsp;edge&nbsp;and&nbsp;the&nbsp;inactive&nbsp;edge&nbsp;match,<br>
+otherwise&nbsp;0.</tt></dd></dl>
+ <dl><dt><a name="-parse"><strong>parse</strong></a>(input)</dt><dd><tt>Parse&nbsp;a&nbsp;list&nbsp;of&nbsp;tokens.</tt></dd></dl>
+ <dl><dt><a name="-ruleInvocation"><strong>ruleInvocation</strong></a>(lststart)</dt><dd><tt>Add&nbsp;all&nbsp;the&nbsp;rules&nbsp;of&nbsp;the&nbsp;grammar&nbsp;to&nbsp;the&nbsp;chart&nbsp;that<br>
+are&nbsp;relavant:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Find&nbsp;the&nbsp;rule&nbsp;with&nbsp;the&nbsp;LHS&nbsp;of&nbsp;edge&nbsp;as&nbsp;the&nbsp;leftmost&nbsp;RHS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;symbol&nbsp;and&nbsp;maximally&nbsp;the&nbsp;remaining&nbsp;length&nbsp;of&nbsp;the&nbsp;input.</tt></dd></dl>
+ <dl><dt><a name="-structToStr"><strong>structToStr</strong></a>(edges)</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;parse&nbsp;with<br>
+labled&nbsp;brackets.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DEBUG</strong> = 0<br>
+<strong>__author__</strong> = 'Damir Cavar'<br>
+<strong>__version__</strong> = '0.2'<br>
+<strong>chart</strong> = []<br>
+<strong>grammar</strong> = &lt;PSGPars.PSG instance at 0xafee0&gt;<br>
+<strong>grammarfile</strong> = 'PSG1.txt'<br>
+<strong>inputlength</strong> = 0</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Damir&nbsp;Cavar</td></tr></table>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-98557026-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body></html>

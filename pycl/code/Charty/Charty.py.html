@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/Charty/Charty.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#!/usr/bin/env python</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">Charty.py</font>
+<font color="#f20884">This is a small incremental bottom-up chart parser for context free grammars.</font>
+
+<font color="#f20884">(C) 2005 by Damir Cavar</font>
+
+<font color="#f20884">This code is written and distributed under the</font>
+<font color="#f20884">GNU General Public License which means that its</font>
+<font color="#f20884">source code is freely-distributed and available</font>
+<font color="#f20884">to the general public.</font>
+
+<font color="#f20884">See <a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> for details</font>
+<font color="#f20884">on the license or the the file gpl.txt that should always be</font>
+<font color="#f20884">distributed with this code.</font>
+
+
+<font color="#f20884">Used data structures:</font>
+
+<font color="#f20884">chart:</font>
+<font color="#f20884">   list of edges</font>
+
+<font color="#f20884">edge:</font>
+<font color="#f20884">   list of integers and symbols</font>
+<font color="#f20884">   [start, end, dotindex, LHS, RHS]</font>
+<font color="#f20884">   start:    integer, start of the edge</font>
+<font color="#f20884">   end:      integer, end of the edge</font>
+<font color="#f20884">   dotindex: integer, position of the dot in the RHS</font>
+<font color="#f20884">   LHS:      string, left-hand side symbol</font>
+<font color="#f20884">   RHS:      list of strings, symbols in right-hand side</font>
+
+
+<font color="#f20884">Properties:</font>
+<font color="#f20884">Incremental (left-to-right) bottom-up chart parser.</font>
+<font color="#f20884">Select only potentially appropriate rules from grammar</font>
+<font color="#f20884">   - length of RHS is less or equal to remaining words/symbols</font>
+
+
+<font color="#f20884">Processing steps:</font>
+<font color="#f20884">   Word by word:</font>
+<font color="#f20884">      Initialise chart with word (add edge for word)</font>
+<font color="#f20884">      Do until no further improvement:</font>
+<font color="#f20884">         Add new rules from grammar that consume inactive edges</font>
+<font color="#f20884">         Apply the fundamental rule to induce new edges</font>
+
+
+<font color="#f20884">This code can be opimized. However, its main purpose is to help</font>
+<font color="#f20884">students understand how simple chart parsing works. If there are any bugs,</font>
+<font color="#f20884">please let me know: Damir Cavar &lt;dcavar@indiana.edu&gt;</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+__author__  = <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Damir Cavar</font><span style="background-color: #ffffff">&quot;</span>
+__version__ = <span style="background-color: #ffffff">&quot;</span><font color="#f20884">0.2</font><span style="background-color: #ffffff">&quot;</span>
+
+<font color="#a020f0">import</font> sys, PSGPars
+<font color="#a020f0">from</font> copy <font color="#a020f0">import</font> copy
+
+grammarfile = <span style="background-color: #ffffff">&quot;</span><font color="#f20884">PSG1.txt</font><span style="background-color: #ffffff">&quot;</span>              <font color="#0000d4"># name of the CFG file</font>
+DEBUG = 1       <font color="#0000d4"># set this to 0 if you do not want tracing</font>
+
+grammar = PSGPars.PSG(grammarfile) <font color="#0000d4"># initialization of the grammar</font>
+chart  = []     <font color="#0000d4"># storage for edges</font>
+inputlength = 0 <font color="#0000d4"># storage for number of tokens in input</font>
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">isActive</font>(edge):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Return 1 if edge is active, else return 0.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>if</b></font> edge[2] &lt; len(edge[4]): <font color="#804040"><b>return</b></font> 1
+   <font color="#804040"><b>return</b></font> 0
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">isInactive</font>(edge):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Return 1 if edge is active, else return 0.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>if</b></font> edge[2] &gt;= len(edge[4]): <font color="#804040"><b>return</b></font> 1
+   <font color="#804040"><b>return</b></font> 0
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">match</font>(aedge, iedge):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Returns 1 if the active edge and the inactive edge match,</font>
+<font color="#f20884">      otherwise 0.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>if</b></font> aedge[1] == iedge[0]:
+      <font color="#804040"><b>if</b></font> aedge[4][aedge[2]] == iedge[3]: <font color="#804040"><b>return</b></font> 1
+   <font color="#804040"><b>return</b></font> 0
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">getParse</font>(inputlength, chart):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Returns a list of all parses in bracketing notation.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   parses = []
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(len(chart)):
+      <font color="#804040"><b>if</b></font> <font color="#804040"><b>not</b></font> isActive(chart[i]):
+         <font color="#804040"><b>if</b></font> chart[i][0] == 0 <font color="#804040"><b>and</b></font> chart[i][1] == inputlength: <font color="#0000d4"># got spanning edge</font>
+            parses.append(structToStr([i]))
+   <font color="#804040"><b>return</b></font> parses
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">structToStr</font>(edges):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Returns a string representation of the parse with</font>
+<font color="#f20884">      labled brackets.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   tmpstr = <span style="background-color: #ffffff">&quot;&quot;</span>
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> edges:
+      <font color="#804040"><b>if</b></font> chart[i][5]:
+         tmpstr = tmpstr + <span style="background-color: #ffffff">&quot;</span><font color="#f20884">[</font><span style="background-color: #ffffff">&quot;</span> + chart[i][3] + <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span> + structToStr(chart[i][5]) + <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> ] </font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>else</b></font>:
+         tmpstr = tmpstr + <span style="background-color: #ffffff">&quot;</span><font color="#f20884">[</font><span style="background-color: #ffffff">&quot;</span> + chart[i][3] + <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span>
+         <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> chart[i][4]:
+            tmpstr = <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span>.join([tmpstr, x])
+         tmpstr = tmpstr + <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> ] </font><span style="background-color: #ffffff">&quot;</span>
+   <font color="#804040"><b>return</b></font> tmpstr
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">ruleInvocation</font>(lststart):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Add all the rules of the grammar to the chart that</font>
+<font color="#f20884">      are relavant:</font>
+<font color="#f20884">      Find the rule with the LHS of edge as the leftmost RHS</font>
+<font color="#f20884">      symbol and maximally the remaining length of the input.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>global</b></font> chart
+   change = 0
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(lststart, len(chart)):
+      <font color="#804040"><b>if</b></font> chart[i][2] &gt;= len(chart[i][4]): <font color="#0000d4"># only inactive edge</font>
+         (start, end, index, lhs, rhs, consumed) = chart[i]
+         <font color="#804040"><b>if</b></font> grammar.rhshash.has_key(lhs):
+            <font color="#804040"><b>for</b></font> k <font color="#804040"><b>in</b></font> grammar.rhshash[lhs]:
+               <font color="#804040"><b>if</b></font> len(grammar.rhs[k]) &gt; inputlength - start:
+                  <font color="#804040"><b>continue</b></font>
+               newedge = [ start, end, 1, grammar.lhs[k], grammar.rhs[k], [i] ]
+               <font color="#804040"><b>if</b></font> newedge <font color="#804040"><b>in</b></font> chart:
+                  <font color="#804040"><b>continue</b></font>
+               chart.append(copy(newedge))
+               change = 1
+               <font color="#804040"><b>if</b></font> DEBUG:
+                  <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">RI Adding edge:</font><span style="background-color: #ffffff">&quot;</span>, newedge
+   <font color="#804040"><b>return</b></font> change
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">fundamentalRule</font>():
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">The fundamental rule of chart parsing generates new edges by</font>
+<font color="#f20884">      combining fitting active and inactive edges.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>global</b></font> chart
+   change = 0
+   <font color="#804040"><b>for</b></font> aedge <font color="#804040"><b>in</b></font> chart:
+      <font color="#804040"><b>if</b></font> isActive(aedge):
+         <font color="#804040"><b>for</b></font> k <font color="#804040"><b>in</b></font> range(len(chart)):
+            <font color="#804040"><b>if</b></font> isInactive(chart[k]):
+               <font color="#804040"><b>if</b></font> match(aedge, chart[k]):
+                  newedge = aedge[:]
+                  newedge[5] = aedge[5][:]
+                  newedge[5].append(k)
+                  newedge[1] = chart[k][1]
+                  newedge[2] = newedge[2] + 1
+                  <font color="#804040"><b>if</b></font> newedge <font color="#804040"><b>not</b></font> <font color="#804040"><b>in</b></font> chart:
+                     chart.append(copy(newedge))
+                     change = 1
+                     <font color="#804040"><b>if</b></font> DEBUG:
+                        <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">FR Adding edge:</font><span style="background-color: #ffffff">&quot;</span>, newedge
+   <font color="#804040"><b>return</b></font> change
+
+
+<font color="#804040"><b>def</b></font> <font color="#008080">parse</font>(input):
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Parse a list of tokens.</font>
+<font color="#f20884">   </font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+   <font color="#804040"><b>global</b></font> chart, inputlength
+   chart = []
+   inputlength = len(input)
+
+   chartpos = 0  <font color="#0000d4"># remember start-position in chart</font>
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(len(input)):
+      <font color="#0000d4"># initialize with input token</font>
+      chart.append([ i, i + 1, 1, grammar.getTag(input[i]), [ input[i] ], [] ])
+      <font color="#804040"><b>if</b></font> DEBUG:
+         <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Adding edge:</font><span style="background-color: #ffffff">&quot;</span>, chart[len(chart) - 1]
+      change = 1
+      <font color="#804040"><b>while</b></font> change:
+         change = 0
+         chartlen = len(chart)
+         <font color="#804040"><b>if</b></font> ruleInvocation(chartpos):
+            change = 1
+         chartpos = chartlen  <font color="#0000d4"># set pointer to new edge in chart</font>
+         <font color="#804040"><b>if</b></font> fundamentalRule():
+            change = 1
+   <font color="#804040"><b>if</b></font> DEBUG:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Chart:</font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(len(chart)):
+         <font color="#804040"><b>if</b></font> isActive(chart[i]):
+            <font color="#804040"><b>print</b></font> i, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Active:  </font><span style="background-color: #ffffff">&quot;</span>,
+         <font color="#804040"><b>else</b></font>:
+            <font color="#804040"><b>print</b></font> i, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Inactive:</font><span style="background-color: #ffffff">&quot;</span>,
+         <font color="#804040"><b>print</b></font> chart[i]
+   <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> getParse(inputlength, chart):
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Parse:</font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>print</b></font> i
+
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   <font color="#804040"><b>if</b></font> len(sys.argv) &gt; 1:
+      parse(sys.argv[1:])
+   <font color="#804040"><b>else</b></font>:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Parsing: John kissed Mary</font><span style="background-color: #ffffff">&quot;</span>
+      parse([<span style="background-color: #ffffff">&quot;</span><font color="#f20884">John</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">kissed</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Mary</font><span style="background-color: #ffffff">&quot;</span>])
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">-----------------------------------------------------------</font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Parsing: John kissed Mary</font><span style="background-color: #ffffff">&quot;</span>
+      parse([<span style="background-color: #ffffff">&quot;</span><font color="#f20884">the</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">green</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">man</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">killed</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">the</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">blue</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">man</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">with</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">the</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884">tie</font><span style="background-color: #ffffff">&quot;</span>])
+
+</pre>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-98557026-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>~/Documents/Teaching/DGfS Herbstschule 2005/Code/LID/lid.py.html</title>
+<meta name="Generator" content="Vim/7.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#0000d4">#! /usr/bin/env python</font>
+<font color="#0000d4"># -*- coding: utf-8 -*-</font>
+
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+<font color="#f20884">lid.py</font>
+<font color="#f20884">(C) 2005 by Damir Cavar &lt;dcavar@indiana.edu&gt;</font>
+
+<font color="#f20884">License:</font>
+
+<font color="#f20884">This program is free software; you can redistribute it and/or modify</font>
+<font color="#f20884">it under the terms of the GNU General Public License as published by</font>
+<font color="#f20884">the Free Software Foundation; either version 2 of the License, or</font>
+<font color="#f20884">(at your option) any later version.</font>
+
+
+<font color="#f20884">Functionality:</font>
+
+<font color="#f20884">1. Startup:</font>
+<font color="#f20884">   Lid loads all *.dat files in the current directory, assuming that</font>
+<font color="#f20884">   the files contain the tri-gram model of the language which is named</font>
+<font color="#f20884">   with the file name (e.g. japanese.dat, german.dat etc.).</font>
+
+<font color="#f20884">2. Processing:</font>
+<font color="#f20884">   Lid processes all the files given as parameters to the script and prints</font>
+<font color="#f20884">   out the language of the text that the file contains.</font>
+
+<font color="#f20884">Lid can be used within an application by importing the class and using its</font>
+<font color="#f20884">methods as shown in the end of this code (the __main__ part):</font>
+
+<font color="#f20884">myLid = Lid()</font>
+<font color="#f20884">languagename = myLid(&quot;This is an English example.&quot;)</font>
+
+<font color="#f20884">Basics:</font>
+
+<font color="#f20884">   Lid is based on a tri-gram model of a training corpus for a given language.</font>
+<font color="#f20884">   Use lidtrainer.py to generate such language models.</font>
+
+<font color="#f20884">   The language models are sets of three character sequences (tri-grams) extracted</font>
+<font color="#f20884">   from the training corpus, with their frequency. The probability of each</font>
+<font color="#f20884">   tri-gram is calculated (given the frequency of the tri-gram and the number</font>
+<font color="#f20884">   of all tri-grams in the corpus) and stored with the tri-gram in the language</font>
+<font color="#f20884">   model.</font>
+
+<font color="#f20884">   Lid generates all tri-grams for the test document and compares the probability</font>
+<font color="#f20884">   of each tri-gram with the probabilities the corresponding tri-grams in the</font>
+<font color="#f20884">   training corpus or the language model. For each tri-gram the deviation from</font>
+<font color="#f20884">   the corresponding tri-gram in the language model is calculated. If a tri-gram is</font>
+<font color="#f20884">   not found in the language model, the deviation is assumed to be maximal, i.e.</font>
+<font color="#f20884">   equal to 1.</font>
+
+<font color="#f20884">   The language model that has the minimal deviation score for the tri-grams in</font>
+<font color="#f20884">   the tested text is assumed to represent the language of the tested text.</font>
+
+<font color="#f20884">   This is a very simple but effective language ID strategy. It is developed for</font>
+<font color="#f20884">   teaching purposes. A real world application would require much more evaluation</font>
+<font color="#f20884">   of the significance of the deviations, optimization of the language models and</font>
+<font color="#f20884">   many many other things.</font>
+
+<font color="#f20884">Please send your comments and suggestions!</font>
+<span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+
+__version__ = 0.2
+__author__ = <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Damir Cavar</font><span style="background-color: #ffffff">&quot;</span>
+
+
+<font color="#a020f0">import</font> sys, re, os.path, glob
+<font color="#a020f0">from</font> string <font color="#a020f0">import</font> *
+<font color="#a020f0">from</font> os <font color="#a020f0">import</font> listdir, getcwd
+
+
+<font color="#804040"><b>class</b></font> <font color="#008080">Lid</font>:
+   <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">The basic Language Identification class</font>
+<font color="#f20884">   </font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+
+   num        = 0  <font color="#0000d4"># number of trigrams</font>
+   characters = 0  <font color="#0000d4"># number of characters</font>
+   languages  = [] <font color="#0000d4"># list of loaded language models</font>
+   models     = [] <font color="#0000d4"># list with the trigram models</font>
+   trigrams   = {} <font color="#0000d4"># trigrams of the analyzed document</font>
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">__init__</font>(self):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Lid constructor</font>
+<font color="#f20884">         The constructor loads automatically all language models in the</font>
+<font color="#f20884">         current directory.</font>
+<font color="#f20884">         The language models are stored in files that are made up as follows:</font>
+<font color="#f20884">         LANGUAGE_NAME followd by .dat.</font>
+<font color="#f20884">      </font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> listdir(getcwd()):
+         <font color="#804040"><b>if</b></font> x[-4:] == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">.dat</font><span style="background-color: #ffffff">&quot;</span>:
+            modelfile = file(x)
+            self.languages.append(upper(x[0]) + x[1:-4])
+            newdict = {}
+            <font color="#804040"><b>for</b></font> line <font color="#804040"><b>in</b></font> modelfile:
+               tokens = split(line)
+               <font color="#804040"><b>if</b></font> len(tokens) == 2:
+                  newdict[tokens[0]] = float(tokens[1])
+            self.models.append(newdict)
+            modelnum = len(self.models)
+            modelfile.close()
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">checkText</font>(self, text):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Check which language a text is.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      self.createTrigrams(text) <font color="#0000d4"># create trigrams of submitted text</font>
+      self.calcProb()           <font color="#0000d4"># calculate probabilities</font>
+
+      result = []               <font color="#0000d4"># storage for the matches with the models</font>
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> range(len(self.languages)):
+         result.append(0)
+      <font color="#0000d4"># for all keys in trigrams</font>
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> self.trigrams.keys():
+         <font color="#0000d4"># for 0 to number language models</font>
+         <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(len(self.models)):
+            <font color="#0000d4"># get the current model</font>
+            mymodel = self.models[i]
+            <font color="#804040"><b>if</b></font> mymodel.has_key(x):
+               <font color="#0000d4"># if the model contains the key, get the deviation</font>
+               value = mymodel[x] - self.trigrams[x]
+               <font color="#804040"><b>if</b></font> value &lt; 0:
+                  value = value * -1
+               result[i] += value
+            <font color="#804040"><b>else</b></font>:
+               <font color="#0000d4"># otherwise set the resulting value to 1 = max. deviation</font>
+               result[i] += 1
+      value = float(1.0)
+      element = 0
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> range(len(result)):
+         result[x] = float(result[x])/float(self.num)
+         <font color="#804040"><b>if</b></font> value &gt; result[x]:
+            value = float(result[x])
+            element = x
+      <font color="#804040"><b>return</b></font> self.languages[element]
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">createTrigrams</font>(self, text):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Creates tri-grams from characters.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      self.num = 0                    <font color="#0000d4"># storage for the number of trigrams</font>
+      self.trigrams = {}              <font color="#0000d4"># dictionary storage for trigrams</font>
+      text = re.sub(<span style="background-color: #ffffff">r&quot;</span><font color="#f20884">\n</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span>, text) <font color="#0000d4"># replace newlines in text</font>
+      text = self.cleanTextSC(text)   <font color="#0000d4"># clean trigrams with punctuation marks</font>
+      text = re.sub(<span style="background-color: #ffffff">r&quot;</span><font color="#f20884">\s+</font><span style="background-color: #ffffff">&quot;</span>, <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span>, text) <font color="#0000d4"># replace multiple spaces/tabs </font>
+      self.characters = len(text)     <font color="#0000d4"># get number of characters</font>
+
+      <font color="#0000d4"># go thru list up to one but last word and take</font>
+      <font color="#0000d4"># the actual word and the following word together</font>
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> range(len(text) - 2):
+         self.num += 1
+         self.trigrams[text[i:i+3]] = self.trigrams.get(text[i:i+3], 0) + 1
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">calcProb</font>(self):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Calculate the probabilities for each trigram.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> self.trigrams.keys():
+         self.trigrams[x] = float(self.trigrams[x]) / float(self.num)
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">eliminateFrequences</font>(self, num):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Eliminates all bigrams with a frequency &lt;= num</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      <font color="#804040"><b>for</b></font> x <font color="#804040"><b>in</b></font> self.trigrams.keys():
+         <font color="#804040"><b>if</b></font> self.trigrams[x] &lt;= num:
+            value = self.trigrams[x]
+            <font color="#804040"><b>del</b></font> self.trigrams[x]
+            self.num -= value
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">createTrigramNSC</font>(self, text):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Creates bigrams without punctuation symbols.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      self.createTrigrams(self.cleanTextSC(text))
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">cleanTextSC</font>(self, text):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Eliminates punctuation symbols from the submitted text.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> punctuation:
+         <font color="#804040"><b>if</b></font> i <font color="#804040"><b>in</b></font> text:
+            text = replace(text, i, <span style="background-color: #ffffff">&quot;</span><font color="#f20884"> </font><span style="background-color: #ffffff">&quot;</span>)
+      <font color="#804040"><b>return</b></font> text
+
+
+   <font color="#804040"><b>def</b></font> <font color="#008080">cleanPBIG</font>(self):
+      <span style="background-color: #ffffff">&quot;&quot;&quot;</span><font color="#f20884">Eliminate tri-grams that contain punctuation marks.</font><span style="background-color: #ffffff">&quot;&quot;&quot;</span>
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> self.trigrams.keys():
+         <font color="#804040"><b>for</b></font> a <font color="#804040"><b>in</b></font> punctuation:
+            <font color="#804040"><b>if</b></font> a <font color="#804040"><b>in</b></font> i:
+               value = self.trigrams[i]
+               <font color="#804040"><b>del</b></font> self.trigrams[i]
+               self.num -= value
+               <font color="#804040"><b>break</b></font>
+
+
+
+<font color="#804040"><b>if</b></font> __name__ == <span style="background-color: #ffffff">&quot;</span><font color="#f20884">__main__</font><span style="background-color: #ffffff">&quot;</span>:
+   <font color="#804040"><b>if</b></font> len(sys.argv) &gt; 1:
+      myLid = Lid()
+      <font color="#804040"><b>for</b></font> i <font color="#804040"><b>in</b></font> sys.argv[1:]:
+         <font color="#804040"><b>for</b></font> y <font color="#804040"><b>in</b></font> glob.glob(os.path.normcase(i)):
+            <font color="#804040"><b>try</b></font>:
+               <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">File:</font><font color="#6a5acd">\t</font><span style="background-color: #ffffff">&quot;</span> + str(y) + <span style="background-color: #ffffff">&quot;</span><font color="#6a5acd">\t</font><font color="#f20884">Language:</font><font color="#6a5acd">\t</font><span style="background-color: #ffffff">&quot;</span> + myLid.checkText(open(y).read())
+            <font color="#804040"><b>except</b></font> IOError:
+               <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Cannot open file:</font><span style="background-color: #ffffff">&quot;</span> + str(y)
+               <font color="#804040"><b>pass</b></font>
+   <font color="#804040"><b>else</b></font>:
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">Usage:</font><span style="background-color: #ffffff">&quot;</span>
+      <font color="#804040"><b>print</b></font> <span style="background-color: #ffffff">&quot;</span><font color="#f20884">python Lid.py [filename]</font><span style="background-color: #ffffff">&quot;</span>
+</pre>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-98557026-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module TDAParser</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>TDAParser</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/dcavar/Documents/Teaching/DGfS Herbstschule 2005/Code/TDAParser.py">/Users/dcavar/Documents/Teaching/DGfS Herbstschule 2005/Code/TDAParser.py</a></font></td></tr></table>
+    <p><tt>TDAParser.py<br>
+(C)&nbsp;2005&nbsp;by&nbsp;Damir&nbsp;Cavar<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;code&nbsp;is&nbsp;free;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;2&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;is&nbsp;a&nbsp;simple&nbsp;implementation&nbsp;of&nbsp;an&nbsp;agenda-based&nbsp;top-down&nbsp;parser<br>
+with&nbsp;backtracking.<br>
+&nbsp;<br>
+In&nbsp;the&nbsp;code&nbsp;you&nbsp;can&nbsp;control&nbsp;the&nbsp;behavior&nbsp;of&nbsp;the&nbsp;parser,&nbsp;i.e.&nbsp;simulate<br>
+depth-first&nbsp;or&nbsp;breadth-first&nbsp;by&nbsp;changing&nbsp;the&nbsp;element&nbsp;that&nbsp;is&nbsp;taken&nbsp;from&nbsp;the<br>
+agenda,&nbsp;the&nbsp;first&nbsp;or&nbsp;the&nbsp;last&nbsp;one.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="grammar.html">grammar</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-tdparse"><strong>tdparse</strong></a>(input, goal, grammar, agenda)</dt><dd><tt>Recursive&nbsp;top-down&nbsp;parse&nbsp;function&nbsp;with&nbsp;weak&nbsp;generative&nbsp;capacity.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>FIFO</strong> = 0<br>
+<strong>LIFO</strong> = -1<br>
+<strong>strategy</strong> = 0</td></tr></table>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-98557026-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body></html>
