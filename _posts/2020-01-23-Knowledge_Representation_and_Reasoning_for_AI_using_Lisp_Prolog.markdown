@@ -27,3 +27,8 @@ We will look into Prolog and Common Lisp again, using these tools:
 See for some documentation the links on the corresponding websites.
 
 We use a Slack channel to communicate meeting times and other arrangements. Email me to add you to the Slack channel.
+
+See the two GitHub repos for material related to these meetings:
+
+- [Prolog repo](https://github.com/dcavar/prolog-tutorial)
+- [Common Lisp repo](https://github.com/dcavar/common_lisp_tutorial)
