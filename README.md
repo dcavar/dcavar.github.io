@@ -5,7 +5,7 @@ Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927)), [Indiana Un
 Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 
-- **phone:** +1 812 856-5094 (or via Signal, Teams, Zoom)
+- **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** dcavar at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/)
 - **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
@@ -36,11 +36,15 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 ## Activities
 
+- [NLP-Lab] Meeting 09/28/2021 in Ballantine Hall at 3 PM, see website and calendar for detail! - from next week on 5 PM every Tuesday, location TBA
+
+
 ### Upcoming
 
 **talks:**
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
-- *Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0* presented at the SEMAPRO 2021 in Barcelona, Spain.
+- *Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0* presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
+
 
 ### Most recent
 
