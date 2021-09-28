@@ -2,4 +2,4 @@ theme: jekyll-theme-minimal
 title: Damir Cavar's Homepage
 logo: /assets/img/dc_pic2.jpg
 description: Damir Cavar is a Natural Language Processing and Knowledge Representation scientist
-show_downloads: true
+show_downloads: false
