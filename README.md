@@ -1,8 +1,10 @@
 ## Contact
 
-Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927))
+Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927)), [Indiana University] at Bloomington ([IU])
 
-[Indiana University] ([IU])
+Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
+
+
 - **phone:** +1 812 856-5094 (or via Signal, Teams, Zoom)
 - **email:** dcavar at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/)
@@ -34,8 +36,9 @@ Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927))
 ### Most recent
 
 **projects:**
-- TIE-ML - Temporal Information and Event Annotation (GitHub repo; project website)
+- [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 - Knowledge Graphs from unstructured data and common sense reasoning
+- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/) with postdoc Anthony Meyer and CL student Billy Dickson
 
 **publications:**
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of SEMAPRO 2021, Barcelona, Spain.
