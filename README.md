@@ -2,13 +2,17 @@
 
 Damir Cavar
 Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927))
+
 [Indiana University] ([IU])
+
 **phone:** +1 812 856-5094 (or via Signal, Teams, Zoom)
+
 **email:** dcavar at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 
 **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/)
 
 **departmental address:**
+
 [Indiana University], [Department of Linguistics], Ballantine Hall, Room 516, 1020 E. Kirkwood Ave., [Bloomington], IN 47405, USA.
 
 **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
