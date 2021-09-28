@@ -79,9 +79,9 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/)).
 - Member of the [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
 
-- [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/)), Senior Member.
-- Member of the [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
-- Member of the [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+- Senior Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/)).
+- Member of the [ACM](http://www.acm.org/) [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
+- Member of the [ACM](http://www.acm.org/) [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 - [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
@@ -95,8 +95,7 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 
 ### Education
 
-<strong>Degrees</strong>
-
+**degrees:**
 - Dr. phil. in Linguistics (magna cum laude), [University of Potsdam](http://www.uni-potsdam.de/), September 1999, Advisors: Prof.Dr. Peter Staudacher and [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/~fanselow/)
 - Diploma in Linguistics (with distinction), [University of Potsdam](http://www.uni-potsdam.de/), November 1994, Advisor: [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/~fanselow/)
 
