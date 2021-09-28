@@ -55,7 +55,7 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 
 - *2000* Researcher (PostDoc), Department of Computer Science at the [Technical University in Berlin](http://www.tu-berlin.de/), [KIT Group](http://flp.cs.tu-berlin.de/kit/), [Project Verbmobil](http://verbmobil.dfki.de/).
 
-- *1999* Researcher at the [University of Potsdam], [Linguistics Department](http://www.ling.uni-potsdam.de/), in the interdisciplinary project &ldquo;Formale Modelle Kognitiver Komplexit&auml;t&rdquo; (Formal Models of Cognitive Complexity), WP PI: [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/~fanselow/).
+- *1999* Researcher at the [University of Potsdam], [Linguistics Department](http://www.ling.uni-potsdam.de/), in the interdisciplinary project "Formale Modelle Kognitiver Komplexit&auml;t" (Formal Models of Cognitive Complexity), WP PI: [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/~fanselow/).
 
 - *1998-1999* Researcher, [Computer Science](http://www.informatik.uni-hamburg.de/) at the [University in Hamburg](http://www.uni-hamburg.de/), [Natural Language Systems Group](http://nats-www.informatik.uni-hamburg.de/Main/WebHome) ([NATS](http://nats-www.informatik.uni-hamburg.de/Main/WebHome)), PI: [Prof.Dr. Walther von Hahn](http://www1.uni-hamburg.de/slm/ifg1/Personal/Hahn_von/GermHome.html) and [Prof.Dr. Wolfgang Menzel](http://nats-www.informatik.uni-hamburg.de/WolfgangMenzel), [Project Verbmobil](http://verbmobil.dfki.de/).
 
@@ -68,7 +68,7 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 
 ### Board Member
 
-- Founding member of [Semiring Inc.], an AI, NLP, and ML company.
+- Founding member of [Semiring Inc.], an AI, Natural Language Processing, and Machine Learning company, specializing in Knowledge Graphs and reasoning.
 
 - Member of the External Advisory Board of the [Linguistic Research Center](https://liberalarts.utexas.edu/lrc/) at the [University of Texas at Austin](http://www.utexas.edu/). See [note](https://liberalarts.utexas.edu/lrc/news/article.php?id=11585).
 
