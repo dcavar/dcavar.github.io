@@ -83,8 +83,9 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 - Member of the [ACM](http://www.acm.org/) [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
 - Member of the [ACM](http://www.acm.org/) [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
-- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
+- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
+- [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
 - [Media Ecology Association](http://www.media-ecology.org/) ([MEA](http://www.media-ecology.org/)) for 2019-2020.
 - [Network Science Society](http://www.netscisociety.net/) ([NetSci](http://www.netscisociety.net/)) - 2017.
 - [Heterodox Academy](https://heterodoxacademy.org/)

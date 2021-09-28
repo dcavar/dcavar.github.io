@@ -1,5 +1,25 @@
 ## Blog
 
-
+- [Midwest AI Day 2021 at the WestGate Academy](/posts/2021-07-20-Midwest_AI_Day_2021_at_the_WestGate_Academy) (2021-07-20)
+- [Meetings On Knowledge Representations and Reasoning for AI using Lisp and Prolog](/posts/2020-01-23-Knowledge_Representation_and_Reasoning_for_AI_using_Lisp_Prolog) (2020-01-23)
+- [Talk 11/02/2019 - On Knowledge Representations and Reasoning for AI using Deep NLP and Description Logic](/posts/2019-11-02-Knowledge_Representation_and_Reasoning_for_AI_using_Deep_NLP_and_Description_Logic) (2019-11-02)
+- [Jupyter Notebooks for NLP, AI, and Computational Linguistics](/posts/2019-09-26-Jupyter_Notebooks_for_NLP_AI_and_Computational_Linguistics) (2019-09-26)
+- [Deep and Broad NLP for Big Data and Knowledge Graph Generation](/posts/2019-03-19-Talk_Deep_and_Broad_NLP_for_Big_Data_and_Knowledge_Graph_Generation) (2019-03-19)
+- [Java TreeProcessor tree parser and analyzer for treebank syntactic structures](/posts/2018-08-05-Java_tree_parser_4_PCFG_scope) (2018-08-05)
+- [Java JNI to C++ Wrapper for Foma for Natural Language Processing and Morphological Analysis](/posts/2018-08-03-Java_JNI_CPP_Foma_Wrapper_4_NLP_Morphology) (2018-08-03)
+- [Colloquium, Research, and Reading Group Meetings Quantum Algorithms for Natural Language Processing](/posts/2018-05-14-Colloquium_Reading_Group_Quantum_Algorithms_4_NLP) (2018-05-14)
+- [Colloquium and Research Group Meeting working on Speech Signal Processing and Prosody in relation to Information Theory (Pragmatics, Semantics) using Deep Learning](/posts/2018-02-18-Colloquium_Research_Group_Speech_Information_Theory) (2018-02-18)
+- [Colloquium and Research Group Meeting working on Deep Linguistics and Deep Learning](/posts/2018-02-07-Colloquium_Research_Group_Meeting) (2018-02-07)
+- [Communication with Amazon Alexa via HTTPS using Go](/posts/2017-12-05-Communicating_with_Amazon_Alexa_using_Go) (2017-12-05)
+- [System 76 Lemur with Fedora 26 KDE Spin](/posts/2017-08-12-System_76_with_Fedora) (2017-08-12)
+- [CSCI-B 659 and LING-715 Semantic Natural Language Processing, NoAI, and Big Knowledge](/posts/2017-06-29-Course_NoAI_Big_Knowledge) (2017-06-29)
+- [ELAN2split](/posts/2017-04-05-ELAN2split) (2017-04-05)
+- [TreebankParser SA](/posts/2016-09-15-TreebankParserSA) (2016-09-15)
+- [On Ubuntu/Debian/... tools for linguists](/posts/2016-08-14-Ubuntu-Debian-Tools-for-Linguists) (2016-08-14)
+- [Repairing ELAN annotation files from before 2005 for use with ELAN 4.9.4 or newer](/posts/2016-08-08-Repairing-ELAN-files-from-2005) (2016-08-08)
+- [Compiling Thrax on Linux, Mac OSX, and Windows with Cygwin](/posts/2016-07-17-compiling-thrax-on-linux-mac-osx-and-windows-with-cygwin) (2016-07-17)
+- [Compiling OpenFST on Windows 10 using Cygwin](/posts/2016-07-17-Compiling-OpenFST-on-windows-10-using-cygwin) (2016-07-17)
+- [Compiling Foma on Windows with Cygwin](/posts/2016-07-17-Compiling-foma-on-windows-with-cygwin) (2016-07-17)
+- [Haskell](/posts/2016-06-12-HaskellJupyterNotebooks) (2016-06-12)
 - [Midwest Speech and Language Days and Midwest Computational Linguistics Colloquium 2016](/posts/midwest-speech-and-language-days-and-midwest-computational-linguistics-colloquium-2016) (2016-04-07)
 

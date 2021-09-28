@@ -24,6 +24,15 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - Member of the [Cognitive Science Program at Indiana University](http://www.cogs.indiana.edu)
 - Adjunct in the [Department of Slavic and East European Languages and Cultures](http://www.indiana.edu/~lingdept/)
 
+**member:**
+- [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/)).
+- [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
+- Senior Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/)); and [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/)), and [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+- [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
+- [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
+- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
+- [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
+
 
 ## Activities
 
@@ -36,9 +45,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 ### Most recent
 
 **projects:**
+- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/) with postdoc Anthony Meyer and CL student Billy Dickson
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 - Knowledge Graphs from unstructured data and common sense reasoning
-- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/) with postdoc Anthony Meyer and CL student Billy Dickson
 
 **publications:**
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of SEMAPRO 2021, Barcelona, Spain.
