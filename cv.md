@@ -82,14 +82,15 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 - [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/)), Senior Member.
 - Member of the [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
 - Member of the [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+- [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
+- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
+- Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
 - [Media Ecology Association](http://www.media-ecology.org/) ([MEA](http://www.media-ecology.org/)) for 2019-2020.
 - [Network Science Society](http://www.netscisociety.net/) ([NetSci](http://www.netscisociety.net/)) - 2017.
 - [Heterodox Academy](https://heterodoxacademy.org/)
-- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
-- Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
+
 - Former member of the [American Association for the Advancement of Science](https://www.aaas.org/) ([AAAS](https://www.aaas.org/)), [Section Z](https://www.aaas.org/Section-Z), [Linguistics and Language Science](https://www.aaas.org/Section-Z).
 - Former member of the [Deutsche Gesellschaft f&uuml;r Sprachwissenschaft](https://dgfs.de/) ([DGfS](https://dgfs.de/)), [DGfS Sektion Computerlinguistik](https://dgfs.de/cgi-bin/dgfs.pl/coli).
-- Foli
 
 
 ### Education

@@ -4,7 +4,7 @@
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
 
-- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of SEMAPRO 2021, Barcelona, Spain.
+- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 - Damir Cavar (2019) *[Measuring Lexical Semantic Variation using Word Embeddings](https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/42654/file/of_trees_and_birds.pdf)*. Pages 61-74 in J.M.M. Brown, A. Schmidt, M. Wierzba (eds.) *Of Trees and Birds*, Universitätsverlag Potsdam, Germany.
 
@@ -31,88 +31,39 @@
 
 - Damir Cavar, Helen Aristar-Dry, Anthony Aristar (2012) Large Mailing List Corpora: Management, Annotation and Repository. In [LREC 2012](http://www.lrec-conf.org/lrec2012/) Proceedings of the workshop on [Challenges in the management of large corpora](http://corpora.ids-mannheim.de/cmlc.html).
 
-- Damir Cavar, Dunja Brozović Rončević (2012) <a href="/Pubs/CLC-Slavicorp.pdf">Riznica:
-        The Croatian Language Corpus</a>. In
-        *<a href="http://www.polon.uw.edu.pl/pis/pf.html">Prace Filologiczne</a>* LXIII (63),
-        Wydział Polonistyki Uniwersytetu Warszawskiego, Warsaw. Pages 51-66. ISSN: 0138-056.
+- Damir Cavar, Dunja Brozović Rončević (2012) [Riznica: The Croatian Language Corpus](/Pubs/CLC-Slavicorp.pdf). In *[Prace Filologiczne](http://www.polon.uw.edu.pl/pis/pf.html)* LXIII (63), Wydział Polonistyki Uniwersytetu Warszawskiego, Warsaw. Pages 51-66. ISSN: 0138-056.
 
-- Damir Cavar, Melanie Seiss (2011) *<a href="/Pubs/LFG2011-Paper.pdf">Clitic Placement,
-        Syntactic Discontinuity, and Information
-        Structure</a>*. In <a href="http://cslipublications.stanford.edu/LFG/">LFG Proceedings</a>
-        2011. ISSN 1098-6782
+- Damir Cavar, Melanie Seiss (2011) *[Clitic Placement, Syntactic Discontinuity, and Information Structure](/Pubs/LFG2011-Paper.pdf)*. In [LFG Proceedings](http://cslipublications.stanford.edu/LFG/) 2011. ISSN 1098-6782
 
-- Damir Cavar, Tanja Gulan, Damir Kero, Franjo Pehar, Pavle Valerjev (2011) <a
-            href="http://www.snltk.org/resources/ELS-2011-Proceedings-Cavar-et-al.pdf">The Scheme Natural
-        Language Toolkit (SNLTK): NLP libraries for R6RS and Racket</a>. In Proceedings of the <a
-            href="http://www.european-lisp-symposium.org/">4th European Lisp
-        Symposium</a>, Hamburg University of Technology, pp. 58-61.
+- Damir Cavar, Tanja Gulan, Damir Kero, Franjo Pehar, Pavle Valerjev (2011) [The Scheme Natural Language Toolkit (SNLTK): NLP libraries for R6RS and Racket](http://www.snltk.org/resources/ELS-2011-Proceedings-Cavar-et-al.pdf). In Proceedings of the [4th European Lisp Symposium](http://www.european-lisp-symposium.org/), Hamburg University of Technology, pp. 58-61.
 
-- Damir Cavar (2010) <a href="/Pubs/cavar_fs.pdf">On Statistical Metrics for Selection and
-        Phrasality</a>. In T. Hanneforth and G. Fanselow (eds.) *<a
-            href="http://www.amazon.de/Language-Logos-theoretical-computational-linguistics/dp/3050049316/ref=sr_1_1?ie=UTF8&s=books-intl-de&qid=1299013317&sr=8-1"
-           >Language and Logos</a>*. Akademie Verlag, Berlin. (ca. 25 pages), ISBN <a
-            href="http://www.amazon.de/Language-Logos-theoretical-computational-linguistics/dp/3050049316/ref=sr_1_1?ie=UTF8&s=books-intl-de&qid=1299013317&sr=8-1"
-           >978-3050049311</a>
+- Damir Cavar (2010) [On Statistical Metrics for Selection and Phrasality](/Pubs/cavar_fs.pdf). In T. Hanneforth and G. Fanselow (eds.) *[Language and Logos](http://www.amazon.de/Language-Logos-theoretical-computational-linguistics/dp/3050049316/ref=sr_1_1?ie=UTF8&s=books-intl-de&qid=1299013317&sr=8-1)*. Akademie Verlag, Berlin. (ca. 25 pages), ISBN [978-3050049311](http://www.amazon.de/Language-Logos-theoretical-computational-linguistics/dp/3050049316/ref=sr_1_1?ie=UTF8&s=books-intl-de&qid=1299013317&sr=8-1)
 
 - Damir Cavar, Ivo-Pavao Jazbec, Sini&scaron;a Runjaić (2009) Efficient Morphological Parsing with a Weighted Finite State Transducer. *[Informatica* 33/1](http://www.informatica.si/vol33.htm#No1), pp. 107-113. [Website of the journal](http://www.informatica.si/). ISSN: 0350-5596
 
-- Damir Cavar, Ivo-Pavao Jazbec, Tomislav Stojanov (2009) CroMo - Morphological Analysis for Standard Croatian and its Synchronic and Diachronic Dialects and Variants. In: Jakub Piskorski, Bruce W. Watson, Anssi Yli-Jyr&auml; (Eds.)
-        *<a href="http://www.booksonline.iospress.com/Content/View.aspx?piid=11699">Finite-State
-            Methods and Natural Language Processing</a>*, 7th International Workshop, FSMNLP 2007, Ispra, Italy, September 11-12, 2008. Post-proceedings. Frontiers in Artificial Intelligence and Applications 19 IOS Press, pp. 183-190. ISBN <a href="http://www.booksonline.iospress.com/Content/View.aspx?piid=11699">978-1-58603-975-2</a> ([Draft PDF](/Pubs/paper21.pdf))
+- Damir Cavar, Ivo-Pavao Jazbec, Tomislav Stojanov (2009) CroMo - Morphological Analysis for Standard Croatian and its Synchronic and Diachronic Dialects and Variants. In: Jakub Piskorski, Bruce W. Watson, Anssi Yli-Jyr&auml; (Eds.) *[Finite-State Methods and Natural Language Processing](http://www.booksonline.iospress.com/Content/View.aspx?piid=11699)*, 7th International Workshop, FSMNLP 2007, Ispra, Italy, September 11-12, 2008. Post-proceedings. Frontiers in Artificial Intelligence and Applications 19 IOS Press, pp. 183-190. ISBN [978-1-58603-975-2](http://www.booksonline.iospress.com/Content/View.aspx?piid=11699) ([Draft PDF](/Pubs/paper21.pdf))
 
 - Damir Cavar, Ivo Pavao Jazbec, Bruno Nahod (2009) Struktura i razvoj baze podataka za potrebe projekta Hrvatsko strukovno nazivlje (STRUNA) - projekt koordinacije. Pages 311-317 in: N. Ledinek, M. Žagar Karer and M. Humar (eds.) *Terminologija in sodobna terminografija*. Ljubljana: Založba ZRC, ZRC SAZU. ISBN: [978-961-254-158-3](http://cobiss.izum.si/scripts/cobiss?command=DISPLAY&base=COBIB&RID=248173568)
 
 - Dunja Brozović Rončević, Damir Cavar 2008: Hrvatska jezična riznica kao podloga jezičnim i jezičnopovijesnim istraživanjima hrvatskoga jezika. In: *Vidjeti Ohrid, Zbornik radova XIV. međunarodnog slavističkog kongresa u Ohridu*, Hrvatsko filolo&scaron;ko dru&scaron;tvo - Hrvatska sveučili&scaron;na naklada, Zagreb, pp. 173-186.
 
-- Damir Cavar, Ivo-Pavao Jazbec, Sini&scaron;a Runjaić (2008) Interoperability and Rapid Bootstrapping of
-        Morphological Parsing and Annotation Automata. In
-        *<a href="http://nl.ijs.si/is-ltc08/IS-LTC08-Proceedings.pdf">Proceedings of IS-LTC
-            08</a>*, Ljubljana, Slovenia. ISBN <a href="http://nl.ijs.si/is-ltc08/IS-LTC08-Proceedings.pdf"
-                                                     >978-961-264-006-4</a>
+- Damir Cavar, Ivo-Pavao Jazbec, Sini&scaron;a Runjaić (2008) Interoperability and Rapid Bootstrapping of Morphological Parsing and Annotation Automata. In *[Proceedings of IS-LTC 08](http://nl.ijs.si/is-ltc08/IS-LTC08-Proceedings.pdf)*, Ljubljana, Slovenia. ISBN [978-961-264-006-4](http://nl.ijs.si/is-ltc08/IS-LTC08-Proceedings.pdf)
 
-- Paul Rodrigues, Damir Cavar (2008) "Learning Arabic Morphology With Information Theory." Proceedings of the 41st
-        Annual Meeting of the Chicago Linguistics Society (CLS 41), volume 41, no. 2. Chicago, IL, USA. April 7-9, 2005.
-        pages 49-60.
-        <a href="http://humanities.uchicago.edu/orgs/cls/list.html">CLS Journal</a>. ISSN: <a
-                href="http://cls.metapress.com/content/p5u4h5726360/?p=4b31ec84938b4f59a425cbb2fd98ef78&pi=0"
-               >0577-7240</a>
+- Paul Rodrigues, Damir Cavar (2008) "Learning Arabic Morphology With Information Theory." Proceedings of the 41st Annual Meeting of the Chicago Linguistics Society (CLS 41), volume 41, no. 2. Chicago, IL, USA. April 7-9, 2005. pages 49-60. <a href="http://humanities.uchicago.edu/orgs/cls/list.html">CLS Journal</a>. ISSN: <a href="http://cls.metapress.com/content/p5u4h5726360/?p=4b31ec84938b4f59a425cbb2fd98ef78&pi=0">0577-7240</a>
 
-- Damir Cavar, Dunja Brozović Rončević (2007) "Grammaticality judgments and language usage data." Proceedings of
-        the fourth Corpus Linguistics conference 2007, Corpus and Cognition Colloquium: The relation between natural and
-        experimental language data; Birmingham, July 27-30, 2007. Abstract.
+- Damir Cavar, Dunja Brozović Rončević (2007) "Grammaticality judgments and language usage data." Proceedings of the fourth Corpus Linguistics conference 2007, Corpus and Cognition Colloquium: The relation between natural and experimental language data; Birmingham, July 27-30, 2007. Abstract.
 
-- Paul Rodrigues, Damir Cavar (2007) "Learning Arabic Morphology Using Statistical Constraint Satisfaction
-        Models."
-        *Pages 63-76 in:* E. Benmamoun (ed.) *Perspectives on Arabic Linguistics XIX*. Current Issues in
-        Linguistic Theory 289. John Benjamins, Amsterdam. <a
-                href="http://books.google.com/books?id=JmCtdUaVO2MC&lpg=PP1&dq=Perspectives%255C%20on%255C%20Arabic%255C%20Linguistics&pg=PR5-IA1%255C%2523v=onepage&q&f=false"
-               >Google Books</a>. ISBN: 978-90-272-4804-6
+- Paul Rodrigues, Damir Cavar (2007) "Learning Arabic Morphology Using Statistical Constraint Satisfaction Models." *Pages 63-76 in:* E. Benmamoun (ed.) *Perspectives on Arabic Linguistics XIX*. Current Issues in Linguistic Theory 289. John Benjamins, Amsterdam. <a href="http://books.google.com/books?id=JmCtdUaVO2MC&lpg=PP1&dq=Perspectives%255C%20on%255C%20Arabic%255C%20Linguistics&pg=PR5-IA1%255C%2523v=onepage&q&f=false">Google Books</a>. ISBN: 978-90-272-4804-6
 
-- Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2006) <a
-            href="/Pubs/PLM06-draft.pdf">On Unsupervised Grammar Induction from Untagged
-        Corpora</a>. In: P. Kaszubski (ed.) *<a href="http://ifa.amu.edu.pl/psicl/Volume_41_2006">PSiCL:
-        Poznań Studies in Contemporary Linguistics.
-        41</a>*, Adam Mickiewicz University, Poznań, Poland. pp. 57-71. ISBN: 73-7208-165-4
+- Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2006) <a href="/Pubs/PLM06-draft.pdf">On Unsupervised Grammar Induction from Untagged Corpora</a>. In: P. Kaszubski (ed.) *<a href="http://ifa.amu.edu.pl/psicl/Volume_41_2006">PSiCL: Poznań Studies in Contemporary Linguistics. 41</a>*, Adam Mickiewicz University, Poznań, Poland. pp. 57-71. ISBN: 73-7208-165-4
 
-- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2006) Unsupervised Morphology Induction for Part-of-Speech
-        Tagging.
-        *<a href="http://ling.upenn.edu/papers/pwpl.html">Penn Working Papers in Linguistics. Volume
-            12.1</a>*. Philadelphia, PA, pp. 29-41.
+- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2006) Unsupervised Morphology Induction for Part-of-Speech Tagging. *<a href="http://ling.upenn.edu/papers/pwpl.html">Penn Working Papers in Linguistics. Volume 12.1</a>*. Philadelphia, PA, pp. 29-41.
 
-- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2005) Using Morphological and Distributional Cues for
-        Inductive Part-of-Speech Tagging. Proceedings of the Midwest Computational Linguistics Colloquium (MCLC) 2005 at
-        the Ohio State University, Columbus, OH.
-        <a href="http://cllt.osu.edu/mclc/">Online</a>
+- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2005) Using Morphological and Distributional Cues for Inductive Part-of-Speech Tagging. Proceedings of the Midwest Computational Linguistics Colloquium (MCLC) 2005 at the Ohio State University, Columbus, OH. [Online](http://cllt.osu.edu/mclc/)
 
-- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2004) Syntactic Parsing Using Mutual Information and Relative
-        Entropy. Proceedings of Midwest Computational Linguistics Colloquium (MCLC) 2004.
-        <a href="http://jones.ling.indiana.edu/~mclc/schedule.html">Online</a>
+- Damir Cavar, Paul Rodrigues, Giancarlo Schrementi (2004) Syntactic Parsing Using Mutual Information and Relative Entropy. Proceedings of Midwest Computational Linguistics Colloquium (MCLC) 2004. [Online](http://jones.ling.indiana.edu/~mclc/schedule.html)
 
-- Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2004) On Statistical
-        Bootstrapping. In: William G. Sakas (ed.)
-        <a href="/Pubs/PsychoCompProceedings-Article.pdf">Proceedings of the First Workshop on
-            Psycho-computational Models of Human Language Acquisition</a>, held in cooperation with COLING 2004, Geneva,
-        pp. 9-16. <a href="http://www.aclweb.org/anthology/W/W04/">ACL Anthology</a>
+- Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2004) On Statistical Bootstrapping. In: William G. Sakas (ed.) [Proceedings of the First Workshop on Psycho-computational Models of Human Language Acquisition](/Pubs/PsychoCompProceedings-Article.pdf), held in cooperation with COLING 2004, Geneva, pp. 9-16. [ACL Anthology](http://www.aclweb.org/anthology/W/W04/)
 
 - Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2004) [Alignment Based Induction of Morphology Grammar and its Role for Bootstrapping](/Pubs/Proceedings-of-Formal-Grammar-2004.pdf). In: Gerhard J&auml;ger, Paola Monachesi, Gerald Penn and Shuly Wintner (eds.) *<a href="http://cs.haifa.ac.il/~shuly/fg04/">Proceedings of Formal Grammar 2004</a>*, Nancy, pp. 47-62.
 
@@ -154,13 +105,13 @@
 
 - J&uuml;rgen Weissenborn, Barbara H&ouml;hle, Dorothea Kiefer, Damir Cavar (1998) "Children's sensitivity to word-order violations in German: Evidence for very early parameter-setting." In: A. Greenhill, M. Hughes, H. Littlefield & H. Walsh (eds.) Proceedings of the 22<sup>nd</sup> Annual Boston Conference on Language Development. Sommerville: Cascadilla Press. ISBN: 978-1-57473-032-6
 
-- Damir Cavar and Chris Wilder (1997) "<a href="/Pubs/cawi-96.pdf">Auxiliaries in Serbian/Croatian and English</a>" In: U. Junghanns and G. Zybatow (eds.) *Formale Slavistik*. Vervuert: Frankfurt a.M., pp. 3-12. ISBN: 3-89354-267-1
+- Damir Cavar and Chris Wilder (1997) "[Auxiliaries in Serbian/Croatian and English](/Pubs/cawi-96.pdf)" In: U. Junghanns and G. Zybatow (eds.) *Formale Slavistik*. Vervuert: Frankfurt a.M., pp. 3-12. ISBN: 3-89354-267-1
 
-- Damir Cavar (1996) "<a href="/Pubs/synpr-a4.pdf">On Clitics in Croatian: Syntax or Prosody?</a>" Paper presented at the "Workshop on the Syntax, Morphology and Phonology of Clitics" In: *<a href="http://www.zas.gwz-berlin.de/78.html">ZAS-Working Papers in Linguistics</a>* 6 (Oct. 1996), pp. 51-65. ISSN: 1435-9588 (<a href="http://www.mendeley.com/download/public/1341051/3482963591/bffbf82dc8269d10dabc02138e70260121a076fd/dl.pdf">PDF file</a> on Mendeley)
+- Damir Cavar (1996) "[On Clitics in Croatian: Syntax or Prosody?](/Pubs/synpr-a4.pdf)" Paper presented at the "Workshop on the Syntax, Morphology and Phonology of Clitics" In: *[ZAS-Working Papers in Linguistics](http://www.zas.gwz-berlin.de/78.html)* 6 (Oct. 1996), pp. 51-65. ISSN: 1435-9588
 
 - Damir Cavar (1994) Minimalist Aspects of the Syntax of Closed Class Elements, Diploma thesis, University of Potsdam.
 
-- Damir Cavar and Chris Wilder (1994) "<a href="/Pubs/cawi-94.pdf">Clitic Third in Croatian</a>" In: *<a href="http://www.uni-potsdam.de/u/slavistik/slav_reihen/lip/lip1_94.htm">Linguistics in Potsdam</a>* No. 1, 25-63. (<a href="http://www.mendeley.com/download/public/1341051/3482651091/514035ec07869f839381307ade2c60312dcb0d79/dl.pdf">PDF file</a>)
+- Damir Cavar and Chris Wilder (1994) "[Clitic Third in Croatian](/Pubs/cawi-94.pdf)" In: *[Linguistics in Potsdam](http://www.uni-potsdam.de/u/slavistik/slav_reihen/lip/lip1_94.htm)* No. 1, 25-63.
 
 - Damir Cavar and Chris Wilder (1994) "Clitic Third in Croatian". In: H. van Riemsdijk and L. Hellan (eds.) Clitics: Their Origin, Status and Position. Eurotype Woking Papers, Theme Group 8, Vol. 6. Also in: H. van Riemsdijk (eds.) Eurotype volume, Mouton de Gruyter: Berlin.
 
@@ -182,6 +133,8 @@
 #### 2021
 
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
+
+- *Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0*, Paper presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
 
 
 #### 2019
