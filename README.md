@@ -9,8 +9,11 @@ Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927))
 - **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
 
 **departmental address:**
-
-[Indiana University], [Department of Linguistics], Ballantine Hall, Room 516, 1020 E. Kirkwood Ave., [Bloomington], IN 47405, USA.
+      [Indiana University]
+      [Department of Linguistics]
+      Ballantine Hall, Room 516
+      1020 E. Kirkwood Ave.
+      [Bloomington], IN 47405, USA.
 
 **adjunct/member:**
 - [Data Science](https://www.soic.indiana.edu/graduate/degrees/data-science/index.html) Faculty in the [School of Informatics and Computation](http://www.soic.indiana.edu/)
