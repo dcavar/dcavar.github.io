@@ -23,22 +23,28 @@ Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927))
 - Adjunct in the [Department of Slavic and East European Languages and Cultures](http://www.indiana.edu/~lingdept/)
 
 
-
 ## Activities
+
+### Upcoming
+
+**talks:**
+- *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
+- *Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0* presented at the SEMAPRO 2021 in Barcelona, Spain.
 
 ### Most recent
 
-projects:
+**projects:**
 - TIE-ML - Temporal Information and Event Annotation (GitHub repo; project website)
 - Knowledge Graphs from unstructured data and common sense reasoning
 
-publications:
-- a
+**publications:**
+- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of SEMAPRO 2021, Barcelona, Spain.
 
-presentations:
-- a
 
-teaching:
+**presentations:**
+- 
+
+**teaching:**
 - no courses in Fall 2021 and Spring 2022
 
 
@@ -49,27 +55,27 @@ teaching:
 - [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) (via Slack group).
 
 
-code, data, and projects:
+**code, data, and projects:**
 - [GitHub repos](https://github.com/dcavar), [GitLab repos](https://gitlab.com/dcavar), [Bitbucket repos](https://bitbucket.org/dcavar/),
       [Kaggle](https://kaggle.com/dcavar/), and [GORILLA](https://gorilla.linguistlist.org/)
 
 
 **teaching:**
 
-Fall 2020
+**Fall 2020**
 - ...
 
-Spring 2020
+**Spring 2020**
 - [LING-L 665 Applying Machine Learning Techniques in Computational Linguistics](/l665/)
 - [CSCI-B 659 Topics in Artificial Intelligence: Deep Learning, Knowledge Graphs, Computational Semantics in AI/NLP](/l665/)
 
-Fall 2018:
+**Fall 2018**
 - [LING-L 645 Advanced Natural Language Processing](/l645f18/) / [CSCI-B 659 Topics in Artificial Intelligence]()
 
-Spring 2018:
+**Spring 2018**
 - [LING-L 665 Applying Machine Learning Techniques in Computational Linguistics](/l665/) / [CSCI-B 659 Topics in Artificial Intelligence: Neural Networks, Deep Learning in CL/NLP](/l665/)
 
-2017:
+**2017**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
 - [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing: "Semantic Natural Language Processing, NoAI, and Big Knowledge (including dialog and AI)](/l715/)
 
