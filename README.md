@@ -78,6 +78,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **teaching:**
 
+**Spring 2021**
+- ...
+
 **Fall 2020**
 - ...
 
