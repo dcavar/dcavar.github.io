@@ -4,7 +4,7 @@
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
 
-- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
+- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 - Damir Cavar (2019) *[Measuring Lexical Semantic Variation using Word Embeddings](https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/42654/file/of_trees_and_birds.pdf)*. Pages 61-74 in J.M.M. Brown, A. Schmidt, M. Wierzba (eds.) *Of Trees and Birds*, Universitätsverlag Potsdam, Germany.
 

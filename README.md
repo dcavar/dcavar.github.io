@@ -43,7 +43,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **talks:**
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
-- *Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0* presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
+- *[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)* presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
 
 
 ### Most recent
@@ -54,7 +54,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 **publications:**
-- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0," In Proceedings of SEMAPRO 2021, Barcelona, Spain.
+- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 
 **presentations:**
