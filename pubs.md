@@ -14,14 +14,11 @@
 
 - Damir Cavar, Matt Josefy (2018) Mapping Deep NLP to Knowledge Graphs: An Enhanced Approach to Analyzing Corporate Filings with Regulators. In Proceedings of [The First Financial Narrative Processing Workshop](http://wp.lancs.ac.uk/cfie/) (FNP 2018), [LREC 2018](http://lrec2018.lrec-conf.org/en/) in Miyazaki, Japan. (download [extended abstract](/Pubs/Mapping_SEC_Deep_NLP_Knowledge_Graph.pdf))
 
-- Damir Cavar, <a href="https://linguistlist.org/people/lwin.html">Lwin Moe</a>, Hai Hu, Kenneth Steimel (2016) Preliminary Results from the Free Linguistic Environment Project. Pages 161-181 in D. Arnold, M. Butt, B. Crysmann, T. Holloway-King, S. Müller (eds.) *Proceedings of the Joint 2016 Conference on Head-driven Phrase Structure Grammar and Lexical Functional Grammar*. CSLI Publications. See also: [FLE]
+- Damir Cavar, [Lwin Moe](http://lwinmoe.org/), Hai Hu, Kenneth Steimel (2016) Preliminary Results from the Free Linguistic Environment Project. Pages 161-181 in D. Arnold, M. Butt, B. Crysmann, T. Holloway-King, S. Müller (eds.) *Proceedings of the Joint 2016 Conference on Head-driven Phrase Structure Grammar and Lexical Functional Grammar*. CSLI Publications. See also: [FLE]
 
 - [Małgorzata E. Ćavar], Damir Cavar, Hilaria Cruz (2016) Endangered Language Documentation: Bootstrapping a Chatino Speech Corpus, Forced Aligner, ASR. In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [GORILLA]
 
-- Damir Cavar, [Małgorzata E. Ćavar], <a
-            href="https://linguistlist.org/people/lwin.html">Lwin Moe</a> (2016) Global Open Resources
-        and Information for Language and Linguistic Analysis ([GORILLA]). In *Proceedings of the LREC 2016*, Portorož, Slovenia.
-        See also: [GORILLA]
+- Damir Cavar, [Małgorzata E. Ćavar], [Lwin Moe](http://lwinmoe.org/) (2016) Global Open Resources and Information for Language and Linguistic Analysis ([GORILLA]). In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [GORILLA]
 
 - [Małgorzata E. Ćavar], Damir Cavar, Dov-Ber Kerler, Anya Quilitsch (2016) Generating a Yiddish Speech Corpus, Forced Aligner and Basic ASR System for the AHEYM Project. In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [AHEYM](http://www.iub.edu/%7Eaheym/), [GORILLA]
 
@@ -67,12 +64,7 @@
 
 - Damir Cavar, Joshua Herring, Toshikazu Ikuta, Paul Rodrigues, Giancarlo Schrementi (2004) [Alignment Based Induction of Morphology Grammar and its Role for Bootstrapping](/Pubs/Proceedings-of-Formal-Grammar-2004.pdf). In: Gerhard J&auml;ger, Paola Monachesi, Gerald Penn and Shuly Wintner (eds.) *<a href="http://cs.haifa.ac.il/~shuly/fg04/">Proceedings of Formal Grammar 2004</a>*, Nancy, pp. 47-62.
 
-- Chris Wilder and Damir Cavar (2002) Verb Movement, Cliticization, and Coordination. Pages 365-375 of: P. Kosta
-        and J. Frasek (eds.)
-        *Current Approaches to Formal Slavic Linguistics*. Linguistik International Series Vol. 9, Peter Lang:
-        Frankfurt a.M. ISBN <a
-                href="http://www.amazon.de/Current-Approaches-Formal-Slavic-Linguistics/dp/3631503113/ref=sr_1_1?ie=UTF8&qid=1299015268&sr=8-1"
-               >978-3-631-50311-9</a>
+- Chris Wilder and Damir Cavar (2002) Verb Movement, Cliticization, and Coordination. Pages 365-375 of: P. Kosta and J. Frasek (eds.) *Current Approaches to Formal Slavic Linguistics*. Linguistik International Series Vol. 9, Peter Lang: Frankfurt a.M. ISBN <a href="http://www.amazon.de/Current-Approaches-Formal-Slavic-Linguistics/dp/3631503113/ref=sr_1_1?ie=UTF8&qid=1299015268&sr=8-1">978-3-631-50311-9</a>
 
 - Sebastian Brandt, Damir Cavar and Uta St&ouml;rl (2002) [A Real Live Web Service using Semantic Web Technologies: Automatic Generation of Meta-Information](/Pubs/Brandt-Cavar-2002-IrvineMetF006.pdf). In: Proceedings of "On The Move Towards Meaningful Internet Systems" (DOA, ODBASE, CoopIS'02), Irvine, California.
 
@@ -82,8 +74,7 @@
 
 - Gisbert Fanselow and Damir Cavar (2001) "Distributed Deletion". In: A. Alexiadou (ed.) Universal of Language: Proceedings of the 1999 GLOW Colloqium. Benjamins, Amsterdam. ([Draft PDF](/Pubs/splitdps.pdf))
 
-- Gisbert Fanselow and Damir Cavar (2000) Remarks on the economy of pronunciation. In: Gereon M&uuml;ller and
-        Wolfgang Sternefeld (eds.) Competition in Syntax, Studies in Generative Grammar 49, ISBN 3-11-016945-2.
+- Gisbert Fanselow and Damir Cavar (2000) Remarks on the economy of pronunciation. In: Gereon M&uuml;ller and Wolfgang Sternefeld (eds.) Competition in Syntax, Studies in Generative Grammar 49, ISBN 3-11-016945-2.
 
 - Damir Cavar, Alexander Geyken, Gerald Neumann (2000) [Digital Dictionary of the 20th Century German Language](/Pubs/DWDS1.pdf). In: T. Erjavec and J. Gros (eds.) Jezikoslovne Tehnologije za Slovenski Jezik. Proceedings of JS 2000, Ljubljana.
 
