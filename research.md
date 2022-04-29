@@ -1,5 +1,6 @@
 ## Research
 
+See the activities in the [Natural Processing Lab](http://nlp-lab.org/) for more details.
 
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 

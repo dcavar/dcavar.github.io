@@ -6,8 +6,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 
 - **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
-- **email:** dcavar at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
-- **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/)
+- **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
+- **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/)
+- **code:** [GitHub](https://github.com/dcavar)
 - **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
 
 **departmental address:**
@@ -36,12 +37,13 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 ## Activities
 
-- [NLP-Lab] Meeting 09/28/2021 in Ballantine Hall at 3 PM, see website and calendar for detail! - from next week on 5 PM every Tuesday, location TBA
+- [NLP-Lab] Meetings are Wednesdays 6 PM in Ballantine Hall, see website and calendar for detail!
 
 
 ### Upcoming
 
 **talks:**
+- *Event Sequencing Annotation with TIE-ML* at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
 - *[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)* presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
 
@@ -54,14 +56,17 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 **publications:**
+- Cavar, D., A. Aljubailan, L. Mompelat, Y. Won, B. Dickson, M. Fort, A. Davis and S. Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
+- Jikeli, G., D. Cavar, W. Jeong, D. Miehling, P. Wagh, D. Pak (2022) *Toward an AI Definition of Antisemitism?* In M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media. Routlage, New York.
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 
 **presentations:**
-- 
+- *Event Sequencing Annotation with TIE-ML* Poster at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
+
 
 **teaching:**
-- no courses in Fall 2021 and Spring 2022
+- no courses in Fall 2021 till Spring 2023
 
 
 ## Links
