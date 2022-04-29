@@ -57,7 +57,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **publications:**
 - Cavar, D., A. Aljubailan, L. Mompelat, Y. Won, B. Dickson, M. Fort, A. Davis and S. Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
-- Jikeli, G., D. Cavar, W. Jeong, D. Miehling, P. Wagh, D. Pak (2022) *Toward an AI Definition of Antisemitism?* In M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media. Routlage, New York.
+- Jikeli, G., D. Cavar, W. Jeong, D. Miehling, P. Wagh, D. Pak (2022) *Toward an AI Definition of Antisemitism?* In M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routlage, New York.
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 
