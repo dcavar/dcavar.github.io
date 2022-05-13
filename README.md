@@ -7,7 +7,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 - **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
-- **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/)
+- **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
 - **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
 
@@ -33,6 +33,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
 - [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
+- [ARRL - The National Association for Amateur Radio](http://arrl.org/) and [BARC - Bloomington Amateur Radio Club](https://bloomingtonradio.org/)
+- [Harley-Davidson Owner Group](https://www.harley-davidson.com/us/en/content/hog.html) ([HOG](https://www.harley-davidson.com/us/en/content/hog.html))
 
 
 ## Activities
