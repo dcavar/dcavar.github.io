@@ -318,7 +318,7 @@
            >Crosslingual Language Technology in service of an integrated
         multilingual Europe - 20 years on-</a>. University of Hamburg, Germany, 4-5 May 2012.
 
-- *Ein Grundgerüst für eine Morphologie und eine Grammatik des Litauischen in LFG*. <a href="https://titus.fkidg1.uni-frankfurt.de/dgfs2012/poster.html#cavar"></a> Poster presented at the Section of Computational Linguistics at the DGfS Annual Meeting in March 2012 (<a href="https://titus.fkidg1.uni-frankfurt.de/dgfs2012/poster/cavar.pdf">Download poster</a>). Joint work with Juliane Arenz, Justina Bacytė, Bettina Grabert, Fatih Korkmaz, Anja Leiderer, Michael Pollich, Volker Rehberg, Burkhard Rosemann.
+- *Ein Grundgerüst für eine Morphologie und eine Grammatik des Litauischen in LFG*. <a href="https://titus.fkidg1.uni-frankfurt.de/dgfs2012/poster.html#cavar">(abstract and poster)</a> ("A base for a morphology and grammar of Lithuanian in the Lexical-functional Grammar Framework - LFG") Poster presented at the Section of Computational Linguistics at the DGfS Annual Meeting in March 2012 (<a href="https://titus.fkidg1.uni-frankfurt.de/dgfs2012/poster/cavar.pdf">Download poster</a>). Joint work with Juliane Arenz, Justina Bacytė, Bettina Grabert, Fatih Korkmaz, Anja Leiderer, Michael Pollich, Volker Rehberg, Burkhard Rosemann.
 
 - *On Split Islands*. Presented at the <a
             href="http://www.lsa.umich.edu/linguistics/research/syntaxsemantics"
