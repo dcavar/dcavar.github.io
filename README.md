@@ -7,9 +7,10 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 - **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
-- **communication:** [Signal](https://www.signal.org/), [Matrix](https://matrix.org/) and [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
+- **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
-- **office hours:** only via personal arrangement, not teaching Fall 2021 and Spring 2022, [NLP-Lab] meets regularly at least once per week
+- **office hours:** only via personal arrangement, on leave 2021-2022, sabbatical 2022-2023, [NLP-Lab] meets regularly at least once per week all the time (2021-2023)
+
 
 **departmental address:**
       [Indiana University], 
@@ -68,12 +69,12 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 
 **teaching:**
-- no courses in Fall 2021 till Spring 2023
+- no teaching from Summer 2021 till Fall 2023
 
 
 ## Links
 
-**[research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2021 (contact me, if you would like to join the Teams team)
+**[research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
 - Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning.
 - [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) (via Slack group).
 
@@ -85,11 +86,10 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **teaching:**
 
-**Spring 2021**
-- ...
+**Fall 2023**
+- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
+- [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing](/l715/)
 
-**Fall 2020**
-- ...
 
 **Spring 2020**
 - [LING-L 665 Applying Machine Learning Techniques in Computational Linguistics](/l665/)
@@ -103,7 +103,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **2017**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-- [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing: "Semantic Natural Language Processing, NoAI, and Big Knowledge (including dialog and AI)](/l715/)
+- [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing: "Semantic Natural Language Processing, NoAI, and Big Knowledge" (including dialog and AI)](/l715/)
 
 
 
