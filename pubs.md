@@ -3,6 +3,7 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
+
 - Damir Cavar, Ali Aljubailan, Ludovic Mompelat, Yuna Won, Billy Dickson, Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
 
 - Günther Jikeli, Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routlage, New York.
@@ -123,6 +124,19 @@
 
 
 ### Presentations
+
+#### 2023
+
+*Distributed Deletion, Syntax, and Knowledge Representation* (2023) Paper presented at the [Gisbert Fanselow's Contributions to Syntactic Theory and GGS 47](https://sites.google.com/view/ggs-2023/home), Berlin, Germany.
+
+
+#### 2022
+
+- *On tense interpretaon in Croatian, Polish, Russian Ukrainian: A corpus study and computaonal model*. Paper presented at the 17th Slavic Linguistic Society Annual Meeting in Sapporo, Japan.
+
+- *Event Sequencing Annotation with TIE-ML*, Paper presented at the The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation (ISA-18), colocated with the LREC 2022, Marseille, France. ([paper](https://sigsem.uvt.nl/isa18/ISA-18_32_Paper.pdf))
+
+
 
 #### 2021
 
