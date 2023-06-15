@@ -129,6 +129,8 @@
 
 *Distributed Deletion, Syntax, and Knowledge Representation* (2023) Paper presented at the [Gisbert Fanselow's Contributions to Syntactic Theory and GGS 47](https://sites.google.com/view/ggs-2023/home), Berlin, Germany.
 
+*Automated Hate Speech Detection - The Importance of Precise Datasets Including a Calling-Out-Bias Label*, (2023) Poster presented at the Indiana University AI Day, Bloomington, Indiana.
+
 
 #### 2022
 
