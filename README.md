@@ -40,7 +40,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 ## Activities
 
-- [NLP-Lab] Meetings are Wednesdays 6 PM in Ballantine Hall, see website and calendar for detail!
+- [NLP-Lab] Meetings are Wednesdays 4 PM in Luddy Hall 0002, see [website](https://nlp-lab.org/) and calendar for detail!
 
 
 ### Upcoming
