@@ -9,7 +9,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
-- **office hours:** only via personal arrangement, on leave 2021-2022, sabbatical 2022-2023, [NLP-Lab] meets regularly at least once per week all the time (2021-2023)
+- **office hours:** by personal arrangement, and Thursdays 4:15-5:15 PM, [NLP-Lab] meets Thursdays 5:30-7 PM (Luddy Hall 0002)
 
 
 **departmental address:**
