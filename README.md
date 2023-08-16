@@ -68,13 +68,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - *Event Sequencing Annotation with TIE-ML* Poster at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
 
 
-**teaching:**
-- no teaching from Summer 2021 till Fall 2023
-
-
 ## Links
 
-**[research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
+**[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
 - Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning.
 - [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) (via Slack group).
 
@@ -88,7 +84,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 
 **Fall 2023**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-- [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing](/l715/)
+- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning](/l715-23/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-23/)
 
 
 
