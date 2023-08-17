@@ -3,8 +3,7 @@
 
 **Fall 2023**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-- [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing](/l715/)
-
+- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning](/l715-23/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-23/)
 
 
 
