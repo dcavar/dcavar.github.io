@@ -83,9 +83,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 **teaching:**
 
 **[Spring 2024](/teaching)**
-- LING-L 614 *Alternative Syntactic Theories*
-- LING-L 665 *Applying Machine Learning Techniques in Computational Linguistics* / CSCI-B 659 *Topics in Artificial Intelligence*
-- HON-H 240 ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *Language, Intelligence, and the Machine*
+- [LING-L 614](/l614) *[Alternative Syntactic Theories](/l614)*
+- [LING-L 665](/l665) *[Applying Machine Learning Techniques in Computational Linguistics](/l665)* / [CSCI-B 659](/l665) *[Topics in Artificial Intelligence](/l665)*
+- [HON-H 240](/h240/) ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *Language, Intelligence, and the Machine*
 
 
 **Fall 2023**
