@@ -80,15 +80,15 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
       [Kaggle](https://kaggle.com/dcavar/), and [GORILLA](https://gorilla.linguistlist.org/)
 
 
-**teaching:**
+**[teaching](/teaching):**
 
 **[Spring 2024](/teaching)**
-- [LING-L 614](/l614/) *[Alternative Syntactic Theories](/l614/)*
+- [LING-L 614] *[Alternative Syntactic Theories](/l614/)*
 - [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
-- [HON-H 240](/h240/) ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *Language, Intelligence, and the Machine*
+- [HON-H 240](/h240/) ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *[Language, Intelligence, and the Machine](/h240/)*
 
 
-**Fall 2023**
+**[Fall 2023](/teaching)**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
 - [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning](/l715-23/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-23/)
 
@@ -100,3 +100,5 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 [Department of Linguistics]: https://www.indiana.edu/~lingdept/ "Indiana University Department of Linguistics"
 [Bloomington]: https://en.wikipedia.org/wiki/Bloomington,_Indiana "Bloomington, Indiana"
 [NLP-Lab]: https://nlp-lab.org/ "Natural Language Processing Lab"
+[LING-L 614]: http://damir.cavar.me/l614/ "L 614 Alternative Syntax"
+
