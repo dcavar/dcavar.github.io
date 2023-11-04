@@ -4,9 +4,9 @@
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
 
-- Damir Cavar, Ali Aljubailan, Ludovic Mompelat, Yuna Won, Billy Dickson, Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
+- Damir Cavar, Ali Aljubailan, Ludovic Mompelat, Yuna Won, Billy Dickson, Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 
-- Günther Jikeli, Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routlage, New York.
+- Günther Jikeli, Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routledge, New York.
 
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
@@ -84,7 +84,7 @@
 
 - Damir Cavar, Uwe K&uuml;ssner, Dan Tidhar (2000) "From Off-line Evaluation to On-line Selection". In: W. Wahlster (ed.) Verbmobil: Foundations of Speech to Speech Translation, Springer Verlag. ([Draft PDF](/Pubs/selection.pdf))
 
-- Damir Cavar, Uwe K&uuml;ssner, Dan Tidhar (2000) "[From Human Evaluation to Automatic Selection of Good Translations](/Pubs/LREC2000.pdf)". In: Proceedings of the Second International Conference on Language Resources and Evaluation, LREC 2000 - Workshop on the Evalution of Machine Translation, Athens.
+- Damir Cavar, Uwe K&uuml;ssner, Dan Tidhar (2000) "[From Human Evaluation to Automatic Selection of Good Translations](/Pubs/LREC2000.pdf)". In: Proceedings of the Second International Conference on Language Resources and Evaluation, LREC 2000 - Workshop on the Evaluation of Machine Translation, Athens.
 
 - Gisbert Fanselow and Damir Cavar (2000) Remarks on the Economy of Pronunciation. Mscr. University of Potsdam/Technical University of Berlin.
 
@@ -138,9 +138,9 @@
 
 #### 2022
 
-- *On tense interpretaon in Croatian, Polish, Russian Ukrainian: A corpus study and computaonal model*. Paper presented at the 17th Slavic Linguistic Society Annual Meeting in Sapporo, Japan.
+- *On tense interpretation in Croatian, Polish, Russian Ukrainian: A corpus study and computational model*. Paper presented at the 17th Slavic Linguistic Society Annual Meeting in Sapporo, Japan.
 
-- *Event Sequencing Annotation with TIE-ML*, Paper presented at the The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation (ISA-18), colocated with the LREC 2022, Marseille, France. ([paper](https://sigsem.uvt.nl/isa18/ISA-18_32_Paper.pdf))
+- *Event Sequencing Annotation with TIE-ML*, Paper presented at the The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation (ISA-18), co-located with the LREC 2022, Marseille, France. ([paper](https://sigsem.uvt.nl/isa18/ISA-18_32_Paper.pdf))
 
 
 
@@ -190,7 +190,7 @@
 
 - Damir Cavar, Matt Josefy (2018) Mapping Deep NLP to Knowledge Graphs: An Enhanced Approach to Analyzing Corporate Filings with Regulators. Paper presented at <a href="http://wp.lancs.ac.uk/cfie/">The First Financial Narrative Processing Workshop</a> (FNP 2018), <a href="http://lrec2018.lrec-conf.org/en/">LREC 2018</a> in Miyazaki, Japan. (download <a href="/Pubs/Mapping_SEC_Deep_NLP_Knowledge_Graph.pdf">extended abstract</a>)
 
-- Mapping Deep NLP to Knowledge Graphs: An Enhanced Approach to Analyzing Corporate Filings with Regulators. Paper presented at the <a href="http://wp.lancs.ac.uk/cfie/">The First Financial Narrative Processing Workshop</a> (FNP 2018), <a href="http://lrec2018.lrec-conf.org/en/">LREC 2018</a> in Miyazaki, Japan. May 7th 2018.
+- Mapping Deep NLP to Knowledge Graphs: An Enhanced Approach to Analyzing Corporate Filings with Regulators. Paper presented at the [The First Financial Narrative Processing Workshop](http://wp.lancs.ac.uk/cfie/) (FNP 2018), <a href="http://lrec2018.lrec-conf.org/en/">LREC 2018</a> in Miyazaki, Japan. May 7th 2018.
 
 
 
@@ -232,22 +232,22 @@
             href="http://headlex16.ipipan.waw.pl/programme/">HeadLex16</a>,
         24.–29. July 2016, Warsaw, Poland. (<a
                 href="http://nlp.ipipan.waw.pl/HeadLex16/slides/cavar_etal.pdf">slides</a>, <a
-                href="https://www.youtube.com/watch?v=wK4pVjh1igQ&feature=youtu.be">YouTube video</a>) See also: [FLE]
+                href="https://www.youtube.com/watch?v=wK4pVjh1igQ&feature=youtu.be">YouTube video</a>) See also: [FLE].
 
 - *Plenary panel that sets out needs/issues from four perspectives*. <a
             href="http://www.dynamicsoflanguage.edu.au/news-and-media/media-releases/article/?id=tools-and-methods-summit-university-of-melbourne-1-3-june-2016">Tools
-        &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June, 2016.
+        &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June 2016.
         See also <a href="https://sites.google.com/site/ldtoolssummit/products-services">program</a>.
 
 - *Generating speech tools and corpora for unwritten endangered languages: Chatino*. Paper presented at the
         <a href="http://www.dynamicsoflanguage.edu.au/news-and-media/media-releases/article/?id=tools-and-methods-summit-university-of-melbourne-1-3-june-2016">Tools
-            &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June, 2016.
+            &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June 2016.
         See also <a href="https://sites.google.com/site/ldtoolssummit/products-services">program</a>.
 
 - *Bridging between Documentary Linguistics, Computational Linguistics, Theoretical Linguistics, and NLP*.
         Paper presented at the <a
                 href="http://www.dynamicsoflanguage.edu.au/news-and-media/media-releases/article/?id=tools-and-methods-summit-university-of-melbourne-1-3-june-2016">Tools
-            &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June, 2016.
+            &amp; Methods Summit</a>, University of Melbourne, Australia, 1<sup>st</sup>-3<sup>rd</sup> of June 2016.
         See also <a
                 href="https://sites.google.com/site/ldtoolssummit/products-services">program</a>.
 
@@ -282,7 +282,7 @@
 
 - *On Split Islands*. Department of Linguistics, Indiana University. April 2015.
 
-- *Automatically Annotated Repository of Digital Video and Audio Resources Community* (AARDVARC). Presentation at the ClingDing meeting, Department of Linguistics, Indiana University, together with [Malgosia E. Cavar], July 2014. See also: AARDVARC
+- *Automatically Annotated Repository of Digital Video and Audio Resources Community* (AARDVARC). Presentation at the ClingDing meeting, Department of Linguistics, Indiana University, together with [Malgosia E. Cavar], July 2014. See also: AARDVARC.
 
 - *Morphological grammars and computational analyzer/generators for the documentation of indigenous/endangered languages of the world*. Poster presented at the Morphology Fest at Indiana University, Department of Linguistics, together with U. Kazagashewa, M. Mueller, [Malgosia E. Cavar], A. Lamont, S. Fox June 20<sup>th</sup>, 2014.
 
@@ -295,8 +295,7 @@
 
 - *Online visualization of research in historical linguistics*. Poster presented at the LSA Annual Meeting
         2014 in Minneapolis, MN. Together with [Malgosia E. Cavar], S. Couture, U.
-        Kazagasheva, E. Benzschawel, January,
-        2014.
+        Kazagasheva, E. Benzschawel, January 2014.
 
 - *Urban fieldwork, evolution and languages in cities*. Paper presented at the Association for the Study of
         the Arts of the Present ASAP/5: Arts of the City Conference, together with [Malgosia E. Cavar]. Wayne State University, October 3<sup>rd</sup>-6<sup>th</sup>, 2013.
@@ -367,8 +366,7 @@
         Racket.* <a href="http://www.european-lisp-symposium.org/">4</a><sup><a
             href="http://www.european-lisp-symposium.org/">th</a></sup><a
             href="http://www.european-lisp-symposium.org/"> European Lisp Symposium, Special Focus on
-        Parallelism &amp; Efficiency</a>, TUHH, Hamburg University of Technology, Hamburg, Germany, 1
-        <sup>st</sup> of April 2011.
+        Parallelism &amp; Efficiency</a>, TUHH, Hamburg University of Technology, Hamburg, Germany, 1st of April 2011.
 
 - *>No Escape from Clitics in Neo-Shtokavian: Contributions to the syntax and prosody of enclitic auxiliaries
         and pronouns*, Research Colloquium, <a href="http://ling.uni-konstanz.de/">Linguistics
@@ -477,7 +475,7 @@
 - *Constraint-based Cue-learning and cue-based language acquisition*. Workshop on Approaches to Empirical
         Syntax/WOTS-8, Berlin, Germany. 08/28/2004
 
-- *Alignment Based Induction of Morphology Grammar and its Role for Bootstrapping*. The 9th conference on
+- *Alignment-Based Induction of Morphology Grammar and its Role for Bootstrapping*. The 9th conference on
         Formal Grammar: FGNancy, Nancy, France. 08/08/2004
 
 - *Computationale Modellierung des Spracherwerbs: Wieviel kann man &uuml;ber nat&uuml;rliche Sprache von der
@@ -581,10 +579,10 @@
         11/20.-22./1997
 
 - *Children's Sensitivity to Word-Order Variations in German: Evidence for Very Early Parameter Setting*.
-        Boston University Conference on Language Development (USA), joint work with: J&uuml;rgen Weissenborn, Barbara H&ouml;hle,
+        Boston University Conference on Language Development (USA), joint work with: Juergen Weissenborn, Barbara Hoehle,
         Dorothea Kiefer. 11/07.-09./1996
 
-- *Split Constituents in Germanic and Slavic*. International Conference on Pied-Piping, Universit&auml;t
+- *Split Constituents in Germanic and Slavic*. International Conference on Pied-Piping, Universitaet
         Jena (D), joint work with: Gisbert Fanselow. 05/30/1997
 
 - *On the Syntactic and Phonological Properties of Enclitic Categories in Slavic*. PLM: 30th Poznań
@@ -599,13 +597,13 @@
 
 - *Interface Phenomena in Croatian and Polish*. University of Leipzig (D). 11/27/1996
 
-- *Fr&uuml;he Syntaktische Wissensstrukturen: Kontinuit&auml;t und &Ouml;konomie* (Early syntactic
+- *Fruehe Syntaktische Wissensstrukturen: Kontinuitaet und Oekonomie* (Early syntactic
         knowledge structures: continuity and economy). Annual meeting of the RULE group, Gro&szlig; D&ouml;lln (D),
         (PANNONIA Hotel D&ouml;llnsee), Berlin-Brandenburg Academy of Science. 10/11/1996
 
-- *Fr&uuml;he Syntaktische Wissensstrukturen: Kontinuit&auml;t und &Ouml;konomie* (Early syntactic
+- *Fruehe Syntaktische Wissensstrukturen: Kontinuitaet und Oekonomie* (Early syntactic
         knowledge structures: continuity and economy). Workshop: TROPICS, Berlin-Brandenburgische Akademie der
-        Wissenschaften, joint work with: J&uuml;rgen Weissenborn, Barbara H&ouml;hle, Dorothea Kiefer. 09/28/1996
+        Wissenschaften, joint work with: Juergen Weissenborn, Barbara H&ouml;hle, Dorothea Kiefer. 09/28/1996
 
 - Weissenborn, J., H&ouml;hle, B., Kiefer, D. &amp; Cavar, D. On the Structure of Tacit Syntactic Knowledge:
         Continuity and Economy. Conference: Approaches to Bootstrapping in Early Language Development,
@@ -629,19 +627,19 @@
 - *Pronominal and Verbal Clitics in Croatian*. SOAS, London (UK) (School of Oriental and African Studies).
         10/14/1993
 
-- *Verbale und pronominale Klitika* (Verbal and pronominal clitics). Universit&auml;t zu K&ouml;ln (D), GGS. 07/10/1993
+- *Verbale und pronominale Klitika* (Verbal and pronominal clitics). Universitaet zu Koeln (D), GGS. 07/10/1993
 
-- *Ein Konzept f&uuml;r MultiMedia im Sprachunterricht am Beispiel des Japanischen* (A concept for multimedia in 2nd language teaching on the basis of Japanese). M&uuml;nchen (D), MediaNet, Universit&auml;t Frankfurt a.M. 07/09/1993
+- *Ein Konzept fuer MultiMedia im Sprachunterricht am Beispiel des Japanischen* (A concept for multimedia in 2nd language teaching on the basis of Japanese). Muenchen (D), MediaNet, Universitaet Frankfurt a.M. 07/09/1993
 
-- *Wortstellungsvariation, Verbbewegung und &Ouml;konomie-Prinzipien* (Wordorder variation, verb movement and economy principles). Universit&auml;t Stuttgart (D). 06/24/1993
+- *Wortstellungsvariation, Verbbewegung und &Ouml;konomie-Prinzipien* (Wordorder variation, verb movement and economy principles). Universitaet Stuttgart (D). 06/24/1993
 
 - *Verbs and Clitics in Croatian*. Universit&eacute; de Gen&egrave;ve (CH), Clitic Workshop. 06/01/1993
 
 - *Verbs and Clitics in Croatian*. Rijksuniversitet Groningen (NL). 05/28/1993
 
-- *X*<sup>0</sup>*-Bewegung und &Ouml;konomie* (X0-movement and economy). DGfS annual meeting, University of Jena (D), Workshop: Wortordnung (word order). 03/03/1993
+- *X0*-Bewegung und Oekonomie* (X0-movement and economy). DGfS annual meeting, University of Jena (D), Workshop: Wortordnung (word order). 03/03/1993
 
-- *X*<sup>0</sup>*-Bewegung und &Ouml;konomie* (X0-movement and economy). Max-Planck-Gesellschaft zur F&ouml;rderung der Wissenschaften e.V., Arbeitsgruppe Strukturelle Grammatik an der Humboldt-Universit&auml;t, Berlin. 11/17/1992
+- *X0*-Bewegung und Oekonomie* (X0-movement and economy). Max-Planck-Gesellschaft zur Foerderung der Wissenschaften e.V., Arbeitsgruppe Strukturelle Grammatik an der Humboldt-Universitaet, Berlin. 11/17/1992
 
 - *Long Head Movement? Verb-Movement and Cliticization in Croatian*. University of Regensburg (D), GGS. 02/01/1992
 
