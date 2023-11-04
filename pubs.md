@@ -127,6 +127,10 @@
 
 #### 2023
 
+*Understanding Ellipsis in Language: A Comparative Analysis of SOTA NLP and Large Language Models*, Cognitive Science Lunch talk at [Indiana University at Bloomington](https://bloomington.iu.edu/about/index.html), October 2023.
+
+*Artificial Intelligence and Entertainment* Webinar, organized by [Gotham Group](https://gotham-group.com/), Los Angeles.
+
 *Distributed Deletion, Syntax, and Knowledge Representation* (2023) Paper presented at the [Gisbert Fanselow's Contributions to Syntactic Theory and GGS 47](https://sites.google.com/view/ggs-2023/home), Berlin, Germany.
 
 *Automated Hate Speech Detection - The Importance of Precise Datasets Including a Calling-Out-Bias Label*, (2023) [Poster](Pubs/Hackathon_Poster_AI_Center_Open_House-1.pdf) presented at the Indiana University AI Day, Bloomington, Indiana.

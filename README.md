@@ -46,6 +46,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 ### Upcoming
 
 **talks:**
+- *Understanding Ellipsis in Language: A Comparative Analysis of SOTA NLP and Large Language Models*, Cognitive Science Lunch talk at [Indiana University at Bloomington](https://bloomington.iu.edu/about/index.html), October 2023.
+- *Artificial Intelligence and Entertainment* Webinar, organized by [Gotham Group](https://gotham-group.com/), Los Angeles.
 - *Event Sequencing Annotation with TIE-ML* at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marsaille, France.
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
 - *[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)* presented at the [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html) in Barcelona, Spain.
