@@ -5,7 +5,7 @@
 
 - [GitHub repo](https://github.com/dcavar/python-tutorial-notebooks)
 
-**exported topics:**
+**Exported topics:**
 
 - Bayesian Classifier
 - Flair Tutorial

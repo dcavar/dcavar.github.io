@@ -4,12 +4,12 @@ September 2023
 
 ### Summary
 
-Since Fall 2016 I am Associate Professor at [Indiana University].
+Since Fall 2016 I have been Associate Professor at [Indiana University].
 
-Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), September 1999, Advisors: Prof.Dr. Peter Staudacher and [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/%7Efanselow/)
+Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), 2000, Advisors: Prof.Dr. Peter Staudacher and [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/%7Efanselow/)
 
 
-### Professional experience
+### Professional Experience
 
 - *since summer 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
 
