@@ -13,7 +13,7 @@
 
 ### 2022
 
-- *On tense interpretation in Croatian, Polish, Russian Ukrainian: A corpus study and computational model*. Paper presented at the 17th Slavic Linguistic Society Annual Meeting in Sapporo, Japan.
+- *On tense interpretation in Croatian, Polish, Russian, and Ukrainian: A corpus study and computational model*. Paper presented at the 17th Slavic Linguistic Society Annual Meeting in Sapporo, Japan.
 
 - *Event Sequencing Annotation with TIE-ML*, Paper presented at the The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation (ISA-18), co-located with the LREC 2022, Marseille, France. ([paper](https://sigsem.uvt.nl/isa18/ISA-18_32_Paper.pdf))
 
