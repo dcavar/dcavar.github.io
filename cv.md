@@ -1,23 +1,24 @@
 ## Curriculum Vitae
 
-September 2021
+September 2023
+
 
 ### Summary
 
-Since Fall 2016 I am Associate Professor at [Indiana University].
+Since Fall 2016, I have been an Associate Professor at [Indiana University].
 
-Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), September 1999, Advisors: Prof.Dr. Peter Staudacher and [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/%7Efanselow/)
+Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), 2000, Advisors: Prof.Dr. Peter Staudacher and [Prof.Dr. Gisbert Fanselow](http://www.ling.uni-potsdam.de/%7Efanselow/)
 
 
-### Professional experience
+### Professional Experience
 
-- *since summer 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
+- *Since the summer of 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
 
-- *since summer 2017* Data Science Faculty in the [School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([SICE](https://sice.indiana.edu/)), [Indiana University]
+- *Since the summer of 2017* Data Science Faculty in the [School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([SICE](https://sice.indiana.edu/)), [Indiana University]
 
-- *since January 2018* Co-founder of [Semiring Inc.], an AI, NLP, ML company.
+- *Since January 2018* Co-founder of [Semiring Inc.], an AI, Natural Language Processing, Machine Learning, and Knowledge Graph company.
 
-- *since August 2016* Associate Professor of Computational Linguistics, [Department of Linguistics], [Indiana University].
+- *Since August 2016* Associate Professor of Computational Linguistics, [Department of Linguistics], [Indiana University].
 
 - *2014-2018* Co-Director of [The LINGUIST List](http://linguistlist.org/) at [Indiana University].
 
@@ -27,7 +28,7 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 
 - *2011-2014* Assistant and Associate Professor (tenured and quit 2014), Computational Linguistics, at [Eastern Michigan University](http://www.emich.edu/).
 
-- *since 2006* Adjunct Assistant Professor of Computational Linguistics in the [Department of Linguistics] at [Indiana University].
+- *Since 2006* Adjunct Assistant Professor of Computational Linguistics in the [Department of Linguistics] at [Indiana University].
 
 - *2011* Adjunct Affiliate Researcher at the [Institute of Croatian Language and Linguistics](http://www.ihjj.hr/) ([IHJJ](http://www.ihjj.hr/)).
 
@@ -49,7 +50,7 @@ Dr. phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de
 
 - *2002-2003* Visiting Assistant Professor in the [Department of Linguistics] at [Indiana University].
 
-- *2001-2002* IT Architect, Project Manager and Researcher in the Research &amp; Innovations group of the IS-STA ([Dresdner Bank AG](http://www.dresdner-bank.de/) and [Allianz AG](https://www.allianz.de/)) in Frankfurt a.M. (Germany).
+- *2001-2002* IT Architect, Project Manager, and Researcher in the Research &amp; Innovations group of the IS-STA ([Dresdner Bank AG](http://www.dresdner-bank.de/) and [Allianz AG](https://www.allianz.de/)) in Frankfurt a.M. (Germany).
 
 - *2000-2001* Researcher (PostDoc) at the [Berlin-Brandenburgian Academy of Science](http://www.bbaw.de/), [Project DWDS](http://www.dwds.de/), PI: [Prof.Dr. Manfred Bierwisch](http://de.wikipedia.org/wiki/Manfred_Bierwisch) and Prof.Dr. Wolfgang Klein.
 
