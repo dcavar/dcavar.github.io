@@ -47,8 +47,10 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 ### Upcoming
 
 **Talks:**
-- *Understanding Ellipsis in Language: A Comparative Analysis of SOTA NLP and Large Language Models*, Cognitive Science Lunch talk at [Indiana University at Bloomington](https://bloomington.iu.edu/about/index.html), October 2023.
-- *Artificial Intelligence and Entertainment* Webinar, organized by [Gotham Group](https://gotham-group.com/), Los Angeles.
+- Damir Cavar, Muhammad S. Abdo and Billy Dickson (2024) Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words. Paper presented at the [Arabic Linguistic Society](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/) ([ASAL](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/)) 37 Conference, February 2024, New York City.
+
+- Damir Cavar, Ludovic V. Mompelat, Muhammad S. Abdo (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta.
+
 
 
 ### Most Recent
@@ -59,6 +61,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/).
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 **Publications:**
+- Damir Cavar, Ludovic Vetea Mompelat, Muhammad S. Abdo (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta (March, 2024). (full paper)
 - Cavar, D., A. Aljubailan, L. Mompelat, Y. Won, B. Dickson, M. Fort, A. Davis and S. Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 - Jikeli, G., D. Cavar, W. Jeong, D. Miehling, P. Wagh, D. Pak (2022) *Toward an AI Definition of Antisemitism?* In M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routledge, New York.
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
