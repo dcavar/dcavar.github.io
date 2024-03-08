@@ -63,7 +63,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Projects:**
 
-- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/) with postdoc Anthony Meyer and CL student Billy Dickson
+- [Quantum NLP](https://nlp-lab.org/quantumnlp/)
+
+- [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
 
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 
