@@ -68,6 +68,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
 
+- [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
+
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 
 - Knowledge Graphs from unstructured data and common sense reasoning
