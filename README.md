@@ -46,14 +46,14 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ### Upcoming
 
+- [Van Holthenrichs], [Damir Cavar], Zoran Tiganj, Billy Dickson (2024) On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results. Paper presented at [The 33rd Annual Meeting of Formal Approaches to Slavic Linguistics](https://sites.google.com/view/fasl33). Halifax, Canada. ([abstract](/Pubs/NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf))
+
 - *Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
 
 
 **Talks:**
 
-- Vance Holthenrichs, Damir Cavar, Zoran Tiganj, Billy Dickson (2024) *On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results* (16-19 May 2024) at the [Formal Approaches to Slavic Linguistics 33](https://sites.google.com/view/fasl33) ([FASL33](https://sites.google.com/view/fasl33)), Halifax, Canada.
-
-- Damir Cavar, Ludovic V. Mompelat, [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta.
+- [Damir Cavar], [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta. ([slides](Ellipsis_IU.pdf), [video summary](https://youtu.be/P_w4kZmArqY), [full paper](https://aclanthology.org/2024.sigtyp-1.6/))
 
 - Damir Cavar, [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/), and Billy Dickson (2024) Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words. Paper presented at the [Arabic Linguistic Society](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/) ([ASAL](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/)) 37 Conference, February 2024, New York City.
 
@@ -74,7 +74,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Publications:**
 
-- Damir Cavar, Ludovic V. Mompelat, Muhammad S. Abdo (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta (March, 2024). (full paper)
+- [Damir Cavar], [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta. ([full paper](https://aclanthology.org/2024.sigtyp-1.6/))
 
 - Cavar, D., A. Aljubailan, L. Mompelat, Y. Won, B. Dickson, M. Fort, A. Davis and S. Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 
