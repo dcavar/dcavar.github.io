@@ -99,13 +99,13 @@ the-art AI Technologies Still Fail(?). Language Processing Brown Bag, Indiana Un
 ## Links
 
 **[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
-- Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning.
-- [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) ([NLP-Lab Quantum site](https://nlp-lab.org/quantumnlp/)).
+- [Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning](https://nlp-lab.org/timeevents/).
+- [Quantum NLP - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
 - [GitHub repos](https://github.com/dcavar), [GitLab repos](https://gitlab.com/dcavar), [Bitbucket repos](https://bitbucket.org/dcavar/),
-      [Kaggle](https://kaggle.com/dcavar/), and [GORILLA](https://gorilla.linguistlist.org/)
+      [Kaggle](https://kaggle.com/dcavar/), and former GORILLA was taken down by The LINGUIST List.
 
 
 **[Teaching](/teaching):**
