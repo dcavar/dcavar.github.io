@@ -43,6 +43,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - [NLP-Lab] Meetings are on Thursdays at 5:30 PM in Luddy Hall 0002; see [website](https://nlp-lab.org/) and calendar for details!
 
+- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings are on Fridays at 4 PM in Ballantine Hall 104.
 
 ### Upcoming
 
@@ -99,7 +100,7 @@ the-art AI Technologies Still Fail(?). Language Processing Brown Bag, Indiana Un
 
 **[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
 - Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning.
-- [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) (via Slack group).
+- [Quantum NLP - Computing and Algorithms](https://github.com/dcavar/q) ([Project Q](https://github.com/dcavar/q)) ([NLP-Lab Quantum site](https://nlp-lab.org/quantumnlp/)).
 
 
 **Code, data, and projects:**
