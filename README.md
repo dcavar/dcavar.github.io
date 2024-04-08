@@ -28,15 +28,15 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - Adjunct in the [Department of Slavic and East European Languages and Cultures](http://www.indiana.edu/~lingdept/)
 
 **Member:**
+- Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))
+      - [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
+      - [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/)).
-- [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
-- Senior Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/)); and [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/)), and [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+      - [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
-- [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
 - [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
 - [ARRL - The National Association for Amateur Radio](http://arrl.org/) and [BARC - Bloomington Amateur Radio Club](https://bloomingtonradio.org/)
-- [Harley-Davidson Owner Group](https://www.harley-davidson.com/us/en/content/hog.html) ([HOG](https://www.harley-davidson.com/us/en/content/hog.html))
 
 
 ## Activities
