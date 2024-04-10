@@ -47,6 +47,12 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ### Upcoming
 
+- Damir Cavar, Ludovic Mompelat, Muhammad S. Abdo (2024) *The Hoosier Ellipsis Corpus (HELC): Documenting Linguistic Dark Matter*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024.
+
+- Muhammad S. Abdo, Damir Cavar (2024) *The Hosiers Ellipsis Corpus: Building a Corpus of Ellipsis for Arabic Natural Language Processing*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024.
+
+- Damir Cavar, Chi Zhang, Koushik Reddy Parukola (2024) Quantum Natural Language Processing (QNLP) (2024) Presentation at the [Quantum Day 2024](/Pubs/QuantumDayIUQuTE2024.png) Seminar Series, organized by [Quantum Technologies for Everyone](https://beinvolved.indiana.edu/organization/qute) ([QuTE](https://beinvolved.indiana.edu/organization/qute)) at Indiana University Bloomington, April 14th 2024.
+
 - [Van Holthenrichs], Damir Cavar, Zoran Tiganj, Billy Dickson (2024) On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results. Paper presented at [The 33rd Annual Meeting of Formal Approaches to Slavic Linguistics](https://sites.google.com/view/fasl33). Halifax, Canada. ([abstract](/Pubs/NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf))
 
 - *Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
@@ -54,10 +60,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Talks:**
 
-- Damir Cavar, [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta. ([slides](Ellipsis_IU.pdf), [video summary](https://youtu.be/P_w4kZmArqY), [full paper](https://aclanthology.org/2024.sigtyp-1.6/))
+- *Quantum-Natural Language Processing (NLP) and Machine Learning (ML)* (2024) Presentation at the [CQT - Center for Quantum Technologies](https://www.purdue.edu/cqt/), NSF Industry/University Cooperative Research Center (IUCRC) Year 2, Phase I, Spring 2024 Industry Advisory Board Meeting, April 3-4, 2024, University of Notre Dame, South Bend, IN.
 
-- Damir Cavar, [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/), and Billy Dickson (2024) Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words. Paper presented at the [Arabic Linguistic Society](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/) ([ASAL](https://arabic-linguistics-society.uwm.edu/annual-symposia-on-arabic-linguistics/guidelines-for-writing-abstracts/)) 37 Conference, February 2024, New York City.
-
+- [Quantum Natural Language Processing and Machine Learning](/Pubs/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [NLP-Lab](http://nlp-lab.org/) poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
 
 
 ### Most Recent
