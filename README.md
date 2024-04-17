@@ -49,7 +49,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - Damir Cavar, Ludovic Mompelat, Muhammad S. Abdo (2024) *The Hoosier Ellipsis Corpus (HELC): Documenting Linguistic Dark Matter*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024. ([poster](/Pubs/IU_Poster_1_MSLD_2024.pdf))
 
-- Muhammad S. Abdo, Damir Cavar (2024) *The Hosiers Ellipsis Corpus: Building a Corpus of Ellipsis for Arabic Natural Language Processing*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024.
+- Muhammad S. Abdo, Damir Cavar (2024) *The Hosiers Ellipsis Corpus: Building a Corpus of Ellipsis for Arabic Natural Language Processing*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024. ([poster](/Pubs/IU_Poster_2_MSLD_2024.pdf))
 
 - Damir Cavar, Chi Zhang, Koushik Reddy Parukola (2024) Quantum Natural Language Processing (QNLP) (2024) Presentation at the [Quantum Day 2024](/Pubs/QuantumDayIUQuTE2024.png) Seminar Series, organized by [Quantum Technologies for Everyone](https://beinvolved.indiana.edu/organization/qute) ([QuTE](https://beinvolved.indiana.edu/organization/qute)) at Indiana University Bloomington, April 14th 2024.
 
