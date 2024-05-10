@@ -2,7 +2,7 @@
 
 Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927)), [Indiana University] at Bloomington ([IU])
 
-Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum-NLP Reading group](https://nlp-lab.org/quantumnlp/).
+Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum-NLP Study group](https://nlp-lab.org/quantumnlp/).
 
 
 - **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
@@ -43,7 +43,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - [NLP-Lab] Meetings are on Thursdays at 5:30 PM in Luddy Hall 0002; see [website](https://nlp-lab.org/) and calendar for details!
 
-- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings are on Fridays at 4 PM in Ballantine Hall 104.
+- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings are on Thursdays at 5 PM in Luddy 0002.
 
 ### Upcoming
 
