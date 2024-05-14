@@ -1,29 +1,30 @@
 ## Publications
 
-
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
-- Damir Cavar, [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta. (full paper)
+- [Damir Cavar], [Zoran Tiganj], [Ludovic Mompelat], [Billy Dickson] (2024) Computing Ellipsis Constructions: Comparing Classical NLP and LLM Approaches. In Proceedings of the 2024 Meeting of the [Society for Computation in Linguistics](https://sites.uci.edu/scil2024/) ([SCiL](https://sites.uci.edu/scil2024/)).
 
-- Damir Cavar, Ali Aljubailan, [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), Yuna Won, Billy Dickson, Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
+- Damir Cavar, [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), [Muhammad S. Abdo](https://www.linkedin.com/in/muhsabrys/) (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Paper to be presented at the [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/), St Julian's, Malta. ([full paper](https://aclanthology.org/2024.sigtyp-1.6/))
 
-- Günther Jikeli, Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routledge, New York.
+- Damir Cavar, Ali Aljubailan, [Ludovic V. Mompelat](https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/), Yuna Won, [Billy Dickson], Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) in proceedings of [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 
-- Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
+- [Günther Jikeli], Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routledge, New York.
+
+- Damir Cavar, [Billy Dickson], Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 - Damir Cavar (2019) *[Measuring Lexical Semantic Variation using Word Embeddings](https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/42654/file/of_trees_and_birds.pdf)*. Pages 61-74 in J.M.M. Brown, A. Schmidt, M. Wierzba (eds.) *Of Trees and Birds*, Universitätsverlag Potsdam, Germany.
 
-- Guenther Jikeli, Damir Cavar, Daniel Miehling (2019) [Annotating Antisemitic Online Content. Towards an Applicable Definition of Antisemitism.](https://arxiv.org/abs/1910.01214) [arXiv:1910.01214](https://arxiv.org/abs/1910.01214) [cs.CY].
+- [Günther Jikeli], Damir Cavar, Daniel Miehling (2019) [Annotating Antisemitic Online Content. Towards an Applicable Definition of Antisemitism.](https://arxiv.org/abs/1910.01214) [arXiv:1910.01214](https://arxiv.org/abs/1910.01214) [cs.CY].
 
 - Damir Cavar, Joshua Herring, Anthony Meyer (2018) Case Law Analysis using Deep NLP and Knowledge Graphs. In *Proceedings of the LREC 2018*, paper presented at the 1st Workshop on Language Resources and Technologies for the Legal Knowledge Graph (LegalKG), [LREC 2018](http://lrec2018.lrec-conf.org/en/), in Miyazaki, Japan.
 
 - Damir Cavar, Matt Josefy (2018) Mapping Deep NLP to Knowledge Graphs: An Enhanced Approach to Analyzing Corporate Filings with Regulators. In Proceedings of [The First Financial Narrative Processing Workshop](http://wp.lancs.ac.uk/cfie/) (FNP 2018), [LREC 2018](http://lrec2018.lrec-conf.org/en/) in Miyazaki, Japan. (download [extended abstract](/Pubs/Mapping_SEC_Deep_NLP_Knowledge_Graph.pdf))
 
-- Damir Cavar, [Lwin Moe](http://lwinmoe.org/), Hai Hu, Kenneth Steimel (2016) Preliminary Results from the Free Linguistic Environment Project. Pages 161-181 in D. Arnold, M. Butt, B. Crysmann, T. Holloway-King, S. Müller (eds.) *Proceedings of the Joint 2016 Conference on Head-driven Phrase Structure Grammar and Lexical Functional Grammar*. CSLI Publications. See also: [FLE]
+- Damir Cavar, [Lwin Moe], Hai Hu, Kenneth Steimel (2016) Preliminary Results from the Free Linguistic Environment Project. Pages 161-181 in D. Arnold, M. Butt, B. Crysmann, T. Holloway-King, S. Müller (eds.) *Proceedings of the Joint 2016 Conference on Head-driven Phrase Structure Grammar and Lexical Functional Grammar*. CSLI Publications. See also: [FLE]
 
 - [Małgorzata E. Ćavar], Damir Cavar, Hilaria Cruz (2016) Endangered Language Documentation: Bootstrapping a Chatino Speech Corpus, Forced Aligner, ASR. In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [GORILLA]
 
-- Damir Cavar, [Małgorzata E. Ćavar], [Lwin Moe](http://lwinmoe.org/) (2016) Global Open Resources and Information for Language and Linguistic Analysis ([GORILLA]). In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [GORILLA]
+- Damir Cavar, [Małgorzata E. Ćavar], [Lwin Moe] (2016) Global Open Resources and Information for Language and Linguistic Analysis ([GORILLA]). In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [GORILLA]
 
 - [Małgorzata E. Ćavar], Damir Cavar, Dov-Ber Kerler, Anya Quilitsch (2016) Generating a Yiddish Speech Corpus, Forced Aligner and Basic ASR System for the AHEYM Project. In *Proceedings of the LREC 2016*, Portorož, Slovenia. See also: [AHEYM](http://www.iub.edu/%7Eaheym/), [GORILLA]
 
@@ -130,6 +131,18 @@
 [Małgorzata E. Ćavar]: http://malgosia.cavar.me/ "Malgorzata E. Cavar"
 [Malgosia E. Cavar]: http://malgosia.cavar.me/ "Malgorzata E. Cavar"
 [Malgorzata E. Cavar]: http://malgosia.cavar.me/ "Malgorzata E. Cavar"
+[D. Cavar]: http://damir.cavar.me/ "Damir Cavar"
+[Damir Cavar]: http://damir.cavar.me/ "Damir Cavar"
+[B. Dickson]: https://www.linkedin.com/in/billy-dickson/ "Billy Dickson"
+[Billy Dickson]: https://www.linkedin.com/in/billy-dickson/ "Billy Dickson"
+[Günther Jikeli]: https://news.iu.edu/iu-experts/profile/m/297/jikeli-gunther "Günther Jikeli"
+[Van Holthenrichs]: https://russian.indiana.edu/about/instructors/holthenrichs-van.html "Van Holthenrichs"
+[Vance Holthenrichs]: https://russian.indiana.edu/about/instructors/holthenrichs-van.html "Van Holthenrichs"
+[Ludovic V. Mompelat]: https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/ "Ludovic V. Mompelat"
+[Ludovic Mompelat]: https://www.linkedin.com/in/ludovic-mompelat-8a1960b8/ "Ludovic V. Mompelat"
+[Lwin Moe]: http://lwinmoe.org/ "Lwin Moe"
+[Muhammad S. Abdo]: https://www.linkedin.com/in/muhsabrys/ "Muhammad S. Abdo"
+[Zoran Tiganj]: https://homes.luddy.indiana.edu/ztiganj/ "Zoran Tiganj"
 [GORILLA]: http://gorilla.linguistlist.org/ "Project GORILLA"
 [FLE]: http://gorilla.linguistlist.org/fle/ "Free Linguistic Environment"
 [University of Zadar]: http://www.unizd.hr/ "University of Zadar"
