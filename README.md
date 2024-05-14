@@ -118,6 +118,12 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **[Teaching](/teaching):**
 
+**[Fall 2024](/teaching)**
+
+- [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
+- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
+
+
 **[Spring 2024](/teaching)**
 - [LING-L 614] *[Alternative Syntactic Theories](/l614/)*
 - [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
@@ -158,4 +164,3 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 [Lwin Moe]: http://lwinmoe.org/ "Lwin Moe"
 [Muhammad S. Abdo]: https://www.linkedin.com/in/muhsabrys/ "Muhammad S. Abdo"
 [Zoran Tiganj]: https://homes.luddy.indiana.edu/ztiganj/ "Zoran Tiganj"
-
