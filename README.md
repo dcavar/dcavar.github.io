@@ -9,6 +9,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [Twitter](https://twitter.com/DaCavar), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
+- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), [local](/Pubs/)
 - **office hours:** Tuesdays 2:00-3:00 PM in my BH 511 office, by personal arrangement, or at the [NLP-Lab] meets Wednesdays 5:00-6:30 PM (Luddy Hall 0002)
 
 
