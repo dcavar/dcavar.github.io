@@ -49,7 +49,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - Damir Cavar, [Zoran Tiganj], [Ludovic Mompelat], [Billy Dickson] (2024) Computing Ellipsis Constructions: Comparing Classical NLP and LLM Approaches. Paper presented at the 2024 Meeting of the [Society for Computation in Linguistics](https://sites.uci.edu/scil2024/) ([SCiL](https://sites.uci.edu/scil2024/)).
 
-- [Van Holthenrichs], Damir Cavar, [Zoran Tiganj], [Billy Dickson] (2024) On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results. Paper presented at [The 33rd Annual Meeting of Formal Approaches to Slavic Linguistics](https://sites.google.com/view/fasl33). Halifax, Canada. ([abstract](/Pubs/NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf))
+- [Van Holthenrichs], Damir Cavar, [Zoran Tiganj], [Billy Dickson] (2024) On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results. Paper presented at [The 33rd Annual Meeting of Formal Approaches to Slavic Linguistics](https://sites.google.com/view/fasl33). Halifax, Canada. ([abstract](/Pubs/NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf), [abstract](NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf), [slides](/Pubs/Ellipsis_IU_FASL.pdf))
 
 - *Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
 
