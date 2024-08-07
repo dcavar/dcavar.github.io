@@ -43,8 +43,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ## Activities
 
-- [NLP-Lab] Meeting times and location are announced on the website; see [website](https://nlp-lab.org/) and calendar for details! (This is not an open course, student, study, or reading group, this is just my lab meeting!)
-- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meeting times and location are announced on the website.
+- [NLP-Lab]: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
+- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/).
 
 
 ### Upcoming
@@ -58,12 +58,6 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 
 - *[Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
 
-
-
-**Talks:**
-
-- *Quantum-Natural Language Processing (NLP) and Machine Learning (ML)* (2024) Presentation at the [CQT - Center for Quantum Technologies](https://www.purdue.edu/cqt/), NSF Industry/University Cooperative Research Center (IUCRC) Year 2, Phase I, Spring 2024 Industry Advisory Board Meeting, April 3-4, 2024, University of Notre Dame, South Bend, IN.
-- [Quantum Natural Language Processing and Machine Learning](/Pubs/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [NLP-Lab](http://nlp-lab.org/) poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
 
 
 ### Most Recent
@@ -89,6 +83,8 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 
 **Recent Presentations:**
 
+- *Quantum-Natural Language Processing (NLP) and Machine Learning (ML)* (2024) Presentation at the [CQT - Center for Quantum Technologies](https://www.purdue.edu/cqt/), NSF Industry/University Cooperative Research Center (IUCRC) Year 2, Phase I, Spring 2024 Industry Advisory Board Meeting, April 3-4, 2024, University of Notre Dame, South Bend, IN.
+- [Quantum Natural Language Processing and Machine Learning](/Pubs/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [NLP-Lab](http://nlp-lab.org/) poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
 - Damir Cavar. (2024) The Great NLP and AI Swindle: Why State-of-the-art AI Technologies Still Fail(?). Language Processing Brown Bag, Indiana University, February 5th, 2024. ([slides](/Pubs/Language_Processing_Brown_Bag_talk_Damir_Cavar_20240205.pdf))
 - *Event Sequencing Annotation with TIE-ML* at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
