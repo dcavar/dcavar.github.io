@@ -49,7 +49,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ### Upcoming
 
-Presentations at the IEEE Quantum Week 2024:
+Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/):
 
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 

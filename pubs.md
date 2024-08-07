@@ -2,7 +2,7 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
-- Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
+- Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (full paper, short paper, poster)
 
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 
