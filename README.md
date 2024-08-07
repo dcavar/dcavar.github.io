@@ -92,9 +92,8 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 
 ## Links
 
-**[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for meeting times during 2023 (contact me, if you would like to join the Teams team)
-- [Temporal and Event Logic using Graphs and Graph Neural Networks, Reasoning](https://nlp-lab.org/timeevents/).
-- [Quantum NLP - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
+**[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
+- [Quantum NLP Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
@@ -110,17 +109,15 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
 
 
+**[Summer 2024](/teaching)**
+
+- *[Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
+
+
 **[Spring 2024](/teaching)**
 - [LING-L 614] *[Alternative Syntactic Theories](/l614/)*
 - [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
 - [HON-H 240](/h240/) ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *[Language, Intelligence, and the Machine](/h240/)*
-
-
-**[Fall 2023](/teaching)**
-- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning](/l715-23/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-23/)
-
-
 
 
 [Indiana University]: https://www.indiana.edu/ "Indiana University"
