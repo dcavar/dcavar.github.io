@@ -4,7 +4,7 @@ Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927)), [Indiana Un
 
 Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum-NLP Study group](https://nlp-lab.org/quantumnlp/).
 
-- **phone:** +1 812 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
+- **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
