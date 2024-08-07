@@ -29,12 +29,12 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Member:**
 - Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))<br/>
-   - [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))<br/>
-   - [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+   &#8226; [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))<br/>
+   &#8226; [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/))<br/>
-   - [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
+   &#8226; [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
 - [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) member<br/>
-   - [IEEE Computer Society](https://www.computer.org/) member
+   &#8226; [IEEE Computer Society](https://www.computer.org/) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 - [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
