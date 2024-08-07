@@ -43,7 +43,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ## Activities
 
-- [NLP-Lab]: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
+- [NLP-Lab](https://nlp-lab.org/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
 - [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/).
 
 
