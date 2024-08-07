@@ -46,6 +46,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 - [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings are on Thursdays at 5 PM in Luddy 0002.
 
+
 ### Upcoming
 
 Presentations at the IEEE Quantum Week 2024:
