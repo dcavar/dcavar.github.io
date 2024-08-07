@@ -21,7 +21,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
       [Bloomington], IN 47405, USA.
 
 
-**Adjunct/member:**
+**Adjunct/Member:**
+- [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [Data Science](https://www.soic.indiana.edu/graduate/degrees/data-science/index.html) Faculty in the [School of Informatics and Computation](http://www.soic.indiana.edu/)
 - [Center for Applied Cybersecurity Research](https://cacr.iu.edu/about/people/fellows/index.php) ([CACR](https://cacr.iu.edu/about/people/fellows/index.php)) Fellow at [Indiana University]
 - [Russian and East-European Institute](http://www.iub.edu/~reeiweb/) ([REEI](http://www.iub.edu/~reeiweb/)), [School of Global and International Studies](http://sgis.indiana.edu/), [Indiana University]
