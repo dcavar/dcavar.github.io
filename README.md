@@ -31,12 +31,12 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Member:**
 - Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))<br/>
-   [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))<br/>
-   [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
+   - [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))<br/>
+   - [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/))<br/>
-   [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
+   - [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
 - [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) member<br/>
-   [IEEE Computer Society](https://www.computer.org/) member
+   - [IEEE Computer Society](https://www.computer.org/) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 - [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
 - [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
@@ -55,9 +55,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/):
 
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
-
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
-
 
 [ESSLLI 2024 Summer School](https://2024.esslli.eu/) course:
 
@@ -77,13 +75,9 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 **Projects:**
 
 - [Quantum NLP](https://nlp-lab.org/quantumnlp/)
-
 - [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
-
 - [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
-
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
-
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 
