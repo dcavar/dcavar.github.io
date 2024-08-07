@@ -43,9 +43,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ## Activities
 
-- [NLP-Lab] Meetings are on Thursdays at 5:30 PM in Luddy Hall 0002; see [website](https://nlp-lab.org/) and calendar for details!
-
-- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings are on Thursdays at 5 PM in Luddy 0002.
+- [NLP-Lab] Meeting times and location are announced on the website; see [website](https://nlp-lab.org/) and calendar for details! (This is not an open course, student, study, or reading group, this is just my lab meeting!)
+- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/) meeting times and location are announced on the website.
 
 
 ### Upcoming
