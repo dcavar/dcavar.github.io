@@ -86,7 +86,7 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 
-**Publications:**
+**Recent Publications:**
 
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 
@@ -101,7 +101,7 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 - Damir Cavar, Billy Dickson, Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
 
 
-**Presentations:**
+**Recent Presentations:**
 
 - Damir Cavar. (2024) The Great NLP and AI Swindle: Why State-of-the-art AI Technologies Still Fail(?). Language Processing Brown Bag, Indiana University, February 5th, 2024. ([slides](/Pubs/Language_Processing_Brown_Bag_talk_Damir_Cavar_20240205.pdf))
 
