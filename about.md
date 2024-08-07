@@ -1,5 +1,4 @@
 ---
-layout: base
 title: About Damir Cavar's Blog
 author: Damir Cavar
 permalink: /about/
