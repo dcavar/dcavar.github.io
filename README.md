@@ -9,7 +9,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
-- **office hours:** During the semester Mondays 3:00-4:00 PM in my Ballantine Hall 511 office, or by personal arrangement
+- **office hours:** During the semester Mondays 3:00-4:00 PM in my Ballantine Hall 511, or by personal arrangement
 
 **Departmental Address:**
       [Indiana University], 
