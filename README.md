@@ -24,11 +24,11 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Adjunct/Member:**
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
-- [Data Science](https://www.soic.indiana.edu/graduate/degrees/data-science/index.html) Faculty in the [School of Informatics and Computation](http://www.soic.indiana.edu/)
-- [Center for Applied Cybersecurity Research](https://cacr.iu.edu/about/people/fellows/index.php) ([CACR](https://cacr.iu.edu/about/people/fellows/index.php)) Fellow at [Indiana University]
-- [Russian and East-European Institute](http://www.iub.edu/~reeiweb/) ([REEI](http://www.iub.edu/~reeiweb/)), [School of Global and International Studies](http://sgis.indiana.edu/), [Indiana University]
-- Member of the [Cognitive Science Program at Indiana University](http://www.cogs.indiana.edu)
-- Adjunct in the [Department of Slavic and East European Languages and Cultures](http://www.indiana.edu/~lingdept/)
+- [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
+- [Center for Applied Cybersecurity Research](https://cacr.iu.edu/about/people/index.html) ([CACR](https://cacr.iu.edu/about/people/index.html)) Fellow at [Indiana University]
+- [Russian and East-European Institute](https://reei.indiana.edu/) ([REEI](https://reei.indiana.edu/)), [Hamilton Lugar School of Global and International Studies](https://hls.indiana.edu/), [Indiana University]
+- Member of the [Cognitive Science Program at Indiana University](https://cogs.indiana.edu/)
+- Adjunct in the [Department of Slavic and East European Languages and Cultures](https://linguistics.indiana.edu/about/faculty/cavar-damir.html)
 
 **Member:**
 - Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))<br/>
