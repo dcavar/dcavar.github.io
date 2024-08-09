@@ -124,7 +124,7 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 
 [Indiana University]: https://www.indiana.edu/ "Indiana University"
 [IU]: https://www.indiana.edu/ "Indiana University"
-[Department of Linguistics]: https://www.indiana.edu/~lingdept/ "Indiana University Department of Linguistics"
+[Department of Linguistics]: https://linguistics.indiana.edu/about/faculty/cavar-damir.html "Indiana University Department of Linguistics"
 [Bloomington]: https://en.wikipedia.org/wiki/Bloomington,_Indiana "Bloomington, Indiana"
 [NLP-Lab]: https://nlp-lab.org/ "Natural Language Processing Lab"
 [LING-L 614]: http://damir.cavar.me/l614/ "L 614 Alternative Syntax"
