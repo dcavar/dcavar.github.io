@@ -1,6 +1,9 @@
 ## Contact
 
-Associate Professor ([ORCID](http://orcid.org/0000-0002-1262-5927)), [Indiana University] at Bloomington ([IU])
+Associate Professor, [Indiana University] at Bloomington ([IU])
+
+- ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
+     <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/>https://orcid.org/0000-0002-1262-5927</a>
 
 Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum-NLP Study group](https://nlp-lab.org/quantumnlp/).
 
