@@ -47,7 +47,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 ## Activities
 
 - [NLP-Lab](https://nlp-lab.org/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
-- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/).
+- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 
 
 ### Upcoming
@@ -67,7 +67,7 @@ Presentations at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/
 
 **Projects:**
 
-- [Quantum NLP](https://nlp-lab.org/quantumnlp/)
+- [Quantum NLP](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 - [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
 - [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
