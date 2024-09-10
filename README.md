@@ -46,6 +46,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ## Activities
 
+- [Webinar on NLP, AI, LLMs for social media content processing](https://isca.indiana.edu/conferences/webinars/2024-webinars/10-20-24_datathon.html) coming up in October.
 - We launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/)
 - [NLP-Lab](https://nlp-lab.org/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
 - [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
