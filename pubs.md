@@ -2,6 +2,7 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
+- [Günther Jikeli], [Damir Cavar], Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2024) *Auf dem Weg zu einer KI-Definition von Antisemitism*. In: M. Hübscher and S. von Mehring (eds.) Antisemitismus in den Sozialen Medien. Verlag Barbara Budrich: Opladen, Berlin, Toronto, pp. 269-292.
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (full paper, short paper, poster)
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 - [Damir Cavar], [Zoran Tiganj], [Ludovic Mompelat], [Billy Dickson] (2024) "Computing Ellipsis Constructions: Comparing Classical NLP and LLM Approaches." [Society for Computation in Linguistics](https://sites.uci.edu/scil2024/) 7(1), pp. 217–226. doi: [https://doi.org/10.7275/scil.2147](https://doi.org/10.7275/scil.2147). See ([SCiL](https://sites.uci.edu/scil2024/)).
