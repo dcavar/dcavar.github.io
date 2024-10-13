@@ -56,6 +56,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 ### Upcoming
 
 - [Quantum Artificial Intelligence &amp; Optimization 2025](https://qaio.org/) workshop at the 17th International Conference on Agents and Artificial Intelligence (ICAART).
+- [Quantum Artificial Intelligence and Natural Language Processing Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 
 
 ### Most Recent
