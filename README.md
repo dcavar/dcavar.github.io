@@ -63,7 +63,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **Projects:**
 
-- [Quantum NLP](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- [Quantum AI and NLP](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 - [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
 - [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
