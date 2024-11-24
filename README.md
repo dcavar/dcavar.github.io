@@ -104,6 +104,11 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **[Teaching](/teaching):**
 
+**[Spring 2025](/teaching)**
+
+- LING-L 614 
+- [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
+
 **[Fall 2024](/teaching)**
 
 - [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
