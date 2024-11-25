@@ -1,6 +1,12 @@
 ## Teaching
 
 
+**Spring 2025**
+
+- LING-L 614 
+- [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
+
+
 **Fall 2024**
 
 - **[LING-L 665](/l665/)** (3 credits) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665/)* (Course Description: Introduction to major algorithms in Machine Learning (ML) and Natural Language Processing (NLP) as well as applications of these techniques to a wide range of NLP/CL topics. The course includes an advanced introduction to NLP/CL and focuses on advanced NLP algorithms, including Deep Learning and Large Language Models. Also considered are applications of ML algorithms to NLP/CL problems.)
