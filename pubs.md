@@ -2,6 +2,7 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
+- Muhammad S. Abdo, Yash Hatekar and [Damir Cavar] (2025) *AMWAL: Named Entity Recognition for Arabic Financial News*. In proceedings of the [FinNLP-FNP-LLMFinLegal 2025](https://sites.google.com/nlg.csie.ntu.edu.tw/finnlp-fnp-llmfinlegal/home) workshop at [COLING 2025](https://coling2025.org/).
 - [Günther Jikeli], [Damir Cavar], Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2024) *Auf dem Weg zu einer KI-Definition von Antisemitism*. In: M. Hübscher and S. von Mehring (eds.) Antisemitismus in den Sozialen Medien. Verlag Barbara Budrich: Opladen, Berlin, Toronto, pp. 269-292.
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (full paper, short paper, poster)
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
