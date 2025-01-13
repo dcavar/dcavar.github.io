@@ -2,6 +2,7 @@
 
 ### 2024
 
+- [Webinar on NLP, AI, LLMs for social media content processing, antisemitism, and hate-speech](https://isca.indiana.edu/conferences/webinars/2024-webinars/10-20-24_datathon.html) coming up in October 2024. See also [project website](/antisemitism) and [GitHub repo with notes and code](https://github.com/AnnotationPortal/DatathonandHackathon.github.io)
 - Damir Cavar, [Zoran Tiganj], [Ludovic Mompelat], [Billy Dickson] (2024) Computing Ellipsis Constructions: Comparing Classical NLP and LLM Approaches. Paper presented at the 2024 Meeting of the [Society for Computation in Linguistics](https://sites.uci.edu/scil2024/) ([SCiL](https://sites.uci.edu/scil2024/)).
 - [Van Holthenrichs], Damir Cavar, Zoran Tiganj, Billy Dickson (2024) On Ellipsis in Slavic: The Ellipsis Corpus and Natural Language Processing Results. Paper presented at [The 33rd Annual Meeting of Formal Approaches to Slavic Linguistics](https://sites.google.com/view/fasl33). Halifax, Canada. ([abstract](/Pubs/NLP_Corpus_of_Ellipsis_Modelling_Ellipsis_Slavic-2.pdf), [slides](/Pubs/Ellipsis_IU_FASL.pdf))
 - Damir Cavar, Ludovic Mompelat, Muhammad S. Abdo (2024) *The Hoosier Ellipsis Corpus (HELC): Documenting Linguistic Dark Matter*. Poster presented at the [Midwest Speech and Language Days](https://ai.engin.umich.edu/news/midwest-speech-and-language-days/) at the University of Michigan in Ann Arbor, April 15-16, 2024. ([poster](/Pubs/IU_Poster_1_MSLD_2024.pdf))
