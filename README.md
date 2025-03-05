@@ -5,7 +5,7 @@ Associate Professor, [Indiana University] at Bloomington ([IU])
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum-NLP Study group](https://nlp-lab.org/quantumnlp/).
+Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI and NLP Study group](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
@@ -47,9 +47,10 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ## Activities
 
+- Organizing the [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 - We launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/)
 - [NLP-Lab](https://nlp-lab.org/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
-- [Quantum NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- [Quantum AI and NLP Study Group](https://nlp-lab.org/quantumnlp/): Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 
 
 ### Upcoming
