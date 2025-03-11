@@ -55,6 +55,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 ### Upcoming
 
+- [QED-C Discussion on the Future of Quantum and AI](https://sri.zoomgov.com/webinar/register/9717374933023/WN_7AME7O63SZ6EhYan91HoRg#/registration) (March 12th, 2025) ([LinkedIn post](https://www.linkedin.com/posts/qedc_last-call-to-join-us-on-wednesday-march-activity-7304954073571549184-YCZe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAv4XMUBX2S08vo53W0sGUSFpw814QpqqBs)) with [Cierra Choucair](https://www.linkedin.com/in/cierra-lunde/), [Alain Chancé](https://www.linkedin.com/in/alainchance/), [Damir Cavar](https://damir.cavar.me/), [Bob Coecke](https://www.linkedin.com/in/bob-coecke-9389627/), [Taha Selim](https://www.linkedin.com/in/tiselim/)
 - [Quantum Artificial Intelligence &amp; Optimization 2025](https://qaio.org/) workshop at the 17th International Conference on Agents and Artificial Intelligence (ICAART).
 - [Quantum Artificial Intelligence and Natural Language Processing Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 
@@ -94,7 +95,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 ## Links
 
 **[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
-- [Quantum NLP Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
+- [Quantum AI and NLP Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
