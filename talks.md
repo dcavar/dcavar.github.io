@@ -1,5 +1,12 @@
 ## Presentations / Talks
 
+### 2025
+
+- Cavar, D., Koushik Reddy Parukola, Shane Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper to be presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
+- A. Karkala Pai, D. Cavar (2025) A Voice-based Detection of Parkinson's Disease: Feature Selection and Classification Results. Paper to be presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
+- Wang, R., R. Shrivastava, T. Sun, S. Lakshmi Anusha Chebolu, M. Kodandapani Naidu, T. Jayaprakash, J. Decatur, D. Cavar (2025) Improving LLM Reasoning Through Ontology-driven Knowledge Graphs: A Comparative Study of Generating Ontologies for Medical RAGs. Poster to be presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
+
+
 ### 2024
 
 - [Webinar on NLP, AI, LLMs for social media content processing, antisemitism, and hate-speech](https://isca.indiana.edu/conferences/webinars/2024-webinars/10-20-24_datathon.html) coming up in October 2024. See also [project website](/antisemitism) and [GitHub repo with notes and code](https://github.com/AnnotationPortal/DatathonandHackathon.github.io)
