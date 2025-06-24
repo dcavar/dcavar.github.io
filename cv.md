@@ -1,13 +1,13 @@
 ## Curriculum Vitae
 
-September 2023
+June 2025
 
 
 ### Summary
 
 Since Fall 2016, I have been an Associate Professor at [Indiana University].
 
-Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), 2000, Advisors: Prof.Dr. Peter Staudacher and Prof.Dr. Gisbert Fanselow)
+Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/), 2000, Advisors: Prof.Dr. Peter Staudacher and Prof.Dr. Gisbert Fanselow
 
 
 ### Professional Experience
@@ -20,7 +20,7 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 - *Since the summer of 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
 
-- *Since the summer of 2017* Data Science Faculty in the [School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([SICE](https://sice.indiana.edu/)), [Indiana University]
+- *Since the summer of 2017* Data Science Faculty in the [Luddy School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([Luddy School](https://luddy.indiana.edu/)), [Indiana University]
 
 - *Since January 2018* Co-founder of [Semiring Inc.], an AI, Natural Language Processing, Machine Learning, and Knowledge Graph company.
 
