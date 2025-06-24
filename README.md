@@ -40,7 +40,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
    &#8226; [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/))<br/>
    &#8226; [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
-- [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) member<br/>
+- [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) (Senior Member status in process)<br/>
    &#8226; [IEEE Computer Society](https://www.computer.org/) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 
@@ -109,10 +109,16 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **[Teaching](/teaching):**
 
+**[Fall 2025](/teaching)**
+
+- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
+- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, Graph-based Reasoning, Retrieval Augmented Generation (RAG), and Ontologies](/l715-25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-25/)
+
+
 **[Spring 2025](/teaching)**
 
-- LING-L 614 
 - [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
+
 
 **[Fall 2024](/teaching)**
 
