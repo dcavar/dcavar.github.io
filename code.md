@@ -1,6 +1,8 @@
 ## Software and Code
 
-### Natural Language Quantum Toolkit (NLQK)
+### Natural Language Qu Kit (NLQK)
+
+Quantum Computing Natural Language Processing (NLP) and AI tools:
 
 - [GitHub repo](https://github.com/dcavar/nlqk)
 - [PyPi page](https://pypi.org/project/nlqk/)

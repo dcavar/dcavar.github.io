@@ -43,9 +43,6 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) member<br/>
    &#8226; [IEEE Computer Society](https://www.computer.org/) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
-- [Linguistic Society of America](http://www.lsadc.org/) ([LSA](http://www.lsadc.org/)), Lifetime Member.
-- [Slavic Linguistic Society](https://www.slaviclinguistics.org/) ([SLS](https://www.slaviclinguistics.org/)), Lifetime Member.
-- [ARRL - The National Association for Amateur Radio](http://arrl.org/) and [BARC - Bloomington Amateur Radio Club](https://bloomingtonradio.org/)
 
 
 ## Activities
