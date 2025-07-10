@@ -75,7 +75,9 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 - Member of the [ACM](http://www.acm.org/) [Special Interest Group for Artificial Intelligence](http://sigai.acm.org/) ([SIGAI](http://sigai.acm.org/))
 - Member of the [ACM](http://www.acm.org/) [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 
-- Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)). (Senior Member status in process)
+- Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)). (Senior Member)
+   &#8226; [IEEE Computer Society](https://www.computer.org/) member
+   &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member
 
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/)).
 - Member of the [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))

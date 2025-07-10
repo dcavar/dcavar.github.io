@@ -40,8 +40,9 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
    &#8226; [Special Interest Group on Management of Data](https://sigmod.org/) ([SIGMOD](https://sigmod.org/))
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/))<br/>
    &#8226; [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
-- [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) (Senior Member status in process)<br/>
+- [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) (Senior Member)<br/>
    &#8226; [IEEE Computer Society](https://www.computer.org/) member
+   &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 
 
