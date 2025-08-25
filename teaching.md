@@ -1,10 +1,14 @@
 ## Teaching
 
+**Fall 2025**
+
+- **[LING-L 645 Advanced Natural Language Processing](/l645_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645_Fall_25/)**
+- **[LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning using Agentive AI Models](/l715_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715_Fall_25/)**
+
 
 **Spring 2025**
 
-- LING-L 614 
-- [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
+- **[LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)**
 
 
 **Fall 2024**
@@ -15,7 +19,7 @@
 
 **Summer 2024**
 
-- *[Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
+- **[Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)** (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
 
 
 **Spring 2024**

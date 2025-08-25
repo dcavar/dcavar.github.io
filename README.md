@@ -115,8 +115,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 
 **[Fall 2025](/teaching)**
 
-- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, Graph-based Reasoning, Retrieval Augmented Generation (RAG), and Ontologies](/l715-25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715-25/)
+- [LING-L 645 Advanced Natural Language Processing](/l645_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645_Fall_25/)
+- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning using Agentive AI Models](/l715_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715_Fall_25/)
 
 
 **[Spring 2025](/teaching)**
