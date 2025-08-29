@@ -17,6 +17,10 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 1:00-2:00 PM in my Ballantine Hall 511
 
+
+My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs). We are getting there.
+
+
 **Departmental Address:**
       [Indiana University], 
       [Department of Linguistics], 
