@@ -21,9 +21,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs). We are getting there.
 
 
-**Departmental Address:**
+**Address:**
       [Indiana University], 
-      [Department of Linguistics], 
       Ballantine Hall, Room 511, 
       1020 E. Kirkwood Ave., 
       [Bloomington], IN 47405, USA.
