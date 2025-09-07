@@ -52,7 +52,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Events
 
-- I am organizing the [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
+- I was organizing the [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 
 ## Activities
 
