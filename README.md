@@ -44,8 +44,8 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/))<br/>
    &#8226; [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
 - [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) (Senior Member)<br/>
-   &#8226; [IEEE Computer Society](https://www.computer.org/) member
-   &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member
+   &#8226; [IEEE Computer Society](https://www.computer.org/) member<br/>
+   &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member<br/>
    &#8226; [IEEE Quantum Technical Community](https://quantum.ieee.org/) ([QTC](https://quantum.ieee.org/))
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 
