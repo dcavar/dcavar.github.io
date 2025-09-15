@@ -46,7 +46,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 - [Institute of Electrical and Electronics Engineers](https://www.ieee.org/about/index.html) ([IEEE](https://www.ieee.org/about/index.html)) (Senior Member)<br/>
    &#8226; [IEEE Computer Society](https://www.computer.org/) member<br/>
    &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member<br/>
-   &#8226; [IEEE Quantum Technical Community](https://quantum.ieee.org/) ([QTC](https://quantum.ieee.org/))
+   &#8226; [IEEE Quantum Technical Community](https://quantum.ieee.org/) ([QTC](https://quantum.ieee.org/)) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
 
 
