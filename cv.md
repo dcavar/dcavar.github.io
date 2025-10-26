@@ -14,9 +14,9 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 - *Since 2024* Fellow of the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)), an NSF Industry/University Cooperative Research Center (IUCRC) including Indiana University, Purdue University, and the University of Notre Dame.
 
-- *Since 2024* Member of the Quantum Science and Engineering Center (QSEc) at Indiana University.
+- *Since 2024* Member of the [Quantum Science and Engineering Center](https://qsec.indiana.edu/) ([QSEc](https://qsec.indiana.edu/)) at Indiana University.
 
-- *Since 2023* Core AI Faculty at the Luddy Artificial Intelligence Center at Indiana University.
+- *Since 2023* [Core AI Faculty at the Luddy Artificial Intelligence Center at Indiana University Bloomington](https://ai.luddy.indiana.edu/people/core-ai-faculty.html).
 
 - *Since the summer of 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
 
