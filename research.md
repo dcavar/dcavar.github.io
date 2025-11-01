@@ -27,7 +27,7 @@ See:
 
 ### Competitions and Challenges
 
-- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/), joint work with postdoc Anthony Meyer and CL MS student Billy Dickson
+- Second Phase of the [US Navy AINet ANTX AI Prize Challenge 2021](https://www.navwar.navy.mil/Media/Article-Display/Article/3972869/navwar-supports-ai-innovation-through-2024-antx-prize-challenge/), joint work with postdoc Anthony Meyer and CL MS student Billy Dickson, see on [Sam.gov](https://sam.gov/opp/aabcdeae2ef948bba5b9f6acf0430070/view)
 - [Veteran Affairs AI Tech Sprint 2024](https://department.va.gov/ai/engage/), Finalists in a competition to process medical reports (April to May, 2024), joint work with PhD-student Billy Dickson.
 - [2nd Annual Crane IP Defense Innovation Pitch Competition](https://radiusindiana.com/news/article/bloomington-based-start-up-wins-crane-ip-defense-innovation-pitch-competition). Winner of the competition (June 2023) 
 - Fellow of the [National Security Innovations Network](https://nsin.mil/) ([NSIN](https://nsin.mil/)). Defense Innovations Accelerator 2021: work on AI, Natural Language Processing (NLP), Data Science, large systems software engineering, high-performance/high-accuracy cloud, on-premises, and edge computing: technology for data and text pre-processing to enable and speed up the generation of results for Data Scientists and Analysts who are confronted with time-consuming and costly data processing.
