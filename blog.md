@@ -1,6 +1,6 @@
 ## Blog
 
-- [Quantum AI and NLP 2025 Conference Indiana University](2025-11-01-Quantum_AI_and_NLP_2025_Conference_at_IU)
+- [Quantum AI and NLP 2025 Conference Indiana University](/2025-11-01-Quantum_AI_and_NLP_2025_Conference_at_IU) (2025-11-01)
 - [Midwest AI Day 2021 at the WestGate Academy](/2021-07-20-Midwest_AI_Day_2021_at_the_WestGate_Academy) (2021-07-20)
 - [Meetings On Knowledge Representations and Reasoning for AI using Lisp and Prolog](/2020-01-23-Knowledge_Representation_and_Reasoning_for_AI_using_Lisp_Prolog) (2020-01-23)
 - [Talk 11/02/2019 - On Knowledge Representations and Reasoning for AI using Deep NLP and Description Logic](/2019-11-02-Knowledge_Representation_and_Reasoning_for_AI_using_Deep_NLP_and_Description_Logic) (2019-11-02)
