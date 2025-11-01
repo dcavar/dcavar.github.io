@@ -16,7 +16,7 @@
 - [CSCI-B 659 and LING-715 Semantic Natural Language Processing, NoAI, and Big Knowledge](/2017-06-29-Course_NoAI_Big_Knowledge) (2017-06-29)
 - [ELAN2split](/2017-04-05-ELAN2split) (2017-04-05)
 - [TreebankParser SA](/2016-09-15-TreebankParserSA) (2016-09-15)
-- [On Ubuntu/Debian/... tools for linguists](/2016-08-14-Ubuntu-Debian-Tools-for-Linguists) (2016-08-14)
+- [On Ubuntu/Debian/... tools for linguists](/on-ubuntudebian-tools-for-linguists) (2016-08-14)
 - [Repairing ELAN annotation files from before 2005 for use with ELAN 4.9.4 or newer](/2016-08-08-Repairing-ELAN-files-from-2005) (2016-08-08)
 - [Compiling Thrax on Linux, Mac OSX, and Windows with Cygwin](/2016-07-17-compiling-thrax-on-linux-mac-osx-and-windows-with-cygwin) (2016-07-17)
 - [Compiling OpenFST on Windows 10 using Cygwin](/2016-07-17-Compiling-OpenFST-on-windows-10-using-cygwin) (2016-07-17)
