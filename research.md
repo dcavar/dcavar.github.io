@@ -27,8 +27,8 @@ See:
 
 ### Competitions and Challenges
 
-- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/) with postdoc Anthony Meyer and CL student Billy Dickson
-- [Veteran Affairs AI Tech Sprint 2024](https://department.va.gov/ai/engage/), Finalists in a competition to process medical reports (April to May, 2024), together with Billy Dickson.
+- Second Phase of the [US Navy AINet ANTX AI Prize Challenge](https://www.challenge.gov/challenge/networks-advanced-naval-technology-exercise-ainetantx-artificial-intelligence-prize-challenge/), joint work with postdoc Anthony Meyer and CL MS student Billy Dickson
+- [Veteran Affairs AI Tech Sprint 2024](https://department.va.gov/ai/engage/), Finalists in a competition to process medical reports (April to May, 2024), joint work with PhD-student Billy Dickson.
 - [2nd Annual Crane IP Defense Innovation Pitch Competition](https://radiusindiana.com/news/article/bloomington-based-start-up-wins-crane-ip-defense-innovation-pitch-competition). Winner of the competition (June 2023) 
 - Fellow of the [National Security Innovations Network](https://nsin.mil/) ([NSIN](https://nsin.mil/)). Defense Innovations Accelerator 2021: work on AI, Natural Language Processing (NLP), Data Science, large systems software engineering, high-performance/high-accuracy cloud, on-premises, and edge computing: technology for data and text pre-processing to enable and speed up the generation of results for Data Scientists and Analysts who are confronted with time-consuming and costly data processing.
 
@@ -37,13 +37,13 @@ See:
 
 - new EU collaboration - TBA
 - [Multinational Collaborative EU Project: ATLAS](https://www.atlasproject.eu/atlas/project/en/index.html) -  ([Applied Technology for Language-Aided CMS](https://www.atlasproject.eu/atlas/project/en/index.html)), start April 2010, technologies Natural Language Processing, Machine Translation (Croatian to other EU languages), Document Processing and Analysis.
-- "Hrvatska jezična mrežna riznica" – "Online Repository for Croatian" funded 2005 by the Croatian Ministry of Science. Project #: [0212010](http://zprojekti.mzos.hr/zprojektiold/prikaz_det.asp?offset=1765&ID=0212010); PI: Dr. Dunja Brozović Rončević (Institute for Croatian Language and Linguistics, Zagreb, Croatia), Co-PI: Damir Cavar, work on digital online resources for Croatian, Machine Learning corpora, speech, and language processing technologies.
+- "Hrvatska jezična mrežna riznica" – "Online Repository for Croatian" funded 2005 by the Croatian Ministry of Science. Project #: [0212010](http://zprojekti.mzos.hr/zprojektiold/prikaz_det.asp?offset=1765&ID=0212010); PI: Dr. Dunja Brozović Rončević (Institute for Croatian Language and Linguistics, Zagreb, Croatia), **Co-Principle Investigator: Damir Cavar**, work on digital online resources for Croatian, Machine Learning corpora, speech, and language processing technologies.
 
 
 ### USA Funded Grants
 
-- [Quantum-Natural Language Processing](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QNLP](https://www.purdue.edu/cqt/research/year-2-projects.php)) [and Quantum Machine Learning](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QML](https://www.purdue.edu/cqt/research/year-2-projects.php)) funded by the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) for 2024-2025. See more outcomes at [Quantum AI/NLP Study Group](https://nlp-lab.org/quantumnlp/).
-- The Governance of Middle Market Firms (Focus Area: Governance &amp; Finance), [funded in 2017](https://www.middlemarketcenter.org/Media/Documents/national-center-for-the-middle-market-2017-annual-report_NCMM_2017_AR_FINAL.pdf) by the [National Center for the Middle Market](https://www.middlemarketcenter.org/); joint project with Matthew Josefy from the Kelley School of Business and Damir Cavar. AI and Natural Language Processing, Mapping of Knowledge Graphs data from SEC quarterly reports.
+- [Quantum-Natural Language Processing](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QNLP](https://www.purdue.edu/cqt/research/year-2-projects.php)) [and Quantum Machine Learning](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QML](https://www.purdue.edu/cqt/research/year-2-projects.php)) funded by the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) for 2024-2025, **Principal Investigator: Damir Cavar**. See more outcomes at [Quantum AI/NLP Study Group](https://nlp-lab.org/quantumnlp/).
+- The Governance of Middle Market Firms (Focus Area: Governance &amp; Finance), [funded in 2017](https://www.middlemarketcenter.org/Media/Documents/national-center-for-the-middle-market-2017-annual-report_NCMM_2017_AR_FINAL.pdf) by the [National Center for the Middle Market](https://www.middlemarketcenter.org/); joint project with Matthew Josefy from the Kelley School of Business and **Damir Cavar**. AI and Natural Language Processing, Mapping of Knowledge Graphs data from SEC quarterly reports.
 
 
 #### National Science Foundation Funding
