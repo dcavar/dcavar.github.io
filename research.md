@@ -68,4 +68,6 @@ See:
 
 #### Local Institutional Grants
 
-- Indiana University Bloomington, TBA
+- Indiana University Bloomington Conference Grant for the [Quantum AI and NLP 2025 Conference](https://qnlp.ai/), July 2025.
+- IU Global CLIP Fellowship Fall 2024 ([Global Client Projects program](https://global.iu.edu/education/internationalization/global-client-projects.html)), collaboration with the [National Institute of Criminalistics and Criminology](https://www.nicc.fgov.be/) ([INCC](https://www.nicc.fgov.be/)), Brussels, Belgium and a team working on advertizement and AI tools for advetrisement classification.
+

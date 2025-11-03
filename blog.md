@@ -11,7 +11,7 @@
 - [Colloquium, Research, and Reading Group Meetings Quantum Algorithms for Natural Language Processing](/colloquium_research_group_meeting_quantum_algorithms_4_nlp) (2018-05-14)
 - [Colloquium and Research Group Meeting working on Speech Signal Processing and Prosody in relation to Information Theory (Pragmatics, Semantics) using Deep Learning](/colloquium_research_group_meeting_speech_prosody_information_theory_deep_learning) (2018-02-18)
 - [Communication with Amazon Alexa via HTTPS using Go](/communicating_with_amazon_alexa_via_https_using_golang) (2017-12-05)
-- [System 76 Lemur with Fedora 26 KDE Spin](/2017-08-12-System_76_with_Fedora) (2017-08-12)
+- [System 76 Lemur with Fedora 26 KDE Spin](/System_76_with_Fedora) (2017-08-12)
 - [ELAN2split](/ELAN2split) (2017-04-05)
 - [TreebankParser SA](/treebankparser-sa) (2016-09-15)
 - [On Ubuntu/Debian/... tools for linguists](/on-ubuntudebian-tools-for-linguists) (2016-08-14)
