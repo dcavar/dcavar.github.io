@@ -16,13 +16,17 @@ See:
 
 #### Knowledge Graph Extraction, AIs and KnowledgeRAGs, and Natural Language Processing
 
-- Multi-Agent Models with Logic and Reasoning RAGs
-- [Large Language Models, NLP, and Ellipsis and Empty Element Parsing](https://nlp-lab.org/ellipsis)
-- [Large Language Models, NLP, and Discontinuity and Non-local Dependency Processing in Natural Language Discourse](https://nlp-lab.org/discontinuities)
-- [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
+- See for details my [NLP-Lab](https://nlp-lab.org/)
 
-- Knowledge Graphs from unstructured data and common sense reasoning, Temporal Graph Neural Networks<br/>
-	[Computaional Semantics and Pragmatics](https://nlp-lab.org/discontinuities/CompSemGraph)
+With applications to Public Health, Medical Applications, National Security, Legal, Education:
+
+- LLMs, Knowledge Graphs, Ontologies in complex AI systems
+	- Social Media data analysis for drug use and abuse, adverse reactions, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
+	- [National Institute of Drug Abuse](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) ([NIDA](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html)) Drugs A-Z Ontology, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
+	- Smart Recovery: Geospatial and AI Tools for Public Health Interventions - a cooperation with the [Dove Recovery House](https://doverecoveryhouse.org/) and [IU Center for Rural Engagement](https://rural.indiana.edu/)
+- Multi-Agent Models with Logic and Reasoning RAGs
+
+- Knowledge Graphs from unstructured data and common sense reasoning, Temporal Graph Neural Networks
 
 
 ### Competitions and Challenges
