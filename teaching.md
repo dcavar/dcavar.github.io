@@ -51,7 +51,11 @@
 
 ### Summer Schools
 
-- ESSLLI 2024 "[Large Language Models, Knowledge, and Reasoning - Generative AI and Symbolic Knowledge Representations](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)", Leuven, Belgium - Intro to LLMs and Knowledge Graphs, Graph RAGs, and reasonign engines
+- [ESSLLI 2024](https://2024.esslli.eu/) "[Large Language Models, Knowledge, and Reasoning - Generative AI and Symbolic Knowledge Representations](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)", Leuven, Belgium - Intro to LLMs and Knowledge Graphs, Graph RAGs, and reasonign engines
+- I taught a course on [Statistics for linguistic Research](/stat4ling-10/) in Spring 2009 at the [University of Zadar](https://www.unizd.hr/eng/), Croatia 
 - ESSLLI 2006 "[Intro to Symbolic and Statistical NLP in Scheme](/ESSLLI2006/)", Malaga, Spain - Intro course to the Scheme Programming language and Natural Language Processing
 - I organized the summer school and taught a Computational Linguistics course: [JSSECL 2006](/JSSECL2006A/) summer school at the [University of Zadar](https://www.unizd.hr/eng/) 
+- I taught a course on [computational modeling in syntax in 2004](/syntaxfest/) at [Indiana University](https://www.indiana.edu/) at the SyntaxFest 2004
+- I taught a course on [Tutorial Machine Learning and Language Acquisition](/IntroCModelingLA/) in 2004 at the [University of Potsdam](https://www.uni-potsdam.de/en/university-of-potsdam), Germany
+- I organized the [Bootstrapping in Language Acquisition - Psychological, Linguistic and Computational Aspects](/BOOT-LA/) ([BOOT-LA](/BOOT-LA/)) workshop in April 2003 at [Indiana University](https://www.indiana.edu/)
 
