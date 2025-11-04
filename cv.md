@@ -1,6 +1,6 @@
 ## Curriculum Vitae
 
-June 2025
+November 2025
 
 
 ### Summary
