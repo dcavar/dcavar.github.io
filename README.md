@@ -29,6 +29,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 
 **Adjunct/Member:**
+- Indiana University [Hutton Honors College’s inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
