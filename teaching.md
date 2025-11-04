@@ -47,3 +47,11 @@
 **2017**
 - [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
 - [LING-L 715 Seminar in Computational Linguistics](/l715/) / [CSCI-B 659 Topics: Adv Natural Language Processing: "Semantic Natural Language Processing, NoAI, and Big Knowledge" (including dialog and AI)](/l715/)
+
+
+### Summer Schools
+
+- ESSLLI 2024 "[Large Language Models, Knowledge, and Reasoning - Generative AI and Symbolic Knowledge Representations](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)", Leuven, Belgium - Intro to LLMs and Knowledge Graphs, Graph RAGs, and reasonign engines
+- ESSLLI 2006 "[Intro to Symbolic and Statistical NLP in Scheme](/ESSLLI2006/)", Malaga, Spain - Intro course to the Scheme Programming language and Natural Language Processing
+
+
