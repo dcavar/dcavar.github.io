@@ -75,4 +75,6 @@ With applications to Public Health, Medical Applications, National Security, Leg
 - Indiana University [Institute for Advanced Study](https://ias.indiana.edu/index.html) Summer Followship 2025, research on Quantum and Complex Embeddings for AI and LLM architectures that are usable in hybrid classical and quantum computing environments.
 - Indiana University Bloomington Conference Grant for the [Quantum AI and NLP 2025 Conference](https://qnlp.ai/), July 2025.
 - IU Global CLIP Fellowship Fall 2024 ([Global Client Projects program](https://global.iu.edu/education/internationalization/global-client-projects.html)), collaboration with the [National Institute of Criminalistics and Criminology](https://www.nicc.fgov.be/) ([INCC](https://www.nicc.fgov.be/)), Brussels, Belgium and a team working on advertizement and AI tools for advetrisement classification.
+- Indiana University [Institute for Advanced Study](https://ias.indiana.edu/index.html) grant for research on "Deep Natural Language Analysis of Corporate Disclosures" in 2017. A joint grant with Dr. Matt Josefy from the Kelley School of Business at Indiana University.
+- Indiana University Grant-In-Aid Program, 2016, "AI-based anti-Semitism Detection in Social Media," joint grant with Guenther Jikeli, Jewish Studies, Indiana University
 
