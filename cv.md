@@ -59,6 +59,12 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 - *1994-1995* Researcher at the Innovationskolleg and Research Project &ldquo;Formale Modelle Kognitiver Komplexit&auml;t&rdquo; (Formal Models of Cognitive Complexity), [University of Potsdam](http://www.uni-potsdam.de/), WP PI: Prof.Dr. Gisbert Fanselow.
 
 
+## Certificates
+
+- **Biomedical Researcher Certificate** (07-Jul-2022-06-Jul-2027), [certificate record ID: 49987962](https://www.citiprogram.org/verify/?we9adbde5-301e-4354-a197-b162a0067b51-49987962), CITI Program, Requirements set by Indiana University/IU Health
+- Google Project Management Certificate (TBA)
+- PMP Certification from PMI (TBA)
+
 
 
 ### Board Member
