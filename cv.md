@@ -63,6 +63,7 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 - **Biomedical Researcher Certificate** (07-Jul-2022-06-Jul-2027), [certificate record ID: 49987962](https://www.citiprogram.org/verify/?we9adbde5-301e-4354-a197-b162a0067b51-49987962), CITI Program, Requirements set by Indiana University/IU Health
 - 2022-2025 **HIPAA Privacy &amp; Security Training**, Indiana University
+- 2025-2026 **Research Security Certificate**, Indiana University
 - 2021 (Class of) **National Security Innovations Network (NSIN) Defense Innovation Accelerator (DIA) program certificate**
 - Google Project Management Certificate (TBA)
 - PMP Certification from PMI (TBA)
