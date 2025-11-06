@@ -1,6 +1,6 @@
 ## Research
 
-See the activities in my [Natural Processing Lab](http://nlp-lab.org/) for more details.
+See the activities in my [Natural Language Processing Lab](http://nlp-lab.org/) for more details.
 
 
 ### Research Area
@@ -16,7 +16,7 @@ See:
 
 #### Knowledge Graph Extraction, AIs and KnowledgeRAGs, and Natural Language Processing
 
-- See for details my [NLP-Lab](https://nlp-lab.org/)
+- More on my [NLP-Lab](https://nlp-lab.org/) pages
 
 With applications to Public Health, Medical Applications, National Security, Legal, Education:
 
