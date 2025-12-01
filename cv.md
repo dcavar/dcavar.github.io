@@ -87,6 +87,7 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 - Senior Member of [The Institute of Electrical and Electronics Engineers](http://www.ieee.org/) ([IEEE](http://www.ieee.org/)).
    - [IEEE Computer Society](https://www.computer.org/) member
    - [IEEE Systems Council](https://ieeesystemscouncil.org/) member
+   - [IEEE Quantum Technical Community](https://quantum.ieee.org/) ([QTC](https://quantum.ieee.org/)) member
 
 - [Association for Computational Linguistics](http://www.aclweb.org/) ([ACL](http://www.aclweb.org/)).
 - Member of the [Special Interest Group on Slavic Natural Language Processing](http://sigslav.cs.helsinki.fi/membership.html) ([SIGSLAV](http://sigslav.cs.helsinki.fi/membership.html))
