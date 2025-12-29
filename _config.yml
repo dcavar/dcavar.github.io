@@ -10,3 +10,6 @@ research: /research
 teaching: /teaching
 code: /code
 show_downloads: false
+# Google Analytics 4 - replace with your GA4 Measurement ID (format: G-XXXXXXXXXX)
+# Get your ID from: Google Analytics > Admin > Data Streams > your stream > Measurement ID
+google_analytics: G-Q45T2W0KCE
