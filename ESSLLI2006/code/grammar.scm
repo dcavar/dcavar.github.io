@@ -2,7 +2,7 @@
 
 ;;; ----------------------------------------------------
 ;;; Filename: grammar.ss
-;;; Author:   Damir Cavar <dcavar@unizd.hr>
+;;; Author:   Damir Cavar <dcavar@iu.edu>
 ;;;
 ;;; (C) 2006 by Damir Cavar
 ;;;

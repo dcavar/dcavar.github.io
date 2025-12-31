@@ -7,7 +7,7 @@ ChartyPy.py
 
 This is a small incremental bottom-up chart parser for context free grammars.
 
-(C) 2005-2011 by Damir Ćavar <dcavar@me.com>
+(C) 2005-2011 by Damir Cavar <dcavar@me.com>
 
 This code is written and distributed under the
 GNU General Public License version 3 or newer.
@@ -46,10 +46,10 @@ Processing steps:
          Apply the fundamental rule to induce new edges
 
 
-This code can be opimized. However, its main purpose is to help students understand a simple algorithm for chart parsing. If there are any bugs, please let me know: Damir Cavar <dcavar@unizd.hr>
+This code can be opimized. However, its main purpose is to help students understand a simple algorithm for chart parsing. If there are any bugs, please let me know: Damir Cavar <dcavar@iu.edu>
 """
 
-__author__  = "Damir Ćavar <dcavar@unizd.hr>"
+__author__  = "Damir Cavar <dcavar@iu.edu>"
 __date__    = "$May 29, 2009 10:36:30 AM$"
 __version__ = "0.4"
 

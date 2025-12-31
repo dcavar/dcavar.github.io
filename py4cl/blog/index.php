@@ -20,9 +20,9 @@
 		<script type="text/javascript" src="../rw_common/themes/dconlinebook/javascript.js"></script>
 		
 		
-		<link rel="alternate" type="application/rss+xml" title="Python3-4-CL RSS Feed" href="http://cavar.me/damir/py4cl/blog/files/feed.xml" />
+		<link rel="alternate" type="application/rss+xml" title="Python3-4-CL RSS Feed" href="http://damir.cavar.me/py4cl/blog/files/feed.xml" />
 		<link rel="alternate" type="application/rss+xml"
-    title="Py4Ling RSS Feed" href="http://www.cavar.me/damir/py4cl/blog/files/feed.xml">
+    title="Py4Ling RSS Feed" href="http://damir.cavar.me/py4cl/blog/files/feed.xml">
 
 		<!--[if IE 6]><script type="text/javascript" charset="utf-8">
 			var blankSrc = "../rw_common/themes/dconlinebook/png/blank.gif";
@@ -51,7 +51,7 @@
 		<div id="title">
 			
 			<h1>Python 3 for (Computational and Corpus) Linguists</h1>
-			<h2>by <a href="http://cavar.me/damir/">Damir Cavar</a></h2>
+			<h2>by <a href="http://damir.cavar.me/">Damir Cavar</a></h2>
 		</div>
 		<div id="navcontainer"><ul><li><a href="../" rel="self">Home</a></li><li><a href="../code/" rel="self">Code examples</a></li><li><a href="./" rel="self" id="current">Blog</a></li></ul></div>
 	</div>
@@ -89,7 +89,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 
 		<div id="footer">
-			<p>&copy; 2011-2012 <a href="http://cavar.me/damir/">Damir Cavar</a> <a href="#" id="rw_email_contact">Contact Me</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":dc";var _rwObsfuscatedHref3 = "ava";var _rwObsfuscatedHref4 = "r@m";var _rwObsfuscatedHref5 = "e.c";var _rwObsfuscatedHref6 = "om";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6; document.getElementById('rw_email_contact').href = _rwObsfuscatedHref;</script></p>
+			<p>&copy; 2011-2012 <a href="http://damir.cavar.me/">Damir Cavar</a> <a href="#" id="rw_email_contact">Contact Me</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":dc";var _rwObsfuscatedHref3 = "ava";var _rwObsfuscatedHref4 = "r@m";var _rwObsfuscatedHref5 = "e.c";var _rwObsfuscatedHref6 = "om";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6; document.getElementById('rw_email_contact').href = _rwObsfuscatedHref;</script></p>
 		</div>
 	</div>
 	<div id="footerBottomGrad">

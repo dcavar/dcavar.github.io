@@ -11,7 +11,7 @@ This is a storage and parser class for context free grammars
 written in the format of reproduction or replacement rules.
 
 
-(C) 2002-2008 by Damir Ćavar <dcavar@unizd.hr>
+(C) 2002-2008 by Damir Cavar <dcavar@iu.edu>
 
 This code is written and distributed under the
 GNU General Public License version 3 or newer.
@@ -37,11 +37,11 @@ ii.  all elements that are not in the set of non-terminals
 
 This code can be opimized. However, its main purpose is to help
 students understand simple parsing algorithms. If there are any bugs,
-please let me know: Damir Cavar <dcavar@unizd.hr>
+please let me know: Damir Cavar <dcavar@iu.edu>
 """
 
 
-__author__  = "Damir Ćavar <dcavar@unizd.hr>"
+__author__  = "Damir Cavar <dcavar@iu.edu>"
 __date__ ="$May 29, 2009 10:38:47 AM$"
 __version__ = "0.4"
 

@@ -173,7 +173,7 @@
             href="http://www.ling.ohio-state.edu/LehisteSymposium/">Ilse Lehiste Memorial Symposium</a> (<a
             href="http://www.ling.ohio-state.edu/LehisteSymposium/program.html">Program</a>). Together
         with
-        <a href="http://www.cavar.me/malgosia/">Malgorzata E. Cavar</a>. 11<sup>th</sup> of November
+        <a href="http://malgosia.cavar.me/">Malgorzata E. Cavar</a>. 11<sup>th</sup> of November
         2011.
 - *<a href="/Pubs/LFG2011-Paper.pdf">Clitic Placement, Syntactic
         Discontinuity, and information structure</a>.* With Melanie Sei&szlig;. (<a

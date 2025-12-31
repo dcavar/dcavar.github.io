@@ -16,7 +16,7 @@ emission symbols can be associated with the position in the reading tape.
 __author__    = "Damir Cavar <dcavar@me.com>"
 __version__   = "$Revision: 1.0 $"
 __date__      = "$Date: 2007/12/29 21:28:19 $"
-__copyright__ = "Copyright (c) 2007-2011 Damir Ćavar"
+__copyright__ = "Copyright (c) 2007-2011 Damir Cavar"
 __license__   = "GPLv3"
 __credits__   = "basic idea from Skip Montanaro's suggestion: http://www.python.org/search/hypermail/python-recent/0667.html and Python Wiki: http://wiki.python.org/moin/FiniteStateMachine"
 

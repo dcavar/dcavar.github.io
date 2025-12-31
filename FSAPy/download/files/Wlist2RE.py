@@ -43,7 +43,7 @@ __author__    = "Damir Cavar <dcavar@me.hr>"
 __credits__ = ""
 __version__   = "$Revision: 1.0 $"
 __date__      = "$Date: 2008/01/13 13:20:01 $"
-__copyright__ = "Copyright (c) 2007-2011 Damir Ćavar"
+__copyright__ = "Copyright (c) 2007-2011 Damir Cavar"
 __license__   = "GPLv3"
 
 

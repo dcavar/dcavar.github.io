@@ -5,7 +5,7 @@
 
 """
 TextStat.py
-(C) 2009-2011 by Damir Cavar <http://www.cavar.me/damir/>
+(C) 2009-2011 by Damir Cavar <http://damir.cavar.me/>
 
 TextStat.py is a module that provides various statistical functions for text
 analysis and processing, N-gram model generation, vector space model generation

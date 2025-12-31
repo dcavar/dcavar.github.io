@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://cavar.me/damir/textstat/index.html</loc>
+		<loc>http://damir.cavar.me/textstat/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/textstat/ngrams/index.html</loc>
+		<loc>http://damir.cavar.me/textstat/ngrams/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/textstat/significance/index.html</loc>
+		<loc>http://damir.cavar.me/textstat/significance/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/textstat/classification/index.html</loc>
+		<loc>http://damir.cavar.me/textstat/classification/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 </urlset>

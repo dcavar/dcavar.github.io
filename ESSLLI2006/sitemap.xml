@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/documents/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/documents/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/datastructures/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/datastructures/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/scripting/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/scripting/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/fileio/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/fileio/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/ngrammodels/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/ngrammodels/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/parsing/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/parsing/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/codeexamples/clustering/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/codeexamples/clustering/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://cavar.me/damir/ESSLLI2006/links/index.html</loc>
+		<loc>http://damir.cavar.me/ESSLLI2006/links/index.html</loc>
 		<lastmod>2012-03-15</lastmod>
 	</url>
 </urlset>

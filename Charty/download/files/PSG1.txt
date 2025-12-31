@@ -1,6 +1,6 @@
 # PSG1.txt
 # very small grammar for English
-# (C) 2003-2008 by Damir Cavar <dcavar@unizd.hr>, University of Zadar
+# (C) 2003-2008 by Damir Cavar <dcavar@iu.edu>, University of Zadar
 #
 # This code is written and distributed under the
 # GNU General Public License version 3 or newer.
