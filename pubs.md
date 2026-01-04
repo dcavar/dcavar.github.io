@@ -2,6 +2,14 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
+Book:
+
+- Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications
+in Computer and Information Science 2659.
+
+
+Papers:
+
 - [Cavar, D.], J.B. Graves, S.A. Sparks, K.R. Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Poster presented at the IEEE Quantum Week 2025, September 2025, Albuquerque, New Mexico.  ([poster](https://nlp-lab.org/publications/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
 - [Cavar, D.], B. Dickson, J.B. Graves, S.A. Sparks, K.R. Parukola (2025) The Natural Language Qu Kit - NLQK for Quantum NLP and AI. Unpublished. ([poster](https://nlp-lab.org/publications/NLQK_Poster_August_2025.pdf))
 - [Cavar, D.], K.R. Parukola, J.B. Graves, S.A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In proceedings (), Fall 2025.
