@@ -39,7 +39,7 @@ With applications to Public Health, Medical Applications, National Security, Leg
 
 ### European Union Funded Grants
 
-- new EU collaboration - TBA
+- KG4J - Knowledge Graphs for Justice (2026-2030), funded by the Belgian Science Policy Office (BELSPO)’s Policy for Science (P4Science), in cooperation with P. Jeuniaux, [Nationaal Instituut voor Criminalistiek en Criminologie](https://nicc.fgov.be/)/[Institut National de Criminalistique et de Criminologie](https://nicc.fgov.be/), Brussels, Belgium.
 - [Multinational Collaborative EU Project: ATLAS](https://www.atlasproject.eu/atlas/project/en/index.html) -  ([Applied Technology for Language-Aided CMS](https://www.atlasproject.eu/atlas/project/en/index.html)), start April 2010, technologies Natural Language Processing, Machine Translation (Croatian to other EU languages), Document Processing and Analysis.
 - "Hrvatska jezična mrežna riznica" – "Online Repository for Croatian" funded 2005 by the Croatian Ministry of Science. Project #: [0212010](http://zprojekti.mzos.hr/zprojektiold/prikaz_det.asp?offset=1765&ID=0212010); PI: Dr. Dunja Brozović Rončević (Institute for Croatian Language and Linguistics, Zagreb, Croatia), **Co-Principle Investigator: Damir Cavar**, work on digital online resources for Croatian, Machine Learning corpora, speech, and language processing technologies.
 
