@@ -4,8 +4,7 @@
 
 Book:
 
-- Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications
-in Computer and Information Science 2659.
+- Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications in Computer and Information Science 2659.
 
 
 Papers:
