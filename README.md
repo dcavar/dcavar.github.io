@@ -91,6 +91,9 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 **Recent Publications:**
 
+- - Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications in Computer and Information Science 2659.
+
+
 - Davis, A.S., B. Dickson, D. Cavar, D. Valdez, F.M. Tyers (2025) Advancing Adverse Drug Event Detection in Social Media Through Knowledge Graph and GraphRAG LLM Architectures. [2025 AAHB Annual Scientific Meeting](https://aahb.org/2025-Scientific-Meeting-Overview), San Diego, CA. ([Poster](/Pubs/AAHB25-ADAVIS-POSTER-FINAL.pdf))
 - Damir Cavar, Koushik Reddy Parukola, Chi Zhang (2025) Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems. Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
 - Muhammad S. Abdo, Yash Hatekar and [Damir Cavar] (2025) *AMWAL: Named Entity Recognition for Arabic Financial News*. In proceedings of the [FinNLP-FNP-LLMFinLegal 2025](https://sites.google.com/nlg.csie.ntu.edu.tw/finnlp-fnp-llmfinlegal/home) workshop at [COLING 2025](https://coling2025.org/). ([download from ACL Anthology](https://aclanthology.org/2025.finnlp-1.20.pdf))
