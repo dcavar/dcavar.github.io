@@ -14,6 +14,8 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 1:00-2:00 PM in my Ballantine Hall 511
 
+2026: Faculty Innovation Ambassador (FIA) - selected by the Innovation and Commercialization Office (ICO) of Indiana University as one of our inaugural Faculty Innovation Ambassadors (FIA).
+
 
 My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs). We are getting there.
 
@@ -60,6 +62,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Events
 
+- Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
 - Presentation on "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP" and discussion at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).
 - Me and Danny Valdez are giving a talk at the [IU Indianapolis Artificial Intelligence &amp; Informatics Consortium (AI2) Events](https://events.iu.edu/ai2-consortium/event/2072564-ai2-consortium-symposium) on the 22nd of October 2025, "Toward dynamic surveillance of drug communication on social media: From descriptive insights to predictive modeling with AI architectures," on analyzing social media data using AI Agentive Models, Knowledge Graphs, Large Language Models, Ontologies, and how to expand existing resources from the [National Institute on Drug Abuse](https://nida.nih.gov/) ([NIDA](https://nida.nih.gov/)) [Drugs dictionary](https://nida.nih.gov/research-topics/drugs-a-to-z) with new street terminology and insights generated from drug abuse posts on social media. Topics: AI, NLP, Reasoning in Medical Research Applications
 - I was organizing the [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
