@@ -12,7 +12,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
-- **office hours:** During the semester Thursdays 1:00-2:00 PM in my Ballantine Hall 511
+- **office hours:** During the semester Thursdays 4:00-5:00 PM in my Ballantine Hall 511 (or arranged other location)
 
 
 My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs). We are getting there.
