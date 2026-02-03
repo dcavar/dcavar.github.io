@@ -28,7 +28,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 
 **Adjunct/Member:**
-- Indiana University [Hutton Honors College’s inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026 (MAUNA KEA: Hutton House Program)
+- Indiana University [Hutton Honors College’s Inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026 (MAUNA KEA: Hutton House Program)
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
@@ -69,6 +69,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Activities
 
+- The Complex Bidirectional Integration for Representation Dynamics (CBIRD) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
 - I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum Study Group](https://nlp-lab.org/quantumnlp/) team.
 - The weekly [NLP-Lab](https://nlp-lab.org/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
 - The weekly [Quantum AI and NLP Study Group](https://nlp-lab.org/quantumnlp/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
