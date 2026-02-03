@@ -7,10 +7,12 @@ See the activities in my [Natural Language Processing Lab](http://nlp-lab.org/) 
 
 #### Quantum Natural Language Processing (QNLP)
 
-The main focus of my Q-NLP work is related to Natural Language Processing, Machine Learning, and AI using Quantum Computing.
+The main focus of my Q-NLP work is related to Natural Language Processing, Machine Learning, and AI using Quantum Computing, and enabling hybrid classical/quantum computing for AI.
 
 See:
 
+- The Complex Bidirectional Integration for Representation Dynamics (CBIRD) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
+- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum Study Group](https://nlp-lab.org/quantumnlp/) team.
 - [Quantum NLP](https://nlp-lab.org/quantumnlp/)
 
 
