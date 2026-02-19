@@ -11,7 +11,7 @@ The main focus of my Q-NLP work is related to Natural Language Processing, Machi
 
 See:
 
-- The Complex Bidirectional Integration for Representation Dynamics (CBIRD) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
+- The [Complex Bidirectional Inducer for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
 - I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum Study Group](https://nlp-lab.org/quantumnlp/) team.
 - [Quantum NLP](https://nlp-lab.org/quantumnlp/)
 
