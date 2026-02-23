@@ -48,6 +48,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
    &#8226; [IEEE Systems Council](https://ieeesystemscouncil.org/) member<br/>
    &#8226; [IEEE Quantum Technical Community](https://quantum.ieee.org/) ([QTC](https://quantum.ieee.org/)) member
 - [The Association for Logic, Language and Information](http://www.folli.info/) ([FoLLI](http://www.folli.info/))
+- [W3C Procedural Memory Knowledge Representation Community Group](https://www.w3.org/community/blog/2026/02/20/proposed-group-procedural-memory-knowledge-representation-community-group/)
 
 
 ## Certificates
