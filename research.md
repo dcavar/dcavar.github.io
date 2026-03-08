@@ -1,13 +1,13 @@
 ## Research
 
-See the activities in my [Natural Language Processing Lab](http://nlp-lab.org/) for more details.
+See the activities in my [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/) and [Natural Language Processing Lab](http://nlp-lab.org/) for more details.
 
 
 ### Research Area
 
-#### Quantum Natural Language Processing (QNLP)
+#### Quantum AI (QAI) and Natural Language Processing (QNLP)
 
-The main focus of my Q-NLP work is related to Natural Language Processing, Machine Learning, and AI using Quantum Computing, and enabling hybrid classical/quantum computing for AI.
+The main focus of my QAI and Q-NLP work is related to enabling hybrid classical/quantum computing for AI.
 
 See:
 
@@ -16,7 +16,7 @@ See:
 - [Quantum NLP](https://nlp-lab.org/quantumnlp/)
 
 
-#### Knowledge Graph Extraction, AIs and KnowledgeRAGs, and Natural Language Processing
+#### Knowledge Graph Extraction, AIs, KnowledgeRAGs, and OntologyRAGs
 
 - More on my [NLP-Lab](https://nlp-lab.org/) pages
 

@@ -16,6 +16,8 @@
 **2026**
 
 - [Cavar, D.], K.R. Parukola, J.B. Graves, S.A. Sparks (2026) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In proceedings Cavar, D. et al. [Quantum AI and NLP](https://link.springer.com/book/9783032138835), Springer, 2026.
+- Muhammad S. Abdo, [Damir Cavar], Billy Dickson, Attia Youseif (2025) *Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words*. Pages 240-263 in: Reem Khamis and Mira Goral (eds.) Selected Papers from the 37th Annual Symposium on Arabic Linguistics, [Published online 27 February 2026](https://benjamins.com/catalog/arli.00013.abd), John Benjamins.
+
 
 
 **2025**
@@ -27,7 +29,6 @@
 - [Cavar, D.], K.R. Parukola, S.A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
 - Davis, A.S., B. Dickson, [D. Cavar], D. Valdez, F.M. Tyers (2025) Advancing Adverse Drug Event Detection in Social Media Through Knowledge Graph and GraphRAG LLM Architectures. [2025 AAHB Annual Scientific Meeting](https://aahb.org/2025-Scientific-Meeting-Overview), San Diego, CA. ([Poster](/Pubs/AAHB25-ADAVIS-POSTER-FINAL.pdf))
 - [Damir Cavar], K.R. Parukola (2025) Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems. Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
-- Muhammad S. Abdo, [Damir Cavar], Billy Dickson, Attia Youseif (2025) *Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words*. Pages 240-263 in: Reem Khamis and Mira Goral (eds.) Selected Papers from the 37th Annual Symposium on Arabic Linguistics, [Published online 27 February 2026](https://benjamins.com/catalog/arli.00013.abd), John Benjamins.
 - Muhammad S. Abdo, Yash Hatekar and [Damir Cavar] (2025) *AMWAL: Named Entity Recognition for Arabic Financial News*. In proceedings of the [FinNLP-FNP-LLMFinLegal 2025](https://sites.google.com/nlg.csie.ntu.edu.tw/finnlp-fnp-llmfinlegal/home) workshop at [COLING 2025](https://coling2025.org/). ([download from ACL Anthology](https://aclanthology.org/2025.finnlp-1.20.pdf))
 
 
