@@ -1,5 +1,13 @@
 ## Presentations / Talks
 
+### 2026
+
+- "*From Vectors to Qubits: Rethinking AI Models for the Hybrid Classical–Quantum Era*," invited keynote lecture, September 16-18, 2026 at the [37th Central European Conference on Information and Intelligent Systems](https://ceciis.foi.hr/) ([CECIIS 2026](https://ceciis.foi.hr/)), Varaždin, Croatia.
+- "*The Rise of Agentic AI and How It Will Change Our World*," invited lectures, March 20, 2026 at the Artificial Intelligence for Legal Professionals Conference, Center for International and Comparative Law
+Indiana University Robert H. McKinney School of Law.
+- "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," invited lecture, March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
+
+
 ### 2025
 
 - "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP", at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).

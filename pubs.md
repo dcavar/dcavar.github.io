@@ -2,31 +2,47 @@
 
 [BibTeX file](/Pubs/dcavar.bib) (not up to date!)
 
-Book:
+**Books**
+
+**2026**
 
 - Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/9783032138835). Springer Nature, Communications in Computer and Information Science 2659.
 
 [![Springer image of the Book Quantum AI and NLP](/Pubs/Quantum_AI.png "Quantum AI and NLP")](https://link.springer.com/book/9783032138835)
 
 
-Papers:
+**Papers**
+
+**2026**
+
+- [Cavar, D.], K.R. Parukola, J.B. Graves, S.A. Sparks (2026) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In proceedings Cavar, D. et al. [Quantum AI and NLP](https://link.springer.com/book/9783032138835), Springer, 2026.
+
+
+**2025**
 
 - [Cavar, D.], J.B. Graves, S.A. Sparks, K.R. Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Poster presented at the IEEE Quantum Week 2025, September 2025, Albuquerque, New Mexico.  ([poster](https://nlp-lab.org/publications/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
 - [Cavar, D.], B. Dickson, J.B. Graves, S.A. Sparks, K.R. Parukola (2025) The Natural Language Qu Kit - NLQK for Quantum NLP and AI. Unpublished. ([poster](https://nlp-lab.org/publications/NLQK_Poster_August_2025.pdf))
-- [Cavar, D.], K.R. Parukola, J.B. Graves, S.A. Sparks (2026) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In proceedings Cavar, D. et al. [Quantum AI and NLP](https://link.springer.com/book/9783032138835), Springer, 2026.
 - A. Karkala Pai, [D. Cavar] (2025) A Voice-based Detection of Parkinson's Disease: Feature Selection and Classification Results. Paper presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
 - Wang, R., R. Shrivastava, T. Sun, S.L.A. Chebolu, M.K. Naidu, T. Jayaprakash, J. Decatur, [D. Cavar] (2025) Improving LLM Reasoning Through Ontology-driven Knowledge Graphs: A Comparative Study of Generating Ontologies for Medical RAGs. Poster presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025. ([poster](https://nlp-lab.org/publications/MSLD_2025_Poster.pdf))
 - [Cavar, D.], K.R. Parukola, S.A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
 - Davis, A.S., B. Dickson, [D. Cavar], D. Valdez, F.M. Tyers (2025) Advancing Adverse Drug Event Detection in Social Media Through Knowledge Graph and GraphRAG LLM Architectures. [2025 AAHB Annual Scientific Meeting](https://aahb.org/2025-Scientific-Meeting-Overview), San Diego, CA. ([Poster](/Pubs/AAHB25-ADAVIS-POSTER-FINAL.pdf))
 - [Damir Cavar], K.R. Parukola (2025) Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems. Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
-- Muhammad S. Abdo, [Damir Cavar], Billy Dickson, Attia Youseif (2025) Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words. To appear in: Arabic Linguistics Journal (John Benjamins).
+- Muhammad S. Abdo, [Damir Cavar], Billy Dickson, Attia Youseif (2025) *Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words*. Pages 240-263 in: Reem Khamis and Mira Goral (eds.) Selected Papers from the 37th Annual Symposium on Arabic Linguistics, [Published online 27 February 2026](https://benjamins.com/catalog/arli.00013.abd), John Benjamins.
 - Muhammad S. Abdo, Yash Hatekar and [Damir Cavar] (2025) *AMWAL: Named Entity Recognition for Arabic Financial News*. In proceedings of the [FinNLP-FNP-LLMFinLegal 2025](https://sites.google.com/nlg.csie.ntu.edu.tw/finnlp-fnp-llmfinlegal/home) workshop at [COLING 2025](https://coling2025.org/). ([download from ACL Anthology](https://aclanthology.org/2025.finnlp-1.20.pdf))
+
+
+**2024**
+
 - [Günther Jikeli], [Damir Cavar], Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2024) *Auf dem Weg zu einer KI-Definition von Antisemitism*. In: M. Hübscher and S. von Mehring (eds.) Antisemitismus in den Sozialen Medien. Verlag Barbara Budrich: Opladen, Berlin, Toronto, pp. 269-292.
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *[Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP](https://ieeexplore.ieee.org/document/10821233).* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (full paper, short paper, poster)
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 - [Damir Cavar], [Zoran Tiganj], [Ludovic Mompelat], [Billy Dickson] (2024) "Computing Ellipsis Constructions: Comparing Classical NLP and LLM Approaches." [Society for Computation in Linguistics](https://sites.uci.edu/scil2024/) 7(1), pp. 217–226. doi: [https://doi.org/10.7275/scil.2147](https://doi.org/10.7275/scil.2147). See ([SCiL](https://sites.uci.edu/scil2024/)).
 - Damir Cavar, [Ludovic V. Mompelat], [Muhammad S. Abdo] (2024) The Typology of Ellipsis: A Corpus for Linguistic Analysis and Machine Learning Applications. Pages 46-54 of Michael Hahn, Alexey Sorokin, Ritesh Kumar, Andreas Shcherbakov, Yulia Otmakhova, Jinrui Yang, Oleg Serikov, Priya Rani, Edoardo M. Ponti, Saliha Muradoğlu, Rena Gao, Ryan Cotterell, Ekaterina Vylomova (eds.) Proceedings of the 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP. Association for Computational Linguistics, St Julian's, Malta. See [ACL Special Interest Group on Typology](https://sigtyp.github.io/) ([SIGTYP](https://sigtyp.github.io/)) 2024, colocated with the [18th Conference of the European Chapter of the Association for Computational Linguistics](https://2024.eacl.org/). ([full paper](https://aclanthology.org/2024.sigtyp-1.6/))
 - Yang, Yuchen, Calvin Josenhans, LuisAbrego, [Damir Cavar] (2024) [Documenting Linguistic Dark Matter](/Pubs/IU_Student_Poster_Spring_2024_The_Hoosier_Ellipsis_Corpus_HELC.pdf). Paper presented at the Undergraduate Project Presentation, Luddy School, Indiana University.
+
+
+**Older**
+
 - Damir Cavar, Ali Aljubailan, [Ludovic V. Mompelat], Yuna Won, [Billy Dickson], Matthew Fort, Andrew Davis and Soyoung Kim (2022) *Event Sequencing Annotation with TIE-ML* (2022) In Proceedings of the 18th Joint ACL - ISO Workshop on Interoperable Semantic Annotation within LREC2022, pages 33–41, Marseille, France. European Language Resources Association. See [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/).
 - [Günther Jikeli], Damir Cavar, Weejeong Jeong, Daniel Miehling, Pauravi Wagh, Denizhan Pak (2022) *Toward an AI Definition of Antisemitism?* Pages 193-212 in M. Hübscher and S. von Mering (eds.) *Antisemitism on Social Media*. Routledge, New York.
 - [Damir Cavar], [Billy Dickson], Ali Aljubailan, Soyoung Kim (2021) "[Temporal Information and Event Markup Language: TIE-ML Markup Process and Schema Version 1.0](https://arxiv.org/abs/2109.13892)," In Proceedings of [SEMAPRO 2021](https://www.iaria.org/conferences2021/SEMAPRO21.html), Barcelona, Spain.
