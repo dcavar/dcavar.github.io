@@ -137,32 +137,22 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 **[Teaching](/teaching):**
 
+**[Spring 2026](/teaching)**
+
+- **[LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)**
+- [NLP-Lab meetings and independent studies](https://nlp-lab.org/), weekly Wednesdays 5:30 PM, Luddy 0002
+- [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/), weekly Thursdays 5:30 PM, Luddy 0002
+- Research project meetings, Dove Recovery House Project, Wednesdays
+
+
 **[Fall 2025](/teaching)**
 
 - [LING-L 645 Advanced Natural Language Processing](/l645_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645_Fall_25/)
 - [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning using Agentive AI Models](/l715_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715_Fall_25/)
+- [NLP-Lab meetings and independent studies](https://nlp-lab.org/), weekly Wednesdays 5:30 PM, Luddy 0002
+- [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/), weekly Thursdays 5:30 PM, Luddy 0002
 
 
-**[Spring 2025](/teaching)**
-
-- [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
-
-
-**[Fall 2024](/teaching)**
-
-- [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
-- [LING-L 645 Advanced Natural Language Processing](/l645/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645/)
-
-
-**[Summer 2024](/teaching)**
-
-- *[Generative AI and Symbolic Knowledge Representations: Large Language Models, Knowledge, and Reasoning](https://damir.cavar.me/ESSLLI24_LLM_KG.github.io/)* (July/August 2024) Course at the [35th European Summer School in Logic, Language and Information](https://2024.esslli.eu/) [ESSLLI 2024](https://2024.esslli.eu/) in Leuven, Belgium.
-
-
-**[Spring 2024](/teaching)**
-- [LING-L 614] *[Alternative Syntactic Theories](/l614/)*
-- [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)* / [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)*
-- [HON-H 240](/h240/) ([Hutton Honors College](https://hutton.indiana.edu/index.html)) *[Language, Intelligence, and the Machine](/h240/)*
 
 
 [Indiana University]: https://www.indiana.edu/ "Indiana University"
