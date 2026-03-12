@@ -2,7 +2,7 @@ title:	Material for the Advanced Machine Learning Course Part 1, Indiana Univers
 layout:	post
 author:	Damir Cavar
 date:	2026-03-12 09:11:00 -0400
-permalink:	2026-03-12-Material_for_Advanced_Machine_Learning_Course_1
+permalink:	2026-03-12-Material_for_Advanced_ML_Course_1
 categories:	Code
 tags:	Diffusion-Models GenAI AI Natural-Language-Processing BERT Language-Models ML Machine-Learning 
 ---

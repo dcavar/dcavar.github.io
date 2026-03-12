@@ -1,7 +1,7 @@
 ## Blog
 
 - [Quantum AI 2026 Conference at IU](/2026-03-12-Quantum_AI_2026_Conference_at_IU) (2026-03-12)
-- [Material for the Advanced Machine Learning Course Part 1](/2026-03-12-Material_for_Advanced_Machine_Learning_Course_1) (2026-03-12)
+- [Material for the Advanced Machine Learning Course Part 1](/2026-03-12-Material_for_Advanced_ML_Course_1) (2026-03-12)
 - [Quantum AI and NLP 2025 Conference Indiana University](/2025-11-01-Quantum_AI_and_NLP_2025_Conference_at_IU) (2025-11-01)
 - [Midwest AI Day 2021 at the WestGate Academy](/2021-07-20-Midwest_AI_Day_2021_at_the_WestGate_Academy) (2021-07-20)
 - [Meetings On Knowledge Representations and Reasoning for AI using Lisp and Prolog](/2020-01-23-Knowledge_Representation_and_Reasoning_for_AI_using_Lisp_Prolog) (2020-01-23)
