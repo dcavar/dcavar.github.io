@@ -4,7 +4,7 @@ author:	Damir Cavar
 date:	2026-03-12 09:11:00 -0400
 permalink:	2026-03-12-Material_for_Advanced_ML_Course_1
 categories:	Code
-tags:	Diffusion-Models GenAI AI Natural-Language-Processing BERT Language-Models ML Machine-Learning 
+tags:	Diffusion-Models GenAI AI Natural-Language-Processing BERT Language-Models ML Machine-Learning LLM
 ---
 # Material for Advanced Machine Learning and Diffusion Models / LLMs
 
