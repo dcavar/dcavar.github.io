@@ -2,7 +2,7 @@
 
 ### 2026
 
-- Cavar, D., Shane Sparks, Soren DeHaan, Ronit Jha, Ayomide Jeje, Yanin Charoenpomsawat, Sam Gray Miller (2026) Hybrid Classical-Quantum Language and World Models for AI - [CBIRD](https://nlp-lab.org/quantumnlp/cbird), Poster presentation at the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT])(https://www.purdue.edu/cqt/) Meeting 2026 at Notre Dame, 1st of April, 2026.
+- Cavar, D., Shane Sparks, Soren DeHaan, Ronit Jha, Ayomide Jeje, Yanin Charoenpomsawat, Sam Gray Miller (2026) Hybrid Classical-Quantum Language and World Models for AI - [CBIRD](https://nlp-lab.org/quantumnlp/cbird), Poster presentation at the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/), 1st of April, 2026.
 - "*From Vectors to Qubits: Rethinking AI Models for the Hybrid Classical–Quantum Era*," invited keynote lecture, September 16-18, 2026 at the [37th Central European Conference on Information and Intelligent Systems](https://ceciis.foi.hr/) ([CECIIS 2026](https://ceciis.foi.hr/)), Varaždin, Croatia.
 - "*The Rise of Agentic AI and How It Will Change Our World*," invited lectures, March 20, 2026 at the Artificial Intelligence for Legal Professionals Conference, Center for International and Comparative Law, Indiana University Robert H. McKinney School of Law.
 - "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," invited lecture, March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
