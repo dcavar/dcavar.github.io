@@ -1,3 +1,4 @@
+---
 title:	Material for the Advanced Machine Learning Course Part 1, Indiana University
 layout:	post
 author:	Damir Cavar
@@ -10,7 +11,7 @@ tags:	Diffusion-Models GenAI AI Natural-Language-Processing BERT Language-Models
 
 Code examples how to pull embeddings from [GPT](https://developers.openai.com/api/docs/guides/embeddings/) and [VoyageAI](https://docs.voyageai.com/docs/embeddings) ([Claude](https://claude.ai/)) for hybrid classical/quantum computing experiments can be found in my [Python Tutorial repo](https://github.com/dcavar/python-tutorial-notebooks) on GitHub.
 
-In particular, these notbooks are relevant:
+In particular, these notebooks are relevant:
 
 - [Getting [MASK] probabilities from BERT (for Diffusion Models)](https://github.com/dcavar/python-tutorial-notebooks/blob/master/notebooks/BERT_Reading_Probabilities.ipynb)
 - [Anthropic / VoyageAI Embeddings](https://github.com/dcavar/python-tutorial-notebooks/blob/master/notebooks/anthropic_vectors.ipynb)
