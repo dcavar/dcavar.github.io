@@ -2,6 +2,8 @@
 
 Associate Professor, [Indiana University] at Bloomington ([IU])
 
+Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
+
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
@@ -28,14 +30,15 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 
 **Adjunct/Member:**
+- Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
 - Indiana University [Hutton Honors College’s Inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026 (MAUNA KEA: Hutton House Program)
+- [Russian and East-European Institute](https://reei.indiana.edu/) ([REEI](https://reei.indiana.edu/)), [Hamilton Lugar School of Global and International Studies](https://hls.indiana.edu/), [Indiana University]
+- Member of the [Cognitive Science Program at Indiana University](https://cogs.indiana.edu/)
+- Adjunct in the [Department of Slavic and East European Languages and Cultures](https://linguistics.indiana.edu/about/faculty/cavar-damir.html)
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
 - [Center for Applied Cybersecurity Research](https://cacr.iu.edu/about/people/index.html) ([CACR](https://cacr.iu.edu/about/people/index.html)) Fellow at [Indiana University]
-- [Russian and East-European Institute](https://reei.indiana.edu/) ([REEI](https://reei.indiana.edu/)), [Hamilton Lugar School of Global and International Studies](https://hls.indiana.edu/), [Indiana University]
-- Member of the [Cognitive Science Program at Indiana University](https://cogs.indiana.edu/)
-- Adjunct in the [Department of Slavic and East European Languages and Cultures](https://linguistics.indiana.edu/about/faculty/cavar-damir.html)
 
 **Member:**
 - Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))<br/>
