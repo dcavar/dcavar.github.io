@@ -7,7 +7,7 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI and NLP Study group](https://nlp-lab.org/quantumnlp/).
+Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI Study group](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
@@ -100,7 +100,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 **Projects:**
 
-- [Quantum AI and NLP](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- [Quantum AI](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 - [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
 - [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
 - [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
@@ -109,7 +109,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 **Recent Publications:**
 
-- Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI and NLP](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications in Computer and Information Science 2659.
+- Cavar, D., V. Aggarwal, J. Busemeyer, S. Yen-Chi Chen (2026) [Quantum AI](https://link.springer.com/book/10.1007/978-3-032-13883-5). Springer Nature, Communications in Computer and Information Science 2659.
 
 
 - Davis, A.S., B. Dickson, D. Cavar, D. Valdez, F.M. Tyers (2025) Advancing Adverse Drug Event Detection in Social Media Through Knowledge Graph and GraphRAG LLM Architectures. [2025 AAHB Annual Scientific Meeting](https://aahb.org/2025-Scientific-Meeting-Overview), San Diego, CA. ([Poster](/Pubs/AAHB25-ADAVIS-POSTER-FINAL.pdf))
@@ -137,8 +137,8 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Links
 
-**[NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
-- [Quantum AI and NLP Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
+**[AI &amp; NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
+- [Quantum AI Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
