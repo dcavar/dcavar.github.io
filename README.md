@@ -19,7 +19,7 @@ Directing the [Natural Language Processing Lab](https://nlp-lab.org/) and organi
 2026: *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
 
 
-My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs). We are getting there.
+My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs).
 
 
 **Address:**
