@@ -66,6 +66,9 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Events
 
+- Cavar, D., Daniel Quigley, Sam Gray Miller (2026) Quantum Computing with AI Embeddings and Training of Hybrid
+Classical/Quantum AI Models (MLMs and LLMs). Tutorial at the [2026 IEEE 2nd International Conference
+on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](https://attend.ieee.org/qai-2026/)) in Nottingham, UK.
 - [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/) - presenting [CBIRD](https://nlp-lab.org/quantumnlp/cbird) - Hybrid Classical-Quantum Language and World Models for AI, 1st of April, 2026
 - Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
 - Presentation on "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP" and discussion at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).
