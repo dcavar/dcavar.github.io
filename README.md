@@ -10,7 +10,7 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI Study group](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
-- **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([GNUPG key](DamirCavar.asc))
+- **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
