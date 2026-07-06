@@ -13,7 +13,7 @@ Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) a
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
-- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
+- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 4:00-5:00 PM in my Ballantine Hall 511 (or arranged other location)
 
 2026: *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
