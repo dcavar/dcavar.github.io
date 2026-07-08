@@ -10,6 +10,7 @@
 - [LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)
 - [NLP-Lab meetings and independent studies](https://nlp-lab.org/), weekly Wednesdays 5:30 PM, Luddy 0002
 - [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/), weekly Thursdays 5:30 PM, Luddy 0002
+- Experiential Learning Project: The [Dove Recovery House - Indiana Site Selection Analysis](https://hdl.handle.net/2022/34943) Data Science project material is available online (Substance use, Women-centered care, Access to care, Jasper, Dubois County, Indiana, Rural Engagement)
 
 **[Fall 2024](/teaching)**
 
