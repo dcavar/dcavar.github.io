@@ -23,7 +23,7 @@ Quantum Computing Natural Language Processing (NLP) and AI tools:
 ### Hoosier Ellipsis Corpus (THEC)
 
 - [GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus)
-- [Website at the NLP-Lab](https://nlp-lab.org/ellipsis/)
+- [Website at the AI &amp; NLP Lab](https://nlp-lab.org/ellipsis/)
 
 
 

@@ -1,6 +1,6 @@
 ## Research
 
-See the activities in my [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/) and [Natural Language Processing Lab](http://nlp-lab.org/) for more details.
+See the activities in my [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) and [AI &amp; NLP Lab](http://nlp-lab.org/) for more details.
 
 
 ### Research Area
@@ -12,13 +12,13 @@ The main focus of my QAI and Q-NLP work is related to enabling hybrid classical/
 See:
 
 - The [Complex Bidirectional Inducer for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
-- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum Study Group](https://nlp-lab.org/quantumnlp/) team.
+- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) team.
 - [Quantum NLP](https://nlp-lab.org/quantumnlp/)
 
 
 #### Knowledge Graph Extraction, AIs, KnowledgeRAGs, and OntologyRAGs
 
-- More on my [NLP-Lab](https://nlp-lab.org/) pages
+- More on my [AI &amp; NLP Lab](https://nlp-lab.org/) pages
 
 With applications to Public Health, Medical Applications, National Security, Legal, Education:
 
@@ -48,7 +48,7 @@ With applications to Public Health, Medical Applications, National Security, Leg
 
 ### USA Funded Grants
 
-- [Quantum-Natural Language Processing](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QNLP](https://www.purdue.edu/cqt/research/year-2-projects.php)) [and Quantum Machine Learning](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QML](https://www.purdue.edu/cqt/research/year-2-projects.php)) funded by the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) for 2024-2025, **Principal Investigator: Damir Cavar**. See more outcomes at [Quantum AI/NLP Study Group](https://nlp-lab.org/quantumnlp/).
+- [Quantum-Natural Language Processing](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QNLP](https://www.purdue.edu/cqt/research/year-2-projects.php)) [and Quantum Machine Learning](https://www.purdue.edu/cqt/research/year-2-projects.php) ([QML](https://www.purdue.edu/cqt/research/year-2-projects.php)) funded by the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) for 2024-2025, **Principal Investigator: Damir Cavar**. See more outcomes at [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
 - The Governance of Middle Market Firms (Focus Area: Governance &amp; Finance), [funded in 2017](https://www.middlemarketcenter.org/Media/Documents/national-center-for-the-middle-market-2017-annual-report_NCMM_2017_AR_FINAL.pdf) by the [National Center for the Middle Market](https://www.middlemarketcenter.org/); joint project with Matthew Josefy from the Kelley School of Business and **Damir Cavar**. AI and Natural Language Processing, Mapping of Knowledge Graphs data from SEC quarterly reports.
 
 

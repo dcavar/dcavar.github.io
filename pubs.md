@@ -125,4 +125,4 @@
 [GORILLA]: http://gorilla.linguistlist.org/ "Project GORILLA"
 [FLE]: http://gorilla.linguistlist.org/fle/ "Free Linguistic Environment"
 [University of Zadar]: http://www.unizd.hr/ "University of Zadar"
-[NLP-Lab]: https://nlp-lab.org/ "Natural Language Processing Lab"
+[NLP-Lab]: https://nlp-lab.org/ "AI & NLP Lab"

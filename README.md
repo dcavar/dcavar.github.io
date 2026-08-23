@@ -13,7 +13,7 @@ Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and organizing the [Quant
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
-- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [AI&amp;NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
+- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [AI &amp; NLP Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 4:00-5:00 PM in my Ballantine Hall 511 (or arranged other location)
 
 2026: *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
@@ -82,9 +82,9 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 - The [Complex Bidirectional Integration for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model.
 - The [Dove Recovery House - Indiana Site Selection Analysis](https://hdl.handle.net/2022/34943) Data Science project material is available online (Substance use, Women-centered care, Access to care, Jasper, Dubois County, Indiana, Rural Engagement)
-- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum Study Group](https://nlp-lab.org/quantumnlp/) team.
-- The weekly [AI &amp; NLP-Lab](https://nlp-lab.org/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
-- The weekly [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) team.
+- The weekly [AI &amp; NLP Lab](https://nlp-lab.org/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
+- The weekly [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 - [QED-C Discussion and Panel on the Future of Quantum and AI](https://sri.zoomgov.com/webinar/register/9717374933023/WN_7AME7O63SZ6EhYan91HoRg#/registration) (March 12th, 2025) ([LinkedIn post](https://www.linkedin.com/posts/qedc_last-call-to-join-us-on-wednesday-march-activity-7304954073571549184-YCZe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAv4XMUBX2S08vo53W0sGUSFpw814QpqqBs)) with [Cierra Choucair](https://www.linkedin.com/in/cierra-lunde/), [Alain Chancé](https://www.linkedin.com/in/alainchance/), [Damir Cavar](https://damir.cavar.me/), [Bob Coecke](https://www.linkedin.com/in/bob-coecke-9389627/), [Taha Selim](https://www.linkedin.com/in/tiselim/) (the recording is available on the [QED-C YouTube channel](https://youtu.be/5yBo3Jb71so?feature=shared))
 
 
@@ -102,7 +102,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," invited lecture, March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
 - Talk on *The Rise of Agentic AI and How It Will Change Our World* (Damir Cavar, IU) at the Artificial Intelligence for Legal Professionals Conference, Center for International and Comparative Law, Indiana University, [Robert H. McKinney School of Law](https://mckinneylaw.iu.edu/index.html).
 - [Quantum Artificial Intelligence &amp; Optimization 2025](https://qaio.org/) workshop at the 17th International Conference on Agents and Artificial Intelligence (ICAART).
-- [Quantum Artificial Intelligence and Natural Language Processing Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
+- [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 
 
 ### Most Recent
@@ -138,7 +138,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
 - *Quantum-Natural Language Processing (NLP) and Machine Learning (ML)* (2024) Presentation at the [CQT - Center for Quantum Technologies](https://www.purdue.edu/cqt/), NSF Industry/University Cooperative Research Center (IUCRC) Year 2, Phase I, Spring 2024 Industry Advisory Board Meeting, April 3-4, 2024, University of Notre Dame, South Bend, IN.
-- [Quantum Natural Language Processing and Machine Learning](/Pubs/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [NLP-Lab](http://nlp-lab.org/) poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
+- [Quantum Natural Language Processing and Machine Learning](/Pubs/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [AI &amp; NLP Lab](http://nlp-lab.org/) poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
 - Damir Cavar. (2024) The Great NLP and AI Swindle: Why State-of-the-art AI Technologies Still Fail(?). Language Processing Brown Bag, Indiana University, February 5th, 2024. ([slides](/Pubs/Language_Processing_Brown_Bag_talk_Damir_Cavar_20240205.pdf))
 - *Event Sequencing Annotation with TIE-ML* at the [The Eighteenth Joint ACL - ISO Workshop on Interoperable Semantic Annotation](https://sigsem.uvt.nl/isa18/) ([ISA-18 2022](https://sigsem.uvt.nl/isa18/)), at [LREC 2022](https://lrec2022.lrec-conf.org/en/) in Marseille, France.
 - *Computational Semantics and Reasoning using Knowledge Graphs and Multi-modal Information Sources for Knowledge Extraction,* presented at the Computational Linguistics Seminar at the University of North Carolina at Chapel Hill, October 6th, 2021.
@@ -146,8 +146,8 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 ## Links
 
-**[AI &amp; NLP-Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
-- [Quantum AI Study Group - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
+**[AI &amp; NLP Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
+- [Quantum AI Lab - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
@@ -164,7 +164,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - [CSCI-B 659 Topics in Artificial Intelligence](/l645/) / [LING-L 645 Advanced Natural Language Processing](/l645/)
 
 - [AI &amp; NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
-- [Quantum AI](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Trhusdays 5 PM, Luddy 0002)
+- [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Trhusdays 5 PM, Luddy 0002)
 
 
 
@@ -172,7 +172,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 [IU]: https://www.indiana.edu/ "Indiana University"
 [Department of Linguistics]: https://linguistics.indiana.edu/about/faculty/cavar-damir.html "Indiana University Department of Linguistics"
 [Bloomington]: https://en.wikipedia.org/wiki/Bloomington,_Indiana "Bloomington, Indiana"
-[NLP-Lab]: https://nlp-lab.org/ "Natural Language Processing Lab"
+[NLP-Lab]: https://nlp-lab.org/ "AI & NLP Lab"
 [LING-L 614]: http://damir.cavar.me/l614/ "L 614 Alternative Syntax"
 [D. Cavar]: http://damir.cavar.me/ "Damir Cavar"
 [Damir Cavar]: http://damir.cavar.me/ "Damir Cavar"
