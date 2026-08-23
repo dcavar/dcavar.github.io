@@ -7,7 +7,7 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
+Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and the [Quantum AI Lab](https://quantum-computing-lab.org/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
@@ -71,7 +71,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 Classical/Quantum AI Models (MLMs and LLMs). Tutorial at the [2026 IEEE 2nd International Conference
 on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](https://attend.ieee.org/qai-2026/)) in Nottingham, UK.
 - I organized the [Quantum AI Conference 2026](https://qnlp.ai/) at Indiana University Indianapolis in August 2026.
-- [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/) - presenting [CBIRD](https://nlp-lab.org/quantumnlp/cbird) - Hybrid Classical-Quantum Language and World Models for AI, 1st of April, 2026
+- [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/) - presenting [CBIRD](https://quantum-computing-lab.org/cbird) - Hybrid Classical-Quantum Language and World Models for AI, 1st of April, 2026
 - Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
 - Presentation on "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP" and discussion at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).
 - Me and Danny Valdez are giving a talk at the [IU Indianapolis Artificial Intelligence &amp; Informatics Consortium (AI2) Events](https://events.iu.edu/ai2-consortium/event/2072564-ai2-consortium-symposium) on the 22nd of October 2025, "Toward dynamic surveillance of drug communication on social media: From descriptive insights to predictive modeling with AI architectures," on analyzing social media data using AI Agentive Models, Knowledge Graphs, Large Language Models, Ontologies, and how to expand existing resources from the [National Institute on Drug Abuse](https://nida.nih.gov/) ([NIDA](https://nida.nih.gov/)) [Drugs dictionary](https://nida.nih.gov/research-topics/drugs-a-to-z) with new street terminology and insights generated from drug abuse posts on social media. Topics: AI, NLP, Reasoning in Medical Research Applications
@@ -80,24 +80,24 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 ## Activities
 
-- The [Complex Bidirectional Integration for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model.
+- The [Complex Bidirectional Integration for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model.
 - The [Dove Recovery House - Indiana Site Selection Analysis](https://hdl.handle.net/2022/34943) Data Science project material is available online (Substance use, Women-centered care, Access to care, Jasper, Dubois County, Indiana, Rural Engagement)
-- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) team.
+- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://quantum-computing-lab.org/) team.
 - The weekly [AI &amp; NLP Lab](https://nlp-lab.org/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/). (This is not an open course, student, study, or reading group, this is just my lab meeting!)
-- The weekly [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://nlp-lab.org/quantumnlp/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- The weekly [Quantum AI Lab](https://quantum-computing-lab.org/) meetings continue during Summer 2025: Details about meeting times and location can be found on the [website](https://quantum-computing-lab.org/). (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
 - [QED-C Discussion and Panel on the Future of Quantum and AI](https://sri.zoomgov.com/webinar/register/9717374933023/WN_7AME7O63SZ6EhYan91HoRg#/registration) (March 12th, 2025) ([LinkedIn post](https://www.linkedin.com/posts/qedc_last-call-to-join-us-on-wednesday-march-activity-7304954073571549184-YCZe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAv4XMUBX2S08vo53W0sGUSFpw814QpqqBs)) with [Cierra Choucair](https://www.linkedin.com/in/cierra-lunde/), [Alain Chancé](https://www.linkedin.com/in/alainchance/), [Damir Cavar](https://damir.cavar.me/), [Bob Coecke](https://www.linkedin.com/in/bob-coecke-9389627/), [Taha Selim](https://www.linkedin.com/in/tiselim/) (the recording is available on the [QED-C YouTube channel](https://youtu.be/5yBo3Jb71so?feature=shared))
 
 
 ### Upcoming
 
 - Invited to be part of the speaker lineup for the [6th Annual Healthcare AI Conference: Operationalizing Intelligence](https://www.regenstrief.org/ai-conference-2026/), hosted by the [Regenstrief Institute](https://www.regenstrief.org/) and [Indiana University Indianapolis](https://indianapolis.iu.edu/). The conference brings together leaders from healthcare, research, technology, and industry to explore how artificial intelligence is moving from theory to real-world implementation in healthcare.
-- [Complex Bidirectional Integration for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)), a hybrid classical-quantum AI model trained on classical computers for inferencing on quantum computers, talk at the [Physics Colloquium](https://physics.indiana.edu/news-events/events/colloquium-calendar.html) at [Indiana University Bloomington](https://bloomington.iu.edu/), 4-5 PM, Swain Hall, 2nd of December, 2026.
+- [Complex Bidirectional Integration for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird)), a hybrid classical-quantum AI model trained on classical computers for inferencing on quantum computers, talk at the [Physics Colloquium](https://physics.indiana.edu/news-events/events/colloquium-calendar.html) at [Indiana University Bloomington](https://bloomington.iu.edu/), 4-5 PM, Swain Hall, 2nd of December, 2026.
 - [Quantum AI Conference 2026](https://qnlp.ai/) (still old website, it will be updated soon) will be August 14th - 16th on the IUI campus in Indianapolis! Stay tuned for updates!
 - Cavar, D., P. Sullivan, S. Sparks, S. Miller, R. Jha, A. Jeje, Y. Charoenpornsawat​ (2026) Training Language Models and Embeddings for Hybrid Classical/Quantum Computing​. Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
 - Cavar, D., N. Shah (2026) LLM OntologyRAG - Extending a Food-Agent with a Description Logic Knowledge Representation. Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
 - Cavar, D., S. Nagappan, K. Telaprolu, A. Stafford, M. Parker, D. Valdez​ (2026) Detecting Emerging Drug Slang and Code Language in Social Media Posts​.  Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
 - Abdo, M., D. Cavar​ (2026) Ontology-Grounded Knowledge Graph Construction for Alzheimer's Research. Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
-- Cavar, D., S. Sparks, S. DeHaan, R. Jha, A. Jeje, Y. Charoenpomsawat, S. Miller (2026) Hybrid Classical-Quantum Language and World Models for AI - [CBIRD](https://nlp-lab.org/quantumnlp/cbird), Poster presentation at the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/), 1st of April, 2026.
+- Cavar, D., S. Sparks, S. DeHaan, R. Jha, A. Jeje, Y. Charoenpomsawat, S. Miller (2026) Hybrid Classical-Quantum Language and World Models for AI - [CBIRD](https://quantum-computing-lab.org/cbird), Poster presentation at the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/), 1st of April, 2026.
 - "*From Vectors to Qubits: Rethinking AI Models for the Hybrid Classical–Quantum Era*," [invited keynote lecture](https://ceciis.foi.hr/news/ceciis-2026-keynote-speakers-announced), September 16-18, 2026 at the [37th Central European Conference on Information and Intelligent Systems](https://ceciis.foi.hr/) ([CECIIS 2026](https://ceciis.foi.hr/)), Varaždin, Croatia.
 - "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," invited lecture, March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
 - Talk on *The Rise of Agentic AI and How It Will Change Our World* (Damir Cavar, IU) at the Artificial Intelligence for Legal Professionals Conference, Center for International and Comparative Law, Indiana University, [Robert H. McKinney School of Law](https://mckinneylaw.iu.edu/index.html).
@@ -109,8 +109,8 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 **Projects:**
 
-- [Quantum AI](https://nlp-lab.org/quantumnlp/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
-- The [Complex Bidirectional Inducer for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - the model is currently being trained.
+- [Quantum AI](https://quantum-computing-lab.org/) (see [IU news article](https://news.iu.edu/live/news/37695-iu-led-research-project-aims-to-improve) about that)
+- The [Complex Bidirectional Inducer for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - the model is currently being trained.
 - Social Media data analysis for drug use and abuse, adverse reactions, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
 - [National Institute of Drug Abuse](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) ([NIDA](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html)) Drugs A-Z Ontology, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
 - Smart Recovery: Geospatial and AI Tools for Public Health Interventions - a cooperation with the [Dove Recovery House](https://doverecoveryhouse.org/) and [IU Center for Rural Engagement](https://rural.indiana.edu/)
@@ -149,7 +149,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 **Labs I direct:**
 
 - **[AI &amp; NLP Lab](https://nlp-lab.org/)** - research lab: see public calendar for location and meeting times (contact me, if you would like to join the lab)
-- **[Quantum AI Lab](https://nlp-lab.org/quantumnlp/)** - Quantum Computing and Algorithms ([GitHub Project Q](https://github.com/dcavar/q)).
+- **[Quantum AI Lab](https://quantum-computing-lab.org/)** - Quantum Computing and Algorithms ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
@@ -168,7 +168,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 Labs I direct:
 
 - [AI &amp; NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
-- [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Thursdays 5 PM, Luddy 0002)
+- [Quantum AI Lab](https://quantum-computing-lab.org/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Thursdays 5 PM, Luddy 0002)
 
 
 
