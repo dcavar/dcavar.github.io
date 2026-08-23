@@ -7,7 +7,7 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
+Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and organizing the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
@@ -31,14 +31,15 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 **Adjunct/Member:**
 - Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
-- Indiana University [Hutton Honors College’s Inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026 (MAUNA KEA: Hutton House Program)
-- [Russian and East-European Institute](https://reei.indiana.edu/) ([REEI](https://reei.indiana.edu/)), [Hamilton Lugar School of Global and International Studies](https://hls.indiana.edu/), [Indiana University]
-- Member of the [Cognitive Science Program at Indiana University](https://cogs.indiana.edu/)
-- Adjunct in the [Department of Slavic and East European Languages and Cultures](https://linguistics.indiana.edu/about/faculty/cavar-damir.html)
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
 - [Center for Applied Cybersecurity Research](https://cacr.iu.edu/about/people/index.html) ([CACR](https://cacr.iu.edu/about/people/index.html)) Fellow at [Indiana University]
+- Indiana University [Hutton Honors College’s Inaugural Faculty House Fellow](https://hutton.indiana.edu/index.html) 2025/2026 (MAUNA KEA: Hutton House Program)
+- [Russian and East-European Institute](https://reei.indiana.edu/) ([REEI](https://reei.indiana.edu/)), [Hamilton Lugar School of Global and International Studies](https://hls.indiana.edu/), [Indiana University]
+- Member of the [Cognitive Science Program at Indiana University](https://cogs.indiana.edu/)
+- Adjunct in the [Department of Slavic and East European Languages and Cultures](https://linguistics.indiana.edu/about/faculty/cavar-damir.html)
+
 
 **Member:**
 - Senior Lifetime Member of the [Association for Computing Machinery](http://www.acm.org/) ([ACM](http://www.acm.org/))<br/>
@@ -60,8 +61,8 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 - 2022-2025 **HIPAA Privacy &amp; Security Training**, Indiana University
 - 2025-2026 **Research Security Certificate**, Indiana University
 - 2021 (Class of) **National Security Innovations Network (NSIN) Defense Innovation Accelerator (DIA) program certificate**
-- Google Project Management Certificate (TBA)
-- PMP Certification from PMI (TBA)
+- Google Project Management Certificate (in prep)
+- PMP Certification from PMI (in prep)
 
 
 ## Events
@@ -69,11 +70,13 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 - Cavar, D., Daniel Quigley, Sam Gray Miller (2026) Quantum Computing with AI Embeddings and Training of Hybrid
 Classical/Quantum AI Models (MLMs and LLMs). Tutorial at the [2026 IEEE 2nd International Conference
 on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](https://attend.ieee.org/qai-2026/)) in Nottingham, UK.
+- I organized the [Quantum AI Conference 2026](https://qnlp.ai/) at Indiana University Indianapolis in August 2026.
 - [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/) - presenting [CBIRD](https://nlp-lab.org/quantumnlp/cbird) - Hybrid Classical-Quantum Language and World Models for AI, 1st of April, 2026
 - Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
 - Presentation on "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP" and discussion at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).
 - Me and Danny Valdez are giving a talk at the [IU Indianapolis Artificial Intelligence &amp; Informatics Consortium (AI2) Events](https://events.iu.edu/ai2-consortium/event/2072564-ai2-consortium-symposium) on the 22nd of October 2025, "Toward dynamic surveillance of drug communication on social media: From descriptive insights to predictive modeling with AI architectures," on analyzing social media data using AI Agentive Models, Knowledge Graphs, Large Language Models, Ontologies, and how to expand existing resources from the [National Institute on Drug Abuse](https://nida.nih.gov/) ([NIDA](https://nida.nih.gov/)) [Drugs dictionary](https://nida.nih.gov/research-topics/drugs-a-to-z) with new street terminology and insights generated from drug abuse posts on social media. Topics: AI, NLP, Reasoning in Medical Research Applications
 - I was organizing the [Quantum AI Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
+
 
 ## Activities
 
@@ -87,6 +90,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 ### Upcoming
 
+- Invited to be part of the speaker lineup for the [6th Annual Healthcare AI Conference: Operationalizing Intelligence](https://www.regenstrief.org/ai-conference-2026/), hosted by the [Regenstrief Institute](https://www.regenstrief.org/) and [Indiana University Indianapolis](https://indianapolis.iu.edu/). The conference brings together leaders from healthcare, research, technology, and industry to explore how artificial intelligence is moving from theory to real-world implementation in healthcare.
 - [Complex Bidirectional Integration for Representation Dynamics](https://nlp-lab.org/quantumnlp/cbird) ([CBIRD](https://nlp-lab.org/quantumnlp/cbird)), a hybrid classical-quantum AI model trained on classical computers for inferencing on quantum computers, talk at the [Physics Colloquium](https://physics.indiana.edu/news-events/events/colloquium-calendar.html) at [Indiana University Bloomington](https://bloomington.iu.edu/), 4-5 PM, Swain Hall, 2nd of December, 2026.
 - [Quantum AI Conference 2026](https://qnlp.ai/) (still old website, it will be updated soon) will be August 14th - 16th on the IUI campus in Indianapolis! Stay tuned for updates!
 - Cavar, D., P. Sullivan, S. Sparks, S. Miller, R. Jha, A. Jeje, Y. Charoenpornsawat​ (2026) Training Language Models and Embeddings for Hybrid Classical/Quantum Computing​. Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
