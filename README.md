@@ -7,13 +7,13 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI Study group](https://nlp-lab.org/quantumnlp/).
+Directing the [AI &amp; Natural Language Processing Lab](https://nlp-lab.org/) and organizing the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
 - **communication:** [Signal](https://www.signal.org/), [Element](https://element.io/), [LinkedIn](https://www.linkedin.com/in/damircavar/), Call sign KD9POS
 - **code:** [GitHub](https://github.com/dcavar)
-- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
+- **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [AI&amp;NLP-Lab](https://nlp-lab.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 4:00-5:00 PM in my Ballantine Hall 511 (or arranged other location)
 
 2026: *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
@@ -73,7 +73,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
 - Presentation on "Optimizing Data Structures for Hybrid Classical and Quantum Computing for AI and NLP" and discussion at the [iQafé event on December 18th, 2025](https://www.linkedin.com/posts/iqafe_1800-2100-cet-1900-2200-eet-activity-7406607073603567616-m_ot).
 - Me and Danny Valdez are giving a talk at the [IU Indianapolis Artificial Intelligence &amp; Informatics Consortium (AI2) Events](https://events.iu.edu/ai2-consortium/event/2072564-ai2-consortium-symposium) on the 22nd of October 2025, "Toward dynamic surveillance of drug communication on social media: From descriptive insights to predictive modeling with AI architectures," on analyzing social media data using AI Agentive Models, Knowledge Graphs, Large Language Models, Ontologies, and how to expand existing resources from the [National Institute on Drug Abuse](https://nida.nih.gov/) ([NIDA](https://nida.nih.gov/)) [Drugs dictionary](https://nida.nih.gov/research-topics/drugs-a-to-z) with new street terminology and insights generated from drug abuse posts on social media. Topics: AI, NLP, Reasoning in Medical Research Applications
-- I was organizing the [Quantum AI and NLP Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
+- I was organizing the [Quantum AI Conference 2025](https://qnlp.ai/) at Indiana University in August 2025.
 
 ## Activities
 
@@ -159,7 +159,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)* / [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)*
 - [CSCI-B 659 Topics in Artificial Intelligence](/l645/) / [LING-L 645 Advanced Natural Language Processing](/l645/)
 
-- [AI and NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
+- [AI &amp; NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
 - [Quantum AI](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Trhusdays 5 PM, Luddy 0002)
 
 
