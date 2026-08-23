@@ -1,6 +1,6 @@
 ## Research
 
-See the activities in my [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) and [AI &amp; NLP Lab](http://nlp-lab.org/) for more details.
+See the activities in the two labs I direct, the [AI &amp; NLP Lab](http://nlp-lab.org/) and the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/), for more details.
 
 
 ### Research Area

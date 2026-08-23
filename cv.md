@@ -14,6 +14,8 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 - *Since 2026* Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
 
+- *Since 2024* Director of the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) at [Indiana University].
+
 - *Since 2024* Fellow of the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)), an NSF Industry/University Cooperative Research Center (IUCRC) including Indiana University, Purdue University, and the University of Notre Dame.
 
 - *Since 2024* Member of the [Quantum Science and Engineering Center](https://qsec.indiana.edu/) ([QSEc](https://qsec.indiana.edu/)) at Indiana University.
@@ -21,6 +23,8 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 - *Since 2023* [Core AI Faculty at the Luddy Artificial Intelligence Center at Indiana University Bloomington](https://ai.luddy.indiana.edu/people/core-ai-faculty.html).
 
 - *Since the summer of 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
+
+- *Since 2017* Director of the [AI &amp; NLP Lab](https://nlp-lab.org/) at [Indiana University].
 
 - *Since the summer of 2017* Data Science Faculty in the [Luddy School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([Luddy School](https://luddy.indiana.edu/)), [Indiana University]
 

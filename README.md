@@ -7,7 +7,7 @@ Adjunct Professor in the [Department of Intelligent Systems Engineering](https:/
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> https://orcid.org/0000-0002-1262-5927</a>
 
-Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and organizing the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
+Directing the [AI &amp; NLP Lab](https://nlp-lab.org/) and the [Quantum AI Lab](https://nlp-lab.org/quantumnlp/).
 
 - **phone:** +1 (812) 856-5094 (or via [Signal](https://www.signal.org/), Teams, Zoom)
 - **email:** *dcavar* at the domain where we all are, here at IU (*iu.edu*) ([OpenPGP key](DamirCavar.asc))
@@ -146,8 +146,10 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 ## Links
 
-**[AI &amp; NLP Lab - research lab](https://nlp-lab.org/)**: see public calendar for location and meeting times (contact me, if you would like to join the lab)
-- [Quantum AI Lab - Computing and Algorithms](https://nlp-lab.org/quantumnlp/) ([GitHub Project Q](https://github.com/dcavar/q)).
+**Labs I direct:**
+
+- **[AI &amp; NLP Lab](https://nlp-lab.org/)** - research lab: see public calendar for location and meeting times (contact me, if you would like to join the lab)
+- **[Quantum AI Lab](https://nlp-lab.org/quantumnlp/)** - Quantum Computing and Algorithms ([GitHub Project Q](https://github.com/dcavar/q)).
 
 
 **Code, data, and projects:**
@@ -163,8 +165,10 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 - [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)* / [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)*
 - [CSCI-B 659 Topics in Artificial Intelligence](/l645/) / [LING-L 645 Advanced Natural Language Processing](/l645/)
 
+Labs I direct:
+
 - [AI &amp; NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
-- [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Trhusdays 5 PM, Luddy 0002)
+- [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Thursdays 5 PM, Luddy 0002)
 
 
 

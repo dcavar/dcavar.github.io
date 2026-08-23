@@ -6,6 +6,8 @@
 - [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)* / [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)*
 - [CSCI-B 659 Topics in Artificial Intelligence](/l645/) / [LING-L 645 Advanced Natural Language Processing](/l645/)
 
+Labs I direct:
+
 - [AI &amp; NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
 - [Quantum AI Lab](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Thursdays 5 PM, Luddy 0002)
 
