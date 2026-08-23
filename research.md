@@ -80,3 +80,12 @@ With applications to Public Health, Medical Applications, National Security, Leg
 - Indiana University [Institute for Advanced Study](https://ias.indiana.edu/index.html) grant for research on "Deep Natural Language Analysis of Corporate Disclosures" in 2017. A joint grant with Dr. Matt Josefy from the Kelley School of Business at Indiana University.
 - Indiana University Grant-In-Aid Program, 2016, "AI-based anti-Semitism Detection in Social Media," joint grant with Guenther Jikeli, Jewish Studies, Indiana University
 
+
+## Older Projects
+
+- [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
+- [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
+- [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
+- Knowledge Graphs from unstructured data and common sense reasoning
+
+

@@ -1,5 +1,31 @@
 ## Teaching
 
+**Fall 2026**
+
+- [CSCI-B 659 Topics in Artificial Intelligence](/l675/) / [LING-L 675 Advanced Machine Learning Techniques](/l675/)
+- [CSCI-B 659](/l665/) *[Topics in Artificial Intelligence](/l665)* / [LING-L 665](/l665/) *[Applying Machine Learning Techniques in Computational Linguistics](/l665/)*
+- [CSCI-B 659 Topics in Artificial Intelligence](/l645/) / [LING-L 645 Advanced Natural Language Processing](/l645/)
+
+- [AI and NLP Lab](https://nlp-lab.org/) - Drug discovery, neuro-symbolic modeling, AI for Science (Fridays 4 PM, Luddy 0002)
+- [Quantum AI](https://nlp-lab.org/quantumnlp/) - hybrid classical-quantum computing, AI for Quantum and Quantum Computing for AI (Thursdays 5 PM, Luddy 0002)
+
+
+**[Spring 2026](/teaching)**
+
+- **[LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)**
+- [NLP-Lab meetings and independent studies](https://nlp-lab.org/), weekly Wednesdays 5:30 PM, Luddy 0002
+- [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/), weekly Thursdays 5:30 PM, Luddy 0002
+- Research project meetings, Dove Recovery House Project, Wednesdays
+
+
+**[Fall 2025](/teaching)**
+
+- [LING-L 645 Advanced Natural Language Processing](/l645_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l645_Fall_25/)
+- [LING-L 715 Seminar on Knowledge Graphs, Large Language Models, and Graph-based Reasoning using Agentive AI Models](/l715_Fall_25/) / [CSCI-B 659 Topics in Artificial Intelligence](/l715_Fall_25/)
+- [NLP-Lab meetings and independent studies](https://nlp-lab.org/), weekly Wednesdays 5:30 PM, Luddy 0002
+- [Quantum AI Study Group](https://nlp-lab.org/quantumnlp/), weekly Thursdays 5:30 PM, Luddy 0002
+
+
 **Spring 2026**
 
 - **[LING-L 675 Advanced Machine Learning Techniques](/l675/) / [CSCI-B 659 Topics in Artificial Intelligence](/l675/)**
