@@ -1,5 +1,10 @@
 ## Software and Code
 
+### Quantum AI Code and Data
+
+- [Quantum AI Lab](https://quantum-computing-lab.org/)
+
+
 ### Natural Language Qu Kit (NLQK)
 
 Quantum Computing Natural Language Processing (NLP) and AI tools:
@@ -23,7 +28,7 @@ Quantum Computing Natural Language Processing (NLP) and AI tools:
 ### Hoosier Ellipsis Corpus (THEC)
 
 - [GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus)
-- [Website at the AI &amp; NLP Lab](https://nlp-lab.org/ellipsis/)
+- [Website at the AI &amp; NLP Lab](https://ai-science-labs.org/ellipsis/)
 
 
 

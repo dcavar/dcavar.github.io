@@ -62,4 +62,4 @@ IUB campus. The project is a result of year long research and
 development activities that included students and colleagues from the
 different schools at IU Bloomington, and also external collaborators.
 We should emphasize that significant contribution came from the
-volunteers and NLP enthusiasts from the [AI &amp; NLP Lab](http://nlp-lab.org/).
+volunteers and NLP enthusiasts from the [AI &amp; NLP Lab](http://ai-science-labs.org/).

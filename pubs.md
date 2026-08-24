@@ -22,10 +22,10 @@
 
 **2025**
 
-- [Cavar, D.], J.B. Graves, S.A. Sparks, K.R. Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Poster presented at the IEEE Quantum Week 2025, September 2025, Albuquerque, New Mexico.  ([poster](https://nlp-lab.org/publications/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
-- [Cavar, D.], B. Dickson, J.B. Graves, S.A. Sparks, K.R. Parukola (2025) The Natural Language Qu Kit - NLQK for Quantum NLP and AI. Unpublished. ([poster](https://nlp-lab.org/publications/NLQK_Poster_August_2025.pdf))
+- [Cavar, D.], J.B. Graves, S.A. Sparks, K.R. Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Poster presented at the IEEE Quantum Week 2025, September 2025, Albuquerque, New Mexico.  ([poster](https://ai-science-labs.org/publications/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
+- [Cavar, D.], B. Dickson, J.B. Graves, S.A. Sparks, K.R. Parukola (2025) The Natural Language Qu Kit - NLQK for Quantum NLP and AI. Unpublished. ([poster](https://ai-science-labs.org/publications/NLQK_Poster_August_2025.pdf))
 - A. Karkala Pai, [D. Cavar] (2025) A Voice-based Detection of Parkinson's Disease: Feature Selection and Classification Results. Paper presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
-- Wang, R., R. Shrivastava, T. Sun, S.L.A. Chebolu, M.K. Naidu, T. Jayaprakash, J. Decatur, [D. Cavar] (2025) Improving LLM Reasoning Through Ontology-driven Knowledge Graphs: A Comparative Study of Generating Ontologies for Medical RAGs. Poster presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025. ([poster](https://nlp-lab.org/publications/MSLD_2025_Poster.pdf))
+- Wang, R., R. Shrivastava, T. Sun, S.L.A. Chebolu, M.K. Naidu, T. Jayaprakash, J. Decatur, [D. Cavar] (2025) Improving LLM Reasoning Through Ontology-driven Knowledge Graphs: A Comparative Study of Generating Ontologies for Medical RAGs. Poster presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025. ([poster](https://ai-science-labs.org/publications/MSLD_2025_Poster.pdf))
 - [Cavar, D.], K.R. Parukola, S.A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
 - Davis, A.S., B. Dickson, [D. Cavar], D. Valdez, F.M. Tyers (2025) Advancing Adverse Drug Event Detection in Social Media Through Knowledge Graph and GraphRAG LLM Architectures. [2025 AAHB Annual Scientific Meeting](https://aahb.org/2025-Scientific-Meeting-Overview), San Diego, CA. ([Poster](/Pubs/AAHB25-ADAVIS-POSTER-FINAL.pdf))
 - [Damir Cavar], K.R. Parukola (2025) Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems. Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
@@ -125,4 +125,4 @@
 [GORILLA]: http://gorilla.linguistlist.org/ "Project GORILLA"
 [FLE]: http://gorilla.linguistlist.org/fle/ "Free Linguistic Environment"
 [University of Zadar]: http://www.unizd.hr/ "University of Zadar"
-[NLP-Lab]: https://nlp-lab.org/ "AI & NLP Lab"
+[NLP-Lab]: https://ai-science-labs.org/ "AI & NLP Lab"

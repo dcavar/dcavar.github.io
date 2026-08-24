@@ -1,6 +1,6 @@
 ## Research
 
-See the activities in the two labs I direct, the [AI &amp; NLP Lab](http://nlp-lab.org/) and the [Quantum AI Lab](https://quantum-computing-lab.org/), for more details.
+See the activities in the two labs I direct, the [AI &amp; NLP Lab](http://ai-science-labs.org/) and the [Quantum AI Lab](https://quantum-computing-lab.org/), for more details.
 
 
 ### Research Area
@@ -18,7 +18,7 @@ See:
 
 #### Knowledge Graph Extraction, AIs, KnowledgeRAGs, and OntologyRAGs
 
-- More on my [AI &amp; NLP Lab](https://nlp-lab.org/) pages
+- More on my [AI &amp; NLP Lab](https://ai-science-labs.org/) pages
 
 With applications to Public Health, Medical Applications, National Security, Legal, Education:
 
@@ -83,9 +83,9 @@ With applications to Public Health, Medical Applications, National Security, Leg
 
 ## Older Projects
 
-- [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://nlp-lab.org/)
-- [The Hoosier Ellipsis Corpus (THEC)](https://nlp-lab.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
-- [TIE-ML](https://nlp-lab.org/timeevents/) - [Temporal Information and Event Annotation](https://nlp-lab.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
+- [Complex Linguistic Constructions and Large Language Models: Ellipsis, Long Distance Dependencies, Discontinuities](https://ai-science-labs.org/)
+- [The Hoosier Ellipsis Corpus (THEC)](https://ai-science-labs.org/ellipsis/) ([GitHub repo](https://github.com/dcavar/hoosierellipsiscorpus))
+- [TIE-ML](https://ai-science-labs.org/timeevents/) - [Temporal Information and Event Annotation](https://ai-science-labs.org/timeevents/) ([GitHub repo](https://github.com/dcavar/tieml))
 - Knowledge Graphs from unstructured data and common sense reasoning
 
 

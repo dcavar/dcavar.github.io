@@ -24,7 +24,7 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 - *Since the summer of 2018* Fellow at the [Center for Applied Cybersecurity Research](https://cacr.iu.edu/) ([CACR](https://cacr.iu.edu/)) at [Indiana University]
 
-- *Since 2017* Director of the [AI &amp; NLP Lab](https://nlp-lab.org/) at [Indiana University].
+- *Since 2017* Director of the [AI &amp; NLP Lab](https://ai-science-labs.org/) at [Indiana University].
 
 - *Since the summer of 2017* Data Science Faculty in the [Luddy School of Informatics, Computation, and Engineering](https://sice.indiana.edu/) ([Luddy School](https://luddy.indiana.edu/)), [Indiana University]
 
