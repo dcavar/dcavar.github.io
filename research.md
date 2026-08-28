@@ -64,7 +64,7 @@ With applications to Public Health, Medical Applications, National Security, Leg
 
 #### National Institute of Health Funding
 
-- TBA
+- Identifying Recovery Insights through Signal Extraction (iRISE): Leveraging Machine Learning Strategies to Predict Disengagement from Recovery Communities. Co-PI Damir Cavar, PI Danny Valdez, Project period: Jul 01, 2026 - Jun 30, 2028, Sponsor: [NIH-NIDA](https://nida.nih.gov/).
 
 
 #### National Institute of Justice Funding
