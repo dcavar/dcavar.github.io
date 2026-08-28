@@ -12,8 +12,8 @@ The main focus of my QAI and Q-NLP work is related to enabling hybrid classical/
 See:
 
 - The [Complex Bidirectional Inducer for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird)) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss, usable as a state-of-the-art text diffusion model, as a BERT-style bidirectional encoder-only model, etc. - code and model coming soon...
-- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://quantum-computing-lab.org/) team.
-- [Quantum NLP](https://quantum-computing-lab.org/)
+- I launched the environment for [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum AI library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/) together with the [Quantum AI Lab](https://quantum-computing-lab.org/) team.
+- [Quantum AI Lab](https://quantum-computing-lab.org/)
 
 
 #### Knowledge Graph Extraction, AIs, KnowledgeRAGs, and OntologyRAGs
