@@ -67,9 +67,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 ## Events
 
-- Cavar, D., Daniel Quigley, Sam Gray Miller (2026) Quantum Computing with AI Embeddings and Training of Hybrid
-Classical/Quantum AI Models (MLMs and LLMs). Tutorial at the [2026 IEEE 2nd International Conference
-on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](https://attend.ieee.org/qai-2026/)) in Nottingham, UK.
+- Cavar, D., Daniel Quigley, Sam Gray Miller (2026) Quantum Computing with AI Embeddings and Training of Hybrid Classical/Quantum AI Models (MLMs and LLMs). Tutorial at the [2026 IEEE 2nd International Conference on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](https://attend.ieee.org/qai-2026/)) in Nottingham, UK.
 - I organized the [Quantum AI Conference 2026](https://qnlp.ai/) at Indiana University Indianapolis in August 2026.
 - [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/) - presenting [CBIRD](https://quantum-computing-lab.org/cbird) - Hybrid Classical-Quantum Language and World Models for AI, 1st of April, 2026
 - Participation at the [NSF LEVEL UP AI](https://cra.org/level-up-ai/) workshop in Phoenix, AZ.
@@ -90,6 +88,7 @@ on Quantum Artificial Intelligence](https://attend.ieee.org/qai-2026/) ([QAI](ht
 
 ### Upcoming
 
+- Talk in the Computer Science Colloquium at the [Luddy School](https://luddy.iu.edu/) at [Indiana University Bloomington](https://bloomington.iu.edu/): "Complex-valued AI Models: Evaluating the effect of phase information in transformer architectures using [Complex Bidirectional Integration for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird))." November 5/6, 2026, [Luddy Hall](https://www.campus-maps.com/iu/luddy-hall/), Bloomington.
 - Invited to be part of the speaker lineup for the [6th Annual Healthcare AI Conference: Operationalizing Intelligence](https://www.regenstrief.org/ai-conference-2026/), hosted by the [Regenstrief Institute](https://www.regenstrief.org/) and [Indiana University Indianapolis](https://indianapolis.iu.edu/). The conference brings together leaders from healthcare, research, technology, and industry to explore how artificial intelligence is moving from theory to real-world implementation in healthcare.
 - [Complex Bidirectional Integration for Representation Dynamics](https://quantum-computing-lab.org/cbird) ([CBIRD](https://quantum-computing-lab.org/cbird)), a hybrid classical-quantum AI model trained on classical computers for inferencing on quantum computers, talk at the [Physics Colloquium](https://physics.indiana.edu/news-events/events/colloquium-calendar.html) at [Indiana University Bloomington](https://bloomington.iu.edu/), 4-5 PM, Swain Hall, 2nd of December, 2026.
 - [Quantum AI Conference 2026](https://qnlp.ai/) (still old website, it will be updated soon) will be August 14th - 16th on the IUI campus in Indianapolis! Stay tuned for updates!
