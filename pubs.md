@@ -15,9 +15,9 @@
 
 **2026**
 
+- Valdez, Danny, Damir Cavar, Maria A. Parker, Xue-Jing Liu, Jon Agley (2026) *Closing surveillance detection gaps for emerging digital drug discourse with ontology-enhanced large language models.* In npj Digital Public Health. Springer Nature.
 - [Cavar, D.], K.R. Parukola, J.B. Graves, S.A. Sparks (2026) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In proceedings Cavar, D. et al. [Quantum AI and NLP](https://link.springer.com/book/9783032138835), Springer, 2026.
 - Muhammad S. Abdo, [Damir Cavar], Billy Dickson, Attia Youseif (2025) *Ellipsis in Arabic: Using Machine Learning to Detect and Predict Elided Words*. Pages 240-263 in: Reem Khamis and Mira Goral (eds.) Selected Papers from the 37th Annual Symposium on Arabic Linguistics, [Published online 27 February 2026](https://benjamins.com/catalog/arli.00013.abd), John Benjamins.
-
 
 
 **2025**
