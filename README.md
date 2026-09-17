@@ -2,6 +2,8 @@
 
 Associate Professor, [Indiana University] at Bloomington ([IU])
 
+Adjunct Professor in the [Department of Informatics](https://luddy.iu.edu/academics/units/informatics.html) and,
+
 Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
 
 - ORCID: <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0000-0002-1262-5927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
