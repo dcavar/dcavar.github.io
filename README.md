@@ -16,7 +16,11 @@ Directing the [AI &amp; NLP Lab](https://ai-science-labs.org/) and the [Quantum 
 - **publications:** [ACL Anthology](https://aclanthology.org/people/d/damir-cavar/), [Google Scholar](https://scholar.google.com/citations?hl=en&user=6b8TO4cAAAAJ&view_op=list_works&sortby=pubdate), [AI &amp; NLP Lab](https://ai-science-labs.org/publications/), local: [publications](/pubs) and [talks](/talks)
 - **office hours:** During the semester Thursdays 4:00-5:00 PM in my Ballantine Hall 511 (or arranged other location)
 
-2026: *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
+2026:
+
+- *Faculty Innovation Ambassador (FIA)* - selected by the [Innovation and Commercialization Office](https://research.iu.edu/innovation-commercialization/index.html) ([ICO](https://research.iu.edu/innovation-commercialization/index.html)) of Indiana University as one of the inaugural Faculty Innovation Ambassadors (FIA).
+- *Quantum Research Network (QRN) Co-chair* - [Indiana University Quantum Research Network](https://research.iu.edu/research-networks/quantum/index.html)
+
 
 
 My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkEfuUaGs).
@@ -30,7 +34,8 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 
 **Adjunct/Member:**
-- Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
+- Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html)
+- Adjunct Professor in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html)
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
