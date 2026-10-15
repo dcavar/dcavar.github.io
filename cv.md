@@ -12,7 +12,9 @@ Dr.phil. (*magna cum laude*), [University of Potsdam](http://www.uni-potsdam.de/
 
 ### Professional Experience
 
-- *Since 2026* Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
+- *Since 2026* Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.iu.edu/index.html) at [Indiana University Bloomington](https://bloomington.iu.edu/)
+
+- *Since 2026*  Adjunct Professor in the [Department of Informatics](https://luddy.iu.edu/academics/units/informatics.html) in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.iu.edu/) at [Indiana University Bloomington](https://bloomington.iu.edu/)
 
 - *Since 2024* Director of the [Quantum AI Lab](https://quantum-computing-lab.org/) at [Indiana University].
 
