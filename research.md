@@ -23,11 +23,10 @@ See:
 With applications to Public Health, Medical Applications, National Security, Legal, Education:
 
 - LLMs, Knowledge Graphs, Ontologies in complex AI systems
-	- Social Media data analysis for drug use and abuse, adverse reactions, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
-	- [National Institute of Drug Abuse](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) ([NIDA](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html)) Drugs A-Z Ontology, in cooperation with [Danny Valdez](https://cancer.iu.edu/about/members/bio/31702) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
-	- Smart Recovery: Geospatial and AI Tools for Public Health Interventions - a cooperation with the [Dove Recovery House](https://doverecoveryhouse.org/) and [IU Center for Rural Engagement](https://rural.indiana.edu/)
+- Social Media data analysis for drug use and abuse, adverse reactions, in cooperation with [Danny Valdez](https://publichealth.indiana.edu/about/directory/danny-valdez-danvald.html) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
+- [National Institute of Drug Abuse](httpshttps://nida.nih.gov) ([NIDA](https://nida.nih.gov)) Drugs A-Z Ontology, in cooperation with [Danny Valdez](https://publichealth.indiana.edu/about/directory/danny-valdez-danvald.html) and [Maria Parker](https://publichealth.indiana.edu/about/directory/Maria-Parker-map2.html) from the [IU School of Public Health](https://publichealth.indiana.edu/index.html)
+- Smart Recovery: Geospatial and AI Tools for Public Health Interventions - a cooperation with the [Dove Recovery House](https://doverecoveryhouse.org/) and [IU Center for Rural Engagement](https://rural.indiana.edu/)
 - Multi-Agent Models with Logic and Reasoning RAGs
-
 - Knowledge Graphs from unstructured data and common sense reasoning, Temporal Graph Neural Networks
 
 
