@@ -36,7 +36,7 @@ My research is inspired by [Steve Jobs' vision from 1985](https://youtu.be/yolkE
 
 
 **Adjunct/Member:**
-- Adjunct Professor in the [Department of Intelligent Systems Engineering](https://luddy.iu.edu/academics/units/ise.html) and Adjunct Professor in the [Department of Informatics](https://luddy.iu.edu/academics/units/informatics.html) in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.iu.edu/)
+- Adjunct Professor in the [Department of Engineering](https://luddy.iu.edu/academics/units/ise.html) and Adjunct Professor in the [Department of Informatics](https://luddy.iu.edu/academics/units/informatics.html) in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.iu.edu/)
 - [Luddy Artificial Intelligence Center](https://ai.luddy.indiana.edu/people/core-ai-faculty.html) Core Faculty, Indiana University at Bloomington
 - [IU Quantum Science and Engineering Center](https://qsec.indiana.edu/)
 - [Data Science](https://datascience.indiana.edu/programs/residential/index.html) Faculty in the [Luddy School of Informatics, Computing, and Engineering](https://luddy.indiana.edu/)
